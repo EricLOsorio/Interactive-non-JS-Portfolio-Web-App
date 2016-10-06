@@ -14,11 +14,28 @@
         <p>Eric L. Osorio</p> 
 
         <ul>
-          <a href="#about"><li>About</li></a>
-          <a href="#projects"><li>Projects</li></a>
-          <a href="#skills"><li>Skills</li></a>
-          <a href="#contact"><li>Contact</li></a>
-        </ul>
+          <input type="radio" name="navRadio" id="aboutNavInput" checked>        
+          <li onclick="window.location='#about'">
+            <label for="aboutNavInput">About</label>
+          </li>
+          <input type="radio" name="navRadio" id="projectNavInput">          
+          <li onclick="window.location='#projects'">
+            <label for="projectNavInput">Projects</label>
+          </li>
+          <input type="radio" name="navRadio" id="skillsNavInput">          
+          <li onclick="window.location='#skills'">
+            <label for="skillsNavInput">Skills</label>
+          </li>
+          <input type="radio" name="navRadio" id="contactNavInput">          
+          <li onclick="window.location='#contact'">
+            <label for="contactNavInput">Contact</label>
+          </li>
+          </ul>
+
+
+
+
+
 
         <label for="modalInput1" id="searchIcon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></label>
         <input type="search" name="search" id="search"/>
