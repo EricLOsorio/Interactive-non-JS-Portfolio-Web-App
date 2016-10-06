@@ -1,18 +1,18 @@
 .wrapper{
-	position:relative;
+  position:relative;
 
 }
 
 .content{
-	position:absolute;
-	width:100%;
-	background-color: #FFFFFF;
+  position:absolute;
+  width:100%;
+  background-color: #FFFFFF;
 
 }
 
 #topNavBar{
-	width:100%;
-	background-color:#7710C2;
+  width:100%;
+  background-color:#7710C2;
   margin-left:-25px;
   padding-left:50px;
   z-index:3;
@@ -101,8 +101,18 @@ nav label > i{
   color:#000000;
 }
 
+nav ul li > label {
+
+  padding:25px;
+}
+
+nav ul input{
+  display:none;
+}
+
+
 section{
-	position:relative;
+  position:relative;
   left:50px;
 }
 
@@ -124,21 +134,27 @@ nav > ul {
 
 nav > ul li{
   display:inline;
-  padding-right:55px;
+  padding-right:0px;
   color:white;
   font-size:25px;
 }
 
+nav input:checked + li > label{
+  background-color:#BB32FF;
+  color:#000;
+}
+
+
 h1{
-	position:relative;
-	left:50%;
+  position:relative;
+  left:50%;
 }
 
 article > p {
-	position:relative;
-	margin-left:20%;
-	margin-right:20%;
-	font-size:25px;
+  position:relative;
+  margin-left:20%;
+  margin-right:20%;
+  font-size:25px;
 }
 
 section h2{
@@ -162,14 +178,14 @@ section input{
 
 
 .projectSection > label{
-	display:block;
-	width:150px;
-	height:50px;
-	margin-left:10%;
-	margin-right:0;
-	padding-left:50px;
-	padding-top:30px;
-	font-size:20px;
+  display:block;
+  width:150px;
+  height:50px;
+  margin-left:10%;
+  margin-right:0;
+  padding-left:50px;
+  padding-top:30px;
+  font-size:20px;
 
 }
 
@@ -186,10 +202,10 @@ section input{
 
 
 .displayArea{
-	position:absolute;
-	width:800px;
-	height:685px;
-	left:200px;
+  position:absolute;
+  width:800px;
+  height:685px;
+  left:200px;
     top:225px;
     display:none;
     margin-left:10%;
@@ -200,23 +216,23 @@ section input{
 
  .projectSection .displayArea > img{
     visibility: hidden;
-	position:absolute;
-	left:16%;
-	top:20%;
-	z-index:2;
-	height:400px;
+  position:absolute;
+  left:16%;
+  top:20%;
+  z-index:2;
+  height:400px;
 
-	width:570px;
+  width:570px;
 
 } 
 
 .projectSection > input:checked +label + div.displayArea{
-	display:block;
+  display:block;
 }
 
 
 .projectSection > input:checked + label + div.displayArea > input:checked + img{
-	visibility: visible;
+  visibility: visible;
 }
 
 .fa-circle-o{
@@ -229,13 +245,13 @@ section input{
 .projectSection input:checked ~ div.displayArea input:nth-of-type(2):checked ~  div.radioLabels  label:nth-of-type(2) > .fa-circle-o,
 .projectSection input:checked ~ div.displayArea input:nth-of-type(3):checked ~  div.radioLabels  label:nth-of-type(3) > .fa-circle-o{
 
-	background-color:purple;
-	color:transparent;
+  background-color:purple;
+  color:transparent;
 } 
 
 
 .chevronLabels label[class="right"]{
-		position:absolute;
+    position:absolute;
         top:300px;
         left:750px;
         display:none;
@@ -243,24 +259,24 @@ section input{
 }
 
 .chevronLabels label[class="left"]{
-	position:absolute;
-	top:300px;
-	left:50px;
+  position:absolute;
+  top:300px;
+  left:50px;
     display:none;
 }
 
 
 .radioLabels{
-	position:absolute;
-	top:540px;
-	left:310px;
-	z-index:2;	
+  position:absolute;
+  top:540px;
+  left:310px;
+  z-index:2;  
 }
 
 .radioLabels label{
-	display:inline;
-	float:left;
-	padding:10px;
+  display:inline;
+  float:left;
+  padding:10px;
 
 } 
 
@@ -271,71 +287,69 @@ section input{
 .projectSection > input:checked ~ .displayArea > input:nth-of-type(2):checked  ~  .chevronLabels label:nth-of-type(4),
 .projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(5),
 .projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(6){
-	display:block;
+  display:block;
 }
 
 div.description{
-	width:100%;
-	height:100px;
+  width:100%;
+  height:100px;
     background-color:rgba(76,74,74,0);
-	position:relative;
-	top:570px;
-	display:none;
-	color:white;
-	font-size:17px;
-	padding-left:20px;
+  position:relative;
+  top:570px;
+  display:none;
+  color:white;
+  font-size:17px;
+  padding-left:20px;
 }
 
 
 div.description  span {
-	font-family:Georgia, Serif;
-	font-weight:500;
+  font-family:Georgia, Serif;
+  font-weight:500;
 }
 
 div.description a{
-	margin-top:15px;
-	margin-right:30px;
-	text-decoration: none;
-	color:black;
-
-
+  margin-top:15px;
+  margin-right:30px;
+  text-decoration: none;
+  color:black;
 }
 
 div.description a:hover{
-	color:#879FF3;
+  color:#879FF3;
 }
 
 .projectSection input:checked ~ div.displayArea > div.description {
-	display:block;
+  display:block;
 }
 
 /*Skills */
 
 .skills {
-	position:relative;
-	top:250px;
+  position:relative;
+  top:250px;
 }
 
 section:nth-of-type(1) hr{
-	position:relative;
-	top:20px;
-	width:800px;
+  position:relative;
+  top:20px;
+  width:800px;
 
 }
 
 
 
 section:nth-of-type(2) hr{
-	position:relative;
-	top:350px;
-	width:800px;
+  position:relative;
+  top:350px;
+  width:800px;
 }
 
 section.skills hr:nth-of-type(1){
-	position:relative;
-	top:-460px;
-	width:400px;
-	left:0px;
+  position:relative;
+  top:-460px;
+  width:400px;
+  left:0px;
 }
 
 hr#endSkillsLine{
@@ -360,105 +374,105 @@ section.skills > .otherGraph hr{
 }
 
 #frontend{
-	position:relative;
-	height:20px;
-	width:500px;
-	background-color:#FB5E5D;
-	text-align:left;
-	color:white;
+  position:relative;
+  height:20px;
+  width:500px;
+  background-color:#FB5E5D;
+  text-align:left;
+  color:white;
 }
 
 #backend{
-	position:relative;
-	display:inline-block;
-	height:20px;
-	width:56px;
-	background-color:#4A6FEB;
-	margin-left:500px;
-	top:-20px;
-	text-align:right;
-	color:white;
+  position:relative;
+  display:inline-block;
+  height:20px;
+  width:56px;
+  background-color:#4A6FEB;
+  margin-left:500px;
+  top:-20px;
+  text-align:right;
+  color:white;
 }
 
 .skillBar {
-	position:relative;
-	width:556px;
-	height:20px;
-	left:30%;
+  position:relative;
+  width:556px;
+  height:20px;
+  left:30%;
 }
 
 #frontendSkill{
-	position:relative;
-	left:300px;
-	top:100px;
-	color:#FB5E5D;
-	font-size:18px;
-	font-weight:bold;
+  position:relative;
+  left:300px;
+  top:100px;
+  color:#FB5E5D;
+  font-size:18px;
+  font-weight:bold;
 }
 
 #backendSkill{
-	position:relative;
-	left:900px;
-	top:80px;	
-	color:#4A6FEB;
-	font-size:18px;
-	font-weight:bold;
+  position:relative;
+  left:900px;
+  top:80px; 
+  color:#4A6FEB;
+  font-size:18px;
+  font-weight:bold;
 }
 
 #otherSkill{
-	position:relative;
-	left:650px;
-	top:520px;		
-	color:black;
-	font-size:18px;
-	font-weight:bold;
+  position:relative;
+  left:650px;
+  top:520px;    
+  color:black;
+  font-size:18px;
+  font-weight:bold;
 }
 
 .proficiencyLabels{
-	list-style-type:none;
+  list-style-type:none;
 }
 
 .proficiencyLabels li {
-	margin-bottom:15px;
+  margin-bottom:15px;
 }
 
 .frontendTechLabels{
-	position:relative;
-	list-style-type: none;
-	left:90px;
-		display:inline;
+  position:relative;
+  list-style-type: none;
+  left:90px;
+    display:inline;
 }
 
 .frontendTechLabels li{
 
-	border:1px solid black;
-	transform: rotate(15deg);
-	-webkit-transform: rotate(15deg);
+  border:1px solid black;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
 }
 
 .js, .html, .react, .jquery,.node,.php,.mongo,.ruby {
-	position:absolute;
-	top:170px;
-	transform: rotate(30deg);
-	-webkit-transform: rotate(30deg);
+  position:absolute;
+  top:170px;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
 }
 
 .js,.node{
-	left:150px;
+  left:150px;
 }
 .html,.php{
-	left:220px;
+  left:220px;
 }
 .react,.mongo{
-	left:290px;
+  left:290px;
 }
 .jquery,.ruby{
-	left:360px;
+  left:360px;
 }
 
 .jsBar,.backendBar1{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:60px;
     background-color:#FFAD41;
     top:-60px;
@@ -466,8 +480,8 @@ section.skills > .otherGraph hr{
 }
 
 .htmlBar,.backendBar2{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:80px;
     background-color:#38BAF0;
     top:-208px;
@@ -475,8 +489,8 @@ section.skills > .otherGraph hr{
 }
 
 .reactBar,.backendBar3{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:20px;
     background-color:#69D12B;
     top:-295px;
@@ -484,8 +498,8 @@ section.skills > .otherGraph hr{
 }
 
 .jqueryBar,.backendBar4{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:20px;
     background-color:#EFE210;
     top:-383px;
@@ -514,18 +528,18 @@ section.skills > .otherGraph hr{
 }
 
 .frontEndGraph{
-	position:relative;
-	width:500px;
+  position:relative;
+  width:500px;
     top:100px;
-	margin-left:150px;
+  margin-left:150px;
 
 }
 
 .backEndGraph{
-	position:relative;
-	width:500px;
-	left:750px;
-	top:-512px;
+  position:relative;
+  width:500px;
+  left:750px;
+  top:-512px;
 }
 
 
@@ -535,40 +549,40 @@ section.skills > .otherGraph hr{
 
 
 .otherGraph{
-	position:relative;
-	width:500px;
-	left:450px;
-	top:-550px;
+  position:relative;
+  width:500px;
+  left:450px;
+  top:-550px;
 }
 
 .writing, .problemSolve, .PM, .research, .publicSpeaking {
-	position:absolute;
-	top:190px;
-	transform: rotate(30deg);
-	-webkit-transform: rotate(30deg);
+  position:absolute;
+  top:190px;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
 }
 
 .writing{
-	left:150px;
+  left:150px;
 }
 .problemSolve{
-	left:220px;
+  left:220px;
 }
 .PM{
-	left:290px;
+  left:290px;
 }
 
 .research{
-	left:360px;
+  left:360px;
 }
 
 .publicSpeaking{
-	left:430px;
+  left:430px;
 }
 
 .writingBar{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:90px;
     background-color:#9FCE57;
     top:-89px;
@@ -576,8 +590,8 @@ section.skills > .otherGraph hr{
 }
 
 .problemSolveBar{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:90px;
     background-color:#3DC694;
     top:-246px;
@@ -585,8 +599,8 @@ section.skills > .otherGraph hr{
 }
 
 .PMBar{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:50px;
     background-color:#4EC1F2;
     top:-364px;
@@ -594,8 +608,8 @@ section.skills > .otherGraph hr{
 }
 
 .researchBar{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:90px;
     background-color:#8D9EFF;
     top:-522px;
@@ -603,8 +617,8 @@ section.skills > .otherGraph hr{
 }
 
 .publicSpeakingBar{
-	position:relative;
-	width:20px;
+  position:relative;
+  width:20px;
     height:60px;
     background-color:#CD98FE;
     top:-650px;
