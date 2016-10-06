@@ -1,0 +1,961 @@
+.wrapper{
+	position:relative;
+
+}
+
+.content{
+	position:absolute;
+	width:100%;
+	background-color: #FFFFFF;
+
+}
+
+#topNavBar{
+	width:100%;
+	background-color:#7710C2;
+  margin-left:-25px;
+  padding-left:50px;
+  z-index:3;
+  position:fixed;
+  margin-top:-50px;
+  right:0;
+ 
+}
+
+#search{
+  position:relative;
+  display:inline;
+  width:200px;
+  height:30px;
+  top:-25px;
+  right:-500px;
+  border:1px none transparent;
+  border-bottom:1px solid black;
+  padding-bottom:0;
+  background-color:transparent;
+  color:white;
+}
+
+#search:focus{
+  outline:none;
+}
+
+#search:not(:focus){
+  color:transparent;
+}
+
+.searchText{
+  color:black;
+  position:relative;
+  display:inline;
+  right:-298px;
+  top:-24px;
+  padding-bottom:50px;
+  transition: 1s top;
+}
+
+#search:focus ~ .searchText{
+  color:#DB4DFF;
+  top:-50px;
+}
+
+#searchIcon:focus ~ .modal{
+  visibility:visible;
+}
+
+.modal{
+  position:absolute;
+  width:100%;
+  height:800px;
+  font-size:80px;
+  text-align: center;
+  border:2px solid black;
+  background-color:white;
+  visibility:hidden;
+}
+
+#modalInput1, #modalInput2{
+  display:none;
+}
+
+
+#modalInput1:checked + .modal{
+  visibility:visible;
+}
+
+#modalClose{
+  left:0px;
+  cursor: pointer;
+}
+
+nav > label:nth-of-type(1){
+  position:relative;
+  display:inline;
+  right:-730px;
+  top:-25px;
+  border:2px solid #5C246E;
+  border-radius:15%;
+}
+
+nav label > i{
+  color:#5C246E;
+}
+
+section{
+	position:relative;
+  left:50px;
+}
+
+nav > p{
+  position:relative;
+  left:0;
+  font-size:250%;
+  color:white;
+  left:50px;
+  top:50px;
+}
+
+nav > ul {
+  display:inline;
+  position:relative;
+  left:25%;
+  top:-20px;
+}
+
+nav > ul li{
+  display:inline;
+  padding-right:55px;
+  color:white;
+  font-size:25px;
+}
+
+h1{
+	position:relative;
+	left:50%;
+}
+
+article > p {
+	position:relative;
+	margin-left:20%;
+	margin-right:20%;
+	font-size:25px;
+}
+
+section h2{
+  display:block;
+  content:" ";
+  margin-top: 10px;
+  height:100px;
+  visibility:hidden;
+  z-index:-10;
+}
+
+section input{
+  display:none;
+}
+
+/*Projects*/
+
+.projectSection{
+  top:-50px;
+}
+
+
+.projectSection > label{
+	display:block;
+	width:150px;
+	height:50px;
+	margin-left:10%;
+	margin-right:0;
+	padding-left:50px;
+	padding-top:30px;
+	font-size:20px;
+
+}
+
+
+.projectSection > input + label:hover{
+    background-color:rgba(76,74,74,0.8);
+    color:white;
+}
+
+.projectSection > input:checked + label{
+    background-color:rgba(76,74,74,0.8);
+    color:white;
+}
+
+
+.displayArea{
+	position:absolute;
+	width:800px;
+	height:685px;
+	left:200px;
+    top:225px;
+    display:none;
+    margin-left:10%;
+    /*background-color:#4C4A4A;*/
+    background-color:rgba(76,74,74,0.8);
+
+}
+
+ .projectSection .displayArea > img{
+    visibility: hidden;
+	position:absolute;
+	left:16%;
+	top:20%;
+	z-index:2;
+	height:400px;
+
+	width:570px;
+
+} 
+
+.projectSection > input:checked +label + div.displayArea{
+	display:block;
+}
+
+
+.projectSection > input:checked + label + div.displayArea > input:checked + img{
+	visibility: visible;
+}
+
+.fa-circle-o{
+  color:transparent;
+  background-color:grey;
+  border-radius:50%;
+}
+
+.projectSection input:checked ~ div.displayArea input:nth-of-type(1):checked ~  div.radioLabels  label:nth-of-type(1) > .fa-circle-o,
+.projectSection input:checked ~ div.displayArea input:nth-of-type(2):checked ~  div.radioLabels  label:nth-of-type(2) > .fa-circle-o,
+.projectSection input:checked ~ div.displayArea input:nth-of-type(3):checked ~  div.radioLabels  label:nth-of-type(3) > .fa-circle-o{
+
+	background-color:purple;
+	color:transparent;
+} 
+
+
+.chevronLabels label[class="right"]{
+		position:absolute;
+        top:300px;
+        left:750px;
+        display:none;
+
+}
+
+.chevronLabels label[class="left"]{
+	position:absolute;
+	top:300px;
+	left:50px;
+    display:none;
+}
+
+
+.radioLabels{
+	position:absolute;
+	top:540px;
+	left:310px;
+	z-index:2;	
+}
+
+.radioLabels label{
+	display:inline;
+	float:left;
+	padding:10px;
+
+} 
+
+
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(1):checked  ~  .chevronLabels label:nth-of-type(1),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(1):checked  ~  .chevronLabels label:nth-of-type(2),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(2):checked  ~  .chevronLabels label:nth-of-type(3),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(2):checked  ~  .chevronLabels label:nth-of-type(4),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(5),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(6){
+	display:block;
+}
+
+div.description{
+	width:100%;
+	height:100px;
+    background-color:rgba(76,74,74,0);
+	position:relative;
+	top:570px;
+	display:none;
+	color:white;
+	font-size:17px;
+	padding-left:20px;
+}
+
+
+div.description  span {
+	font-family:Georgia, Serif;
+	font-weight:500;
+}
+
+div.description a{
+	margin-top:15px;
+	margin-right:30px;
+	text-decoration: none;
+	color:black;
+
+
+}
+
+div.description a:hover{
+	color:#879FF3;
+}
+
+.projectSection input:checked ~ div.displayArea > div.description {
+	display:block;
+}
+
+/*Skills */
+
+.skills {
+	position:relative;
+	top:250px;
+}
+
+section:nth-of-type(1) hr{
+	position:relative;
+	top:20px;
+	width:800px;
+
+}
+
+
+
+section:nth-of-type(2) hr{
+	position:relative;
+	top:350px;
+	width:800px;
+}
+
+section.skills hr:nth-of-type(1){
+	position:relative;
+	top:-460px;
+	width:400px;
+	left:0px;
+}
+
+hr#endSkillsLine{
+  position:relative;
+  width:400px;
+  top:-1050px;
+
+}
+
+section.skills > .backEndGraph  hr{
+  position:relative;
+  top:-360px;
+  width:400px;
+  left:0px;
+}
+
+section.skills > .otherGraph hr{
+  position:relative;
+  top:-727px;
+  width:400px;
+  left:0px;  
+}
+
+#frontend{
+	position:relative;
+	height:20px;
+	width:500px;
+	background-color:#FB5E5D;
+	text-align:left;
+	color:white;
+}
+
+#backend{
+	position:relative;
+	display:inline-block;
+	height:20px;
+	width:56px;
+	background-color:#4A6FEB;
+	margin-left:500px;
+	top:-20px;
+	text-align:right;
+	color:white;
+}
+
+.skillBar {
+	position:relative;
+	width:556px;
+	height:20px;
+	left:30%;
+}
+
+#frontendSkill{
+	position:relative;
+	left:300px;
+	top:100px;
+	color:#FB5E5D;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#backendSkill{
+	position:relative;
+	left:900px;
+	top:80px;	
+	color:#4A6FEB;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#otherSkill{
+	position:relative;
+	left:650px;
+	top:520px;		
+	color:black;
+	font-size:18px;
+	font-weight:bold;
+}
+
+.proficiencyLabels{
+	list-style-type:none;
+}
+
+.proficiencyLabels li {
+	margin-bottom:15px;
+}
+
+.frontendTechLabels{
+	position:relative;
+	list-style-type: none;
+	left:90px;
+		display:inline;
+}
+
+.frontendTechLabels li{
+
+	border:1px solid black;
+	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+}
+
+.js, .html, .react, .jquery,.node,.php,.mongo,.ruby {
+	position:absolute;
+	top:170px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+
+.js,.node{
+	left:150px;
+}
+.html,.php{
+	left:220px;
+}
+.react,.mongo{
+	left:290px;
+}
+.jquery,.ruby{
+	left:360px;
+}
+
+.jsBar,.backendBar1{
+	position:relative;
+	width:20px;
+    height:60px;
+    background-color:#FFAD41;
+    top:-60px;
+    left:170px;
+}
+
+.htmlBar,.backendBar2{
+	position:relative;
+	width:20px;
+    height:80px;
+    background-color:#38BAF0;
+    top:-208px;
+    left:230px;
+}
+
+.reactBar,.backendBar3{
+	position:relative;
+	width:20px;
+    height:20px;
+    background-color:#69D12B;
+    top:-295px;
+    left:290px;
+}
+
+.jqueryBar,.backendBar4{
+	position:relative;
+	width:20px;
+    height:20px;
+    background-color:#EFE210;
+    top:-383px;
+    left:350px;
+}
+
+.backendBar1,.backendBar2,.backendBar3,.backendBar4{
+  background-color: pink;
+  height:20px;
+}
+
+.backendBar1{
+  top:-20px;
+}
+
+.backendBar2{
+  top:-108px;
+}
+
+.backendBar3{
+  top:-195px;
+}
+
+.backendBar4{
+  top:-282px;
+}
+
+.frontEndGraph{
+	position:relative;
+	width:500px;
+    top:100px;
+	margin-left:150px;
+
+}
+
+.backEndGraph{
+	position:relative;
+	width:500px;
+	left:750px;
+	top:-512px;
+}
+
+
+ .bar:hover + div{
+  visibility: visible;
+}
+
+
+.otherGraph{
+	position:relative;
+	width:500px;
+	left:450px;
+	top:-550px;
+}
+
+.writing, .problemSolve, .PM, .research, .publicSpeaking {
+	position:absolute;
+	top:190px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+
+.writing{
+	left:150px;
+}
+.problemSolve{
+	left:220px;
+}
+.PM{
+	left:290px;
+}
+
+.research{
+	left:360px;
+}
+
+.publicSpeaking{
+	left:430px;
+}
+
+.writingBar{
+	position:relative;
+	width:20px;
+    height:90px;
+    background-color:#9FCE57;
+    top:-89px;
+    left:170px;
+}
+
+.problemSolveBar{
+	position:relative;
+	width:20px;
+    height:90px;
+    background-color:#3DC694;
+    top:-246px;
+    left:230px;
+}
+
+.PMBar{
+	position:relative;
+	width:20px;
+    height:50px;
+    background-color:#4EC1F2;
+    top:-364px;
+    left:290px;
+}
+
+.researchBar{
+	position:relative;
+	width:20px;
+    height:90px;
+    background-color:#8D9EFF;
+    top:-522px;
+    left:350px;
+}
+
+.publicSpeakingBar{
+	position:relative;
+	width:20px;
+    height:60px;
+    background-color:#CD98FE;
+    top:-650px;
+    left:400px;
+}
+
+.jsTooltip{
+  position:relative;
+  top:-190px;
+  left:108px;
+  visibility:hidden;
+}
+
+.htmlTooltip{
+  position:relative;
+  top:-350px;
+  left:170px;
+  visibility:hidden;
+}
+
+
+.reactTooltip{
+  position:relative;
+  top:-380px;
+  left:230px;
+  visibility:hidden;
+}
+
+.jqueryTooltip{
+  position:relative;
+  top:-470px;
+  left:290px;
+  visibility:hidden;
+}
+
+
+.nodeTooltip{
+  position:relative;
+  top:-100px;
+  left:110px;
+  visibility: hidden;
+}
+
+
+.phpTooltip{
+  position:relative;
+  top:-200px;
+  left:170px;
+  visibility: hidden;
+}
+
+.mongoTooltip{
+  position:relative;
+  top:-280px;
+  left:230px;
+  visibility: hidden;
+}
+
+.rubyTooltip{
+  position:relative;
+  top:-365px;
+  left:290px;
+  visibility: hidden;
+}
+
+.writingTooltip{
+  position:relative;
+  top:-245px;
+  left:110px;
+  visibility: hidden;
+}
+
+.problemTooltip{
+  position:relative;
+  top:-400px;
+  left:170px;
+  visibility: hidden;
+}
+
+.pmTooltip{
+  position:relative;
+  top:-480px;
+  left:230px;
+  visibility: hidden;
+}
+
+.researchTooltip{
+  position:relative;
+  top:-680px;
+  left:290px;
+  visibility: hidden;
+}
+
+.publicTooltip{
+  position:relative;
+  top:-780px;
+  left:340px;
+  visibility: hidden;
+}
+
+.tooltipBody{
+  position:relative;
+  height:40px;
+  width:150px;
+  background:black;
+  color: white;
+  font-size:80%;
+}
+
+.tip {
+  position:relative;
+
+  width:20px;
+  height:15px;
+  left:60px;
+  top:-15px;
+}
+
+/*Contact*/
+
+.contact {
+  position:relative;
+  top:-850px;
+}
+
+/* Business Card */
+
+.contact label { 
+  position:absolute;
+  top:20%;
+  left:40%;
+  display:block;
+  -webkit-perspective: 800px;
+  -moz-perspective:800px;
+  -ms-perspective:800px;
+  -o-perspective:800px;
+  perspective: 800px;
+  margin-bottom:200px;
+
+}
+
+.contact input {
+    display: none;
+}
+
+.card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /*transition: transform 1s;*/
+
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+
+  transition: all 1s;
+  position:absolute;
+  height:400px;
+  width:600px;
+ /* border:2px solid black;*/
+  margin:0;
+  margin-top:25%;
+  margin-left:-15%;
+  top:250px;
+  left:-100px;
+  background-color:black;
+
+}
+
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+ /* background: #FFF; */
+
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+
+    }
+
+.card div  p.name{
+  position: relative;
+  display:block;
+  margin-top:5%;
+  margin-left:5%;
+  margin-bottom:-4%;
+  font-weight: bold;
+  font-size:2.5em;
+  color: #FFFFFF;
+  text-align:left;
+
+/*  border:1px solid red;*/
+
+}
+
+.card div p.aboutme{
+  position:relative;
+  font-size:1.1em;
+  line-height:1.2em;
+  text-align:left;
+  margin-left:5%;
+  margin-bottom:3%;
+  padding-right:5%;
+
+
+
+}
+
+ .contact span{
+  font-size:0.7em;
+  left:15em;
+  margin-top:-10em;
+}
+
+
+.card .front{
+  color:#ffffff;
+  background-image: url("designs/bg2.png");
+
+}
+
+.card .back {
+  background-color: black;
+  color: #FFFFFF;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg); 
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg); 
+  transform: rotateX(180deg);
+
+    }
+
+.contact label:hover .card{
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  -o-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+  box-shadow: 1px 15px 10px rgba(0, 0, 0, .3);
+
+}
+
+.contact label:hover input:checked + .card {
+  -webkit-transform: rotateX(160deg);
+  -moz-transform: rotateX(160deg);
+  -ms-transform: rotateX(160deg);
+  -o-transform: rotateX(160deg);
+  transform: rotateX(160deg);
+  box-shadow: 1px 15px 10px rgba(0,0,0,.2);
+
+}
+
+.contact input:checked + .card {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.contact a{
+  color:red;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+#lmd{
+  position:absolute;
+  left:5%;
+  bottom:5%;
+}
+
+.links{
+  float:right;
+  padding-top:3%;
+  padding-right:1%;
+  margin-right:5%;
+  margin-top:5%;
+}
+
+.encyclopedia{
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:25%;
+  margin-left:13%;
+  margin-top:12%;
+}
+
+#left, #up {
+    position:absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin:5px;
+}
+
+#up {
+  position: absolute;
+  transform: rotate(90deg);
+  position: relative;
+ left:-10px;
+  top:3px;
+}
+
+#up-triangle {
+  position:relative;
+   width: 0; 
+   height: 0; 
+   top:-20px;
+   left:0px;
+   border-bottom: 15px solid white; 
+   border-left: 6px solid transparent; 
+   border-right: 6px solid transparent; 
+}
+
+#down-triangle {
+  position:relative;
+   width: 0; 
+   height: 0; 
+   top:-20px;
+   left:0px;
+   border-bottom: 15px solid white; 
+   border-left: 6px solid transparent; 
+   border-right: 6px solid transparent; 
+}
+
+#upArrow, #downArrow{
+  position:relative;
+  left:50px;
+  height:30px;
+  width:30px;
+  float:right;
+  margin-right:80px;
+  margin-top:40px;
+}
+
+#downArrow{
+  position:relative;
+  transform:rotate(180deg);
+  backface-visibility: visible;    
+  margin-right:-40px;
+  margin-top:25px;
+
+}
