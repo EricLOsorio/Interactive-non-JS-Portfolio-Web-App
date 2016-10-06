@@ -756,7 +756,6 @@ section.skills > .otherGraph hr{
   -ms-perspective:800px;
   -o-perspective:800px;
   perspective: 800px;
-  margin-bottom:200px;
 
 }
 
@@ -778,16 +777,21 @@ section.skills > .otherGraph hr{
   -o-transition: all 1s;
 
   transition: all 1s;
-  position:absolute;
+  position:relative;
   height:400px;
   width:600px;
  /* border:2px solid black;*/
   margin:0;
   margin-top:25%;
   margin-left:-15%;
-  top:250px;
+  top:100px;
   left:-100px;
   background-color:black;
+  -webkit-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility: hidden
 
 }
 
@@ -850,7 +854,7 @@ section.skills > .otherGraph hr{
 }
 
 .card .back {
-  background-color: black;
+  background-color: none;
   color: #FFFFFF;
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg); 
@@ -858,7 +862,29 @@ section.skills > .otherGraph hr{
   -o-transform: rotateX(180deg); 
   transform: rotateX(180deg);
 
-    }
+}
+
+#myName{
+  position:relative;
+  height:30px;
+  width:100px;
+  border:2px solid red;
+  color:white;
+  top:-50px;
+  left:20px;
+  padding-top:10px;
+  border-radius:10px;
+  background-color:black;
+  z-index:2;
+
+}
+
+.back > img{
+  position:relative;
+  height:400px;
+  width:600px;
+
+}
 
 .contact label:hover .card{
   -webkit-transform: rotateX(15deg);
@@ -955,7 +981,7 @@ section.skills > .otherGraph hr{
    border-right: 6px solid transparent; 
 }
 
-#upArrow, #downArrow{
+ .front ~ #upArrow, .front ~ #downArrow{
   position:relative;
   left:50px;
   height:30px;
@@ -965,11 +991,26 @@ section.skills > .otherGraph hr{
   margin-top:40px;
 }
 
-#downArrow{
+.front ~ #downArrow{
   position:relative;
   transform:rotate(180deg);
   backface-visibility: visible;    
   margin-right:-40px;
   margin-top:25px;
+
+}
+
+.back #upArrow{
+  color:red;
+  position:relative;
+  left:543px;
+  top:-400px;
+}
+
+.back #downArrow{
+  position:relative;
+    transform:rotate(180deg);
+  top:-1200px;
+  left:-20px;
 
 }
