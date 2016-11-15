@@ -26,6 +26,16 @@
   right:0;
  }
 
+ #aboutPic{
+  max-height:50em;
+  max-width:80em;
+  margin-left:15%;
+  height:auto;
+  width:auto;
+
+
+ }
+
 #sideNavBar{
   display:none;
 }
@@ -1503,6 +1513,15 @@ footer{
 
   }
 
+     #aboutPic{
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
+
   #fullCanvas{
     position: relative;
     height: 100%;
@@ -1811,6 +1830,15 @@ footer{
 
 @media(min-device-width:361px) and (max-device-width:600px) and (min-device-height:200px) {
 
+   #aboutPic{
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
+
   .displayArea{
     position:relative;
     width:80vw;
@@ -1911,6 +1939,15 @@ footer{
 }
 
 @media(min-device-width:601px) and (max-device-width:1024px) and (min-device-height:200px) {
+
+   #aboutPic{
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
 
   section.projectSection{
     top:2em;
