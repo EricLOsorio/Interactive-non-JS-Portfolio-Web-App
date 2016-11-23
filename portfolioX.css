@@ -1,3 +1,7 @@
+body {
+  font-family:Georgia,Verdana,Arial;
+}
+
 .wrapper{
   position:relative;  border:1px solid blue;
   padding:0;
