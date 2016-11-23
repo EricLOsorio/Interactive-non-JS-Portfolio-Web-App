@@ -1079,7 +1079,11 @@ footer p{
 
 @media (max-device-width:600px) and (min-device-height:200px),
        (max-device-width:1024px) and (min-device-height:200px){
- 
+
+ #topNavBar p{
+  width:8em;
+}         
+         
  section{
   width:100vw;
   margin-left:-3.5em;
