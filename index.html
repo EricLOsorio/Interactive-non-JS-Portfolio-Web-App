@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Portfolio #1 Eric L. Osorio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="portfolioX.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <input type="checkbox" id="off-menu">
+
+        <div class="solidTopBar">
+          <div class="name">
+             <p>Eric L. Osorio</p>
+          </div>
+
+
+        <label for="off-menu" class="hamburger">
+          <div class="bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+        </div>
+
+      <nav id="topNavBar">
+        <p>Eric L. Osorio</p> 
+
+        <ul>
+          <input type="radio" name="navRadio" id="aboutNavInput" checked>        
+          <li onclick="window.location='#about'">
+            <label for="aboutNavInput">About</label>
+          </li>
+          <input type="radio" name="navRadio" id="projectNavInput">          
+          <li onclick="window.location='#projects'">
+            <label for="projectNavInput">Projects</label>
+          </li>
+          <input type="radio" name="navRadio" id="skillsNavInput">          
+          <li onclick="window.location='#skills'">
+            <label for="skillsNavInput">Skills</label>
+          </li>
+          <input type="radio" name="navRadio" id="contactNavInput">          
+          <li onclick="window.location='#contact'">
+            <label for="contactNavInput">Contact</label>
+          </li>
+          </ul>
+
+
+        <label for="modalInput1" id="searchIcon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></label>
+        <input type="search" name="search" id="search"/>
+        <label for="search" class="searchText">
+          Search
+        </label>
+        <input type="radio" name="modalInput" id="modalInput1">
+        <div class="modal"><p>Search is temporarily disabled</p><label for="modalInput2" id="modalClose"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></label>
+        <input type="radio" name="modalInput" id="modalInput2">
+        </div>
+
+
+      </nav>
+
+    <div id="fullCanvas">
+
+    <div id="sideNavBar">
+
+        <ul>
+
+
+          <input type="radio" name="side" id="aboutSide">        
+          <li >
+            <label for="aboutSide">About</label>
+          </li>
+
+          <div class="sideDetails">
+            <p>I am an aspriring full stack developer</p> 
+          </div>       
+
+          <input type="radio" name="side" id="projectSide">                  
+          <li >
+            <label for="projectSide">Projects</label>
+          </li>
+
+          <div class="sideDetails">
+            <ul class="sideProjList">
+              <input type="radio" name="projDesc" id="calcProj">
+              <li><label for="calcProj">Calculator</label></li>
+              <div class="projectDetails">
+                 <p>Calculator using HTML, CSS3 and Vanilla JS</p>
+                 <a href="http://ericlosorio.github.io/calculator/calc.html">View Demo </a><br/><br/><a href="https://github.com/EricLOsorio/calculator/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="cartProj">
+              <li><label for="cartProj">Shopping Cart</label></li>
+              <div class="projectDetails">
+                 <p>Shopping Cart using HTML, CSS3 and Vanilla JS</p>
+                 <a href="http://ericlosorio.github.io/product-list-page/">View Demo</a><br/><br/><a href="https://github.com/EricLOsorio/product-list-page/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="formsProj">
+              <li><label for="formsProj">Forms</label></li>
+              <div class="projectDetails">
+                 <p>Forms using HTML, CSS3 and Vanilla JS</p>
+                 <a href="https://ericlosorio.github.io/forms-and-inputs/forms.html">View Demo </a><br/><br/><a href="https://github.com/EricLOsorio/forms-and-inputs/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="UI-Proj">
+              <li><label for="UI-Proj">Non-JavaScript UI</label></li>
+              <div class="projectDetails">
+                 <p>UI components using HTML and CSS3 only</p>
+                 <a href="http://ericlosorio.github.io/moderndeveloper-web-components/">View Demo </a><br/><br/><a href="https://github.com/EricLOsorio/moderndeveloper-web-components/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="teamProj">
+              <li><label for="teamProj">Collaborative Project</label></li>
+              <div class="projectDetails">
+                 <p>UI components using HTML, CSS3 and Vanilla JS</p>
+                 <a href="https://patrickfranz.github.io/md-encyclopedia-profiles/">View Demo </a><br/><br/><a href="https://github.com/PatrickFranz/md-encyclopedia-profiles"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="accordionProj"> 
+              <li><label for="accordionProj">Responsive Accordion</label></li>
+              <div class="projectDetails">
+                 <p>UI components using HTML and CSS3 only</p>
+                 <a href="https://ericlosorio.github.io/moderndeveloper-web-components/components/accordion/">View Demo </a><br/><br/><a href="https://github.com/EricLOsorio/moderndeveloper-web-components/tree/gh-pages/components/accordion"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>
+              <input type="radio" name="projDesc" id="menuBordersProj"> 
+              <li><label for="menuBordersProj">Hackathon menu borders project</label></li>
+              <div class="projectDetails">
+                 <p>Hackathon menu borders exercise using HTML and CSS3 only</p>
+                 <a href="https://ericlosorio.github.io/Menu-Borders/borders.html">View Demo </a><br/><br/><a href="https://github.com/EricLOsorio/Menu-Borders/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+              </div>                            
+            </ul>
+
+          </div>
+
+          <input type="radio" name="side" id="skillsSide">          
+          <li>
+            <label for="skillsSide">Skills</label>
+          </li>
+
+          <div class="sideDetails">
+            <ul>
+              <li>90% frontend</li>
+              <li>10% backend</li>
+            </ul> 
+          </div> 
+
+          <input type="radio" name="side" id="contactSide">          
+          <li>
+            <label for="contactSide">Contact</label>
+          </li>
+
+            <div class="sideDetails">
+            <a href="mailto:cyberfrein@gmail.com">cyberfrein@gmail.com</a></p>
+            <a href="https://twitter.com/ericleeo1"><img src="designs/twitter.png" class="links"/></a>
+            <a href="https://github.com/EricLOsorio"><img src="designs/github2.png" class="links"/></a>         
+            <a href="https://www.linkedin.com/in/ericlosorio"><img src="designs/linkedin.png" class="links"/></a>
+            <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img src="designs/facebook.png" class="links"/></a>
+            </div>
+            <li class="copy">© 2016 Logo. All Rights Reserved.</li>
+
+          </ul>
+      </div>
+
+
+    <label for="off-menu" class="mask"></label>   
+    <div id="allContent">
+
+    <section class="aboutMe">
+      <header>
+        <h2 id="about">Top of About Section</h2>
+        <h1>About</h1>
+      </header>
+      <article>
+        <p>I am a systems administrator turned web developer. My goal is to become a fullstack developer and work on challenging projects that make a positive impact on humanity.</p>
+        <p> This page is part of my portfolio as I progress through the challenging curriculum of the <span><a href="https://moderndeveloper.com/">Learn Modern Developer</a></span> program in my quest to reach these goals. It is a work in progress used to track my skill proficiencies.</p>
+      </article>
+       <img src="images/Orlando.JPG" alt="Site seeing in Orlando" id="aboutPic" />   
+    <hr/>   
+       
+    </section>
+
+    
+    <section class="projectSection">
+      <header>
+        <h2 id="projects">Top of Project Section</h2>      
+        <a name="projects"><h1>Projects</h1></a>
+      </header>
+      <article>
+        <p>Here is a sample of the projects that I've worked on so far at <span><a href="https://moderndeveloper.com/">Learn Modern Developer</a></span> </p>
+      </article>
+
+       
+      <input type="radio" name="projects" id="project1" checked>
+      <label for="project1">Calculator</label>      
+      <div class="displayArea">
+
+
+          <input type="radio" name="images" id="project1Img1" checked>
+          <img src="images/calc1.bmp">
+
+          <input type="radio" name="images" id="project1Img2" >
+          <img src="images/calc2.bmp">
+ 
+          <input type="radio" name="images" id="project1Img3" >
+          <img src="images/calc3.bmp">
+
+          <input type="radio" name="images" id="project1Img4" >
+          <img src="images/calc4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project1Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project1Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project1Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project1Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project1Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project1Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project1Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project1Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>            
+          </div>    
+
+          <div class="radioLabels">
+            <label for="project1Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project1Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project1Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project1Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                     
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3, Vanilla JavaScript</p>
+         <p>Scientific Calculator with basic functionality, advanced features coming soon</p>
+         <a href="http://ericlosorio.github.io/calculator/calc.html">View Demo </a><a href="https://github.com/EricLOsorio/calculator/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+
+      <input type="radio" name="projects" id="project2">
+      <label for="project2">Shopping Cart</label>
+      <div class="displayArea">
+
+
+          <input type="radio" name="images2" id="project2Img1" checked>
+          <img src="images/cart1.png">
+
+          <input type="radio" name="images2" id="project2Img2" >
+          <img src="images/cart2.png">
+ 
+          <input type="radio" name="images2" id="project2Img3" >
+          <img src="images/cart3.png">
+
+          <input type="radio" name="images2" id="project2Img4" >
+          <img src="images/cart4.jpg">
+
+
+          <div class="chevronLabels">
+            <label for="project2Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project2Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project2Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project2Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project2Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project2Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project2Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project2Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project2Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project2Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project2Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
+            <label for="project2Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                   
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3, Vanilla JavaScript</p>
+         <p>Basic shopping cart with JavaScript functions for calculating prices</p>
+         <a href="http://ericlosorio.github.io/product-list-page/">View Demo</a><a href="https://github.com/EricLOsorio/product-list-page/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+
+      <input type="radio" name="projects" id="project3">
+      <label for="project3">Forms</label>      
+      <div class="displayArea">
+
+
+          <input type="radio" name="images3" id="project3Img1" checked>
+          <img src="images/forms1.jpg">
+
+          <input type="radio" name="images3" id="project3Img2" >
+          <img src="images/forms2.jpg">
+ 
+          <input type="radio" name="images3" id="project3Img3" >
+          <img src="images/forms3.jpg">
+
+          <input type="radio" name="images3" id="project3Img4" >
+          <img src="images/forms4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project3Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project3Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project3Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project3Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project3Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project3Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project3Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project3Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project3Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project3Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project3Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project3Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                     
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3, Vanilla JavaScript</p>
+         <p>Basic forms with validation JavaScript</p>
+         <a href="https://ericlosorio.github.io/forms-and-inputs/forms.html">View Demo </a><a href="https://github.com/EricLOsorio/forms-and-inputs/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>
+
+        </div>          
+      
+
+
+      <input type="radio" name="projects" id="project4">
+      <label for="project4">Non-JavaScript UI Components</label>
+      <div class="displayArea">
+
+
+          <input type="radio" name="images4" id="project4Img1" checked>
+          <img src="images/non-js1.jpg">
+
+          <input type="radio" name="images4" id="project4Img2" >
+          <img src="images/non-js2.jpg">
+ 
+          <input type="radio" name="images4" id="project4Img3" >
+          <img src="images/non-js3.jpg">
+
+          <input type="radio" name="images4" id="project4Img4" >
+          <img src="images/non-js4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project4Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project4Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project4Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project4Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project4Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project4Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project4Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project4Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project4Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project4Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project4Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
+            <label for="project4Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3</p>
+         <p>Business Card, Tabs, Accordion, Side Bar, Image Gallery and Button non-JavaScript-components</p>
+         <a href="http://ericlosorio.github.io/moderndeveloper-web-components/">View Demo </a><a href="https://github.com/EricLOsorio/moderndeveloper-web-components/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+
+      <input type="radio" name="projects" id="project5">
+      <label for="project5">Collaborative Projects</label>      
+      <div class="displayArea">
+
+
+          <input type="radio" name="images5" id="project5Img1" checked>
+          <img src="images/collaboration1.png">
+
+          <input type="radio" name="images5" id="project5Img2" >
+          <img src="images/collaboration2.png">
+ 
+          <input type="radio" name="images5" id="project5Img3" >
+          <img src="images/collaboration3.png">
+
+          <input type="radio" name="images5" id="project5Img4" >
+          <img src="images/collaboration4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project5Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project5Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project5Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project5Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project5Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project5Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project5Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project5Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project5Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project5Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project5Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
+            <label for="project5Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3, Vanilla JavaScript</p>
+         <p>Collaboration Project for Modern Developer Encyclopedia with Javascript object definitions</p>
+         <a href="https://patrickfranz.github.io/md-encyclopedia-profiles/">View Demo </a><a href="https://github.com/PatrickFranz/md-encyclopedia-profiles"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+  <!--NEW RESPONSIVE ACCORDION PROJECT-->  
+  
+      <input type="radio" name="projects" id="project6">
+      <label for="project6">Responsive Accordion</label>      
+      <div class="displayArea">
+
+
+          <input type="radio" name="images6" id="project6Img1" checked>
+          <img src="images/accResponsive1.jpg">
+
+          <input type="radio" name="images6" id="project6Img2" >
+          <img src="images/accResponsive2.jpg">
+ 
+          <input type="radio" name="images6" id="project6Img3" >
+          <img src="images/accResponsive3.jpg">
+
+          <input type="radio" name="images6" id="project6Img4" >
+          <img src="images/accResponsive4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project6Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project6Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project6Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project6Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project6Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project6Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project6Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project6Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project6Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project6Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project6Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
+            <label for="project6Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3</p>
+         <p>Responsive Accordion with only HTML and CSS</p>
+         <a href="https://ericlosorio.github.io/moderndeveloper-web-components/components/accordion/">View Demo </a><a href="https://github.com/EricLOsorio/moderndeveloper-web-components/tree/gh-pages/components/accordion"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+  <!--NEW Hackathon Menu Borders-->  
+  
+      <input type="radio" name="projects" id="project7">
+      <label for="project7">Hackathon Menu Borders</label>      
+      <div class="displayArea">
+
+
+          <input type="radio" name="images7" id="project7Img1" checked>
+          <img src="images/animatedBorders1.jpg">
+
+          <input type="radio" name="images7" id="project7Img2" >
+          <img src="images/animatedBorders2.jpg">
+ 
+          <input type="radio" name="images7" id="project7Img3" >
+          <img src="images/animatedBorders3.jpg">
+
+          <input type="radio" name="images7" id="project7Img4" >
+          <img src="images/animatedBorders4.jpg">          
+
+          <div class="chevronLabels">
+            <label for="project7Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project7Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project7Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project7Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project7Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project7Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project7Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
+            <label for="project7Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+          </div>
+
+          <div class="radioLabels">
+            <label for="project7Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="project7Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
+            <label for="project7Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
+            <label for="project7Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
+          </div>  
+
+
+        <div class="description">
+          <p><span>TECHNOLOGIES:</span> HTML5, CSS3</p>
+         <p>Hackathon project for animated borders using only HTML and CSS</p>
+         <a href="https://ericlosorio.github.io/Menu-Borders/borders.html">View Demo </a><a href="https://github.com/EricLOsorio/Menu-Borders/tree/gh-pages"><i class="fa fa-github" aria-hidden="true"></i>  Project Source on GitHub</a>
+
+        </div>           
+      </div>
+
+
+    <hr/>
+
+    </section>
+
+
+
+    <section class="skills">
+      <header>
+        <h2 id="skills">Skills header</h2>
+        <h1>Skills</h1>
+      </header>
+      <article>
+        <p>Here are some metrics to help visualize a number of skills related to web development and other professional skills</p>
+      </article>
+
+
+      <div class="skillBar">
+      <div id="frontend">90%</div><div id="backend">10%</div>
+      </div>  
+
+      <div id="frontendSkill">Frontend Development</div>
+      <div id="backendSkill">Backend Developement</div>
+      <div id="otherSkill">Other Skills</div>
+
+      <div class="frontEndGraph">
+        <ul class="proficiencyLabels">
+          <li>Expert</li>
+          <li>Proficient</li>
+          <li>Competent</li>
+          <li>Learning</li>
+        </ul>   
+
+        <div class="front">
+        <div class="js">JavaScript</div>
+        <div class="html">HTML/CSS</div>
+        <div class="react">ReactJS</div>
+        <div class="jquery">jQuery</div>
+
+
+        <div class="jsBar bar"></div>
+        <div class="jsTooltip">
+          <div class="tooltipBody"><p>Competent at JavaScript</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="htmlBar bar"></div>
+        <div class="htmlTooltip">
+          <div class="tooltipBody"><p>Proficient with HTML/CSS</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="reactBar bar"></div>
+        <div class="reactTooltip">
+          <div class="tooltipBody"><p>Still learning ReactJS</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div> 
+
+        <div class="jqueryBar bar"></div>
+        <div class="jqueryTooltip">
+          <div class="tooltipBody"><p>Still learning jQuery</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>        
+
+        <hr class="graphLabelsLine">   
+        </div>      
+      </div>
+
+      <div class="backEndGraph">
+        <ul class="proficiencyLabels">
+          <li>Expert</li>
+          <li>Proficient</li>
+          <li>Competent</li>
+          <li>Learning</li>
+        </ul>   
+
+        <div class="back">
+        <div class="node">NodeJS</div>
+        <div class="php">PHP</div>
+        <div class="mongo">MongoDB</div>
+        <div class="ruby">Ruby</div>
+
+
+        <div class="backendBar1 bar"></div>
+        <div class="nodeTooltip">
+          <div class="tooltipBody"><p>Still learning NodeJS</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="backendBar2 bar"></div>
+        <div class="phpTooltip">
+          <div class="tooltipBody"><p>Still learning PHP</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="backendBar3 bar"></div>
+        <div class="mongoTooltip">
+          <div class="tooltipBody"><p>Still learning MongoDB</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="backendBar4 bar"></div>
+        <div class="rubyTooltip">
+          <div class="tooltipBody"><p>Still learning Ruby</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+
+        <hr class="graphLabelsLine">   
+        </div>      
+      </div>
+
+      <div class="otherGraph">
+        <ul class="proficiencyLabels">
+          <li>Expert</li>
+          <li>Proficient</li>
+          <li>Competent</li>
+          <li>Learning</li>
+        </ul>   
+
+        <div class="other">
+        <div class="writing">Written Communication</div>
+        <div class="problemSolve">Problem Solving</div>
+        <div class="PM">Project Management</div>
+        <div class="research">Research</div>
+        <div class="publicSpeaking">Public Speaking</div>
+
+
+        <div class="writingBar bar"></div>
+        <div class="writingTooltip">
+          <div class="tooltipBody"><p>Proficient at written communication</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="problemSolveBar bar"></div>
+        <div class="problemTooltip">
+          <div class="tooltipBody"><p>Proficient at problem solving</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="PMBar bar"></div>
+        <div class="pmTooltip">
+          <div class="tooltipBody"><p>Competent at project management</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="researchBar bar"></div>
+        <div class="researchTooltip">
+          <div class="tooltipBody"><p>Proficient at research</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="publicSpeakingBar bar"></div>
+        <div class="publicTooltip">
+          <div class="tooltipBody"><p>Competent at public speaking</p></div>
+          <div class=tip><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></div>
+        </div>        
+
+        <hr/>
+        </div>    
+      </div>
+
+      <hr id="endSkillsLine"/>
+    </section>
+
+    <section class="contact">
+
+      <header>
+       <h2 id="contact">Contact header</h2>
+       <h1>Contact</h1>
+      </header>
+      <article>
+        <p>Feel free to contact me at the email below, or through any of the social network sites on my digital business card.</p>
+      </article>
+
+      <label>
+        <input type="checkbox">
+        <div class="card">
+          <div class="front">
+            <p class="name">Eric L. Osorio</p>
+            <p class="aboutme">Freelance Fullstack Developer</p>
+            <p class="aboutme">Future graduate of <a href="https://learn.moderndeveloper.com">ModernDeveloper.com</a></p>
+            <p class="aboutme">Proficient in HTML, CSS3 and JavaScript along with extensive experience in systems administration and networking.</p>
+            <p class="aboutme">Location:Washington D.C. Area
+            <p class="aboutme"><a href="mailto:cyberfrein@gmail.com">cyberfrein@gmail.com</a></p>
+            <a href="https://encyclopedia.moderndeveloper.com"><img src="designs/enc1.png" id="lmd"/></a>
+            <a href="https://twitter.com/ericleeo1"><img src="designs/twitter.png" class="links"/></a>
+            <a href="https://github.com/EricLOsorio"><img src="designs/github2.png" class="links"/></a>         
+            <a href="https://www.linkedin.com/in/ericlosorio"><img src="designs/linkedin.png" class="links"/></a>
+            <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img src="designs/facebook.png" class="links"/></a>
+            <p class="encyclopedia">Eric L. Osorio<br/>
+          on  <a href="https://encyclopedia.moderndeveloper.com/">Encyclopedia.MD</a></p>
+
+
+          </div>
+        <div id="upArrow">
+          <div id="up" ></div>
+          <div id="left"></div>
+          <div id="up-triangle"></div>
+        </div>
+
+        <div id="downArrow">
+          <div id="up" ></div>
+          <div id="left"></div>
+          <div id="down-triangle"></div>
+        </div>        
+        
+        <div class="back">
+          <img src="designs/atWork.JPG" alt="At Work" id="backImg"/>
+          <div id="myName">Eric L. Osorio</div>
+          <div id="upArrow">
+            <div id="up" ></div>
+            <div id="left"></div>
+            <div id="up-triangle"></div>
+          </div>
+
+          <div id="downArrow">
+            <div id="up" ></div>
+            <div id="left"></div>
+            <div id="down-triangle"></div>
+          </div> 
+        </div>
+
+
+        </div>
+      </label>
+    </section>
+
+
+    </div>
+    </div>
+
+    <footer>
+      <p>2016 Eric L. Osorio</p>
+    </footer>    
+
+    </div>
+  </div>
+</body>
+</html>
