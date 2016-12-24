@@ -1,0 +1,98 @@
+//_search.scss
+
+#search{
+  @include position-top(relative,-25px);
+  @include h-w(30px,200px);
+  display:inline;
+  right:-500px;
+  border:1px none transparent;
+  border-bottom:2px solid black;
+  padding-bottom:0;
+  background-color:transparent;
+  color:$white;
+  &:hover{
+    cursor:pointer;
+  }
+  @include large-only-device{
+    margin-left:3em;
+    left:-3em;
+    top:0.8em;
+    color:$white;
+    border-bottom:2px solid $black;
+  }
+  @include med-only-device{
+    left:0;
+    top:0.5em;
+  }
+  @include small-device{
+    display:none;
+  }
+}
+
+#search:focus{
+  outline:none;
+}
+
+#search:not(:focus){
+  color:transparent;
+}
+
+.searchText{
+  @include position-top(relative,-24px);
+  @include transition-element(top,1s);
+  color:$black;
+  display:inline;
+  right:-298px;
+  padding-bottom:50px;
+  &:hover{
+    cursor:pointer;
+  }  
+  @include large-only-device{
+    margin-left:0em;
+    left:-8em;
+    font-size:1.8em;
+    top:0.8em;
+    color:$white;
+  }
+  @include med-only-device{
+    left:-8.5em;
+    top:0.6em;
+    font-size:1.4em;
+  }  
+  @include small-device{
+    display:none;
+  }
+}
+
+.searchText, #search{
+  @include large-only-device{
+    top:0;
+    color:$white;
+  }
+}
+
+#search:focus ~ .searchText{
+  color:$search-text-focus;
+  top:-50px;
+}
+
+#searchIcon{
+  @include top-left-position(-1.6em,45em,relative);
+  &:hover{
+    cursor:pointer;
+  }  
+  @include med-only-device{
+    font-size:1.5em;
+    left:10em;
+    top:0.5em;
+  }
+  @include large-only-device{
+    font-size:1.5em;
+    left:9em;
+    top:0em; 
+  }
+}
+
+#searchIcon:focus ~ .modal{
+  visibility:visible;
+}

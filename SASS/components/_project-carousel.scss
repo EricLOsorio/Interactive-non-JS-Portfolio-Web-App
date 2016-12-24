@@ -1,0 +1,216 @@
+//_project-carousel.scss
+
+/*Projects*/
+
+.projectSection{
+  top:20px;
+  h1{
+    width:5em;
+  }
+}
+
+section.projectSection{
+  @include large-only-device{
+    top:2em;
+  }
+}
+
+
+.projectSection > label{
+  @include display-marginLeft(block, 20%);
+  @include h-w(50px,150px);
+  &:hover{
+    cursor:pointer;
+  }  
+  @include large-only-device{
+    margin-bottom:0;
+    margin-left:3.9em;
+    border:1px solid $black; 
+  }
+  @include med-only-device{
+    margin-bottom:0;
+    margin-left:2.05em;
+    border:1px solid $black;
+  }
+  padding-left:50px;
+  padding-top:30px;
+  font-size:20px;
+}
+
+
+.projectSection > input + label:hover,
+.projectSection > input:checked + label{
+  background-color:$grey;
+  color:$white;
+}
+
+
+.displayArea{
+  @include structure-dimension(absolute,200px,245px,800px,685px);
+  @include display-marginLeft(none,20%);
+  @include med-only-device{
+    @include structure-dimension(relative,-2.6em,0.1em,80vw,26em);
+    display:none;
+  }
+  @include large-only-device{
+    @include structure-dimension(relative,-4.8em,0.1em,80vw,26em);
+    display:none;
+  }
+  background-color:$grey;
+
+}
+
+ .projectSection .displayArea > img{
+   @include top-left-position(20%,16%,absolute);
+   @include h-w(400px,570px);
+   @include med-and-large-device{
+     @include structure-dimension(absolute,2em,3em,80vw,15em);
+     visibility: hidden;
+     z-index:2;
+   }
+   @include med-only-device{
+     @include structure-dimension(absolute,2em,3em,60vw,15em);
+     visibility: hidden;
+     z-index:2;
+   }
+   @include large-only-device{
+     width:70vw;
+   }
+   visibility: hidden;
+   z-index:2;
+} 
+
+.projectSection > input:checked +label + div.displayArea{
+  display:block;
+}
+
+
+.projectSection > input:checked + label + div.displayArea > input:checked + img{
+  visibility: visible;
+}
+
+.fa-circle-o{
+  color:transparent;
+  background-color:grey;
+  border-radius:50%;
+}
+
+@for $i from 1 through 4 {
+  .projectSection input:checked ~ div.displayArea input:nth-of-type(#{$i}):checked ~  div.radioLabels  label:nth-of-type(#{$i}) > .fa-circle-o {
+    background-color:$purple;
+    color:transparent;
+  }
+} 
+
+
+.chevronLabels label[class="right"]{
+  @include top-left-position(300px,750px,absolute);
+  @include med-and-large-device{
+    @include top-left-position(157px,290px,absolute);
+    display:none;
+  }
+  @include med-only-device{
+    @include top-left-position(157px,285px,absolute);
+    display:none;
+  }
+  @include large-only-device{
+    @include top-left-position(157px,570px,absolute);
+    display:none;
+  }
+  display:none;
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+.chevronLabels label[class="left"]{
+  @include top-left-position(300px,50px,absolute);
+  @include med-and-large-device{
+    @include top-left-position(160px,-1px,absolute);
+    display:none;
+  }
+  display:none;
+  &:hover{
+    cursor:pointer;
+  }  
+}
+
+
+.radioLabels{
+  @include top-left-position(540px,310px,absolute);
+  @include med-and-large-device{
+    @include top-left-position(17.5em,6em,absolute);
+    z-index:2;
+  }
+  z-index:2;  
+}
+
+.radioLabels label{
+  display:inline;
+  float:left;
+  padding:10px;
+  &:hover{
+    cursor:pointer;
+  }  
+} 
+
+@for $j from 1 through 4 {
+   $rightArrow:chevronRT($j);
+   $leftArrow:chevronLT($j);
+  .projectSection > input:checked ~ .displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$rightArrow}),
+  .projectSection > input:checked ~ .displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$leftArrow}){
+    display:block;
+  }  
+}
+
+
+div.description{
+  @include h-w(100px,100%);
+  @include large-only-device{
+    @include top-left-position(25em,-20px,relative);
+    margin-top:-15px;
+    margin-right:0px;
+    margin-left:3em;
+    font-size:0.8em;
+    color:$white;  
+  }
+  @include med-only-device{
+    @include top-left-position(25em,-20px,relative);
+    padding-left:2em;
+    margin-top:-15px;
+    margin-right:0px;
+    font-size:0.8em;
+    color:$black;
+  }
+  background-color:$greylight;
+  position:relative;
+  top:570px;
+  display:none;
+  color:$white;
+  font-size:17px;
+  padding-left:20px;
+
+}
+
+
+div.description  span {
+  font-family:Georgia, Serif;
+  font-weight:500;
+
+}
+
+div.description a{
+  margin-top:15px;
+  margin-right:30px;
+  text-decoration: none;
+  color:$white;
+}
+
+div.description a:hover{
+  color:$blue;
+}
+
+.projectSection input:checked ~ div.displayArea > div.description {
+  display:block;
+  z-index:1;
+}

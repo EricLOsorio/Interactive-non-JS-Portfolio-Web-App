@@ -1,0 +1,9 @@
+//_functions.scss
+
+@function chevronRT($n) {
+	@return $n * 2 - 1;
+}
+
+@function chevronLT($n) {
+	@return $n * 2;
+}

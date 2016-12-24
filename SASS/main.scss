@@ -1,0 +1,25 @@
+//main.scss
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/colors';
+
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sideBar';
+@import 'layout/topBars';
+
+@import 'components/aboutPic';
+@import 'components/hamburger';
+@import 'components/modal';
+@import 'components/offmenu';
+@import 'components/project-carousel';
+@import 'components/search';
+@import 'components/skillsSection';
+@import 'components/contact';
+

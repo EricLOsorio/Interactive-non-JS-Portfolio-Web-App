@@ -1,0 +1,44 @@
+//_modal.scss
+
+.modal{
+  @include h-w(800px,100%);
+  @include med-and-large-device{
+    @include structure-dimension(absolute,0.0em,0em,107vw,150vh);
+    font-size:3em;
+    text-align: center;
+    background-color:white;
+    visibility:hidden;
+  }
+  position:absolute;
+  font-size:80px;
+  text-align: center;
+  border:2px solid black;
+  background-color:white;
+  visibility:hidden;
+
+  p{
+    @include med-and-large-device{
+      @include position-left(relative,-2em);
+      font-size:1em;
+    }
+  }
+}
+
+#modalInput1, #modalInput2{
+  display:none;
+}
+
+
+#modalInput1:checked + .modal{
+  visibility:visible;
+}
+
+#modalClose{
+  @include med-and-large-device{
+    @include top-left-position(1.8em,-4em,relative);
+    cursor: pointer;
+    font-size:0.5em;
+  }
+  left:0px;
+  cursor: pointer;
+}

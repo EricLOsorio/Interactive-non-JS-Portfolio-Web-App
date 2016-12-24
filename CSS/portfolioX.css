@@ -1,0 +1,2117 @@
+body {/*********************************************************************/
+  font-family:Georgia,Verdana,Arial;
+}
+
+.wrapper{/*********************************************************************/
+  position:relative;
+  padding:0;
+  margin:0;
+}
+
+.content{/*********************************************************************/
+  position:absolute;
+  width:100%;
+  background-color: #FFFFFF;
+}
+
+.solidTopBar{/*********************************************************************/
+  display:none;
+}
+
+#topNavBar{/*********************************************************************/
+  width:100%;
+  background-color:#9932CC;
+  margin-left:-25px;
+  padding-left:50px;
+  z-index:3;
+  position:fixed;
+  margin-top:-50px;
+  right:0;
+ }
+
+ #aboutPic{/*********************************************************************/
+  max-height:50em;
+  max-width:80em;
+  margin-left:20%;
+  margin-right:20%;
+  height:auto;
+  width:auto;
+ }
+
+#sideNavBar{/*********************************************************************/
+  display:none;
+}
+
+#off-menu{/*********************************************************************/
+  display:none;
+}
+
+.hamburger{/*********************************************************************/
+  display:none;
+}
+
+#search{/*********************************************************************/
+  position:relative;
+  display:inline;
+  width:200px;
+  height:30px;
+  top:-25px;
+  right:-500px;
+  border:1px none transparent;
+  border-bottom:2px solid black;
+  padding-bottom:0;
+  background-color:transparent;
+  color:white;
+}
+
+#search:focus{/*********************************************************************/
+  outline:none;
+}
+
+#search:not(:focus){/*********************************************************************/
+  color:transparent;
+}
+
+.searchText{/*********************************************************************/
+  color:black;
+  position:relative;
+  display:inline;
+  right:-298px;
+  top:-24px;
+  padding-bottom:50px;
+  transition: 1s top;
+}
+
+#search:focus ~ .searchText{/*********************************************************************/
+  color:#DB4DFF;
+  top:-50px;
+}
+
+#searchIcon{/*********************************************************************/
+  position:relative;
+  left:45em;
+  top:-1.6em;
+}
+
+#searchIcon:focus ~ .modal{/*********************************************************************/
+  visibility:visible;
+}
+
+.modal{/*********************************************************************/
+  position:absolute;
+  width:100%;
+  height:800px;
+  font-size:80px;
+  text-align: center;
+  border:2px solid black;
+  background-color:white;
+  visibility:hidden;
+}
+
+#modalInput1, #modalInput2{/*********************************************************************/
+  display:none;
+}
+
+
+#modalInput1:checked + .modal{/*********************************************************************/
+  visibility:visible;
+}
+
+#modalClose{/*********************************************************************/
+  left:0px;
+  cursor: pointer;
+}
+
+nav > label:nth-of-type(1){/*********************************************************************/
+  position:relative;
+  display:inline;
+  right:-730px;
+  top:-25px;
+  border:2px solid #000000;
+  border-radius:15%;
+}
+
+nav label > i{/*********************************************************************/
+  color:#000000;
+}
+
+nav ul li > label {/*********************************************************************/
+
+  padding:25px;
+}
+
+nav ul input{/*********************************************************************/
+  display:none;
+}
+
+
+section{/*********************************************************************/
+  position:relative;
+  left:50px;
+}
+
+nav > p{/*********************************************************************/
+  position:relative;
+  left:0;
+  width:8em;
+  font-size:250%;
+  color:white;
+  left:50px;
+  top:50px;
+}
+
+nav > ul {/*********************************************************************/
+  display:inline;
+  position:relative;
+  left:25%;
+  top:-20px;
+  margin-left:2em;
+}
+
+nav > ul li{/*********************************************************************/
+  display:inline;
+  padding-right:0px;
+  color:white;
+  font-size:25px;
+}
+
+nav input:checked + li > label{/*********************************************************************/
+  background-color:#BB32FF;
+  color:#000;
+}
+
+
+h1{/*********************************************************************/
+  position:relative;
+  left:50%;
+}
+
+article > p {/*********************************************************************/
+  position:relative;
+  margin-left:20%;
+  margin-right:20%;
+  font-size:25px;
+}
+
+section h2{/*********************************************************************/
+  display:block;
+  content:" ";
+  margin-top: 10px;
+  height:100px;/*********************************************120px CHANGED*********************************************************/
+  visibility:hidden;
+  z-index:-10;
+}
+
+section input{/*********************************************************************/
+  display:none;
+}
+
+/*Projects*/
+
+.projectSection{/***********************************************CHANGED TOP TO 20px*******************************************************************/
+  top:-50px;
+}
+
+
+.projectSection > label{/*********************************************************************/
+  display:block;
+  width:150px;
+  height:50px;
+  margin-left:10%;
+  margin-right:0;/***************************************************DELETED MARGIN-RIGH:0*********************************************************************/
+  padding-left:50px;
+  padding-top:30px;
+  font-size:20px;
+
+}
+
+
+.projectSection > input + label:hover{/*********************************************************************/
+    background-color:rgba(76,74,74,0.8);
+    color:white;
+}
+
+.projectSection > input:checked + label{/*********************************************************************/
+    background-color:rgba(76,74,74,0.8);
+    color:white;
+}
+
+
+.displayArea{
+  position:absolute;
+  width:800px;
+  height:685px;
+  left:200px;
+    top:225px;/*****************************************************************CHANGED TOP TO 245px******************************************************/
+    display:none;
+    margin-left:10%;/*********************************************************CHANGED MARGIN-LEFT TO 20%**********************************************************/
+    /*background-color:#4C4A4A;*/
+    background-color:rgba(76,74,74,0.8);
+
+}
+
+ .projectSection .displayArea > img{/*********************************************************************/
+    visibility: hidden;
+  position:absolute;
+  left:16%;
+  top:20%;
+  z-index:2;
+  height:400px;
+
+  width:570px;
+
+} 
+
+.projectSection > input:checked +label + div.displayArea{/*********************************************************************/
+  display:block;
+}
+
+
+.projectSection > input:checked + label + div.displayArea > input:checked + img{/*********************************************************************/
+  visibility: visible;
+}
+
+.fa-circle-o{/*********************************************************************/
+  color:transparent;
+  background-color:grey;
+  border-radius:50%;
+}
+
+.projectSection input:checked ~ div.displayArea input:nth-of-type(1):checked ~  div.radioLabels  label:nth-of-type(1) > .fa-circle-o,
+.projectSection input:checked ~ div.displayArea input:nth-of-type(2):checked ~  div.radioLabels  label:nth-of-type(2) > .fa-circle-o,
+.projectSection input:checked ~ div.displayArea input:nth-of-type(3):checked ~  div.radioLabels  label:nth-of-type(3) > .fa-circle-o,
+.projectSection input:checked ~ div.displayArea input:nth-of-type(4):checked ~  div.radioLabels  label:nth-of-type(4) > .fa-circle-o{
+
+  background-color:purple;/*******************************************************************************************************************************/
+  color:transparent;
+} 
+
+
+.chevronLabels label[class="right"]{/*********************************************************************/
+    position:absolute;
+        top:300px;
+        left:750px;
+        display:none;
+
+}
+
+.chevronLabels label[class="left"]{/*********************************************************************/
+  position:absolute;
+  top:300px;
+  left:50px;
+    display:none;
+}
+
+
+.radioLabels{/*********************************************************************/
+  position:absolute;
+  top:540px;
+  left:310px;
+  z-index:2;  
+}
+
+.radioLabels label{/*********************************************************************/
+  display:inline;
+  float:left;
+  padding:10px;
+
+} 
+
+
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(1):checked  ~  .chevronLabels label:nth-of-type(1),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(1):checked  ~  .chevronLabels label:nth-of-type(2),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(2):checked  ~  .chevronLabels label:nth-of-type(3),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(2):checked  ~  .chevronLabels label:nth-of-type(4),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(5),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(3):checked  ~  .chevronLabels label:nth-of-type(6),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(4):checked  ~  .chevronLabels label:nth-of-type(7),
+.projectSection > input:checked ~ .displayArea > input:nth-of-type(4):checked  ~  .chevronLabels label:nth-of-type(8){
+  display:block;/***********************************************************************************************************************/
+}
+
+div.description{/*********************************************************************/
+  width:100%;
+  height:100px;
+    background-color:rgba(76,74,74,0);
+  position:relative;
+  top:570px;
+  display:none;
+  color:white;
+  font-size:17px;
+  padding-left:20px;
+
+}
+
+
+div.description  span {/*********************************************************************/
+  font-family:Georgia, Serif;
+  font-weight:500;
+
+}
+
+div.description a{/*********************************************************************/
+  margin-top:15px;
+  margin-right:30px;
+  text-decoration: none;
+  color:ivory;/*******************************************************COLOR CHANGED TO WHITE******************************/
+}
+
+div.description a:hover{/*********************************************************************/
+  color:blue;
+}
+
+.projectSection input:checked ~ div.displayArea > div.description {/***************************ADDED Z-INDEX:1****************************************************************************/
+  display:block;
+}
+
+/*Skills */
+
+.skills {/*********************************************************************/
+  position:relative;
+  top:250px;
+}
+
+section:nth-of-type(1) hr{/*********************************************************************/
+  position:relative;
+  top:20px;/***************************************CHANGED TOP TO 80px****************************************************************************************/
+  width:800px;
+
+}
+
+
+
+section:nth-of-type(2) hr{/*********************************************************************/
+  position:relative;
+  top:350px;/*****************************************************CHANGED TOP TO 270px*******************************************************************************/
+  width:800px;
+}
+
+section.skills hr:nth-of-type(1){/*********************************************************************/
+  position:relative;
+  top:-460px;
+  width:400px;
+  left:0px;
+}
+
+hr#endSkillsLine{/*********************************************************************/
+  position:relative;
+  width:400px;
+  top:-1050px;
+
+}
+
+section.skills > .backEndGraph  hr{/*********************************************************************/
+  position:relative;
+  top:-360px;
+  width:400px;
+  left:0px;
+}
+
+section.skills > .otherGraph hr{/*********************************************************************/
+  position:relative;
+  top:-727px;
+  width:400px;
+  left:0px;  
+}
+
+#frontend{/*********************************************************************/
+  position:relative;
+  height:20px;
+  width:500px;
+  background-color:#FB5E5D;
+  text-align:left;
+  padding-left:1em;
+  color:white;
+}
+
+#backend{/*********************************************************************/
+  position:relative;
+  display:inline-block;
+  height:20px;
+  width:56px;
+  background-color:#4A6FEB;
+  margin-left:500px;
+  padding-right:1em;
+  top:-20px;
+  text-align:right;
+  color:white;
+}
+
+.skillBar {/*********************************************************************/
+  position:relative;
+  width:556px;
+  height:20px;
+  left:30%;
+}
+
+#frontendSkill{/*********************************************************************/
+  position:relative;
+  left:450px;
+  top:100px;
+  color:#FB5E5D;
+  font-size:18px;
+  font-weight:bold;
+}
+
+#backendSkill{/*********************************************************************/
+  position:relative;
+  left:1050px;
+  top:80px; 
+  color:#4A6FEB;
+  font-size:18px;
+  font-weight:bold;
+}
+
+#otherSkill{/*********************************************************************/
+  position:relative;
+  left:800px;
+  top:520px;    
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.proficiencyLabels{/*********************************************************************/
+  list-style-type:none;
+}
+
+.proficiencyLabels li {/*********************************************************************/
+  margin-bottom:15px;
+}
+
+.frontendTechLabels{/*********************************************************************/
+  position:relative;
+  list-style-type: none;
+  left:90px;
+    display:inline;
+}
+
+.frontendTechLabels li{/*********************************************************************/
+
+  border:1px solid black;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+}
+
+.js, .html, .react, .jquery,.node,.php,.mongo,.ruby {/*********************************************************************/
+  position:absolute;
+  top:170px;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+}
+
+.js,.node{/*********************************************************************/
+  left:150px;
+}
+.html,.php{/*********************************************************************/
+  left:220px;
+}
+.react,.mongo{/*********************************************************************/
+  left:290px;
+}
+.jquery,.ruby{/*********************************************************************/
+  left:360px;
+}
+
+.jsBar,.backendBar1{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:60px;
+    background-color:#FFAD41;
+    top:-60px;
+    left:170px;
+}
+
+.htmlBar,.backendBar2{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:80px;
+    background-color:#38BAF0;
+    top:-208px;
+    left:230px;
+}
+
+.reactBar,.backendBar3{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:20px;
+    background-color:#69D12B;
+    top:-295px;
+    left:290px;
+}
+
+.jqueryBar,.backendBar4{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:20px;
+    background-color:#EFE210;
+    top:-383px;
+    left:350px;
+}
+
+.backendBar1,.backendBar2,.backendBar3,.backendBar4{/*********************************************************************/
+  background-color: pink;
+  height:20px;
+}
+
+.backendBar1{/*********************************************************************/
+  top:-20px;
+}
+
+.backendBar2{/*********************************************************************/
+  top:-108px;
+}
+
+.backendBar3{/*********************************************************************/
+  top:-195px;
+}
+
+.backendBar4{/*********************************************************************/
+  top:-282px;
+}
+
+.frontEndGraph{/*********************************************************************/
+  position:relative;
+  width:500px;
+    top:100px;
+  margin-left:300px;
+
+}
+
+.backEndGraph{/*********************************************************************/
+  position:relative;
+  width:500px;
+  left:900px;
+  top:-512px;
+}
+
+
+ .bar:hover + div{/*********************************************************************/
+  visibility: visible;
+}
+
+
+.otherGraph{/*********************************************************************/
+  position:relative;
+  width:500px;
+  left:600px;
+  top:-550px;
+}
+
+.writing, .problemSolve, .PM, .research, .publicSpeaking {/*********************************************************************/
+  position:absolute;
+  top:190px;/*******************************************************CHANGED TOP TO 175px********************************************************************************************/
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+}
+
+.writing{/**************************************************************CHANGED LEFT TO 140px************************************************************************************************/
+  left:150px;
+}
+.problemSolve{/**********************************************************CHANGED LEFT TO 225px************************************************************************************************/
+  left:220px;
+}
+.PM{/**********************************************************************CHANGED LFT TO 280px***********************************************************************************************/
+  left:290px;
+}
+
+.research{/*********************************************************************/
+  left:360px;
+}
+
+.publicSpeaking{/*********************************************************************/
+  left:430px;
+}
+
+.writingBar{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:90px;
+    background-color:#9FCE57;
+    top:-89px;
+    left:170px;
+}
+
+.problemSolveBar{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:90px;
+    background-color:#3DC694;
+    top:-246px;
+    left:230px;
+}
+
+.PMBar{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:50px;
+    background-color:#4EC1F2;
+    top:-364px;
+    left:290px;
+}
+
+.researchBar{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:90px;
+    background-color:#8D9EFF;
+    top:-522px;
+    left:350px;
+}
+
+.publicSpeakingBar{/*********************************************************************/
+  position:relative;
+  width:20px;
+    height:60px;
+    background-color:#CD98FE;
+    top:-650px;
+    left:400px;
+}
+
+.jsTooltip{/*********************************************************************/
+  position:relative;
+  top:-190px;
+  left:108px;
+  visibility:hidden;
+}
+
+.htmlTooltip{/*********************************************************************/
+  position:relative;
+  top:-350px;
+  left:170px;
+  visibility:hidden;
+}
+
+
+.reactTooltip{/*********************************************************************/
+  position:relative;
+  top:-380px;
+  left:230px;
+  visibility:hidden;
+}
+
+.jqueryTooltip{/*********************************************************************/
+  position:relative;
+  top:-470px;
+  left:290px;
+  visibility:hidden;
+}
+
+
+.nodeTooltip{/*********************************************************************/
+  position:relative;
+  top:-100px;
+  left:110px;
+  visibility: hidden;
+}
+
+
+.phpTooltip{/*********************************************************************/
+  position:relative;
+  top:-200px;
+  left:170px;
+  visibility: hidden;
+}
+
+.mongoTooltip{/*********************************************************************/
+  position:relative;
+  top:-280px;
+  left:230px;
+  visibility: hidden;
+}
+
+.rubyTooltip{/*********************************************************************/
+  position:relative;
+  top:-365px;
+  left:290px;
+  visibility: hidden;
+}
+
+.writingTooltip{/*********************************************************************/
+  position:relative;
+  top:-245px;
+  left:110px;
+  visibility: hidden;
+}
+
+.problemTooltip{/*********************************************************************/
+  position:relative;
+  top:-400px;
+  left:170px;
+  visibility: hidden;
+}
+
+.pmTooltip{/*********************************************************************/
+  position:relative;
+  top:-480px;
+  left:230px;
+  visibility: hidden;
+}
+
+.researchTooltip{/*********************************************************************/
+  position:relative;
+  top:-680px;
+  left:290px;
+  visibility: hidden;
+}
+
+.publicTooltip{/*********************************************************************/
+  position:relative;
+  top:-780px;
+  left:340px;
+  visibility: hidden;
+}
+
+.tooltipBody{/*********************************************************************/
+  position:relative;
+  height:40px;
+  width:150px;
+  background:black;
+  color: white;
+  font-size:80%;
+}
+
+.tip {/*********************************************************************/
+  position:relative;
+
+  width:20px;
+  height:15px;
+  left:60px;
+  top:-15px;
+}
+
+
+
+/*Contact*/
+
+.contact {/*********************************************************************/
+  position:relative;
+  top:-850px;
+
+}
+
+/* Business Card */
+
+
+.contact label { /*********************************************************************/
+  position:absolute;
+  top:20%;
+  left:40%;
+  display:block;
+  -webkit-perspective: 800px;
+  -moz-perspective:800px;
+  -ms-perspective:800px;
+  -o-perspective:800px;
+  perspective: 800px;
+
+}
+
+.contact input {/*********************************************************************/
+    display: none;
+}
+
+.card {/*********************************************************************/
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /*transition: transform 1s;*/
+
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+
+  transition: all 1s;
+  position:relative;
+  height:400px;
+  width:600px;
+ /* border:2px solid black;*/
+  margin:0;
+  margin-top:25%;
+  margin-left:-15%;
+  top:100px;
+  left:-100px;
+  background-color:black;
+  -webkit-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility: hidden
+
+}
+
+
+.card div {/*********************************************************************/
+  position: absolute;
+  height: 100%;
+  width: 100%;
+ /* background: #FFF; */
+
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+
+    }
+
+.card div  p.name{/*********************************************************************/
+  position: relative;
+  display:block;
+  margin-top:5%;
+  margin-left:5%;
+  margin-bottom:-4%;
+  font-weight: bold;
+  font-size:2.5em;
+  color: #FFFFFF;
+  text-align:left;
+
+/*  border:1px solid red;*/
+
+}
+
+.card div p.aboutme{/*********************************************************************/
+  position:relative;
+  font-size:1.1em;
+  line-height:1.2em;
+  text-align:left;
+  margin-left:5%;
+  margin-bottom:3%;
+  padding-right:5%;
+
+
+
+}
+
+ .contact span{/*********************************************************************/
+  font-size:0.7em;
+  left:15em;
+  margin-top:-10em;
+}
+
+
+.card .front{/*********************************************************************/
+  color:#ffffff;
+  background-image: url("designs/bg2.png");
+
+}
+
+.card .back {/*********************************************************************/
+  background-color: none;
+  color: #FFFFFF;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg); 
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg); 
+  transform: rotateX(180deg);
+
+}
+
+#myName{/*********************************************************************/
+  position:relative;
+  height:30px;
+  width:100px;
+  border:2px solid red;
+  color:white;
+  top:-50px;
+  left:20px;
+  padding-top:10px;
+  border-radius:10px;
+  background-color:black;
+  z-index:2;
+
+}
+
+.back > img{/*********************************************************************/
+  position:relative;
+  height:400px;
+  width:600px;
+
+}
+
+.contact label:hover .card{/*********************************************************************/
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  -o-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+  box-shadow: 1px 15px 10px rgba(0, 0, 0, .3);
+
+}
+
+.contact label:hover input:checked + .card {/*********************************************************************/
+  -webkit-transform: rotateX(160deg);
+  -moz-transform: rotateX(160deg);
+  -ms-transform: rotateX(160deg);
+  -o-transform: rotateX(160deg);
+  transform: rotateX(160deg);
+  box-shadow: 1px 15px 10px rgba(0,0,0,.2);
+
+}
+
+.contact input:checked + .card {/*********************************************************************/
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.contact a{/*********************************************************************/
+  color:red;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+#lmd{/*********************************************************************/
+  position:absolute;
+  left:5%;
+  bottom:5%;
+}
+
+.links{/*********************************************************************/
+  float:right;
+  padding-top:3%;
+  padding-right:1%;
+  margin-right:5%;
+  margin-top:5%;
+}
+
+.encyclopedia{/*********************************************************************/
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:25%;
+  margin-left:13%;
+  margin-top:12%;
+}
+
+#left, #up {/*********************************************************************/
+    position:absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin:5px;
+}
+
+#up {/*********************************************************************/
+  position: absolute;
+  transform: rotate(90deg);
+  position: relative;/*****************************************************ASSUMING LAST POSITION TAKES PRESEDENCE*********************************************************/
+ left:-10px;
+  top:3px;
+}
+
+#up-triangle {/*********************************************************************/
+  position:relative;
+   width: 0; 
+   height: 0; 
+   top:-20px;
+   left:0px;
+   border-bottom: 15px solid white; 
+   border-left: 6px solid transparent; 
+   border-right: 6px solid transparent; 
+}
+
+#down-triangle {/*********************************************************************/
+  position:relative;
+   width: 0; 
+   height: 0; 
+   top:-20px;
+   left:0px;
+   border-bottom: 15px solid white; 
+   border-left: 6px solid transparent; 
+   border-right: 6px solid transparent; 
+}
+
+ .front ~ #upArrow, .front ~ #downArrow{/*********************************************************************/
+  position:relative;
+  left:50px;
+  height:30px;
+  width:30px;
+  float:right;
+  margin-right:80px;
+  margin-top:40px;
+}
+
+.front ~ #downArrow{/*********************************************************************/
+  position:relative;
+  transform:rotate(180deg);
+  backface-visibility: visible;    
+  margin-right:-40px;
+  margin-top:25px;
+
+}
+
+.back #upArrow{/*********************************************************************/
+  color:red;
+  position:relative;
+  left:543px;
+  top:-400px;
+}
+
+.back #downArrow{/*********************************************************************/
+  position:relative;
+    transform:rotate(180deg);
+  top:-1200px;
+  left:-20px;
+
+}
+
+footer{/*********************************************************************/
+  width:100%;
+  height:10%;
+  background-color:#7710C2;
+  color:white;
+  font-size:1.5em;
+}
+
+footer p{/*********************************************************************/
+  margin:auto;
+  position:relative;
+  width:9em;
+}
+
+@media (max-device-width:600px) and (min-device-height:200px),
+       (max-device-width:1024px) and (min-device-height:200px){
+
+ #topNavBar p{ /*************NEEDED AS IT IS MORE DETAILED THAN BELOW NAV P********************/
+  width:8em;
+}         
+         
+ section{ /*****************************************************/
+  width:100vw;
+  margin-left:-3.5em;
+ } 
+
+ .aboutMe{ /******************************************************/
+  margin-top:10em;
+ }
+
+ #topNavBar{/****************************************************/
+  position:fixed;
+  margin-top:-0.6em;
+  width:100vw;
+  height:16em;
+  left:0;
+
+ }
+
+ h1{/****************************************************************/
+
+  margin-left:-2em;
+  width:5em;
+ }
+
+
+ nav p{ /************************************************************/
+  position:static;
+  width:6em;
+  margin-top:0;
+  margin-left:2em;
+  font-size:2em;
+ }
+
+nav ul li > label { /************************************************/
+
+  padding:0;
+}
+
+
+nav > ul { /*******************************************************/
+  display:block;
+  position:relative;
+  left:4em;
+  top:-1em;
+}
+
+nav > ul li{ /*******************************************************/
+  display:block;
+  margin-bottom:0.2em;
+  color:white;
+  font-size:1.5em;
+}
+
+nav > label:nth-of-type(1){/*********************************************/
+  position:relative;
+  left:12em;
+  top:1em;
+}
+
+.searchText, #search{ /*******************************************************************************/
+  left:-3em;
+  top:0.8em;
+  color:white;
+}
+
+.searchText{/******************************************************************************************/
+  left:-15em;
+}
+
+#search{/***********************************************************************************************/
+    border-bottom:2px solid black;
+}
+
+.displayArea{/*****************************************************************/
+  position:relative;
+  width:100vw;
+  height:26em;
+  left:-2em;
+    top:0.1em;
+    display:none;
+
+
+}
+
+ .projectSection .displayArea > img{/******************************************/
+    visibility: hidden;
+  position:absolute;
+  left:2em;
+  top:3em;
+  z-index:2;
+  height:15em;
+  width:80vw;
+
+} 
+
+.projectSection > label{/******************************************************/
+  margin-bottom:0;
+  margin-left:0;
+  border:1px solid black;
+
+}
+
+
+div.description{/*************************************************************/
+  position:relative;
+  top:25em;
+  left:-20px;
+  margin-top:-15px;
+  margin-right:0px;
+  font-size:0.8em;
+  color:white;
+
+}
+
+.chevronLabels label[class="right"]{/**********************************************/
+    position:absolute;
+        top:157px;
+        left:290px;
+        display:none;
+
+}
+
+.chevronLabels label[class="left"]{/*******************************************/
+  position:absolute;
+  top:160px;
+  left:-1px;
+    display:none;
+}
+
+
+.radioLabels{/***************************************************************/
+  position:absolute;
+  top:17.5em;
+  left:6em;
+  z-index:2;  
+
+}
+
+.skills {/**********************************************************************/
+  position:relative;
+  top:0;
+}
+
+section:nth-of-type(1) hr{ /*************************************************/
+
+  width:120px;
+
+}
+
+section:nth-of-type(2) hr{ /**************************************************/
+  top:7em;
+  width:120px;
+}
+
+.skillBar {/*******************************************************************/
+  position:relative;
+  width:75vw;
+  height:20px;
+  left:10%;
+}
+
+.front{ /*****************************ISSUE WITH THE .FRONT bELONGING TO THE CONTACT SECTION****************************************/
+  position:relative;
+  left:-5.3em;
+  height:2em;
+
+}
+
+.js,.html,.react,.jquery{/*****************INCLUDED IN REGULAR******************************************************/
+  top:0.9em;
+}
+
+#frontendSkill{/**************************************************************/
+  left:4em;
+  width:13em;
+}
+
+#frontend{/*******************************************************************/
+  width:90%;
+}
+
+#backend{/*********************************************************************/
+  width:10%;
+  margin-left:90%;
+}
+
+.proficiencyLabels{/**********************************************************/
+  margin-left:0;
+  padding-left:0;
+}
+
+.frontEndGraph{/**************************************************************/
+  position:relative;
+  width:320px;
+  height:13em;
+  top:100px;
+  margin-left:0;
+
+
+}
+
+.back{/**********************************************************************/
+  position:relative;
+  left:-5.3em;
+}
+
+.node,.php,.mongo,.ruby{/*******************************INCLUDED IN REGULAR******************************************/
+  top:0.9em;
+}
+
+.backEndGraph{/******************************************************************/
+  position:relative;
+  width:320px;
+  left:0;
+  top:12em;
+
+}
+
+#backendSkill{/*****************************************************************/
+  left:4em;
+  top:23em;
+  width:13em;  
+}
+
+.other{/**********************************************************************/
+  position:relative;
+  left:-6.2em;
+}
+
+.writing,.problemSolve,.PM,.research,.publicSpeaking{/*************************/
+  top:2em;
+}
+
+.writing{/*********************************************************************/
+  left:10em;
+}
+
+.problemSolve{/****************************************************************/
+
+  width:7em;
+}
+
+.PM{/***************************************************************************/
+  left:15.5em;
+  width:9em;
+}
+
+.research{/*******************************************************************/
+  left:18.5em;
+  top:1em;
+}
+
+.publicSpeaking{/***************************************************************/
+  left:21em;
+  width:7em;
+}
+
+.problemTooltip{/***************************************************************/
+  left:150px;
+}
+
+.pmTooltip{/******************************************************************/
+
+  left:192px;
+
+}
+
+.researchTooltip{/************************************************************/
+  left:232px;
+}
+
+.publicTooltip{/****************************************************************/
+  left:273px;
+}
+
+.problemSolveBar{/**************************************************************/
+
+    left:210px;
+}
+
+.PMBar{/*********************************************************************/
+
+    left:250px;
+}
+
+.researchBar{/***************************************************************/
+
+    left:290px;
+}
+
+.publicSpeakingBar{/***********************************************************/
+
+    left:330px;
+}
+
+.otherGraph{/****************************************************************/
+  position:relative;
+  width:320px;
+  left:0;
+  top:0;
+
+}
+
+#otherSkill{/******************************************************************/
+  left:4em;
+  top:39em;
+  width:13em;  
+}
+
+hr#endSkillsLine{/************************************************************/
+  position:relative;
+  width:50vw;
+  top:-550px;
+
+}
+
+.contact{/*****************************************************************/
+  top:-40em;
+
+}
+
+.contact header{/*************************************************************/
+  position:relative;
+  top:0em;
+}
+
+.card{/**********************************************************************/
+
+  top:15em;
+  left:-2em;
+  margin-left:0;
+  width:70vw;
+  height:130vh;
+
+}
+
+.front{/*************************************CONFLICT WITH THE .FRONT FROM SKILLS SECTION*******ALSO .CARD .FRONT IN CONTACT SECTION DEFINED*********************/
+
+  width:70vw;
+  height:130vh;
+}
+
+.back{/********************************************.CARD .BACK DEFINITION IN CONTACT SECTION*******************************/
+
+  width:70vw;
+}
+
+.front img{/*******************************************************************/
+  height:1.5em;
+  width:1.5em;
+}
+
+.encyclopedia{/***************************************************************/
+  position:relative;
+  top:14%;
+  left:10%;
+}
+
+.back > img{/*****************************************************************/
+  position:relative;
+  width:100vw;
+  height:130vh;
+
+}
+
+.back #upArrow{/***************************************************************/
+  color:red;
+  position:relative;
+  left:240px;
+  top:-630px;
+  height:2em;
+  width:2em;
+}
+
+.back #downArrow{/************************************************************/
+  position:relative;
+  transform:rotate(180deg);
+  top:-700px;
+  left:250px;
+  height:2em;
+  width:2em;
+
+}
+
+nav ul{/****************INCORPORATED*********************************************/
+  width:10em;
+}
+
+nav ul li{ /********************INCORPORATED************************************/
+  width:3em;
+}
+
+.modal{/***********************************************************************/
+  position:absolute ;
+  width:107vw;
+  height:150vh;
+  font-size:3em;
+  left:0.5em;
+  top:5.3em;
+  text-align: center;
+  background-color:white;
+  visibility:hidden;
+}
+
+.modal p{/*****************************************************************/
+  position:relative;
+  font-size:1em;
+  left:-2em;
+}
+
+#modalClose{/***************************************************************/
+  position:relative;
+  left:0px;
+  cursor: pointer;
+  font-size:0.5em;
+  top:-1.8em;
+}
+
+footer{/************************************************************************/
+  position:relative;
+  top:8.5em;
+}
+
+}
+
+@media(max-device-width:360px) and (min-device-height:200px){
+
+  .content{/*****************************************************************/
+    position:absolute;
+    margin:0;
+    padding:0;
+    top:-1em;
+    left:-1em;
+
+  }
+
+     #aboutPic{/**************************************************************/
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
+
+  #fullCanvas{/**************************************************************/
+    position: relative;
+    height: 100%;
+    padding-top: 1em;
+    overflow: hidden;
+
+  }
+
+  #allContent{/**************************************************************/
+    position:relative;
+    overflow-y:scroll;
+    transform:translate3d(0,0,0);
+    transition:transform 1s;    
+  }
+
+  .mask{/********************************************NO EASE FOR OPACITY TRANSITION********************/
+    position:absolute;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    top:2.5em;
+    opacity:0;
+    transition: opacity 0.5s ease, transform 0.5s, z-index 0s 0.5s;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  section{/****************************************************************************/
+    position:relative;
+    top:-15em;
+    left:5em;
+  }
+
+  nav input:checked + li > label{/***************************************************/
+  display:none;
+}
+
+.solidTopBar .name{/****************************************************************/
+  position:absolute;
+  background-color:blue;
+  height:3em;
+  width:100%;
+  top:0.5em;
+  z-index:-10;
+  transform:translate3d(-16em,0,0);
+  transition: transform 1s;
+}
+
+.name p{/***********************************************************************/
+  margin-top:0em;
+  color:white;
+  font-size:2em;
+
+
+}
+
+  .content > #topNavBar{/**********************************************************/
+    display:none;
+  }
+
+  #topNavBar ul{/******************************************************************/
+    display:none;
+  }
+
+  .solidTopBar{/********************************************************************/
+    display:block;
+    position:fixed;
+    width:100vw;
+    height:3.5em;
+    background-color:blue;
+    z-index:10;
+    transform:translate3d(0,0,0);
+    transition:transform 1s;
+  }
+
+
+  .hamburger {/*************************************************************/
+    display:block;
+    height:2em;
+    width:2em;
+    margin-top:0.9em;
+    transform:translate3d(1em,0,0);
+    transition:transform 1s;
+  }
+
+   .hamburger .bars {/********************************************************/
+      display:block;
+      height:2em;
+      width:2em;
+
+  }
+
+  .hamburger .bars span {/********************************************************/
+    position:relative;
+    display: block;
+    width:35px;
+    height:7px;
+    margin-bottom:5px;
+    background-color:black;
+  }
+
+  #off-menu:checked ~ .solidTopBar > .hamburger{/********************************************************/
+    transform:translate3d(14em,0,0);
+    transition:transform 1s;
+  }
+
+  #off-menu:checked ~ .solidTopBar > .name,
+  #off-menu:checked ~ #fullCanvas > #sideNavBar{/********************************************************/
+    transform: translate3d(0,0,0);
+    transition: transform 1s;
+    overflow:scroll;
+  }
+
+  #off-menu:checked ~ .solidTopBar > .name{/*****************************************************/
+    transform: translate3d(1em,0,0);
+    transition:transform 1s;
+  }
+
+  #off-menu:checked ~ #fullCanvas > #allContent{/**************************************/
+    transform: translate3d(10.5em,0,0);
+    transition: transform 1s;
+    overflow-y:hidden;
+
+  }
+
+
+  #off-menu:checked ~ #fullCanvas > .mask {/**************************************/
+    transform: translate3d(10.5em,0,0);
+    transition:transform 1s;
+    opacity:1;
+    z-index:1;
+  }
+
+  input[name="navRadio2"]{/*****************************************ASSUME MISTAKE NAME SHOULD BE navRadio *********************************************************************/
+    display:none;
+  }
+
+   #fullCanvas > #sideNavBar{/*****************************************************/
+    position:fixed;
+    display:inline-block;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    width:10.5em;
+    height:100%;
+    z-index:1;
+    transform:translate3d(-11em,0,0);
+    transition: transform 1;/**************************************FIXED SECOND UNIT ************************************************************************/
+  }
+
+  #sideNavBar li:hover{/********************************************************/
+    cursor:pointer; 
+  }
+
+  .sideDetails, .projectDetails{/**********************************************/
+    position:static;
+    max-height:0;
+    width:9.5em;
+    padding-top:0;
+    margin-top:0em;
+    margin-left:-2em;
+    overflow:hidden;
+    transition: max-height 1s;
+  }
+
+  .sideProjList{/**************************************************************/
+    overflow-y:scroll;
+    margin-left:-0.5em;
+    width:10em;
+  }
+
+  .sideProjList li {/**********************************************************/
+
+    border:2px solid blue;
+    width:7em;
+    font-size:1.2em;
+
+
+  }
+
+  .sideProjList li + div{/**********************************************************/
+
+    margin-top:-2em;
+    height:5em;
+
+  }
+
+ .sideProjList .projectDetails{/****************************************************/
+    
+    height:12em;
+    margin-top:-1.7em;
+    margin-left:0.5em;
+  }
+
+  #sideNavBar input:nth-of-type(1):checked ~ .sideDetails:nth-of-type(1),
+  #sideNavBar input:nth-of-type(2):checked ~ .sideDetails:nth-of-type(2),
+  #sideNavBar input:nth-of-type(3):checked ~ .sideDetails:nth-of-type(3),
+  #sideNavBar input:nth-of-type(4):checked ~ .sideDetails:nth-of-type(4),
+  .sideProjList input:nth-of-type(1):checked ~ .projectDetails:nth-of-type(1),
+  .sideProjList input:nth-of-type(2):checked ~ .projectDetails:nth-of-type(2),
+  .sideProjList input:nth-of-type(3):checked ~ .projectDetails:nth-of-type(3),
+  .sideProjList input:nth-of-type(4):checked ~ .projectDetails:nth-of-type(4),
+  .sideProjList input:nth-of-type(5):checked ~ .projectDetails:nth-of-type(5),
+  .sideProjList input:nth-of-type(6):checked ~ .projectDetails:nth-of-type(6),
+  .sideProjList input:nth-of-type(7):checked ~ .projectDetails:nth-of-type(7){
+
+    max-height:105vh;/**************************************************************************************/
+
+  }
+
+  li.copy{/********************************************************************************/
+    margin-top:7em;
+  }
+
+ 
+  #sideNavBar > ul > input:checked + li{/**********************************************/
+    background-color:aqua;
+  }
+
+  .sideProjList > input:checked + li {/*********************************************/
+    background-color:skyblue;
+  }
+
+
+  .sideProjList{/*****************************************************INCLUDED IN PREVIOUS ***********************************************************************/
+    position:relative;
+    top:0;
+    left:-2em;
+    transform: translate3d(0,0em,0);
+    transition: transform 1s;
+
+  }
+
+  .sideProjList li{/**************************************************INCORPORATED TO PREVIOUS******************************************************************************/
+
+    margin-bottom:2em;
+  }
+
+  #sideNavBar > ul{/***********************************************************/
+    margin-top:2.5em;
+    height:100%;
+    overflow:scroll;
+  }
+
+  #sideNavBar ul li{/************************************************************/
+   list-style:none;
+   margin-left:-2em;
+  
+  }
+
+
+  #sideNavBar > ul > li label{/***********************************************/
+    position:static;
+    top:3em;
+    left:-1em;
+    color:black;
+    font-size:2em;
+    line-height:2em;
+
+  }
+
+  #sideNavBar ul > input{/**************************************************/
+    display:none;
+  }
+
+  #sideNavBar ul div:nth-of-type(3){/******************************************/
+    width:7em;
+    left:-4em;
+  }
+
+  #sideNavBar ul div:nth-of-type(4) img{/*************************************/
+    width:1.5em;
+    height:1.5em;
+  }
+
+  #sideNavBar ul div:nth-of-type(2) li{/***************************************/
+    margin-left:0em;
+  }
+
+  #sideNavBar ul div:nth-of-type(3) li{/****************************************/
+    margin-left:-2.5em;
+  }
+
+
+
+ 
+  #off-menu{/*******************************************************************/
+    display:none;
+  }
+
+
+  .searchText, #search{/***************************************************/
+  display:none;
+
+}
+  .searchText{/*****************************************************REPEAT FROM ABOVE********************************************************************************/
+    display:none;
+
+  }
+
+}
+
+@media(min-device-width:361px) and (max-device-width:600px) and (min-device-height:200px) {
+
+   #aboutPic{ /*******************************************************************************/
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
+
+  .displayArea{/*****************************************************************/
+    position:relative;
+    width:80vw;
+    height:26em;
+    left:-2.6em;
+    top:0.1em;
+    display:none;
+  }
+
+  #searchIcon{/***************************************************************/
+    font-size:1.5em;
+    left:9em;
+    top:0.5em;
+  }  
+
+  .projectSection .displayArea > img{/*******************************************/
+    visibility: hidden;
+    position:absolute;
+    left:2em;
+    top:3em;
+    z-index:2;
+    height:15em;
+    width:60vw;
+  } 
+
+  .projectSection > label{/***************************************************/
+    margin-bottom:0;
+    margin-left:0;
+    border:1px solid black;
+
+  }
+
+
+  div.description{/*********************************************************/
+    position:relative;
+    top:25em;
+    left:-20px;
+    padding-left:2em;
+    margin-top:-15px;
+    margin-right:0px;
+    font-size:0.8em;
+    color:black;
+
+}
+
+  .chevronLabels label[class="right"]{/********************************************/
+    position:absolute;
+    top:157px;
+    left:285px;
+    display:none;
+  }
+
+      .card{/******************************************************************/
+    left:-4em;
+    height:75vh;
+  }
+
+  .links{/******************************************************************/
+    position:relative;
+    left:5em;
+  }
+
+  .encyclopedia{/************************************************************/
+  position:relative;
+  top:-2em;
+  left:10%;
+}
+
+.back > img{/*****************************************************************/
+  position:relative;
+  width:100vw;
+  height:60vh;
+
+}
+
+.back #upArrow{/************************************************************/
+  color:red;
+  position:relative;
+  left:320px;
+  top:-360px;
+  height:2em;
+  width:2em;
+}
+
+.back #downArrow{/***********************************************************.
+  position:relative;
+  transform:rotate(180deg);
+  top:-430px;
+  left:330px;
+  height:2em;
+  width:2em;
+
+}
+
+  footer{/*************************************************************/
+    top:5em;
+  }
+
+}
+
+@media(min-device-width:601px) and (max-device-width:1024px) and (min-device-height:200px) {
+
+   #aboutPic{/******************************************************************/
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+    height:auto;
+    width:auto;
+
+   }
+
+  section.projectSection{/******************************************************/
+    top:2em;
+  }
+
+  #topNavBar{/******************************************************************/
+    position:fixed;
+    margin-top:-0.6em;
+    width:100vw;
+    height:20em;
+    left:0;
+
+  }
+
+  section h2{/******************************************************************/
+  display:block;
+  content:" ";
+  margin-top: 0em;
+  height:12.5em;
+  visibility:hidden;
+  z-index:-10;
+}
+
+  nav p{/*********************************************************************/
+    position:static;
+    width:6em;
+    margin-top:0;
+    margin:auto;
+    font-size:3em;
+ }
+
+
+  nav > ul {/******************************************************************/
+    display:block;
+    position:relative;
+    left:17em;
+    top:-1em;
+  }
+
+  nav > ul li{/*****************************************************************/
+    display:block;
+    margin-bottom:0.2em;
+    color:white;
+    font-size:2em;
+  }
+
+  nav > label:nth-of-type(1){/***********************************************/
+    position:relative;
+    left:12em;
+    top:1em;
+  }
+
+  .searchText, #search{/*************************REARRANGED TO MAKE SENSE WITH 2 others below************************************/
+    left:-3em;
+    top:0em;
+     color:white;
+  }
+
+  .searchText{/**************************************REARRANGED per above*****************************************************************/
+    left:-8em;
+    font-size:1.8em;
+    top:0em;
+  }
+
+  #search{/*********************************************REARRANGED PER ABOVE***********************************************************************/
+    border-bottom:2px solid black;
+  }
+
+  #searchIcon{/******************************************************************/
+    font-size:1.5em;
+    left:9em;
+    top:0em;
+  }
+
+  .aboutMe{/*********************************IS or SHOULD BE SECTION.aboutME*************************************************************************************/
+    top:0em;
+  }
+
+   .displayArea{/****************************************************************/
+    position:relative;
+    width:80vw;
+    height:26em;
+    left:-4.8em;
+    top:0.1em;
+    display:none;
+
+
+  }
+
+ .projectSection .displayArea > img{/***********************************************/
+
+    width:70vw;
+  } 
+
+  .chevronLabels label[class="right"]{/*****************************************/
+    position:absolute;
+    top:157px;
+    left:570px;
+    display:none;
+  }
+
+    .card{/*****************************************************************/
+    left:-14em;
+    height:50vh;
+  }
+
+
+
+  .encyclopedia{/*************************************************************/
+  position:relative;
+  top:14%;
+  left:10%;
+}
+
+.back > img{/****************************************************************/
+  position:relative;
+  width:100vw;
+  height:50vh;
+
+}
+
+.back #upArrow{/**************************************************************/
+  color:red;
+  position:relative;
+  left:720px;
+  top:-530px;
+  height:2em;
+  width:2em;
+}
+
+.back #downArrow{/*************************************************************/
+  position:relative;
+  transform:rotate(180deg);
+  top:-600px;
+  left:730px;
+  height:2em;
+  width:2em;
+
+}
+
+section:nth-of-type(1) hr{/***********************************************/
+  position:relative;
+  top:150px;
+  width:400px;
+
+}
+
+section:nth-of-type(2) hr{/*******************************************************/
+  top:9em;
+  width:400px;
+}
+
+
+hr#endSkillsLine{/***************************************************************/
+  position:relative;
+  width:400px;
+  top:-500px;
+
+}
+
+  footer{/*********************************************************************/
+    top:3em;
+  }
+
+}

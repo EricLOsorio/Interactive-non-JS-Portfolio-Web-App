@@ -1,0 +1,150 @@
+//_mixins.scss
+
+@mixin structure-dimension($position, $left, $top, $width, $height) {
+  position:$position;
+  left:$left;
+  top:$top;
+  width:$width;
+  height:$height;
+}
+
+@mixin display-marginLeft($display, $margin-left) {
+  display:$display;
+  margin-left:$margin-left;
+}
+
+@mixin top-left-position($top, $left, $position){
+  top:$top;
+  left:$left;
+  position:$position;
+}
+
+@mixin position-left-top-width($position,$left,$top,$width){
+  position:$position;
+  left:$left;
+  top:$top;
+  width:$width;
+}
+
+@mixin position-top-width($position,$top,$width){
+  position:$position;
+  top:$top;
+  width:$width;
+}
+
+@mixin h-w($height, $width){
+  height:$height;
+  width:$width;
+}
+
+@mixin position-left($position, $left){
+  position:$position;
+  left:$left;
+}
+
+@mixin position-top($position, $top){
+  position:$position;
+  top:$top;
+}
+
+@mixin skills-fonts{
+  font-size:18px;
+  font-weight:bold;
+}
+
+@mixin rotate($deg){
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin rotateX($deg){
+  -webkit-transform: rotateX($deg);
+  -moz-transform: rotateX($deg); 
+  -ms-transform: rotateX($deg);
+  -o-transform: rotateX($deg); 
+  transform: rotateX($deg);	
+}
+
+@mixin perspective($perspective){
+	-webkit-perspective:$perspective;
+	-moz-perspective:$perspective;
+	-o-perspective:$perspective;
+	-ms-perspective:$perspective;
+	perspective:$perspective;
+}
+
+@mixin preserve-3d{
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;	
+}
+
+@mixin transition-all($time){
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -ms-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;	
+}
+
+@mixin transition-element($element, $time){
+  -webkit-transition: $element $time;
+  -moz-transition: $element $time;
+  -ms-transition: $element $time;
+  -o-transition: $element $time;
+  transition: $element $time;	
+}
+
+@mixin translate3d($x,$y,$z){
+  -webkit-transform:translate3d($x,$y,$z);
+  -moz-transform:translate3d($x,$y,$z);
+  -o-transform:translate3d($x,$y,$z);
+  -ms-transform:translate3d($x,$y,$z);
+  transform:translate3d($x,$y,$z);
+}
+
+@mixin back-visibility($visibility){
+  -webkit-backface-visibility:$visibility;
+  -ms-backface-visibility:$visibility;
+  -moz-backface-visibility:$visibility;
+  -o-backface-visibility:$visibility;
+  backface-visibility: $visibility;	
+}
+
+@mixin flip-triangle-borders{
+  border-bottom: 15px solid $white; 
+  border-left: 6px solid transparent; 
+  border-right: 6px solid transparent;
+}
+
+@mixin med-and-large-device{
+  @media(#{$max-w}:#{$med}) and (#{$min-h}:#{$dev-h}){
+    @content;
+  }
+  @media(#{$max-w}:#{$large}) and (#{$min-h}:#{$dev-h}){
+    @content;
+  }
+}
+
+@mixin small-device{
+  @media(#{$max-w}:#{$small}) and (#{$min-h}:#{$dev-h}){
+    @content;
+  }
+}
+
+@mixin med-only-device{
+  @media(#{$min-w}:#{$small + 1px}) and (#{$max-w}:#{$med}) and (#{$min-h}:#{$dev-h}) {
+    @content;
+  }
+}
+
+@mixin large-only-device{
+  @media(#{$min-w}:#{$med + 1px}) and (#{$max-w}:#{$large}) and (#{$min-h}:#{$dev-h}) {
+    @content;
+  }
+}

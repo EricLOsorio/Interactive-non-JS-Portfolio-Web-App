@@ -1,0 +1,403 @@
+//_topBars.scss
+
+.solidTopBar{
+  @include small-device{
+    @include h-w(3.5em,100vw);
+    @include translate3d(0,0,0);
+    @include transition-element(transform,1s);
+    display:block;
+    position:fixed;
+    background-color:blue;
+    z-index:10;
+  }
+  display:none;
+  .name{
+    @include small-device{
+      @include h-w(3em,100%);
+      @include position-top(absolute,0.5em);
+      @include translate3d(-16em,0,0);
+      @include transition-element(transform,1s);
+      background-color:blue;
+      z-index:-10;
+      p{
+        margin-top:0;
+        color:$white;
+        font-size:2em;
+      }
+    }
+  }
+}
+
+.hamburger{
+  @include small-device{
+    @include h-w(2em,2em);
+    @include translate3d(1em,0,0);
+    @include transition-element(transform,1s);
+    display:block;
+    margin-top:0.9em;
+  }
+  display:none;
+  .bars{
+    @include small-device{
+      @include h-w(2em,2em);
+      display:block;    
+    }
+    span{
+      @include small-device{
+        @include h-w(7px,35px);
+        position:relative;
+        display: block;
+        margin-bottom:5px;
+        background-color:$black;  
+      }
+    }
+  }
+}
+
+#off-menu{
+  @include small-device{
+    display:none;
+  }
+  display:none;
+}
+
+#off-menu:checked ~ .solidTopBar > .hamburger{
+  @include small-device{
+    @include translate3d(14em,0,0);
+    @include transition-element(transform,1s);
+  }
+}
+
+#off-menu:checked ~ .solidTopBar > .name,
+#off-menu:checked ~ #fullCanvas > #sideNavBar{
+  @include small-device{
+    @include translate3d(0,0,0);
+    @include transition-element(transform,1s);
+    overflow:scroll;
+  }
+}
+
+#off-menu:checked ~ .solidTopBar > .name{
+  @include small-device{
+    @include translate3d(1em,0,0);
+    @include transition-element(transform,1s);
+  }
+}
+
+#off-menu:checked ~ #fullCanvas > #allContent,
+#off-menu:checked ~ #fullCanvas > .mask{
+  @include small-device{
+    @include translate3d(10.5em,0,0);
+    @include transition-element(transform,1s);
+  }
+}
+
+#off-menu:checked ~ #fullCanvas > #allContent{
+  @include small-device{
+    overflow-y:hidden;
+  }
+}
+
+#off-menu:checked ~ #fullCanvas > .mask{
+  @include small-device{
+    opacity:1;
+    z-index:1;
+  }
+}
+
+input[name="navRadio"]{
+  @include small-device{
+    display:none;
+  }
+}
+
+#fullCanvas > #sideNavBar{
+  @include small-device{
+    @include h-w(100%,10.5em);
+    @include translate3d(-11em,0,0);
+    @inlude transition-element(transform,1s);
+    position:fixed;
+    display:inline-block;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    z-index:1;
+  }
+}
+
+#sideNavbar li:hover{
+  @include small-device{
+    cursor:pointer;
+  }
+}
+
+.sideDetails, .projectDetails{
+  @include small-device{
+    @include transition-element(max-height,1s);
+    position:static;
+    max-height:0;
+    width:9.5em;
+    padding-top:0;
+    margin-top:0em;
+    margin-left:-2em;
+    overflow:hidden;
+  }
+}
+
+.sideProjList{
+  @include small-device{
+    @include translate3d(0,0,0);
+    @include transition-element(transform,1s);
+    overflow-y:scroll;
+    margin-left:-0.5em;
+    width:10em;
+    position:relative;
+    top:0;
+    left:-2em;
+  }
+  .projectDetails{
+    @include small-device{
+      height:12em;
+      margin-top:-1.7em;
+      margin-left:0.5em;
+    }
+  }
+
+  li {
+    @include small-device{
+      border:2px solid blue;
+      width:7em;
+      font-size:1.2em;
+      margin-bottom:2em; 
+    }
+  }
+}
+
+
+.sideProjList li + div{
+  @inclue small-device{
+    margin-top:-2em;
+    height:5em;
+  }
+}
+
+@for $i from 1 through 4 {
+  #sideNavBar input:nth-of-type(#{$i}):checked ~ .sideDetails:nth-of-type(#{$i}){
+    @include small-device{
+      max-height:105vh;
+    }
+  }
+}
+
+@for $j from 1 through 7 {
+  .sideProjList input:nth-of-type(#{$j}):checked ~ .projectDetails:nth-of-type(#{$j}){
+    @include small-device{
+      max-height:105vh;
+    }
+  }
+}
+
+#sideNavBar > ul{
+  @include small-device{
+    margin-top:2.5em;
+    height:100%;
+    overflow:scroll;
+  }
+}
+
+#sideNavBar > ul > input:checked + li{
+  @include small-device{
+    background-color:$aqua;
+  }
+}
+
+
+#sideNavBar ul li{
+  @include small-device{
+    list-style:none;
+    margin-left:-2em;
+  }
+}
+
+#sideNavBar > ul > li label{
+  @include small-device{
+    position:static;
+    top:3em;
+    left:-1em;
+    color:black;
+    font-size:2em;
+    line-height:2em;
+  }
+}
+
+#sideNavBar ul > input{
+  @include small-device{
+    display:none;
+  }
+}
+
+#sideNavBar ul {
+  div:nth-of-type(3){
+    @include small-device{
+      width:7em;
+      left:-4em;
+    }
+    li{
+      @include small-device{
+        margin-left:-2.5em;
+      }
+    }
+  }
+  div:nth-of-type(4) img{
+    @include small-device{
+      @include h-w(1.5em, 1.5em);
+    }
+  }
+  div:nth-of-type(2) li{
+    @include small-device{
+      margin-left:0;
+    }
+  }
+}
+
+.sideProjList > input:checked + li{
+  @include small-device{
+    background-color:$skyblue;
+  }
+}
+
+#topNavBar{
+  width:100%;
+  background-color:$nav-bar-bg-color;
+  margin-left:-25px;
+  z-index:3;
+  position:fixed;
+  margin-top:-50px;
+  right:0;
+  
+  @include med-and-large-device{
+    @include h-w(16em,100vw);
+    @include position-left(fixed,0);
+    margin-top:-0.6em;
+    margin-left:0em;    
+  }
+
+  @include large-only-device{
+    @include h-w(20em,100vw);
+    @include position-left(fixed,0);
+    margin-top:-0.6em;
+  }
+
+  p{
+    @include med-and-large-device{
+      width:8em;
+    }
+  }
+
+  ul{
+    @include small-device{
+      display:none;
+    }
+  }
+}
+
+
+nav > label:nth-of-type(1){
+  position:relative;
+  display:inline;
+  right:-730px;
+  top:-25px;
+  border:2px solid $black;
+  border-radius:15%;
+  @include med-and-large-device{
+    @include top-left-position(1em,12em,relative);
+  }
+  @include large-only-device{
+    @include top-left-position(1em,12em,relative);
+  }
+}
+
+nav label > i{
+  color:$black;
+}
+
+nav ul li > label {
+  padding:25px;
+  @include med-and-large-device{
+    padding:0;
+  }
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+nav ul input{
+  display:none;
+}
+
+
+nav > p{
+  @include top-left-position(50px,50px,relative);
+  width:8em;
+  font-size:250%;
+  color:$white;
+
+  @include med-and-large-device{
+    position:static;
+    width:6em;
+    margin-top:0;
+    margin-left:2em;
+    font-size:2em;
+  }
+}
+
+nav p{
+  @include large-only-device{
+    position:static;
+    width:6em;
+    margin-top:0;
+    margin:auto;
+    font-size:3em;
+  }
+}
+
+nav > ul {
+  @include top-left-position(-20px,25%,relative);
+  @include display-marginLeft(inline,2em);
+  @include med-and-large-device{
+    @include top-left-position(-1em,4em,relative);
+    width:10em;
+    display:block;
+  }
+  @include large-only-device{
+    @include top-left-position(-1em,17em,relative);
+    display:block;
+  }
+}
+
+nav > ul li{
+  display:inline;
+  padding-right:0px;
+  color:$white;
+  font-size:25px;
+  @include med-and-large-device{
+    width:3em;
+    display:block;
+    margin-bottom:0.2em;
+    color:$white;
+    font-size:1.5em;  
+  }
+  @include large-only-device{
+    display:block;
+    margin-bottom:0.2em;
+    color:$white;
+    font-size:2em;
+  }
+}
+
+nav input:checked + li > label{
+  @include small-device{
+    display:none;
+  }
+  background-color:$nav-label-bg-color;
+  color:$black;
+}

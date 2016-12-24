@@ -1,0 +1,28 @@
+//_aboutPic.scss
+
+ #aboutPic{
+   @include small-device{
+     @include h-w(auto,auto);
+     max-height:50em;
+     max-width:100vw;
+     margin-left:0;
+   }
+   @include med-only-device{
+     @include h-w(auto,auto);
+     max-height:50em;
+     max-width:100vw;
+     margin-left:0;
+   }
+   @include large-only-device{
+     @include h-w(auto,auto);
+    max-height:50em;
+    max-width:100vw;
+    margin-left:0;
+   }
+  max-height:50em;
+  max-width:80em;
+  margin-left:20%;
+  margin-right:20%;
+  height:auto;
+  width:auto;
+ }

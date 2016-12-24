@@ -1,0 +1,357 @@
+//_contact.scss
+
+/*Contact*/
+
+.contact {
+
+  width:90%;
+  left:0em;
+  @include position-top(relative,-850px);
+  @include med-and-large-device{
+    top:-40em;
+  }
+  h1{
+    width:5em;
+    @include large-only-device{
+      margin-left:8em;
+    }
+    @include med-only-device{
+      margin-left:4.5em;
+    }
+    @include small-device{
+      margin-left:3em;
+    }
+  }
+  article{
+    @include large-only-device{
+      margin-left:5em;
+    }
+    @include med-only-device{
+      margin-left:3em;
+    }
+    @include small-device{
+      margin-left:2em;
+    }
+    p{
+      @include large-only-device{
+        width:19em;
+      }
+      @include med-only-device{
+        width:15em;
+      }
+      @include small-device{
+        width:10em;
+      }
+    }
+  }
+}
+
+.contact header{
+  @include med-and-large-device{
+    @include position-top(relative,0);
+    width:50vw;
+  }
+}
+
+/* Business Card */
+
+
+.contact label { 
+  @include top-left-position(20em,20%,absolute);
+  @include perspective(800px);
+  display:block;
+  &:hover{
+    cursor:pointer;
+  }    
+}
+
+.contact input {
+    display: none;
+}
+
+.card {
+  @include preserve-3d;
+  @include transition-all(1s);
+  @include back-visibility(hidden);
+  @include structure-dimension(relative,-100px,100px,600px,400px);
+  &:hover{
+    cursor:pointer;
+  }  
+  @include med-and-large-device{
+    width:80vw;
+    top:20em;
+    margin-left:0;
+  }
+ @include med-only-device{
+    left:0.5em;
+    top:10em;
+    width:90vw;
+    height:130vh;
+  }
+  @include large-only-device{
+    left:0em;
+    height:75vh;
+  }
+  @include small-device{
+    height:150vh;
+    margin-left:2em;
+  }
+  p{
+    @include med-and-large-device{
+      margin-top:2em;
+    }
+  }
+  margin:0;
+  margin-top:-8em;
+  left:-0.2em;
+  background-color:$black;
+}
+
+
+.card div {
+  @include back-visibility(hidden);
+  @include h-w(100%,100%);
+  position: absolute;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.card div  p.name{
+  @include med-and-large-device{
+    margin-top:1.5em;
+    font-size:1.5em;
+  }
+  @include display-marginLeft(block,5%);
+  position: relative;
+  margin-top:5%;
+  margin-bottom:-4%;
+  font-weight: bold;
+  font-size:2.5em;
+  color: $white;
+  text-align:left;
+}
+
+.card div p.aboutme{
+  position:relative;
+  font-size:1.1em;
+  line-height:1.2em;
+  text-align:left;
+  margin-left:5%;
+  margin-bottom:3%;
+  padding-right:5%;
+  @include small-device{
+    font-size:0.8em;
+    line-height:0.8em;
+  }
+}
+
+ .contact span{
+  font-size:0.7em;
+  left:15em;
+  margin-top:-10em;
+}
+
+.card .front{ 
+  color:$white;
+  background-image: url("../designs/bg2.png");
+  left:0em;
+  @include med-and-large-device{
+    width:100%;
+    height:100%;
+    font-size:1.4em;
+  }
+  img {
+    @include med-and-large-device{
+      height:1.5em;
+      width:1.5em;
+    }
+  }
+}
+
+.card  .back { 
+  background-color: none;
+  color: $white;
+  @include rotateX(180deg);
+  @include large-only-device{
+    width:80vw;
+    height:75vh;    
+    left:0em;
+  }
+  @include med-only-device{
+    height:100%;
+    width:90vw;
+    left:0em;
+  }
+  @include small-device{
+    height:100%;
+    margin-left:5em;
+  }
+}
+
+#myName{
+  @include structure-dimension(relative,20px,-50px,100px,30px);
+  border:2px solid red;
+  color:$white;
+  padding-top:10px;
+  border-radius:10px;
+  background-color:$black;
+  z-index:2;
+
+}
+
+.back > img{
+  @include h-w(400px,600px);
+  @include med-only-device{
+    @include h-w(100%,90vw);
+    position:relative;
+  }
+  @include large-only-device{
+    @include h-w(75vh,80vw);
+    position:relative;
+  }
+  @include small-device{
+    @include h-w(120vh,95vw);
+    position:relative;
+  }
+  position:relative;
+}
+
+.contact label:hover .card{
+  @include rotateX(15deg);
+  box-shadow: 1px 15px 10px rgba(0, 0, 0, .3);
+}
+
+.contact label:hover input:checked + .card {
+  @include rotateX(160deg);
+  box-shadow: 1px 15px 10px rgba(0,0,0,.2);
+
+}
+
+.contact input:checked + .card {
+  @include rotateX(180deg);
+}
+
+.contact a{
+  color:red;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+#lmd{
+  @include position-left(absolute,5%);
+  bottom:5%;
+  @include large-only-device{
+    bottom:15%;
+  }
+  @include med-only-device{
+    bottom:12%;
+  }
+  @include small-device{
+    bottom:6em;
+  }
+}
+
+.links{
+  float:right;
+  padding-top:3%;
+  padding-right:1%;
+  margin-right:5%;
+  margin-top:5%;
+  @include med-only-device{
+    position:relative;
+    left:0.5em;
+  }
+}
+
+.encyclopedia{
+  @include med-only-device{
+    @include top-left-position(-0.5em,3%,relative);
+  }
+  @include large-only-device{
+    @include top-left-position(10%,5%,relative);
+  }
+  @include small-device{
+    position:relative;
+    top:3em;
+    margin-left:3em;
+    font-size:0.7em;
+  }
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:25%;
+  margin-left:13%;
+  margin-top:12%;
+}
+
+#left, #up {
+  @include h-w(3px,20px);
+  position:absolute;
+  background-color: $white;
+  margin:5px;
+}
+
+#up {
+  @include rotate(90deg);
+  @include top-left-position(3px,-10px,relative);
+}
+
+#up-triangle {
+  @include structure-dimension(relative,0px,-20px,0,0);
+  @include flip-triangle-borders;
+}
+
+#down-triangle {
+  @include structure-dimension(relative,0,-20px,0,0);
+  @include flip-triangle-borders;
+}
+
+ .front ~ #upArrow, .front ~ #downArrow{
+   @include h-w(30px,30px);
+   @include position-left(relative,50px);
+   float:right;
+   margin-right:80px;
+   margin-top:40px;
+}
+
+.front ~ #downArrow{
+  @include rotate(180deg);
+  @include back-visibility(visible);
+  position:relative;
+  margin-right:-40px;
+  margin-top:25px;
+}
+
+.back #upArrow{
+  @include top-left-position(-400px,543px,relative);
+  @include med-and-large-device{
+    @include structure-dimension(relative,240px,-630px,2em,2em);
+    color:red;
+  }
+  @include med-only-device{
+    @include structure-dimension(relative,290px,-860px,2em,2em);
+    color:$red;
+  }
+  @include large-only-device{
+    @include structure-dimension(relative,520px,-730px,2em,2em);
+    color:$red;
+  }
+  color:$red;
+}
+
+.back #downArrow{
+  @include rotate(180deg);
+  @include top-left-position(-1200px,-20px,relative);
+  @include med-and-large-device{
+    @include structure-dimension(relative,250px,-700px,2em,2em);
+    @include rotate(180deg);
+  }
+  @include med-only-device{
+    @include structure-dimension(relative,300px,-930px,2em,2em);
+    @include rotate(180deg);
+  }
+  @include large-only-device{
+    @include structure-dimension(relative,530px,-800px,2em,2em);
+    @include rotate(180deg);
+  }
+}

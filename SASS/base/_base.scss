@@ -1,0 +1,123 @@
+// _base.scss
+
+
+section{ 
+  margin:auto;
+  @include position-left(relative,50px);
+  @include med-and-large-device{
+    width:100vw;
+    margin-left:-3.5em;    
+  }
+  @include small-device{
+    @include top-left-position(-15em,5em,relative);
+  }
+}
+
+section.aboutMe{
+  @include med-and-large-device{
+    margin-top:10em;
+  }
+  h1{
+    width:5em;
+  }
+
+}
+
+.aboutMe{
+  @include large-only-device{
+    top:0;
+  }
+}
+
+h1{
+  @include position-left(relative,50%);
+  @include med-and-large-device{
+    margin-left:-2em;
+    width:5em;
+  }
+
+}
+
+article > p {
+  position:relative;
+  margin-left:20%;
+  margin-right:20%;
+  font-size:25px;
+  @include med-only-device{
+    margin-left:1em;
+    width:15em;
+  }
+}
+
+section h2{
+  @include large-only-device{
+    display:block;
+    content:" ";
+    margin-top: 0em;
+    height:12.5em;
+    visibility:hidden;
+    z-index:-10;
+  }
+  display:block;
+  content:" ";
+  margin-top: 10px;
+  height:120px;
+  visibility:hidden;
+  z-index:-10;
+}
+
+section input{
+  display:none;
+}
+
+section:nth-of-type(1) hr{
+  @include position-top-width(relative,80px,800px);
+  @include med-and-large-device{
+    width:120px;
+  }
+  @include large-only-device{
+    @include position-top-width(relative,150px,400px);
+  }
+}
+
+section:nth-of-type(2) hr{
+  @include position-top-width(relative,270px,800px);
+  @include med-and-large-device{
+    top:7em;
+    width:120px;
+  }
+  @include large-only-device{
+    top:9em;
+    width:400px;
+  }
+}
+
+#fullCanvas{
+  @include small-device{
+    position: relative;
+    height: 100%;
+    padding-top: 1em;
+    overflow: hidden; 
+  }
+}
+
+#allContent{
+  @include small-device{
+    @include translate3d(0,0,0);
+    @include transition-element(transform,1s);
+    position:relative;
+    overflow-y:scroll;
+  }
+}
+
+.mask{
+  @include small-device{
+    @include structure-dimension(absolute,0,2.5em,100%,100%);
+    @include transition-element(z-index,0.5s);
+    @include transition-element(transform,0.5s);
+    @include transition-element(opacity,0.5s);
+    z-index:-1;
+    opacity:0;
+    background-color: rgba(0,0,0,0.5);
+  }  
+}
