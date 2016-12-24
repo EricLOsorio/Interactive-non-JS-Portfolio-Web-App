@@ -753,11 +753,18 @@ nav input:checked + li > label {
       position: relative;
       left: -2em;
       font-size: 1em; } }
+  @media (max-device-width: 600px) and (min-device-height: 200px) and (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+    .modal p {
+      left: 0.1em; } }
+
   @media (max-device-width: 1024px) and (min-device-height: 200px) {
     .modal p {
       position: relative;
       left: -2em;
       font-size: 1em; } }
+  @media (max-device-width: 1024px) and (min-device-height: 200px) and (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+    .modal p {
+      left: 0.1em; } }
 
 #modalInput1, #modalInput2 {
   display: none; }
@@ -782,6 +789,9 @@ nav input:checked + li > label {
       position: relative;
       cursor: pointer;
       font-size: 0.5em; } }
+  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+    #modalClose {
+      left: -1em; } }
 
 /*Projects*/
 .projectSection {

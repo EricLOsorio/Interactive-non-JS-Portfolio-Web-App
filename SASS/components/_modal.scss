@@ -20,6 +20,9 @@
     @include med-and-large-device{
       @include position-left(relative,-2em);
       font-size:1em;
+      @include med-only-device{
+        left:0.1em;
+      }
     }
   }
 }
@@ -38,6 +41,9 @@
     @include top-left-position(1.8em,-4em,relative);
     cursor: pointer;
     font-size:0.5em;
+  }
+  @include med-only-device{
+    left:-1em;
   }
   left:0px;
   cursor: pointer;
