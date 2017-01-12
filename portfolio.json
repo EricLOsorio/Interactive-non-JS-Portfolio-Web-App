@@ -3,7 +3,7 @@
    "header": {
      "fullName": "Eric L. Osorio",
      "navMenu": ["About","Projects","Skills","Contact"],
-     "searcBar": "Search"
+     "searchBar": "Search"
    },
 
    "about" : {
