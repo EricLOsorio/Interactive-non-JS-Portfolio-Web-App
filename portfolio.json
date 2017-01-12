@@ -1,0 +1,235 @@
+{ 
+
+   "header": {
+     "fullName": "Eric L. Osorio",
+     "navMenu": ["About","Projects","Skills","Contact"],
+     "searcBar": "Search"
+   },
+
+   "about" : {
+     "sectionTitle": "About",
+     "sectionSubtitle": "",
+     "bioIntro":"I am a systems engineer turned web developer. My goal is to become a fullstack developer and work on challenging projects that make a positive impact on humanity.This page is part of my portfolio as I progress through the challenging curriculum of the BOV Academy program in my quest to reach these goals. It is a work in progress used to track my skill proficiencies."
+   },
+
+   "projects" : {
+     "sectionTitle": "Projects",
+     "sectionSubtitle": "",
+     "projectsIntro": "Here is a sample of the projects that I've worked on so far at Learn Modern Developer",
+     "projectList" : [
+     	{
+     	  "projectTitle":"Calculator",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3, Vanilla JavaScript",
+     	  "projecttDescription":"Scientific Calculator with basic functionality, advanced features coming soon",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Shopping Cart",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3, Vanilla JavaScript",
+     	  "projecttDescription":"Basic shopping cart with JavaScript functions for calculating prices",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Forms",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3, Vanilla JavaScript",
+     	  "projecttDescription":"Basic forms with validation JavaScript",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Non-JavaScript UI Components",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3",
+     	  "projecttDescription":"Business Card, Tabs, Accordion, Side Bar, Image Gallery and Button non-JavaScript-components",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Collaborative Projects",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3, Vanilla JavaScript",
+     	  "projecttDescription":"Collaboration Project for Modern Developer Encyclopedia with Javascript object definitions",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Responsive Accordion",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3",
+     	  "projecttDescription":"Responsive Accordion with only HTML and CSS",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	},
+
+     	{
+     	  "projectTitle":"Hackathon Menu Borders",
+     	  "projectTechnologies":"TECHNOLOGIES: HTML5, CSS3",
+     	  "projecttDescription":"Hackathon project for animated borders using only HTML and CSS",
+     	  "projectDemo": "View Demo",
+     	  "projectSource": "Project Source on GitHub"
+     	}	     	     	
+     ]
+   },
+
+   "skills": {
+     "sectionTitle": "Skills",
+     "sectionSubtitle": "",
+     "skillsIntro": "Here are some metrics to help visualize a number of skills related to web development and other professional skills",
+     "skillsGraphBar":{
+       "skills":{
+         "frontendDevelopment":{
+     	   "percent":90
+     	 },
+     	 "backendDevelopment":{
+     	   "percent":10
+     	 }
+       }
+     },    	
+     "expertiseLevels":{
+       "learning":{
+         "percent":25
+       },
+       "competent":{
+         "percent":50
+       },
+       "proficient":{
+         "percent":75
+       },
+       "expert":{
+         "percent":100
+       }
+     },
+     "skillsGraphs":{
+
+       "frontendGraph":{
+         "title":"Frontend Development",
+     	 "expertiseLevels":{
+     	   "learning":{
+     	     "percent":25
+     	   },
+     	   "competent":{
+     	     "percent":50
+     	   },
+     	   "proficient":{
+     	     "percent":75
+     	   },
+     	   "expert":{
+     	     "percent":100
+     	   }
+     	 },
+     	 "frontendGraphSkills":{
+     	   "javaScript":{
+     	     "percent":50,
+     	     "toolTip":"Competent at JavaScript"
+     	   },
+     	   "html_css":{
+     	     "percent":50,
+     	     "toolTip":"Proficient with HTML/CSS"
+     	   },
+     	   "reactJS":{
+     	     "percent":25,
+     	     "toolTip":"Still Learning ReactJS"
+     	   },
+     	   "jQuery":{
+     	     "precent":25,
+     	     "toolTip":"Still Learning jQuery"
+     	   }
+     	 }
+
+       },
+       "backendGraph":{
+         "title":"Backend Development",
+     	   "expertiseLevels":{
+     	     "learning":{
+     	       "percent":25
+     	     },
+     	     "competent":{
+     	       "percent":50
+     	     },
+     	     "proficient":{
+     	       "percent":75
+     	     },
+     	     "expert":{
+     	       "percent":100
+     	     }
+     	   },
+     	   "backendGraphSkills":{
+     	     "NodeJS":{
+     	       "percent":25,
+     	       "toolTip":"Still Learning NodeJS"
+     	     },
+     	     "PHP":{
+     	       "percent":25,
+     	       "toolTip":"Still Learning PHP"
+     	     },
+     	     "MongoDB":{
+     	       "percent":25,
+     	       "toolTip":"Still Learning MongoDB"
+     	     },
+     	     "Ruby":{
+     	       "precent":25,
+     	       "toolTip":"Still Learning Ruby"
+     	     }
+     	   }
+     	},
+        "otherSkillsGraph":{
+     	  "title":"Other Skills",
+     	  "expertiseLevels":{
+     	    "learning":{
+     	  	"percent":25
+     	    },
+     	    "competent":{
+     	      "percent":50
+     	    },
+     	    "proficient":{
+     	      "percent":75
+     	    },
+     	    "expert":{
+     	      "percent":100
+     	    }
+     	  },
+     	  "otherGraphSkills":{
+     	    "writtenCommunication":{
+     	      "percent":75,
+     	      "toolTip":"Proficient at Written Communication"
+     	    },
+     	    "problemSolving":{
+     	      "percent":75,
+     	      "toolTip":"Proficient at Problem Solving"
+     	    },
+     	    "projectManagement":{
+     	      "percent":50,
+     	      "toolTip":"Competent at Project Management"
+     	    },
+     	    "research":{
+     	      "precent":25,
+     	      "toolTip":"Proficient at Research"
+     	    },
+     	    "publicSpeaking":{
+     	      "percent":50,
+     	      "toolTip": "Competent at Public Speaking"
+     	    }
+     	  } 
+        }  
+     } 
+   }, 
+   "contact": {
+     "sectionTitle": "Contact",
+     "sectionSubtitle": "",
+     "contactIntro": "Feel free to contact me at the email below, or through any of the social network sites on my digital business card.",
+     "card":{
+       "fullName":"Eric L. Osorio",
+       "title":"Freelance Fullstack Developer",
+       "subtitle":"Future graduate of BOV Academy",
+       "description":"Proficient in HTML5, CSS3 and JavaScript along with extensive experience in systems administration and networking.",
+       "location":"Location: Washington D.C. Area",
+       "contacteMail":"cyberfrein@gmail.com",
+       "bovAcademyContact":"Eric L. Osorio on Encyclopedia.MD"
+     } 
+   } 
+
+} 
