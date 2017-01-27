@@ -1,20 +1,22 @@
 //_topBars.scss
 
-.solidTopBar{
+.solidTopBar{overflow:hidden;
   @include small-device{
     @include h-w(3.5em,100vw);
     @include translate3d(0,0,0);
     @include transition-element(transform,1s);
+    padding:0;margin:0;
     display:block;
     position:fixed;
     background-color:blue;
     z-index:10;
+
   }
   display:none;
   .name{
     @include small-device{
-      @include h-w(3em,100%);
-      @include position-top(absolute,0.5em);
+      width:100vw;
+      @include position-top(absolute,0.9em);
       @include translate3d(-16em,0,0);
       @include transition-element(transform,1s);
       background-color:blue;
@@ -22,7 +24,7 @@
       p{
         margin-top:0;
         color:$white;
-        font-size:2em;
+        font-size:1.5em;
       }
     }
   }
@@ -31,10 +33,10 @@
 .hamburger{
   @include small-device{
     @include h-w(2em,2em);
-    @include translate3d(1em,0,0);
+    @include translate3d(2em,0,0);
     @include transition-element(transform,1s);
     display:block;
-    margin-top:0.9em;
+    margin-top:1em;
   }
   display:none;
   .bars{
@@ -44,15 +46,20 @@
     }
     span{
       @include small-device{
-        @include h-w(7px,35px);
+        @include h-w(5px,30px);
         position:relative;
         display: block;
         margin-bottom:5px;
-        background-color:$black;  
+        background-color:$black; 
+        @include transition-all(0.1s);
       }
     }
   }
+  &:hover{
+    cursor:pointer;
+  }
 }
+
 
 #off-menu{
   @include small-device{
@@ -63,15 +70,26 @@
 
 #off-menu:checked ~ .solidTopBar > .hamburger{
   @include small-device{
-    @include translate3d(14em,0,0);
+    @include translate3d(15em,0,0);
     @include transition-element(transform,1s);
+  }
+  span:nth-of-type(1){
+    @include rotate-translate(45deg,8px,6px);
+    @include transition-element(transform,0.5s);
+  }
+  span:nth-of-type(2){
+    display:none;
+  }
+  span:nth-of-type(3){
+    @include rotate(-45deg);
+    @include transition-element(transform,0.5s);
   }
 }
 
 #off-menu:checked ~ .solidTopBar > .name,
 #off-menu:checked ~ #fullCanvas > #sideNavBar{
   @include small-device{
-    @include translate3d(0,0,0);
+    @include translate3d(4em,0,0);
     @include transition-element(transform,1s);
     overflow:scroll;
   }
@@ -87,7 +105,7 @@
 #off-menu:checked ~ #fullCanvas > #allContent,
 #off-menu:checked ~ #fullCanvas > .mask{
   @include small-device{
-    @include translate3d(10.5em,0,0);
+    @include translate3d(14em,0,0);
     @include transition-element(transform,1s);
   }
 }
@@ -113,10 +131,12 @@ input[name="navRadio"]{
 
 #fullCanvas > #sideNavBar{
   @include small-device{
-    @include h-w(100%,10.5em);
+    position:fixed;  
+    @include h-w(100%,14em);
+    margin-left:-4em;
     @include translate3d(-11em,0,0);
     @inlude transition-element(transform,1s);
-    position:fixed;
+
     display:inline-block;
     overflow-y:scroll;
     overflow-x:hidden;
@@ -143,13 +163,25 @@ input[name="navRadio"]{
   }
 }
 
+.sideDetails:nth-of-type(1){
+  margin-left:-1em;
+}
+.sideDetails:nth-of-type(3){
+   position:relative;
+    margin-left:3em;
+    ul{
+      margin:0;
+      padding:0;
+    }
+}
+
 .sideProjList{
   @include small-device{
     @include translate3d(0,0,0);
     @include transition-element(transform,1s);
     overflow-y:scroll;
     margin-left:-0.5em;
-    width:10em;
+    width:14em;
     position:relative;
     top:0;
     left:-2em;
@@ -157,28 +189,32 @@ input[name="navRadio"]{
   .projectDetails{
     @include small-device{
       height:12em;
-      margin-top:-1.7em;
+      margin-top:-1.9em;
       margin-left:0.5em;
     }
   }
 
   li {
     @include small-device{
+      position:relative;
+      left:0px;
       border:2px solid blue;
-      width:7em;
-      font-size:1.2em;
+      width:8.1em;
+      font-size:1em;
+      padding:0.5em 0;
+      line-height:1em;
       margin-bottom:2em; 
     }
   }
 }
 
-
+/*
 .sideProjList li + div{
   @inclue small-device{
     margin-top:-2em;
-    height:5em;
+    height:9em;color:red;
   }
-}
+}*/
 
 @for $i from 1 through 4 {
   #sideNavBar input:nth-of-type(#{$i}):checked ~ .sideDetails:nth-of-type(#{$i}){
@@ -198,6 +234,7 @@ input[name="navRadio"]{
 
 #sideNavBar > ul{
   @include small-device{
+    position:relative;
     margin-top:2.5em;
     height:100%;
     overflow:scroll;
@@ -214,18 +251,27 @@ input[name="navRadio"]{
 #sideNavBar ul li{
   @include small-device{
     list-style:none;
-    margin-left:-2em;
+    margin-left:-2.5em;
+    padding-left:1em;
+  }
+  &:hover{
+    cursor:pointer;
   }
 }
 
 #sideNavBar > ul > li label{
   @include small-device{
-    position:static;
-    top:3em;
-    left:-1em;
+    position:relative;
+    padding:0.5em 2em;
+    top:0em;
+    left:-1.5em;
     color:black;
     font-size:2em;
     line-height:2em;
+    text-align:right;
+  }
+  &:hover{
+    cursor:pointer;
   }
 }
 
@@ -238,18 +284,20 @@ input[name="navRadio"]{
 #sideNavBar ul {
   div:nth-of-type(3){
     @include small-device{
-      width:7em;
+      width:9em;
       left:-4em;
     }
     li{
       @include small-device{
-        margin-left:-2.5em;
+        margin-left:0em;
       }
     }
   }
   div:nth-of-type(4) img{
     @include small-device{
+      position:relative;
       @include h-w(1.5em, 1.5em);
+      left:-20px;
     }
   }
   div:nth-of-type(2) li{
@@ -267,66 +315,75 @@ input[name="navRadio"]{
 
 #topNavBar{
   width:100%;
+  height:90px;
   background-color:$nav-bar-bg-color;
-  margin-left:-25px;
   z-index:3;
   position:fixed;
-  margin-top:-50px;
-  right:0;
-  
-  @include med-and-large-device{
-    @include h-w(16em,100vw);
-    @include position-left(fixed,0);
-    margin-top:-0.6em;
-    margin-left:0em;    
-  }
-
+  top:0;
+  left:0;
+  margin-bottom:7px;
+  border-bottom:7px solid $nav-label-bg-color;
   @include large-only-device{
-    @include h-w(20em,100vw);
-    @include position-left(fixed,0);
-    margin-top:-0.6em;
+    background-color:$nav-bar-lg-bg-color;
+    border-bottom-color:$nav-border-lg-bottom;
   }
+  @include med-only-device{
+    background-color:$nav-bar-med-bg-color;
+    border-bottom-color:$nav-border-med-bottom;  
+  }
+  @include small-device{
+    display:none;
+  }
+ }
 
-  p{
+#fullName{
     @include med-and-large-device{
+      display:inline;
       width:8em;
-    }
-  }
+      top:-0.5em;
+      margin-left:30%;
+      margin-right:30%;      
+}
 
   ul{
+    @include large-only-device{
+      margin-left:-50px;
+    }
+    @include med-only-device{
+      margin-left:-150px;
+    }
     @include small-device{
       display:none;
     }
   }
 }
 
-
-nav > label:nth-of-type(1){
-  position:relative;
-  display:inline;
-  right:-730px;
-  top:-25px;
-  border:2px solid $black;
-  border-radius:15%;
-  @include med-and-large-device{
-    @include top-left-position(1em,12em,relative);
-  }
-  @include large-only-device{
-    @include top-left-position(1em,12em,relative);
-  }
+#fullName{
+  font-size:20px;
 }
 
 nav label > i{
   color:$black;
 }
 
-nav ul li > label {
-  padding:25px;
-  @include med-and-large-device{
-    padding:0;
+
+nav ul label {
+  width:70px;
+  display:inline-block;
+  text-align:center;
+  padding:5px 20px 20px 20px;
+  margin-right:-5px;
+  @include large-only-device{
+    width:70px;
+  }
+  @include med-only-device{
+    width:40px;
+    position:relative;
+    top:5px;
   }
   &:hover{
     cursor:pointer;
+    color:$black;    
   }
 }
 
@@ -336,61 +393,43 @@ nav ul input{
 
 
 nav > p{
-  @include top-left-position(50px,50px,relative);
+  @include top-left-position(33px,20px,absolute);
   width:8em;
-  font-size:250%;
+  font-size:18px;
   color:$white;
-
-  @include med-and-large-device{
-    position:static;
-    width:6em;
-    margin-top:0;
-    margin-left:2em;
-    font-size:2em;
-  }
-}
-
-nav p{
-  @include large-only-device{
-    position:static;
-    width:6em;
-    margin-top:0;
-    margin:auto;
-    font-size:3em;
-  }
+  line-height:1.15;
 }
 
 nav > ul {
-  @include top-left-position(-20px,25%,relative);
+  white-space:nowrap;
+  @include top-left-position(50px,20%,relative);
   @include display-marginLeft(inline,2em);
   @include med-and-large-device{
-    @include top-left-position(-1em,4em,relative);
-    width:10em;
-    display:block;
+    display:inline-block;
+    left:25%;
+    top:2em;
+    margin-right:0;
+    padding:0;
+    width:100%;
   }
-  @include large-only-device{
-    @include top-left-position(-1em,17em,relative);
-    display:block;
+  @include med-only-device{
+    left:-20px;
   }
 }
 
 nav > ul li{
-  display:inline;
+  display:inline-block;
   padding-right:0px;
   color:$white;
-  font-size:25px;
-  @include med-and-large-device{
-    width:3em;
-    display:block;
-    margin-bottom:0.2em;
-    color:$white;
-    font-size:1.5em;  
-  }
+  font-size:18px;
   @include large-only-device{
-    display:block;
-    margin-bottom:0.2em;
-    color:$white;
-    font-size:2em;
+   font-size:17px;
+    padding:0;
+    margin:0;
+  }
+  @include med-only-device{
+    font-size:12px;
+    margin-right:10px;
   }
 }
 
@@ -400,4 +439,10 @@ nav input:checked + li > label{
   }
   background-color:$nav-label-bg-color;
   color:$black;
+  @include large-only-device{
+    background-color:$nav-border-lg-bottom;
+  }
+  @include med-only-device{
+    background-color:$nav-border-med-bottom;
+  }
 }

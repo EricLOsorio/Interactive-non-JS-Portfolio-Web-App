@@ -1,51 +1,90 @@
 // _base.scss
 
-
-section{ 
+section{
+  width:900px;
+  position:relative;
   margin:auto;
+  font-size:15px;
+  color:#6D7373;
   @include position-left(relative,50px);
-  @include med-and-large-device{
-    width:100vw;
-    margin-left:-3.5em;    
-  }
-  @include small-device{
-    @include top-left-position(-15em,5em,relative);
-  }
-}
-
-section.aboutMe{
-  @include med-and-large-device{
-    margin-top:10em;
-  }
-  h1{
-    width:5em;
-  }
-
-}
-
-.aboutMe{
   @include large-only-device{
+    width:600px;
+    margin:auto;
+  }
+  @include med-only-device{
+    position:relative;
     top:0;
   }
+
+  @include small-device{
+    @include top-left-position(0em,0,relative);
+    width:100vw;
+  }
 }
 
-h1{
-  @include position-left(relative,50%);
-  @include med-and-large-device{
-    margin-left:-2em;
+section:nth-of-type(2){
+  @include large-only-device{
+  position:relative;
+   margin-top:0px;
+  }
+  @include small-device{
+    top:-13em;  
+  }
+}
+
+
+
+  section.aboutMe h1, section.projectSection h1,section.skills h1, section.contact h1{
+  @include position-left(relative,0);
+  font-size:32px;
+  font-weight:100;
+  font-family:sans-serif;
+  width:100%;
+  top:-30px;
+  margin:auto;
+  text-align:center;
+  @include large-only-device{
+    margin:auto;
     width:5em;
+    top:-200px;
+  }
+  @include med-only-device{
+    top:-30px;
+    left:-9em;
+  }
+  @include small-device{
+    left:-20px;
   }
 
+}
+
+article{
+  margin-bottom:51px;
+  margin-left:0em;
+  width:100%;
+  @include small-device{
+    position:relative;
+    width:100%;
+    left:19%;
+  }
 }
 
 article > p {
   position:relative;
-  margin-left:20%;
-  margin-right:20%;
-  font-size:25px;
+  left:0;
+  width:100%;
+  margin:auto;
+  font-size:18px;
+  @include large-only-device{
+    top:-150px;
+  }
   @include med-only-device{
     margin-left:1em;
     width:15em;
+  }
+  @include small-device{
+    width:80vw;
+    margin-left:-2em;
   }
 }
 
@@ -57,6 +96,9 @@ section h2{
     height:12.5em;
     visibility:hidden;
     z-index:-10;
+  }
+  @include small-device{
+    visibility:hidden;
   }
   display:block;
   content:" ";
@@ -71,25 +113,51 @@ section input{
 }
 
 section:nth-of-type(1) hr{
-  @include position-top-width(relative,80px,800px);
-  @include med-and-large-device{
-    width:120px;
-  }
+  @include position-top-width(relative,50px,800px);
+
   @include large-only-device{
-    @include position-top-width(relative,150px,400px);
+    @include position-top-width(relative,-100px,400px);
+  }
+  @include med-only-device{
+    @include position-top-width(relative,10px,220px);
+    left:-20em;
+  }
+  @include small-device{
+    @include position-top-width(relative,10px,80px);
+  }
+}
+
+section:nth-of-type(2){
+  top:-20px;
+  @include large-only-device{
+    top:-120px;
+  }
+}
+
+section:nth-of-type(3){
+  top:20px;
+  @include large-only-device{
+    top:-300px;
+  }
+  @include med-only-device{
+    top:-100px;
   }
 }
 
 section:nth-of-type(2) hr{
-  @include position-top-width(relative,270px,800px);
-  @include med-and-large-device{
-    top:7em;
-    width:120px;
+  @include position-top-width(relative,230px,800px);
+  @include med-only-device{
+    top:5em;
+    width:220px;
+    left:-20em;
   }
   @include large-only-device{
-    top:9em;
+    top:-4em;
     width:400px;
   }
+  @include small-device{
+    @include position-top-width(relative,120px,80px);
+  }  
 }
 
 #fullCanvas{
@@ -99,6 +167,10 @@ section:nth-of-type(2) hr{
     padding-top: 1em;
     overflow: hidden; 
   }
+
+
+  margin:0;
+  padding:0;
 }
 
 #allContent{
@@ -108,6 +180,8 @@ section:nth-of-type(2) hr{
     position:relative;
     overflow-y:scroll;
   }
+  width:100%;
+  
 }
 
 .mask{

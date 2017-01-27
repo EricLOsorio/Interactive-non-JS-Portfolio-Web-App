@@ -4,33 +4,40 @@
 
 .contact {
 
-  width:90%;
-  left:0em;
-  @include position-top(relative,-850px);
-  @include med-and-large-device{
-    top:-40em;
+
+  @include position-top(relative,-1050px);
+  @include large-only-device{
+    top:-70em;
+    left:2em;
+  }
+  @include med-only-device{
+    top:-45em;
+  }
+  @include small-device{
+    top:-15em;
   }
   h1{
     width:5em;
     @include large-only-device{
-      margin-left:8em;
+      margin-left:2em;
     }
     @include med-only-device{
-      margin-left:4.5em;
+      margin-left:-3em;
     }
     @include small-device{
-      margin-left:3em;
+      margin-left:1em;
     }
   }
   article{
     @include large-only-device{
-      margin-left:5em;
+      margin-left:1em;
     }
     @include med-only-device{
       margin-left:3em;
     }
     @include small-device{
-      margin-left:2em;
+      margin-left:3.5em;
+      top:-30em;
     }
     p{
       @include large-only-device{
@@ -40,28 +47,53 @@
         width:15em;
       }
       @include small-device{
-        width:10em;
+        position:relative;
+        width:90vw;
+        left:-4em;
       }
     }
   }
 }
 
 .contact header{
-  @include med-and-large-device{
-    @include position-top(relative,0);
+  @include large-only-device{
+    position:relative;
+    top:0;
     width:50vw;
+    left:5em;
+  }
+  @include med-only-device{
+    position:relative;
+    width:500px;
+    left:200px;
+  }
+  @include small-device{
+    position:relative;
+    top:-30em;
+    left:0em;
   }
 }
 
 /* Business Card */
 
 
-.contact label { 
-  @include top-left-position(20em,20%,absolute);
+.contact label {
+  @include top-left-position(20em,18%,absolute);
   @include perspective(800px);
   display:block;
   &:hover{
     cursor:pointer;
+  }
+  @include large-only-device{
+    left:0em;
+    margin:auto;
+  }
+  @include med-only-device{
+    left:-20px;
+  }
+  @include small-device{
+    top:-3em;
+    left:-20px;
   }    
 }
 
@@ -77,23 +109,22 @@
   &:hover{
     cursor:pointer;
   }  
-  @include med-and-large-device{
-    width:80vw;
-    top:20em;
-    margin-left:0;
-  }
  @include med-only-device{
     left:0.5em;
     top:10em;
-    width:90vw;
-    height:130vh;
+    width:300px;
+    height:35em;
+    margin-left:0;
   }
   @include large-only-device{
-    left:0em;
-    height:75vh;
-  }
+    top:8em;
+    width:600px;
+    margin-left:0em;
+    height:30em;
+   }
   @include small-device{
-    height:150vh;
+    height:22em;
+    width:300px;
     margin-left:2em;
   }
   p{
@@ -139,6 +170,9 @@
   margin-left:5%;
   margin-bottom:3%;
   padding-right:5%;
+  @include large-only-device{
+    font-size:0.8em;
+  }
   @include small-device{
     font-size:0.8em;
     line-height:0.8em;
@@ -155,10 +189,14 @@
   color:$white;
   background-image: url("../designs/bg2.png");
   left:0em;
-  @include med-and-large-device{
-    width:100%;
+  @include large-only-device{
+    width:600px;
     height:100%;
-    font-size:1.4em;
+    font-size:1.1em;
+  }
+  @include med-only-device{
+    width:300px;
+    height:100%;
   }
   img {
     @include med-and-large-device{
@@ -173,17 +211,18 @@
   color: $white;
   @include rotateX(180deg);
   @include large-only-device{
-    width:80vw;
-    height:75vh;    
+    width:600px;
+    height:30em;    
     left:0em;
   }
   @include med-only-device{
-    height:100%;
-    width:90vw;
+    height:35em;
+    width:300px;
     left:0em;
   }
   @include small-device{
-    height:100%;
+    width:300px;
+    height:22em;
     margin-left:5em;
   }
 }
@@ -202,15 +241,15 @@
 .back > img{
   @include h-w(400px,600px);
   @include med-only-device{
-    @include h-w(100%,90vw);
+    @include h-w(35em,300px);
     position:relative;
   }
   @include large-only-device{
-    @include h-w(75vh,80vw);
+    @include h-w(30em,600px);
     position:relative;
   }
   @include small-device{
-    @include h-w(120vh,95vw);
+    @include h-w(22em,300px);
     position:relative;
   }
   position:relative;
@@ -329,11 +368,11 @@
     color:red;
   }
   @include med-only-device{
-    @include structure-dimension(relative,290px,-860px,2em,2em);
+    @include structure-dimension(relative,240px,-510px,2em,2em);
     color:$red;
   }
   @include large-only-device{
-    @include structure-dimension(relative,520px,-730px,2em,2em);
+    @include structure-dimension(relative,520px,-430px,2em,2em);
     color:$red;
   }
   color:$red;
@@ -347,11 +386,11 @@
     @include rotate(180deg);
   }
   @include med-only-device{
-    @include structure-dimension(relative,300px,-930px,2em,2em);
+    @include structure-dimension(relative,250px,-570px,2em,2em);
     @include rotate(180deg);
   }
   @include large-only-device{
-    @include structure-dimension(relative,530px,-800px,2em,2em);
+    @include structure-dimension(relative,530px,-490px,2em,2em);
     @include rotate(180deg);
   }
 }

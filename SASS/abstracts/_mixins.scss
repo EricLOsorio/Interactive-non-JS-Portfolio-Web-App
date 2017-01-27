@@ -52,6 +52,14 @@
   font-weight:bold;
 }
 
+@mixin rotate-translate($deg, $x,$y){
+  -webkit-transform: rotate($deg) translate($x,$y);
+  -moz-transform: rotate($deg) translate($x,$y);
+  -o-transform: rotate($deg) translate($x,$y);
+  -ms-transform: rotate($deg) translate($x,$y);
+  transform: rotate($deg) translate($x,$y);  
+}
+
 @mixin rotate($deg){
   -webkit-transform: rotate($deg);
   -moz-transform: rotate($deg);

@@ -1,13 +1,16 @@
 //_helpers.scss
 
 
-body {
-  font-family:Georgia,Verdana,Arial;
+body,html {
+  font-family:Roboto,sans-serif;
+  max-width:100%;
+  padding:0;margin:0;
+  overflow-x:hidden;
+  box-sizing:border-box;
 }
 
 .wrapper{
   position:relative;
-  width:100%;
 }
 
 .content{
@@ -17,10 +20,10 @@ body {
       padding:0;
   }
   margin:0;
-  padding-right:4em;
+  padding:0;
   left:-0.5em;
   position:absolute;
-  width:100%;
+  width:100vw;
   background-color: #FFFFFF;
 }
 

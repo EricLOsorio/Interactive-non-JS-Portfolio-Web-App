@@ -4,57 +4,77 @@
 
 .projectSection{
   top:20px;
+  padding-bottom:100px;
+  @include large-only-device{
+    top:80px;
+  }
+  @include small-device{
+    width:100vw;
+  }
   h1{
     width:5em;
   }
 }
 
-section.projectSection{
-  @include large-only-device{
-    top:2em;
-  }
-}
-
 
 .projectSection > label{
-  @include display-marginLeft(block, 20%);
+  position:relative;
+  top:15px;
+  @include display-marginLeft(block, 0);
   @include h-w(50px,150px);
   &:hover{
     cursor:pointer;
   }  
   @include large-only-device{
     margin-bottom:0;
-    margin-left:3.9em;
-    border:1px solid $black; 
+    margin:auto;
+    top:-150px;
+
   }
   @include med-only-device{
     margin-bottom:0;
-    margin-left:2.05em;
-    border:1px solid $black;
+    margin-left:3em;
+
   }
+  @include small-device{
+    left:-10px;
+    top:-3px;
+    margin:auto;
+  }
+
   padding-left:50px;
   padding-top:30px;
   font-size:20px;
 }
 
 
-.projectSection > input + label:hover,
 .projectSection > input:checked + label{
   background-color:$grey;
   color:$white;
 }
 
+.projectSection > input:not(:checked) + label:hover{
+  color:#cc00ff;
+}
+
 
 .displayArea{
-  @include structure-dimension(absolute,200px,245px,800px,685px);
-  @include display-marginLeft(none,20%);
+  @include structure-dimension(absolute,150px,283px,700px,680px);
+  @include display-marginLeft(none,50px);
   @include med-only-device{
-    @include structure-dimension(relative,-2.6em,0.1em,80vw,26em);
+    @include structure-dimension(relative,-2.6em,1.2em,300px,26em);
     display:none;
   }
   @include large-only-device{
-    @include structure-dimension(relative,-4.8em,0.1em,80vw,26em);
+    @include structure-dimension(relative,-3.2em,-147px,600px,26em);
     display:none;
+  }
+  @include small-device{
+    position:relative;
+    top:0;
+    left:-48px;
+    width:90vw;
+    height:470px;
   }
   background-color:$grey;
 
@@ -62,19 +82,22 @@ section.projectSection{
 
  .projectSection .displayArea > img{
    @include top-left-position(20%,16%,absolute);
-   @include h-w(400px,570px);
+   @include h-w(300px,470px);
    @include med-and-large-device{
-     @include structure-dimension(absolute,2em,3em,80vw,15em);
-     visibility: hidden;
-     z-index:2;
+     @include structure-dimension(absolute,2em,3em,200px,15em);
    }
    @include med-only-device{
-     @include structure-dimension(absolute,2em,3em,60vw,15em);
+     @include structure-dimension(absolute,3em,3em,200px,15em);
      visibility: hidden;
      z-index:2;
    }
    @include large-only-device{
-     width:70vw;
+     width:400px;
+     left:93px;
+   }
+   @include small-device{
+     width:15em;
+     left:14%;
    }
    visibility: hidden;
    z-index:2;
@@ -104,18 +127,22 @@ section.projectSection{
 
 
 .chevronLabels label[class="right"]{
-  @include top-left-position(300px,750px,absolute);
+  color:$chevrons;
+  @include top-left-position(300px,630px,absolute);
   @include med-and-large-device{
     @include top-left-position(157px,290px,absolute);
     display:none;
   }
   @include med-only-device{
-    @include top-left-position(157px,285px,absolute);
+    @include top-left-position(157px,250px,absolute);
     display:none;
   }
   @include large-only-device{
     @include top-left-position(157px,570px,absolute);
     display:none;
+  }
+  @include small-device{
+    left:280px;
   }
   display:none;
   &:hover{
@@ -124,10 +151,17 @@ section.projectSection{
 }
 
 .chevronLabels label[class="left"]{
+  color:$chevrons;
   @include top-left-position(300px,50px,absolute);
   @include med-and-large-device{
-    @include top-left-position(160px,-1px,absolute);
+    @include top-left-position(160px,15px,absolute);
     display:none;
+  }
+  @include med-only-device{
+    left:25px;
+  }
+  @include small-device{
+    left:15px;
   }
   display:none;
   &:hover{
@@ -137,10 +171,16 @@ section.projectSection{
 
 
 .radioLabels{
-  @include top-left-position(540px,310px,absolute);
+  @include top-left-position(440px,280px,absolute);
   @include med-and-large-device{
-    @include top-left-position(17.5em,6em,absolute);
+    @include top-left-position(17.5em,220px,absolute);
     z-index:2;
+  }
+  @include med-only-device{
+    left:70px;
+  }
+  @include small-device{
+    left:90px;
   }
   z-index:2;  
 }
@@ -166,25 +206,26 @@ section.projectSection{
 
 div.description{
   @include h-w(100px,100%);
-  @include large-only-device{
+  @include med-and-large-device{
     @include top-left-position(25em,-20px,relative);
-    margin-top:-15px;
+    margin-top:-15px; 
     margin-right:0px;
-    margin-left:3em;
-    font-size:0.8em;
+    font-size:0.8em; 
     color:$white;  
   }
+  @include large-only-device{
+    margin-left:3em;
+  }
   @include med-only-device{
-    @include top-left-position(25em,-20px,relative);
     padding-left:2em;
-    margin-top:-15px;
-    margin-right:0px;
+  }
+  @include small-device{
     font-size:0.8em;
-    color:$black;
+    top:30em;
   }
   background-color:$greylight;
   position:relative;
-  top:570px;
+  top:550px;
   display:none;
   color:$white;
   font-size:17px;

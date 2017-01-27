@@ -19,20 +19,27 @@ section.skills hr:nth-of-type(1){
 
 hr#endSkillsLine{
   @include position-top-width(relative,-1050px,800px);
-  @include med-and-large-device{
-    @include position-top-width(relative,-550px,50vw);
-  }
   @include large-only-device{
-    @include position-top-width(relative,-500px,400px);
+    @include position-top-width(relative,-750px,400px);
+  }
+  @include med-only-device{
+    @include position-top-width(relative,-550px,220px);
+    left:-18em;
+  }
+  @include small-device{
+    @include position-top-width(relative,-600px,80px);
   }
 }
 
 section.skills > .backEndGraph  hr{
-  @include position-left-top-width(relative,0px,-360px,400px);
+  @include position-left-top-width(relative,44px,-360px,400px);
 }
 
 section.skills > .otherGraph hr{
-  @include position-left-top-width(relative,0px,-727px,400px);
+  @include position-left-top-width(relative,0px,-724px,400px);
+  @include med-and-large-device{
+    left:60px;
+  }
 }
 
 #frontend{
@@ -63,10 +70,20 @@ section.skills > .otherGraph hr{
 
 .skillBar {
   @include h-w(20px,556px);
-  @include position-left(relative,30%);
-  @include med-and-large-device{
-    @include h-w(20px,75vw);
-    @include position-left(relative,10%);
+  @include position-left(relative,18%);
+  @include large-only-device{
+    @include h-w(20px,50vw);
+    @include position-left(relative,10%);  
+    top:-140px;
+  }
+  @include med-only-device{
+    position:relative;
+    left:10px;
+    @include h-w(20px,240px);
+  }
+  @include small-device{
+    width:230px;
+    left:30px;
   }
 }
 
@@ -78,14 +95,14 @@ section.skills > .otherGraph hr{
 }
 
 #frontendSkill{
-  @include top-left-position(100px,400px,relative);
+  @include top-left-position(100px,100px,relative);
   @include skills-fonts;
-  @include med-and-large-device{
-    left:4em;
-    width:13em;
-    margin-left:250px;
+  @include large-only-device{
+    top:-80px;
   }
   @include med-only-device{
+    left:0em;
+    width:13em;
     margin-left:20px;
   }
   @include small-device{
@@ -96,19 +113,21 @@ section.skills > .otherGraph hr{
 }
 
 #backendSkill{
-  @include top-left-position(80px,900px,relative);
+  @include top-left-position(78px,605px,relative);
   @include skills-fonts;
-  @include med-and-large-device{
-    left:4em;
-    top:23em;
-    width:13em;
-    margin-left:250px;    
+  @include large-only-device{
+    left:5.5em;
+    top:10em;
   }
   @include med-only-device{
-    margin-left:20px;
+    left:0;
+    top:22em;
+    width:13em;
+    margin-left:20px;    
   }
   @include small-device{
-    margin-left:-50px;
+    margin-left:-550px;
+    top:390px;
   }    
   width:13em;
   color:$backend-skill-color;
@@ -116,18 +135,20 @@ section.skills > .otherGraph hr{
 
 #otherSkill{
   @include skills-fonts;
-  @include top-left-position(520px,680px,relative);
-  @include med-and-large-device{
-    left:4em;
-    top:39em;
-    width:13em;
-    margin-left:250px;    
+  @include top-left-position(520px,400px,relative);
+  @include large-only-device{
+    top:25em;
+    left:5.5em;
   }
   @include med-only-device{
-    margin-left:20px;
+    left:0;
+    top:39em;
+    width:13em;
+    margin-left:20px;    
   }
   @include small-device{
-    margin-left:-50px;
+    margin-left:-345px;
+    top:660px;
   }    
   width:13em;
   color:$black;
@@ -179,25 +200,25 @@ section.skills > .otherGraph hr{
 }
 
 .jsBar,.backendBar1{
-  @include top-left-position(-60px,170px,relative);
+  @include top-left-position(-63px,170px,relative);
   @include h-w(60px,20px);
   background-color:$js-backendbar1-bg-color;
 }
 
 .htmlBar,.backendBar2{
-  @include top-left-position(-208px,230px,relative);
+  @include top-left-position(-211px,230px,relative);
   @include h-w(80px,20px);
   background-color:$html-backendbar2-bg-color;
 }
 
 .reactBar,.backendBar3{
-  @include top-left-position(-295px,290px,relative);
+  @include top-left-position(-298px,290px,relative);
   @include h-w(20px,20px);
   background-color:$react-backendbar3-bg-color;
 }
 
 .jqueryBar,.backendBar4{
-  @include top-left-position(-383px,350px,relative);
+  @include top-left-position(-386px,350px,relative);
   @include h-w(20px,20px);
   background-color:$jquery-backendbar4-bg-color;
 }
@@ -214,36 +235,38 @@ section.skills > .otherGraph hr{
 }
 
 .backendBar1{
-  top:-20px;
+  top:-23px;
 }
 
 .backendBar2{
-  top:-108px;
+  top:-111px;
 }
 
 .backendBar3{
-  top:-195px;
+  top:-198px;
 }
 
 .backendBar4{
-  top:-282px;
+  top:-285px;
 }
 
 
 .frontEndGraph{
-  @include position-top-width(relative,100px,500px);
-  @include med-and-large-device{
-    @include position-top(relative,100px);
-    @include h-w(13em,320px);
-    margin-left:250px;
+  @include position-top-width(relative,90px,500px);
+  @include large-only-device{
+    margin-left:80px;
+    top:-100px;
   }
   @include med-only-device{
-    margin-left:60px;
+    @include position-top(relative,100px);
+    @include h-w(13em,320px);
+    margin-left:-30px;
   }
   @include small-device{
-    margin-left:-15px;
+    width:200px;
+    margin-left:0;
   }  
-  margin-left:280px;
+  margin-left:-30px;
 }
 
 .backEndGraph{
@@ -252,12 +275,18 @@ section.skills > .otherGraph hr{
     @include position-left-top-width(relative,0,12em,320px);
     margin-left:250px;
   }
+  @include large-only-device{
+    margin-left:80px;
+    top:2em;
+  }
   @include med-only-device{
-    margin-left:60px;
+    margin-left:-30px;
   }
   @include small-device{
-    margin-left:-15px;
-  }  
+    top:220px;
+    margin-left:0;
+  } 
+  margin-left:-360px; 
 }
 
 
@@ -272,18 +301,21 @@ section.skills > .otherGraph hr{
 }
 
 .otherGraph{
-  @include position-left-top-width(relative, 600px,-550px, 500px);
+  @include position-left-top-width(relative, 250px,-550px, 500px);
   @include med-and-large-device{
-    @include position-left-top-width(relative,0,0,320px);
-    margin-left:250px;
+    @include position-left-top-width(relative,15px,0,320px);
+    margin-left:60px;
+  }
+  @include large-only-device{
+    top:-13em;
   }
   @include med-only-device{
-    margin-left:60px;
+    margin-left:-45px;
   }
   @include small-device{
     margin-left:-15px;
   }  
-  margin-left:-100px;
+  margin-left:-60px;
 }
 
 .writing, .problemSolve, .PM, .research, .publicSpeaking {
@@ -337,10 +369,13 @@ section.skills > .otherGraph hr{
 .writingBar{
   @include structure-dimension(relative,170px,-89px,20px,90px);
   background-color:$writingbar-bg-color;
+  @include med-and-large-device{
+    top:-90px;
+  }
 }
 
 .problemSolveBar{
-  @include structure-dimension(relative,230px,-246px,20px,90px);
+  @include structure-dimension(relative,230px,-247px,20px,90px);
   @include med-and-large-device{
     left:210px;
   }
@@ -452,4 +487,5 @@ div[class*="Tooltip"]{
 
 .tip {
   @include structure-dimension(relative,60px,-15px,20px,15px);
+  color:$black;
 }
