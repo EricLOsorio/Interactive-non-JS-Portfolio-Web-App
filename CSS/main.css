@@ -1,55 +1,84 @@
 section {
+  width: 900px;
+  position: relative;
   margin: auto;
+  font-size: 15px;
+  color: #6D7373;
   position: relative;
   left: 50px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section {
-      width: 100vw;
-      margin-left: -3.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      width: 600px;
+      margin: auto; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     section {
-      width: 100vw;
-      margin-left: -3.5em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      position: relative;
+      top: 0; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     section {
-      top: -15em;
-      left: 5em;
-      position: relative; } }
+      top: 0em;
+      left: 0;
+      position: relative;
+      width: 100vw; } }
 
-@media (max-device-width: 600px) and (min-device-height: 200px) {
-  section.aboutMe {
-    margin-top: 10em; } }
-@media (max-device-width: 1024px) and (min-device-height: 200px) {
-  section.aboutMe {
-    margin-top: 10em; } }
-section.aboutMe h1 {
-  width: 5em; }
+@media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+  section:nth-of-type(2) {
+    position: relative;
+    margin-top: 0px; } }
+@media (max-width: 360px) and (min-height: 200px) {
+  section:nth-of-type(2) {
+    top: -13em; } }
 
-@media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-  .aboutMe {
-    top: 0; } }
-
-h1 {
+section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
   position: relative;
-  left: 50%; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    h1 {
-      margin-left: -2em;
-      width: 5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    h1 {
-      margin-left: -2em;
-      width: 5em; } }
+  left: 0;
+  font-size: 32px;
+  font-weight: 100;
+  font-family: sans-serif;
+  width: 100%;
+  top: -30px;
+  margin: auto;
+  text-align: center; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+      margin: auto;
+      width: 5em;
+      top: -200px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+      top: -30px;
+      left: -9em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+      left: -20px; } }
+
+article {
+  margin-bottom: 51px;
+  margin-left: 0em;
+  width: 100%; }
+  @media (max-width: 360px) and (min-height: 200px) {
+    article {
+      position: relative;
+      width: 100%;
+      left: 19%; } }
 
 article > p {
   position: relative;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 25px; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  left: 0;
+  width: 100%;
+  margin: auto;
+  font-size: 18px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    article > p {
+      top: -150px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     article > p {
       margin-left: 1em;
       width: 15em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    article > p {
+      width: 80vw;
+      margin-left: -2em; } }
 
 section h2 {
   display: block;
@@ -58,7 +87,7 @@ section h2 {
   height: 120px;
   visibility: hidden;
   z-index: -10; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section h2 {
       display: block;
       content: " ";
@@ -66,66 +95,96 @@ section h2 {
       height: 12.5em;
       visibility: hidden;
       z-index: -10; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    section h2 {
+      visibility: hidden; } }
 
 section input {
   display: none; }
 
 section:nth-of-type(1) hr {
   position: relative;
-  top: 80px;
+  top: 50px;
   width: 800px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    section:nth-of-type(1) hr {
-      width: 120px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    section:nth-of-type(1) hr {
-      width: 120px; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section:nth-of-type(1) hr {
       position: relative;
-      top: 150px;
+      top: -100px;
       width: 400px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section:nth-of-type(1) hr {
+      position: relative;
+      top: 10px;
+      width: 220px;
+      left: -20em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    section:nth-of-type(1) hr {
+      position: relative;
+      top: 10px;
+      width: 80px; } }
+
+section:nth-of-type(2) {
+  top: -20px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    section:nth-of-type(2) {
+      top: -120px; } }
+
+section:nth-of-type(3) {
+  top: 20px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    section:nth-of-type(3) {
+      top: -300px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section:nth-of-type(3) {
+      top: -100px; } }
 
 section:nth-of-type(2) hr {
   position: relative;
-  top: 270px;
+  top: 230px;
   width: 800px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     section:nth-of-type(2) hr {
-      top: 7em;
-      width: 120px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      top: 5em;
+      width: 220px;
+      left: -20em; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section:nth-of-type(2) hr {
-      top: 7em;
-      width: 120px; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-    section:nth-of-type(2) hr {
-      top: 9em;
+      top: -4em;
       width: 400px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    section:nth-of-type(2) hr {
+      position: relative;
+      top: 120px;
+      width: 80px; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
-  #fullCanvas {
-    position: relative;
-    height: 100%;
-    padding-top: 1em;
-    overflow: hidden; } }
+#fullCanvas {
+  margin: 0;
+  padding: 0; }
+  @media (max-width: 360px) and (min-height: 200px) {
+    #fullCanvas {
+      position: relative;
+      height: 100%;
+      padding-top: 1em;
+      overflow: hidden; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
-  #allContent {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -ms-transition: transform 1s;
-    -o-transition: transform 1s;
-    transition: transform 1s;
-    position: relative;
-    overflow-y: scroll; } }
+#allContent {
+  width: 100%; }
+  @media (max-width: 360px) and (min-height: 200px) {
+    #allContent {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
+      -ms-transition: transform 1s;
+      -o-transition: transform 1s;
+      transition: transform 1s;
+      position: relative;
+      overflow-y: scroll; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .mask {
     position: absolute;
     left: 0;
@@ -151,21 +210,25 @@ section:nth-of-type(2) hr {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5); } }
 
-body {
-  font-family: Georgia,Verdana,Arial; }
+body, html {
+  font-family: Roboto,sans-serif;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box; }
 
 .wrapper {
-  position: relative;
-  width: 100%; }
+  position: relative; }
 
 .content {
   margin: 0;
-  padding-right: 4em;
+  padding: 0;
   left: -0.5em;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   background-color: #FFFFFF; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .content {
       top: -1em;
       left: -1em;
@@ -173,35 +236,30 @@ body {
       margin: 0;
       padding: 0; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .content > #topNavBar {
     display: none; } }
 
 footer {
-  padding: 0;
-  margin: 0;
-  position: absolute;
+  display: block;
+  position: relative;
+  bottom: 0;
   height: 2em;
-  width: 100%;
+  text-align: center;
   background-color: #7710C2;
   color: #ffffff;
-  font-size: 1.5em; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  font-size: 1em; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     footer {
-      top: 235em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      background-color: #BD2075; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     footer {
-      top: 275em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      background-color: #99182C; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     footer {
       display: none; } }
 
-footer p {
-  margin: auto;
-  position: relative;
-  width: 9em; }
-
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   li.copy {
     margin-top: 7em; } }
 
@@ -209,8 +267,9 @@ footer p {
   display: none; }
 
 .solidTopBar {
+  overflow: hidden;
   display: none; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .solidTopBar {
       height: 3.5em;
       width: 100vw;
@@ -224,16 +283,17 @@ footer p {
       -ms-transition: transform 1s;
       -o-transition: transform 1s;
       transition: transform 1s;
+      padding: 0;
+      margin: 0;
       display: block;
       position: fixed;
       background-color: blue;
       z-index: 10; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .solidTopBar .name {
-      height: 3em;
-      width: 100%;
+      width: 100vw;
       position: absolute;
-      top: 0.5em;
+      top: 0.9em;
       -webkit-transform: translate3d(-16em, 0, 0);
       -moz-transform: translate3d(-16em, 0, 0);
       -o-transform: translate3d(-16em, 0, 0);
@@ -249,67 +309,98 @@ footer p {
       .solidTopBar .name p {
         margin-top: 0;
         color: #ffffff;
-        font-size: 2em; } }
+        font-size: 1.5em; } }
 
 .hamburger {
   display: none; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .hamburger {
       height: 2em;
       width: 2em;
-      -webkit-transform: translate3d(1em, 0, 0);
-      -moz-transform: translate3d(1em, 0, 0);
-      -o-transform: translate3d(1em, 0, 0);
-      -ms-transform: translate3d(1em, 0, 0);
-      transform: translate3d(1em, 0, 0);
+      -webkit-transform: translate3d(2em, 0, 0);
+      -moz-transform: translate3d(2em, 0, 0);
+      -o-transform: translate3d(2em, 0, 0);
+      -ms-transform: translate3d(2em, 0, 0);
+      transform: translate3d(2em, 0, 0);
       -webkit-transition: transform 1s;
       -moz-transition: transform 1s;
       -ms-transition: transform 1s;
       -o-transition: transform 1s;
       transition: transform 1s;
       display: block;
-      margin-top: 0.9em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      margin-top: 1em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .hamburger .bars {
       height: 2em;
       width: 2em;
       display: block; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .hamburger .bars span {
-      height: 7px;
-      width: 35px;
+      height: 5px;
+      width: 30px;
       position: relative;
       display: block;
       margin-bottom: 5px;
-      background-color: #000000; } }
+      background-color: #000000;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      -ms-transition: all 0.1s;
+      -o-transition: all 0.1s;
+      transition: all 0.1s; } }
+  .hamburger:hover {
+    cursor: pointer; }
 
 #off-menu {
   display: none; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #off-menu {
       display: none; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ .solidTopBar > .hamburger {
-    -webkit-transform: translate3d(14em, 0, 0);
-    -moz-transform: translate3d(14em, 0, 0);
-    -o-transform: translate3d(14em, 0, 0);
-    -ms-transform: translate3d(14em, 0, 0);
-    transform: translate3d(14em, 0, 0);
+    -webkit-transform: translate3d(15em, 0, 0);
+    -moz-transform: translate3d(15em, 0, 0);
+    -o-transform: translate3d(15em, 0, 0);
+    -ms-transform: translate3d(15em, 0, 0);
+    transform: translate3d(15em, 0, 0);
     -webkit-transition: transform 1s;
     -moz-transition: transform 1s;
     -ms-transition: transform 1s;
     -o-transition: transform 1s;
     transition: transform 1s; } }
+#off-menu:checked ~ .solidTopBar > .hamburger span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg) translate(8px, 6px);
+  -moz-transform: rotate(45deg) translate(8px, 6px);
+  -o-transform: rotate(45deg) translate(8px, 6px);
+  -ms-transform: rotate(45deg) translate(8px, 6px);
+  transform: rotate(45deg) translate(8px, 6px);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s; }
+#off-menu:checked ~ .solidTopBar > .hamburger span:nth-of-type(2) {
+  display: none; }
+#off-menu:checked ~ .solidTopBar > .hamburger span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s; }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ .solidTopBar > .name,
   #off-menu:checked ~ #fullCanvas > #sideNavBar {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(4em, 0, 0);
+    -moz-transform: translate3d(4em, 0, 0);
+    -o-transform: translate3d(4em, 0, 0);
+    -ms-transform: translate3d(4em, 0, 0);
+    transform: translate3d(4em, 0, 0);
     -webkit-transition: transform 1s;
     -moz-transition: transform 1s;
     -ms-transition: transform 1s;
@@ -317,7 +408,7 @@ footer p {
     transition: transform 1s;
     overflow: scroll; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ .solidTopBar > .name {
     -webkit-transform: translate3d(1em, 0, 0);
     -moz-transform: translate3d(1em, 0, 0);
@@ -330,54 +421,55 @@ footer p {
     -o-transition: transform 1s;
     transition: transform 1s; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ #fullCanvas > #allContent,
   #off-menu:checked ~ #fullCanvas > .mask {
-    -webkit-transform: translate3d(10.5em, 0, 0);
-    -moz-transform: translate3d(10.5em, 0, 0);
-    -o-transform: translate3d(10.5em, 0, 0);
-    -ms-transform: translate3d(10.5em, 0, 0);
-    transform: translate3d(10.5em, 0, 0);
+    -webkit-transform: translate3d(14em, 0, 0);
+    -moz-transform: translate3d(14em, 0, 0);
+    -o-transform: translate3d(14em, 0, 0);
+    -ms-transform: translate3d(14em, 0, 0);
+    transform: translate3d(14em, 0, 0);
     -webkit-transition: transform 1s;
     -moz-transition: transform 1s;
     -ms-transition: transform 1s;
     -o-transition: transform 1s;
     transition: transform 1s; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ #fullCanvas > #allContent {
     overflow-y: hidden; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #off-menu:checked ~ #fullCanvas > .mask {
     opacity: 1;
     z-index: 1; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   input[name="navRadio"] {
     display: none; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #fullCanvas > #sideNavBar {
+    position: fixed;
     height: 100%;
-    width: 10.5em;
+    width: 14em;
+    margin-left: -4em;
     -webkit-transform: translate3d(-11em, 0, 0);
     -moz-transform: translate3d(-11em, 0, 0);
     -o-transform: translate3d(-11em, 0, 0);
     -ms-transform: translate3d(-11em, 0, 0);
     transform: translate3d(-11em, 0, 0);
     @inlude transition-element(transform,1s);
-    position: fixed;
     display: inline-block;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 1; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavbar li:hover {
     cursor: pointer; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideDetails, .projectDetails {
     -webkit-transition: max-height 1s;
     -moz-transition: max-height 1s;
@@ -392,7 +484,17 @@ footer p {
     margin-left: -2em;
     overflow: hidden; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+.sideDetails:nth-of-type(1) {
+  margin-left: -1em; }
+
+.sideDetails:nth-of-type(3) {
+  position: relative;
+  margin-left: 3em; }
+  .sideDetails:nth-of-type(3) ul {
+    margin: 0;
+    padding: 0; }
+
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -406,287 +508,270 @@ footer p {
     transition: transform 1s;
     overflow-y: scroll;
     margin-left: -0.5em;
-    width: 10em;
+    width: 14em;
     position: relative;
     top: 0;
     left: -2em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList .projectDetails {
     height: 12em;
-    margin-top: -1.7em;
+    margin-top: -1.9em;
     margin-left: 0.5em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList li {
+    position: relative;
+    left: 0px;
     border: 2px solid blue;
-    width: 7em;
-    font-size: 1.2em;
+    width: 8.1em;
+    font-size: 1em;
+    padding: 0.5em 0;
+    line-height: 1em;
     margin-bottom: 2em; } }
 
-@inclue small-device {
-  .sideProjList li + div {
-    margin-top: -2em;
-    height: 5em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+/*
+.sideProjList li + div{
+  @inclue small-device{
+    margin-top:-2em;
+    height:9em;color:red;
+  }
+}*/
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar input:nth-of-type(1):checked ~ .sideDetails:nth-of-type(1) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar input:nth-of-type(2):checked ~ .sideDetails:nth-of-type(2) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar input:nth-of-type(3):checked ~ .sideDetails:nth-of-type(3) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar input:nth-of-type(4):checked ~ .sideDetails:nth-of-type(4) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(1):checked ~ .projectDetails:nth-of-type(1) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(2):checked ~ .projectDetails:nth-of-type(2) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(3):checked ~ .projectDetails:nth-of-type(3) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(4):checked ~ .projectDetails:nth-of-type(4) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(5):checked ~ .projectDetails:nth-of-type(5) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(6):checked ~ .projectDetails:nth-of-type(6) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList input:nth-of-type(7):checked ~ .projectDetails:nth-of-type(7) {
     max-height: 105vh; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar > ul {
+    position: relative;
     margin-top: 2.5em;
     height: 100%;
     overflow: scroll; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar > ul > input:checked + li {
     background-color: aqua; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul li {
     list-style: none;
-    margin-left: -2em; } }
+    margin-left: -2.5em;
+    padding-left: 1em; } }
+#sideNavBar ul li:hover {
+  cursor: pointer; }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar > ul > li label {
-    position: static;
-    top: 3em;
-    left: -1em;
+    position: relative;
+    padding: 0.5em 2em;
+    top: 0em;
+    left: -1.5em;
     color: black;
     font-size: 2em;
-    line-height: 2em; } }
+    line-height: 2em;
+    text-align: right; } }
+#sideNavBar > ul > li label:hover {
+  cursor: pointer; }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul > input {
     display: none; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul div:nth-of-type(3) {
-    width: 7em;
+    width: 9em;
     left: -4em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul div:nth-of-type(3) li {
-    margin-left: -2.5em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+    margin-left: 0em; } }
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul div:nth-of-type(4) img {
+    position: relative;
     height: 1.5em;
-    width: 1.5em; } }
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+    width: 1.5em;
+    left: -20px; } }
+@media (max-width: 360px) and (min-height: 200px) {
   #sideNavBar ul div:nth-of-type(2) li {
     margin-left: 0; } }
 
-@media (max-device-width: 360px) and (min-device-height: 200px) {
+@media (max-width: 360px) and (min-height: 200px) {
   .sideProjList > input:checked + li {
     background-color: skyblue; } }
 
 #topNavBar {
   width: 100%;
+  height: 90px;
   background-color: #9932CC;
-  margin-left: -25px;
   z-index: 3;
   position: fixed;
-  margin-top: -50px;
-  right: 0; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  top: 0;
+  left: 0;
+  margin-bottom: 7px;
+  border-bottom: 7px solid #BB32FF; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #topNavBar {
-      height: 16em;
-      width: 100vw;
-      position: fixed;
-      left: 0;
-      margin-top: -0.6em;
-      margin-left: 0em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      background-color: #BD2075;
+      border-bottom-color: #D172BB; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #topNavBar {
-      height: 16em;
-      width: 100vw;
-      position: fixed;
-      left: 0;
-      margin-top: -0.6em;
-      margin-left: 0em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      background-color: #99182C;
+      border-bottom-color: #F54D70; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     #topNavBar {
-      height: 20em;
-      width: 100vw;
-      position: fixed;
-      left: 0;
-      margin-top: -0.6em; } }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    #topNavBar p {
-      width: 8em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    #topNavBar p {
-      width: 8em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
-    #topNavBar ul {
       display: none; } }
 
-nav > label:nth-of-type(1) {
-  position: relative;
-  display: inline;
-  right: -730px;
-  top: -25px;
-  border: 2px solid #000000;
-  border-radius: 15%; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    nav > label:nth-of-type(1) {
-      top: 1em;
-      left: 12em;
-      position: relative; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    nav > label:nth-of-type(1) {
-      top: 1em;
-      left: 12em;
-      position: relative; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-    nav > label:nth-of-type(1) {
-      top: 1em;
-      left: 12em;
-      position: relative; } }
+@media (max-width: 600px) and (min-height: 200px) {
+  #fullName {
+    display: inline;
+    width: 8em;
+    top: -0.5em;
+    margin-left: 30%;
+    margin-right: 30%; } }
+@media (max-width: 1024px) and (min-height: 200px) {
+  #fullName {
+    display: inline;
+    width: 8em;
+    top: -0.5em;
+    margin-left: 30%;
+    margin-right: 30%; } }
+@media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+  #fullName ul {
+    margin-left: -50px; } }
+@media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+  #fullName ul {
+    margin-left: -150px; } }
+@media (max-width: 360px) and (min-height: 200px) {
+  #fullName ul {
+    display: none; } }
+
+#fullName {
+  font-size: 20px; }
 
 nav label > i {
   color: #000000; }
 
-nav ul li > label {
-  padding: 25px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    nav ul li > label {
-      padding: 0; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    nav ul li > label {
-      padding: 0; } }
-  nav ul li > label:hover {
-    cursor: pointer; }
+nav ul label {
+  width: 70px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 20px 20px 20px;
+  margin-right: -5px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    nav ul label {
+      width: 70px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    nav ul label {
+      width: 40px;
+      position: relative;
+      top: 5px; } }
+  nav ul label:hover {
+    cursor: pointer;
+    color: #000000; }
 
 nav ul input {
   display: none; }
 
 nav > p {
-  top: 50px;
-  left: 50px;
-  position: relative;
+  top: 33px;
+  left: 20px;
+  position: absolute;
   width: 8em;
-  font-size: 250%;
-  color: #ffffff; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    nav > p {
-      position: static;
-      width: 6em;
-      margin-top: 0;
-      margin-left: 2em;
-      font-size: 2em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    nav > p {
-      position: static;
-      width: 6em;
-      margin-top: 0;
-      margin-left: 2em;
-      font-size: 2em; } }
-
-@media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-  nav p {
-    position: static;
-    width: 6em;
-    margin-top: 0;
-    margin: auto;
-    font-size: 3em; } }
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.15; }
 
 nav > ul {
-  top: -20px;
-  left: 25%;
+  white-space: nowrap;
+  top: 50px;
+  left: 20%;
   position: relative;
   display: inline;
   margin-left: 2em; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     nav > ul {
-      top: -1em;
-      left: 4em;
-      position: relative;
-      width: 10em;
-      display: block; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      display: inline-block;
+      left: 25%;
+      top: 2em;
+      margin-right: 0;
+      padding: 0;
+      width: 100%; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
     nav > ul {
-      top: -1em;
-      left: 4em;
-      position: relative;
-      width: 10em;
-      display: block; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      display: inline-block;
+      left: 25%;
+      top: 2em;
+      margin-right: 0;
+      padding: 0;
+      width: 100%; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     nav > ul {
-      top: -1em;
-      left: 17em;
-      position: relative;
-      display: block; } }
+      left: -20px; } }
 
 nav > ul li {
-  display: inline;
+  display: inline-block;
   padding-right: 0px;
   color: #ffffff;
-  font-size: 25px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  font-size: 18px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     nav > ul li {
-      width: 3em;
-      display: block;
-      margin-bottom: 0.2em;
-      color: #ffffff;
-      font-size: 1.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      font-size: 17px;
+      padding: 0;
+      margin: 0; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     nav > ul li {
-      width: 3em;
-      display: block;
-      margin-bottom: 0.2em;
-      color: #ffffff;
-      font-size: 1.5em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-    nav > ul li {
-      display: block;
-      margin-bottom: 0.2em;
-      color: #ffffff;
-      font-size: 2em; } }
+      font-size: 12px;
+      margin-right: 10px; } }
 
 nav input:checked + li > label {
   background-color: #BB32FF;
   color: #000000; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     nav input:checked + li > label {
       display: none; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    nav input:checked + li > label {
+      background-color: #D172BB; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    nav input:checked + li > label {
+      background-color: #F54D70; } }
 
 #aboutPic {
   max-height: 50em;
@@ -695,21 +780,21 @@ nav input:checked + li > label {
   margin-right: 20%;
   height: auto;
   width: auto; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #aboutPic {
       height: auto;
       width: auto;
       max-height: 50em;
       max-width: 100vw;
       margin-left: 0; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #aboutPic {
       height: auto;
       width: auto;
       max-height: 50em;
       max-width: 100vw;
       margin-left: 0; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #aboutPic {
       height: auto;
       width: auto;
@@ -717,95 +802,124 @@ nav input:checked + li > label {
       max-width: 100vw;
       margin-left: 0; } }
 
-.modal {
-  height: 800px;
+.modalMask {
+  height: 1000px;
   width: 100%;
   position: absolute;
   font-size: 80px;
+  left: 0;
+  top: 90px;
   text-align: center;
-  border: 2px solid black;
-  background-color: white;
-  visibility: hidden; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    .modal {
-      position: absolute;
-      left: 0em;
-      top: 0em;
-      width: 107vw;
-      height: 150vh;
-      font-size: 3em;
-      text-align: center;
-      background-color: white;
-      visibility: hidden; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    .modal {
-      position: absolute;
-      left: 0em;
-      top: 0em;
-      width: 107vw;
-      height: 150vh;
-      font-size: 3em;
-      text-align: center;
-      background-color: white;
-      visibility: hidden; } }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    .modal p {
+  display: none;
+  background-color: transparent; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    .modalMask {
+      position: fixed;
+      left: 0;
+      top: 90px;
+      width: 100vw;
+      height: 150vh; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    .modalMask {
+      position: fixed;
+      left: 0;
+      top: 90px;
+      width: 100vw;
+      height: 150vh; } }
+  .modalMask .modal {
+    margin: auto;
+    font-size: 0.5em;
+    margin-top: 150px;
+    height: 400px;
+    width: 800px;
+    background-color: #9932CC; }
+    @media (max-width: 600px) and (min-height: 200px) {
+      .modalMask .modal {
+        width: 500px;
+        background-color: #BD2075; } }
+    @media (max-width: 1024px) and (min-height: 200px) {
+      .modalMask .modal {
+        width: 500px;
+        background-color: #BD2075; } }
+    @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+      .modalMask .modal {
+        background-color: #99182C; } }
+    .modalMask .modal p {
       position: relative;
-      left: -2em;
-      font-size: 1em; } }
-  @media (max-device-width: 600px) and (min-device-height: 200px) and (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    .modal p {
-      left: 0.1em; } }
-
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    .modal p {
-      position: relative;
-      left: -2em;
-      font-size: 1em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) and (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    .modal p {
-      left: 0.1em; } }
+      top: 50px;
+      color: #ffffff; }
+      @media (max-width: 600px) and (min-height: 200px) {
+        .modalMask .modal p {
+          position: relative;
+          display: inline;
+          width: 100%; } }
+      @media (max-width: 1024px) and (min-height: 200px) {
+        .modalMask .modal p {
+          position: relative;
+          display: inline;
+          width: 100%; } }
 
 #modalInput1, #modalInput2 {
   display: none; }
 
-#modalInput1:checked + .modal {
-  visibility: visible; }
+#modalInput1:checked + .modalMask {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: background-color 1s; }
 
 #modalClose {
+  position: relative;
   left: 0px;
-  cursor: pointer; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  cursor: pointer;
+  top: 200px; }
+  @media (max-width: 600px) and (min-height: 200px) {
     #modalClose {
-      top: 1.8em;
-      left: -4em;
-      position: relative;
+      left: 0;
       cursor: pointer;
-      font-size: 0.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      font-size: 1em; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
     #modalClose {
-      top: 1.8em;
-      left: -4em;
-      position: relative;
+      left: 0;
       cursor: pointer;
-      font-size: 0.5em; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      font-size: 1em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #modalClose {
       left: -1em; } }
+  #modalClose .button {
+    width: 150px;
+    margin: auto;
+    border: 1px solid black;
+    font-size: 0.7em;
+    border-radius: 5%;
+    padding: 5px;
+    background: linear-gradient(rgba(76, 76, 76, 0.9), #ffffff);
+    box-shadow: 3px 3px 4px 2px #000;
+    color: #9932CC; }
+    @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+      #modalClose .button {
+        color: #BD2075; } }
+    @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+      #modalClose .button {
+        color: #99182C; } }
 
 /*Projects*/
 .projectSection {
-  top: 20px; }
+  top: 20px;
+  padding-bottom: 100px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .projectSection {
+      top: 80px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .projectSection {
+      width: 100vw; } }
   .projectSection h1 {
     width: 5em; }
 
-@media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-  section.projectSection {
-    top: 2em; } }
-
 .projectSection > label {
+  position: relative;
+  top: 15px;
   display: block;
-  margin-left: 20%;
+  margin-left: 0;
   height: 50px;
   width: 150px;
   padding-left: 50px;
@@ -813,86 +927,100 @@ nav input:checked + li > label {
   font-size: 20px; }
   .projectSection > label:hover {
     cursor: pointer; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .projectSection > label {
       margin-bottom: 0;
-      margin-left: 3.9em;
-      border: 1px solid #000000; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      margin: auto;
+      top: -150px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .projectSection > label {
       margin-bottom: 0;
-      margin-left: 2.05em;
-      border: 1px solid #000000; } }
+      margin-left: 3em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .projectSection > label {
+      left: -10px;
+      top: -3px;
+      margin: auto; } }
 
-.projectSection > input + label:hover,
 .projectSection > input:checked + label {
-  background-color: rgba(76, 74, 74, 0.8);
+  background-color: rgba(76, 76, 76, 0.9);
   color: #ffffff; }
+
+.projectSection > input:not(:checked) + label:hover {
+  color: #cc00ff; }
 
 .displayArea {
   position: absolute;
-  left: 200px;
-  top: 245px;
-  width: 800px;
-  height: 685px;
+  left: 150px;
+  top: 283px;
+  width: 700px;
+  height: 680px;
   display: none;
-  margin-left: 20%;
-  background-color: rgba(76, 74, 74, 0.8); }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  margin-left: 50px;
+  background-color: rgba(76, 76, 76, 0.9); }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .displayArea {
       position: relative;
       left: -2.6em;
-      top: 0.1em;
-      width: 80vw;
+      top: 1.2em;
+      width: 300px;
       height: 26em;
       display: none; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .displayArea {
       position: relative;
-      left: -4.8em;
-      top: 0.1em;
-      width: 80vw;
+      left: -3.2em;
+      top: -147px;
+      width: 600px;
       height: 26em;
       display: none; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .displayArea {
+      position: relative;
+      top: 0;
+      left: -48px;
+      width: 90vw;
+      height: 470px; } }
 
 .projectSection .displayArea > img {
   top: 20%;
   left: 16%;
   position: absolute;
-  height: 400px;
-  width: 570px;
+  height: 300px;
+  width: 470px;
   visibility: hidden;
   z-index: 2; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .projectSection .displayArea > img {
       position: absolute;
       left: 2em;
       top: 3em;
-      width: 80vw;
-      height: 15em;
-      visibility: hidden;
-      z-index: 2; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      width: 200px;
+      height: 15em; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
     .projectSection .displayArea > img {
       position: absolute;
       left: 2em;
       top: 3em;
-      width: 80vw;
-      height: 15em;
-      visibility: hidden;
-      z-index: 2; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      width: 200px;
+      height: 15em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .projectSection .displayArea > img {
       position: absolute;
-      left: 2em;
+      left: 3em;
       top: 3em;
-      width: 60vw;
+      width: 200px;
       height: 15em;
       visibility: hidden;
       z-index: 2; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .projectSection .displayArea > img {
-      width: 70vw; } }
+      width: 400px;
+      left: 93px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .projectSection .displayArea > img {
+      width: 15em;
+      left: 14%; } }
 
 .projectSection > input:checked + label + div.displayArea {
   display: block; }
@@ -922,74 +1050,91 @@ nav input:checked + li > label {
   color: transparent; }
 
 .chevronLabels label[class="right"] {
+  color: #cccccc;
   top: 300px;
-  left: 750px;
+  left: 630px;
   position: absolute;
   display: none; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .chevronLabels label[class="right"] {
       top: 157px;
       left: 290px;
       position: absolute;
       display: none; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .chevronLabels label[class="right"] {
       top: 157px;
       left: 290px;
       position: absolute;
       display: none; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .chevronLabels label[class="right"] {
       top: 157px;
-      left: 285px;
+      left: 250px;
       position: absolute;
       display: none; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .chevronLabels label[class="right"] {
       top: 157px;
       left: 570px;
       position: absolute;
       display: none; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .chevronLabels label[class="right"] {
+      left: 280px; } }
   .chevronLabels label[class="right"]:hover {
     cursor: pointer; }
 
 .chevronLabels label[class="left"] {
+  color: #cccccc;
   top: 300px;
   left: 50px;
   position: absolute;
   display: none; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .chevronLabels label[class="left"] {
       top: 160px;
-      left: -1px;
+      left: 15px;
       position: absolute;
       display: none; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .chevronLabels label[class="left"] {
       top: 160px;
-      left: -1px;
+      left: 15px;
       position: absolute;
       display: none; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    .chevronLabels label[class="left"] {
+      left: 25px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .chevronLabels label[class="left"] {
+      left: 15px; } }
   .chevronLabels label[class="left"]:hover {
     cursor: pointer; }
 
 .radioLabels {
-  top: 540px;
-  left: 310px;
+  top: 440px;
+  left: 280px;
   position: absolute;
   z-index: 2; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .radioLabels {
       top: 17.5em;
-      left: 6em;
+      left: 220px;
       position: absolute;
       z-index: 2; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .radioLabels {
       top: 17.5em;
-      left: 6em;
+      left: 220px;
       position: absolute;
       z-index: 2; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    .radioLabels {
+      left: 70px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .radioLabels {
+      left: 90px; } }
 
 .radioLabels label {
   display: inline;
@@ -1019,31 +1164,39 @@ div.description {
   width: 100%;
   background-color: rgba(76, 74, 74, 0);
   position: relative;
-  top: 570px;
+  top: 550px;
   display: none;
   color: #ffffff;
   font-size: 17px;
   padding-left: 20px; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     div.description {
       top: 25em;
       left: -20px;
       position: relative;
       margin-top: -15px;
       margin-right: 0px;
-      margin-left: 3em;
+      font-size: 0.8em;
+      color: #ffffff; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    div.description {
+      top: 25em;
+      left: -20px;
+      position: relative;
+      margin-top: -15px;
+      margin-right: 0px;
       font-size: 0.8em;
       color: #ffffff; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     div.description {
-      top: 25em;
-      left: -20px;
-      position: relative;
-      padding-left: 2em;
-      margin-top: -15px;
-      margin-right: 0px;
+      margin-left: 3em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    div.description {
+      padding-left: 2em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    div.description {
       font-size: 0.8em;
-      color: #000000; } }
+      top: 30em; } }
 
 div.description span {
   font-family: Georgia, Serif;
@@ -1062,32 +1215,44 @@ div.description a:hover {
   display: block;
   z-index: 1; }
 
+.searchBlock {
+  display: inline-block;
+  width: 250px;
+  margin: 0 20px;
+  float: right; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .searchBlock {
+      position: relative;
+      display: inline-block;
+      width: 10px;
+      top: 15px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    .searchBlock {
+      position: relative;
+      top: -70px;
+      width: 120px; } }
+
 #search {
   position: relative;
-  top: -25px;
+  top: 40px;
   height: 30px;
-  width: 200px;
-  display: inline;
-  right: -500px;
+  width: 180px;
+  display: inline-block;
+  left: -20px;
   border: 1px none transparent;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #ffffff;
   padding-bottom: 0;
   background-color: transparent;
   color: #ffffff; }
   #search:hover {
     cursor: pointer; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     #search {
-      margin-left: 3em;
-      left: -3em;
-      top: 0.8em;
-      color: #ffffff;
-      border-bottom: 2px solid #000000; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      display: none; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
     #search {
-      left: 0;
-      top: 0.5em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      display: none; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     #search {
       display: none; } }
 
@@ -1099,72 +1264,73 @@ div.description a:hover {
 
 .searchText {
   position: relative;
-  top: -24px;
-  -webkit-transition: top 1s;
-  -moz-transition: top 1s;
-  -ms-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s;
-  color: #000000;
-  display: inline;
-  right: -298px;
+  top: 20px;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -ms-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
+  color: #ccc;
+  display: inline-block;
+  left: 20px;
+  font-size: 14px;
   padding-bottom: 50px; }
   .searchText:hover {
     cursor: pointer; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .searchText {
-      margin-left: 0em;
-      left: -8em;
-      font-size: 1.8em;
-      top: 0.8em;
-      color: #ffffff; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      display: none; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
     .searchText {
-      left: -8.5em;
-      top: 0.6em;
-      font-size: 1.4em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      display: none; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .searchText {
       display: none; } }
 
-@media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-  .searchText, #search {
-    top: 0;
-    color: #ffffff; } }
-
 #search:focus ~ .searchText {
   color: #DB4DFF;
-  top: -50px; }
+  top: 0px;
+  font-size: 12px;
+  color: #ffffff; }
 
 #searchIcon {
-  top: -1.6em;
-  left: 45em;
-  position: relative; }
+  top: 37px;
+  left: 210px;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  border-color: #ccc; }
   #searchIcon:hover {
     cursor: pointer; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  #searchIcon i {
+    margin: auto;
+    padding: 6px;
+    color: #ccc; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #searchIcon {
-      font-size: 1.5em;
-      left: 10em;
-      top: 0.5em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      left: -25px;
+      top: -90px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #searchIcon {
-      font-size: 1.5em;
-      left: 9em;
-      top: 0em; } }
+      left: 90px;
+      top: 0px; } }
 
-#searchIcon:focus ~ .modal {
+nav > .searchBlock > #searchIcon:focus ~ .modalMask {
   visibility: visible; }
 
 /*Skills */
 .skills {
   position: relative;
   top: 250px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .skills {
       position: relative;
       top: 0; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .skills {
       position: relative;
       top: 0; } }
@@ -1181,33 +1347,40 @@ hr#endSkillsLine {
   position: relative;
   top: -1050px;
   width: 800px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     hr#endSkillsLine {
       position: relative;
-      top: -550px;
-      width: 50vw; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    hr#endSkillsLine {
-      position: relative;
-      top: -550px;
-      width: 50vw; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
-    hr#endSkillsLine {
-      position: relative;
-      top: -500px;
+      top: -750px;
       width: 400px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    hr#endSkillsLine {
+      position: relative;
+      top: -550px;
+      width: 220px;
+      left: -18em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    hr#endSkillsLine {
+      position: relative;
+      top: -600px;
+      width: 80px; } }
 
 section.skills > .backEndGraph hr {
   position: relative;
-  left: 0px;
+  left: 44px;
   top: -360px;
   width: 400px; }
 
 section.skills > .otherGraph hr {
   position: relative;
   left: 0px;
-  top: -727px;
+  top: -724px;
   width: 400px; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    section.skills > .otherGraph hr {
+      left: 60px; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    section.skills > .otherGraph hr {
+      left: 60px; } }
 
 #frontend {
   height: 20px;
@@ -1217,10 +1390,10 @@ section.skills > .otherGraph hr {
   text-align: left;
   padding-left: 1em;
   color: #ffffff; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     #frontend {
       width: 90%; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     #frontend {
       width: 90%; } }
 
@@ -1235,11 +1408,11 @@ section.skills > .otherGraph hr {
   padding-right: 1em;
   text-align: right;
   color: #ffffff; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     #backend {
       width: 10%;
       margin-left: 90%; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     #backend {
       width: 10%;
       margin-left: 90%; } }
@@ -1248,26 +1421,31 @@ section.skills > .otherGraph hr {
   height: 20px;
   width: 556px;
   position: relative;
-  left: 30%; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  left: 18%; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .skillBar {
       height: 20px;
-      width: 75vw;
+      width: 50vw;
       position: relative;
-      left: 10%; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      left: 10%;
+      top: -140px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .skillBar {
-      height: 20px;
-      width: 75vw;
       position: relative;
-      left: 10%; } }
+      left: 10px;
+      height: 20px;
+      width: 240px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .skillBar {
+      width: 230px;
+      left: 30px; } }
 
-@media (max-device-width: 600px) and (min-device-height: 200px) {
+@media (max-width: 600px) and (min-height: 200px) {
   .front {
     position: relative;
     left: -5.3em;
     height: 2em; } }
-@media (max-device-width: 1024px) and (min-device-height: 200px) {
+@media (max-width: 1024px) and (min-height: 200px) {
   .front {
     position: relative;
     left: -5.3em;
@@ -1275,90 +1453,77 @@ section.skills > .otherGraph hr {
 
 #frontendSkill {
   top: 100px;
-  left: 400px;
+  left: 100px;
   position: relative;
   font-size: 18px;
   font-weight: bold;
   width: 13em;
   color: #FB5E5D; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #frontendSkill {
-      left: 4em;
+      top: -80px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    #frontendSkill {
+      left: 0em;
       width: 13em;
-      margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    #frontendSkill {
-      left: 4em;
-      width: 13em;
-      margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    #frontendSkill {
       margin-left: 20px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #frontendSkill {
       margin-left: -50px; } }
 
 #backendSkill {
-  top: 80px;
-  left: 900px;
+  top: 78px;
+  left: 605px;
   position: relative;
   font-size: 18px;
   font-weight: bold;
   width: 13em;
   color: #4A6FEB; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #backendSkill {
-      left: 4em;
-      top: 23em;
+      left: 5.5em;
+      top: 10em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    #backendSkill {
+      left: 0;
+      top: 22em;
       width: 13em;
-      margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    #backendSkill {
-      left: 4em;
-      top: 23em;
-      width: 13em;
-      margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    #backendSkill {
       margin-left: 20px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #backendSkill {
-      margin-left: -50px; } }
+      margin-left: -550px;
+      top: 390px; } }
 
 #otherSkill {
   font-size: 18px;
   font-weight: bold;
   top: 520px;
-  left: 680px;
+  left: 400px;
   position: relative;
   width: 13em;
   color: #000000; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #otherSkill {
-      left: 4em;
+      top: 25em;
+      left: 5.5em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    #otherSkill {
+      left: 0;
       top: 39em;
       width: 13em;
-      margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    #otherSkill {
-      left: 4em;
-      top: 39em;
-      width: 13em;
-      margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    #otherSkill {
       margin-left: 20px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #otherSkill {
-      margin-left: -50px; } }
+      margin-left: -345px;
+      top: 660px; } }
 
 .proficiencyLabels {
   list-style-type: none; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .proficiencyLabels {
       margin-left: 0;
       padding-left: 0; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .proficiencyLabels {
       margin-left: 0;
       padding-left: 0; } }
@@ -1388,10 +1553,10 @@ section.skills > .otherGraph hr {
   -o-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg); }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .js, .html, .react, .jquery, .node, .php, .mongo, .ruby {
       top: 0.9em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .js, .html, .react, .jquery, .node, .php, .mongo, .ruby {
       top: 0.9em; } }
 
@@ -1408,7 +1573,7 @@ section.skills > .otherGraph hr {
   left: 360px; }
 
 .jsBar, .backendBar1 {
-  top: -60px;
+  top: -63px;
   left: 170px;
   position: relative;
   height: 60px;
@@ -1416,7 +1581,7 @@ section.skills > .otherGraph hr {
   background-color: #FFAD41; }
 
 .htmlBar, .backendBar2 {
-  top: -208px;
+  top: -211px;
   left: 230px;
   position: relative;
   height: 80px;
@@ -1424,7 +1589,7 @@ section.skills > .otherGraph hr {
   background-color: #38BAF0; }
 
 .reactBar, .backendBar3 {
-  top: -295px;
+  top: -298px;
   left: 290px;
   position: relative;
   height: 20px;
@@ -1432,18 +1597,18 @@ section.skills > .otherGraph hr {
   background-color: #69D12B; }
 
 .jqueryBar, .backendBar4 {
-  top: -383px;
+  top: -386px;
   left: 350px;
   position: relative;
   height: 20px;
   width: 20px;
   background-color: #EFE210; }
 
-@media (max-device-width: 600px) and (min-device-height: 200px) {
+@media (max-width: 600px) and (min-height: 200px) {
   .back {
     position: relative;
     left: -5.3em; } }
-@media (max-device-width: 1024px) and (min-device-height: 200px) {
+@media (max-width: 1024px) and (min-height: 200px) {
   .back {
     position: relative;
     left: -5.3em; } }
@@ -1453,105 +1618,109 @@ section.skills > .otherGraph hr {
   height: 20px; }
 
 .backendBar1 {
-  top: -20px; }
+  top: -23px; }
 
 .backendBar2 {
-  top: -108px; }
+  top: -111px; }
 
 .backendBar3 {
-  top: -195px; }
+  top: -198px; }
 
 .backendBar4 {
-  top: -282px; }
+  top: -285px; }
 
 .frontEndGraph {
   position: relative;
-  top: 100px;
+  top: 90px;
   width: 500px;
-  margin-left: 280px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  margin-left: -30px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .frontEndGraph {
+      margin-left: 80px;
+      top: -100px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .frontEndGraph {
       position: relative;
       top: 100px;
       height: 13em;
       width: 320px;
-      margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      margin-left: -30px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .frontEndGraph {
-      position: relative;
-      top: 100px;
-      height: 13em;
-      width: 320px;
-      margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    .frontEndGraph {
-      margin-left: 60px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
-    .frontEndGraph {
-      margin-left: -15px; } }
+      width: 200px;
+      margin-left: 0; } }
 
 .backEndGraph {
   position: relative;
   left: 800px;
   top: -512px;
-  width: 500px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  width: 500px;
+  margin-left: -360px; }
+  @media (max-width: 600px) and (min-height: 200px) {
     .backEndGraph {
       position: relative;
       left: 0;
       top: 12em;
       width: 320px;
       margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .backEndGraph {
       position: relative;
       left: 0;
       top: 12em;
       width: 320px;
       margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .backEndGraph {
-      margin-left: 60px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      margin-left: 80px;
+      top: 2em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .backEndGraph {
-      margin-left: -15px; } }
+      margin-left: -30px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .backEndGraph {
+      top: 220px;
+      margin-left: 0; } }
 
 .bar:hover + div {
   visibility: visible; }
 
-@media (max-device-width: 600px) and (min-device-height: 200px) {
+@media (max-width: 600px) and (min-height: 200px) {
   .other {
     position: relative;
     left: -6.2em; } }
-@media (max-device-width: 1024px) and (min-device-height: 200px) {
+@media (max-width: 1024px) and (min-height: 200px) {
   .other {
     position: relative;
     left: -6.2em; } }
 
 .otherGraph {
   position: relative;
-  left: 600px;
+  left: 250px;
   top: -550px;
   width: 500px;
-  margin-left: -100px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  margin-left: -60px; }
+  @media (max-width: 600px) and (min-height: 200px) {
     .otherGraph {
       position: relative;
-      left: 0;
+      left: 15px;
       top: 0;
       width: 320px;
-      margin-left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    .otherGraph {
-      position: relative;
-      left: 0;
-      top: 0;
-      width: 320px;
-      margin-left: 250px; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
-    .otherGraph {
       margin-left: 60px; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
+    .otherGraph {
+      position: relative;
+      left: 15px;
+      top: 0;
+      width: 320px;
+      margin-left: 60px; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .otherGraph {
+      top: -13em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    .otherGraph {
+      margin-left: -45px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .otherGraph {
       margin-left: -15px; } }
 
@@ -1563,32 +1732,32 @@ section.skills > .otherGraph hr {
   -o-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg); }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .writing, .problemSolve, .PM, .research, .publicSpeaking {
       top: 2em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .writing, .problemSolve, .PM, .research, .publicSpeaking {
       top: 2em; } }
 
 .writing {
   left: 140px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .writing {
       left: 10em;
       top: 3em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .writing {
       left: 10em;
       top: 3em; } }
 
 .problemSolve {
   left: 225px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .problemSolve {
       width: 10em;
       left: 13em;
       top: 3.0em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .problemSolve {
       width: 10em;
       left: 13em;
@@ -1596,12 +1765,12 @@ section.skills > .otherGraph hr {
 
 .PM {
   left: 280px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .PM {
       left: 15em;
       width: 13em;
       top: 3.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .PM {
       left: 15em;
       width: 13em;
@@ -1609,22 +1778,22 @@ section.skills > .otherGraph hr {
 
 .research {
   left: 360px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .research {
       left: 18.5em;
       top: 1em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .research {
       left: 18.5em;
       top: 1em; } }
 
 .publicSpeaking {
   left: 430px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .publicSpeaking {
       left: 21em;
       width: 10em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .publicSpeaking {
       left: 21em;
       width: 10em; } }
@@ -1636,18 +1805,24 @@ section.skills > .otherGraph hr {
   width: 20px;
   height: 90px;
   background-color: #9FCE57; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    .writingBar {
+      top: -90px; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    .writingBar {
+      top: -90px; } }
 
 .problemSolveBar {
   position: relative;
   left: 230px;
-  top: -246px;
+  top: -247px;
   width: 20px;
   height: 90px;
   background-color: #3DC694; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .problemSolveBar {
       left: 210px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .problemSolveBar {
       left: 210px; } }
 
@@ -1658,10 +1833,10 @@ section.skills > .otherGraph hr {
   width: 20px;
   height: 50px;
   background-color: #4EC1F2; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .PMBar {
       left: 250px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .PMBar {
       left: 250px; } }
 
@@ -1672,10 +1847,10 @@ section.skills > .otherGraph hr {
   width: 20px;
   height: 90px;
   background-color: #8D9EFF; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .researchBar {
       left: 290px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .researchBar {
       left: 290px; } }
 
@@ -1686,10 +1861,10 @@ section.skills > .otherGraph hr {
   width: 20px;
   height: 60px;
   background-color: #CD98FE; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .publicSpeakingBar {
       left: 330px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .publicSpeakingBar {
       left: 330px; } }
 
@@ -1745,10 +1920,10 @@ div[class*="Tooltip"] {
   top: -400px;
   left: 170px;
   position: relative; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .problemTooltip {
       left: 150px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .problemTooltip {
       left: 150px; } }
 
@@ -1756,10 +1931,10 @@ div[class*="Tooltip"] {
   top: -480px;
   left: 230px;
   position: relative; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .pmTooltip {
       left: 192px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .pmTooltip {
       left: 192px; } }
 
@@ -1767,10 +1942,10 @@ div[class*="Tooltip"] {
   top: -680px;
   left: 290px;
   position: relative; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .researchTooltip {
       left: 232px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .researchTooltip {
       left: 232px; } }
 
@@ -1778,10 +1953,10 @@ div[class*="Tooltip"] {
   top: -780px;
   left: 340px;
   position: relative; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .publicTooltip {
       left: 273px; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .publicTooltip {
       left: 273px; } }
 
@@ -1798,65 +1973,77 @@ div[class*="Tooltip"] {
   left: 60px;
   top: -15px;
   width: 20px;
-  height: 15px; }
+  height: 15px;
+  color: #000000; }
 
 /*Contact*/
 .contact {
-  width: 90%;
-  left: 0em;
   position: relative;
-  top: -850px; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  top: -1050px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .contact {
-      top: -40em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      top: -70em;
+      left: 2em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .contact {
-      top: -40em; } }
+      top: -45em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .contact {
+      top: -15em; } }
   .contact h1 {
     width: 5em; }
-    @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+    @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
       .contact h1 {
-        margin-left: 8em; } }
-    @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+        margin-left: 2em; } }
+    @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
       .contact h1 {
-        margin-left: 4.5em; } }
-    @media (max-device-width: 360px) and (min-device-height: 200px) {
+        margin-left: -3em; } }
+    @media (max-width: 360px) and (min-height: 200px) {
       .contact h1 {
-        margin-left: 3em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+        margin-left: 1em; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .contact article {
-      margin-left: 5em; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+      margin-left: 1em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .contact article {
       margin-left: 3em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .contact article {
-      margin-left: 2em; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      margin-left: 3.5em;
+      top: -30em; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .contact article p {
       width: 19em; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .contact article p {
       width: 15em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .contact article p {
-      width: 10em; } }
+      position: relative;
+      width: 90vw;
+      left: -4em; } }
 
-@media (max-device-width: 600px) and (min-device-height: 200px) {
+@media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
   .contact header {
     position: relative;
     top: 0;
-    width: 50vw; } }
-@media (max-device-width: 1024px) and (min-device-height: 200px) {
+    width: 50vw;
+    left: 5em; } }
+@media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
   .contact header {
     position: relative;
-    top: 0;
-    width: 50vw; } }
+    width: 500px;
+    left: 200px; } }
+@media (max-width: 360px) and (min-height: 200px) {
+  .contact header {
+    position: relative;
+    top: -30em;
+    left: 0em; } }
 
 /* Business Card */
 .contact label {
   top: 20em;
-  left: 20%;
+  left: 18%;
   position: absolute;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
@@ -1866,6 +2053,17 @@ div[class*="Tooltip"] {
   display: block; }
   .contact label:hover {
     cursor: pointer; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .contact label {
+      left: 0em;
+      margin: auto; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    .contact label {
+      left: -20px; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .contact label {
+      top: -3em;
+      left: -20px; } }
 
 .contact input {
   display: none; }
@@ -1897,34 +2095,28 @@ div[class*="Tooltip"] {
   background-color: #000000; }
   .card:hover {
     cursor: pointer; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
-    .card {
-      width: 80vw;
-      top: 20em;
-      margin-left: 0; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
-    .card {
-      width: 80vw;
-      top: 20em;
-      margin-left: 0; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .card {
       left: 0.5em;
       top: 10em;
-      width: 90vw;
-      height: 130vh; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+      width: 300px;
+      height: 35em;
+      margin-left: 0; } }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .card {
-      left: 0em;
-      height: 75vh; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+      top: 8em;
+      width: 600px;
+      margin-left: 0em;
+      height: 30em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .card {
-      height: 150vh;
+      height: 22em;
+      width: 300px;
       margin-left: 2em; } }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .card p {
       margin-top: 2em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .card p {
       margin-top: 2em; } }
 
@@ -1950,11 +2142,11 @@ div[class*="Tooltip"] {
   font-size: 2.5em;
   color: #ffffff;
   text-align: left; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .card div p.name {
       margin-top: 1.5em;
       font-size: 1.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .card div p.name {
       margin-top: 1.5em;
       font-size: 1.5em; } }
@@ -1967,7 +2159,10 @@ div[class*="Tooltip"] {
   margin-left: 5%;
   margin-bottom: 3%;
   padding-right: 5%; }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    .card div p.aboutme {
+      font-size: 0.8em; } }
+  @media (max-width: 360px) and (min-height: 200px) {
     .card div p.aboutme {
       font-size: 0.8em;
       line-height: 0.8em; } }
@@ -1981,21 +2176,20 @@ div[class*="Tooltip"] {
   color: #ffffff;
   background-image: url("../designs/bg2.png");
   left: 0em; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .card .front {
-      width: 100%;
+      width: 600px;
       height: 100%;
-      font-size: 1.4em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+      font-size: 1.1em; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .card .front {
-      width: 100%;
-      height: 100%;
-      font-size: 1.4em; } }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+      width: 300px;
+      height: 100%; } }
+  @media (max-width: 600px) and (min-height: 200px) {
     .card .front img {
       height: 1.5em;
       width: 1.5em; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .card .front img {
       height: 1.5em;
       width: 1.5em; } }
@@ -2008,19 +2202,20 @@ div[class*="Tooltip"] {
   -ms-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg); }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .card .back {
-      width: 80vw;
-      height: 75vh;
+      width: 600px;
+      height: 30em;
       left: 0em; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .card .back {
-      height: 100%;
-      width: 90vw;
+      height: 35em;
+      width: 300px;
       left: 0em; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .card .back {
-      height: 100%;
+      width: 300px;
+      height: 22em;
       margin-left: 5em; } }
 
 #myName {
@@ -2040,20 +2235,20 @@ div[class*="Tooltip"] {
   height: 400px;
   width: 600px;
   position: relative; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .back > img {
-      height: 100%;
-      width: 90vw;
+      height: 35em;
+      width: 300px;
       position: relative; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .back > img {
-      height: 75vh;
-      width: 80vw;
+      height: 30em;
+      width: 600px;
       position: relative; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .back > img {
-      height: 120vh;
-      width: 95vw;
+      height: 22em;
+      width: 300px;
       position: relative; } }
 
 .contact label:hover .card {
@@ -2088,13 +2283,13 @@ div[class*="Tooltip"] {
   position: absolute;
   left: 5%;
   bottom: 5%; }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #lmd {
       bottom: 15%; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #lmd {
       bottom: 12%; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     #lmd {
       bottom: 6em; } }
 
@@ -2104,7 +2299,7 @@ div[class*="Tooltip"] {
   padding-right: 1%;
   margin-right: 5%;
   margin-top: 5%; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .links {
       position: relative;
       left: 0.5em; } }
@@ -2116,17 +2311,17 @@ div[class*="Tooltip"] {
   width: 25%;
   margin-left: 13%;
   margin-top: 12%; }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .encyclopedia {
       top: -0.5em;
       left: 3%;
       position: relative; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .encyclopedia {
       top: 10%;
       left: 5%;
       position: relative; } }
-  @media (max-device-width: 360px) and (min-device-height: 200px) {
+  @media (max-width: 360px) and (min-height: 200px) {
     .encyclopedia {
       position: relative;
       top: 3em;
@@ -2199,7 +2394,7 @@ div[class*="Tooltip"] {
   left: 543px;
   position: relative;
   color: red; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .back #upArrow {
       position: relative;
       left: 240px;
@@ -2207,7 +2402,7 @@ div[class*="Tooltip"] {
       width: 2em;
       height: 2em;
       color: red; } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .back #upArrow {
       position: relative;
       left: 240px;
@@ -2215,19 +2410,19 @@ div[class*="Tooltip"] {
       width: 2em;
       height: 2em;
       color: red; } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .back #upArrow {
       position: relative;
-      left: 290px;
-      top: -860px;
+      left: 240px;
+      top: -510px;
       width: 2em;
       height: 2em;
       color: red; } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .back #upArrow {
       position: relative;
       left: 520px;
-      top: -730px;
+      top: -430px;
       width: 2em;
       height: 2em;
       color: red; } }
@@ -2241,7 +2436,7 @@ div[class*="Tooltip"] {
   top: -1200px;
   left: -20px;
   position: relative; }
-  @media (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (max-width: 600px) and (min-height: 200px) {
     .back #downArrow {
       position: relative;
       left: 250px;
@@ -2253,7 +2448,7 @@ div[class*="Tooltip"] {
       -o-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); } }
-  @media (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (max-width: 1024px) and (min-height: 200px) {
     .back #downArrow {
       position: relative;
       left: 250px;
@@ -2265,11 +2460,11 @@ div[class*="Tooltip"] {
       -o-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); } }
-  @media (min-device-width: 361px) and (max-device-width: 600px) and (min-device-height: 200px) {
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .back #downArrow {
       position: relative;
-      left: 300px;
-      top: -930px;
+      left: 250px;
+      top: -570px;
       width: 2em;
       height: 2em;
       -webkit-transform: rotate(180deg);
@@ -2277,11 +2472,11 @@ div[class*="Tooltip"] {
       -o-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); } }
-  @media (min-device-width: 601px) and (max-device-width: 1024px) and (min-device-height: 200px) {
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .back #downArrow {
       position: relative;
       left: 530px;
-      top: -800px;
+      top: -490px;
       width: 2em;
       height: 2em;
       -webkit-transform: rotate(180deg);
