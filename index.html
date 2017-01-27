@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="content">
+  <!--div class="wrapper"-->
+    <!--div class="content"-->
       <input type="checkbox" id="off-menu">
 
         <div class="solidTopBar">
           <div class="name">
-             <p>Eric L. Osorio</p>
+             <p>ERIC L OSORIO</p>
           </div>
 
 
@@ -28,37 +28,42 @@
         </div>
 
       <nav id="topNavBar">
-        <p>Eric L. Osorio</p> 
+        <p id="fullName">ERIC L OSORIO</p> 
 
         <ul>
           <input type="radio" name="navRadio" id="aboutNavInput" checked>        
           <li onclick="window.location='#about'">
-            <label for="aboutNavInput">About</label>
+            <label for="aboutNavInput" class="menuLabel">About</label>
           </li>
           <input type="radio" name="navRadio" id="projectNavInput">          
           <li onclick="window.location='#projects'">
-            <label for="projectNavInput">Projects</label>
+            <label for="projectNavInput" class="menuLabel">Projects</label>
           </li>
           <input type="radio" name="navRadio" id="skillsNavInput">          
           <li onclick="window.location='#skills'">
-            <label for="skillsNavInput">Skills</label>
+            <label for="skillsNavInput" class="menuLabel">Skills</label>
           </li>
           <input type="radio" name="navRadio" id="contactNavInput">          
           <li onclick="window.location='#contact'">
-            <label for="contactNavInput">Contact</label>
+            <label for="contactNavInput" class="menuLabel">Contact</label>
           </li>
           </ul>
+        <div class="searchBlock">
+          <label for="modalInput1" id="searchIcon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></label>           
+          <input type="search" name="search" id="search"/>
+          <label for="search" class="searchText">
+            SEARCH
+          </label>
+          <input type="radio" name="modalInput" id="modalInput1">
+          <div class="modalMask">
+            <div class="modal"><p>Search is temporarily disabled</p><label for="modalInput2" id="modalClose"><div class="button">Close Me</div></label>
+            <input type="radio" name="modalInput" id="modalInput2">
+            </div>
+          </div>
 
-
-        <label for="modalInput1" id="searchIcon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></label>
-        <input type="search" name="search" id="search"/>
-        <label for="search" class="searchText">
-          Search
-        </label>
-        <input type="radio" name="modalInput" id="modalInput1">
-        <div class="modal"><p>Search is temporarily disabled</p><label for="modalInput2" id="modalClose"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></label>
-        <input type="radio" name="modalInput" id="modalInput2">
         </div>
+
+
 
 
       </nav>
@@ -171,10 +176,10 @@
         <h1>About</h1>
       </header>
       <article>
-        <p>I am a systems engineer turned web developer. My goal is to become a fullstack developer and work on challenging projects that make a positive impact on humanity.</p>
-        <p> This page is part of my portfolio as I progress through the challenging curriculum of the <span><a href="https://moderndeveloper.com/">Learn Modern Developer</a></span> program in my quest to reach these goals. It is a work in progress used to track my skill proficiencies.</p>
+        <p>I am a systems engineer turned web developer. My goal is to become a fullstack developer.</p>
+        <p> This page is part of my portfolio as I progress through the challenging curriculum of the <span><a href="https://bovacademy.com/">Bov Academy of Programming and Futuristic Engineering</a></span> in my quest to reach this goal. It is a work in progress used to track my skill proficiencies. This portfolio has been done by using only HTML and CSS. Some of the projects featured in the <a href="#projects">Projects Section</a> include some vanilla JavaScript.</p>
       </article>
-       <img src="images/Orlando.JPG" alt="Site seeing in Orlando" id="aboutPic" />   
+
     <hr/>   
        
     </section>
@@ -183,10 +188,10 @@
     <section class="projectSection">
       <header>
         <h2 id="projects">Top of Project Section</h2>      
-        <a name="projects"><h1>Projects</h1></a>
+        <h1>Projects</h1>
       </header>
       <article>
-        <p>Here is a sample of the projects that I've worked on so far at <span><a href="https://moderndeveloper.com/">Learn Modern Developer</a></span> </p>
+        <p>Here is a sample of the projects that I've worked on so far at <span><a href="https://bovacademy.com/">BOV Academy</a></span> Most of them are only done with HTML and CSS. A few of them also use vanilla JavaScript. </p>
       </article>
 
        
@@ -208,14 +213,14 @@
           <img src="images/calc4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project1Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project1Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project1Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project1Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project1Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project1Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project1Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project1Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>            
+            <label for="project1Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project1Img4" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project1Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project1Img1" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project1Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project1Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project1Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project1Img3" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>            
           </div>    
 
           <div class="radioLabels">
@@ -254,14 +259,14 @@
 
 
           <div class="chevronLabels">
-            <label for="project2Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project2Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project2Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project2Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project2Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project2Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project2Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project2Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project2Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project2Img4" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
+            <label for="project2Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project2Img1" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
+            <label for="project2Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project2Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project2Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project2Img3" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -299,14 +304,14 @@
           <img src="images/forms4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project3Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project3Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project3Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project3Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project3Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project3Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project3Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project3Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project3Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project3Img4" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project3Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project3Img1" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project3Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project3Img2" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
+            <label for="project3Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project3Img3" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -346,14 +351,14 @@
           <img src="images/non-js4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project4Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project4Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project4Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project4Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project4Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project4Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project4Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project4Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project4Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project4Img4" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project4Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project4Img1" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project4Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project4Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project4Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project4Img3" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -391,14 +396,14 @@
           <img src="images/collaboration4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project5Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project5Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project5Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project5Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project5Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project5Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project5Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project5Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project5Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project5Img4" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
+            <label for="project5Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project5Img1" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project5Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project5Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project5Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project5Img3" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -437,14 +442,14 @@
           <img src="images/accResponsive4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project6Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project6Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project6Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project6Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project6Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project6Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project6Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project6Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project6Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project6Img4" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project6Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project6Img1" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project6Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project6Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project6Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project6Img3" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -483,14 +488,14 @@
           <img src="images/animatedBorders4.jpg">          
 
           <div class="chevronLabels">
-            <label for="project7Img2" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project7Img4" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project7Img3" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project7Img1" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project7Img4" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project7Img2" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
-            <label for="project7Img1" class="right"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></label>
-            <label for="project7Img3" class="left"><i class="fa fa-chevron-left fa-2x left" aria-hidden="true"></i></label>
+            <label for="project7Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project7Img4" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project7Img3" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project7Img1" class="left"><i class="fa fa-chevron-left left" aria-hidden="true"></i></label>
+            <label for="project7Img4" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project7Img2" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
+            <label for="project7Img1" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
+            <label for="project7Img3" class="left"><i class="fa fa-chevron-left  left" aria-hidden="true"></i></label>
           </div>
 
           <div class="radioLabels">
@@ -742,10 +747,10 @@
     </div>
 
     <footer>
-      <p>2016 Eric L. Osorio</p>
+      <p>&copy 2016 Eric L. Osorio</p>
     </footer>    
 
-    </div>
-  </div>
+    <!--/div-->
+  <!--/div-->
 </body>
 </html>
