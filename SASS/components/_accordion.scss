@@ -1,0 +1,148 @@
+.accordion {
+  position:absolute;
+  left:80px;
+  width:35em;
+  border:1px solid black;
+  border-radius:10px;
+  overflow:auto;
+  color:black;
+  background-color:white;
+}
+
+.accordion ul {
+  list-style:none;
+  margin-right:20px;
+  margin-left:20px;
+}
+
+
+.accordion ul li div:nth-child(1) {
+  font-family:Verdana, Impact;
+  font-size:1em;
+  text-transform: uppercase;
+  width:100%;
+  background-color:#D95B44;
+  margin-left:-5%;
+  margin-bottom:1px;
+  padding:0.4em;
+  border:1px solid #69201A;
+  color:#682125;
+  font-weight:900;
+  text-shadow:0 0.01em 0.01em #ffffff;
+}
+
+.accordion div label{
+  display:block;
+  width:100%;
+}
+
+.accordion div label:hover{
+  cursor:pointer;
+}
+
+
+.accordion li input {
+  display:none;
+}
+
+.accordion ul li input:checked ~ div{
+/*div when checked will expand to max-height of 250px*/
+  display:block;
+  border:1px solid #69201A;
+  width:100%;  
+  max-height:270px;
+  margin-left:-5%;
+  margin-top:-1px;
+  padding-right:2%;
+  /*font-size:0.9em;*/
+  transition: max-height 1s;
+
+} 
+
+.accordion ul li div:last-of-type{
+  /*max-height:0 and overflow-y:hidden hide the div;*/
+  position:static;
+  max-height: 0;
+  transition:max-height 1s;
+  overflow-y:hidden;
+
+}
+
+
+.accordion ul li input:checked ~ div h3,
+.accordion ul li input:checked ~ div h4,
+.accordion ul li input:checked ~ div p{
+  position:relative;
+  margin-left:29px;
+
+} 
+
+.accordion p{
+  
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+.accordion h3{
+  color:#5C2A29;
+  margin-bottom:0;
+
+}
+
+.accordion h4{
+  margin-top:10px;
+  margin-bottom:10px;
+
+}
+
+@media(max-width:1020px) {
+
+  .accordion{
+    position:absolute;
+    left:1em;
+
+  }
+  
+  .accordion div > label{
+    width:100%;
+  }
+  .accordion ul li div:nth-child(1) {
+    background-color:black;
+    color:white;
+  }
+.accordion ul li input:checked ~ div{  
+  padding-right:1.9%;
+  max-height:100vh;
+    transition: max-height 1s;
+  } 
+
+  .accordion ul li div:nth-child(1) {
+    background-color:black;
+    color:white;
+  }
+
+  .accordion ul li div:last-of-type{
+  /*max-height:0 and overflow-y:hidden hide the div;*/
+  position:static;
+  max-height: 0;
+  transition:max-height 0.7s;
+  overflow-y:hidden;
+
+
+}
+  
+}
+
+@media(max-width:600px){
+    .accordion ul li div:nth-child(1) {
+    background-color:green;
+    color:white;
+  }
+}
+
+@media(max-width:360px){
+    .accordion ul li div:nth-child(1) {
+    background-color:blue;
+    color:white;
+  }
+}

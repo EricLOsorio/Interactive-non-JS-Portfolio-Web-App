@@ -49,8 +49,8 @@
 
 
 .projectSection > input:checked + label{
-  background-color:$grey;
-  color:$white;
+  background-color:#4c4a4a;
+  color:#FB68C5;
 }
 
 .projectSection > input:not(:checked) + label:hover{
@@ -76,11 +76,11 @@
     width:90vw;
     height:470px;
   }
-  background-color:$grey;
+  background-color:#4c4a4a;
 
 }
 
- .projectSection .displayArea > img, .calculator{
+ .projectSection .displayArea > img, .calculator, .accordion{
    @include top-left-position(5%,125px,absolute);
    @include h-w(470px,450px);
    @include med-and-large-device{
@@ -114,7 +114,8 @@
 
 
 .projectSection > input:checked + label + div.displayArea > input:checked + img,
-.projectSection > input:checked + label + div.displayArea > input:checked + .calculator{
+.projectSection > input:checked + label + div.displayArea > input:checked + .calculator,
+.projectSection > input:checked + label + div.displayArea > input:checked + .accordion{
   visibility: visible;
 }
 
