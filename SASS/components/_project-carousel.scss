@@ -1,4 +1,4 @@
-//_project-carousel.scss
+// _project-carousel.scss
 
 /*Projects*/
 
@@ -80,9 +80,9 @@
 
 }
 
- .projectSection .displayArea > img{
-   @include top-left-position(20%,16%,absolute);
-   @include h-w(300px,470px);
+ .projectSection .displayArea > img, .calculator{
+   @include top-left-position(5%,125px,absolute);
+   @include h-w(470px,450px);
    @include med-and-large-device{
      @include structure-dimension(absolute,2em,3em,200px,15em);
    }
@@ -99,8 +99,13 @@
      width:15em;
      left:14%;
    }
+
    visibility: hidden;
    z-index:2;
+}
+
+.calculator{
+  margin-left:-50px;
 } 
 
 .projectSection > input:checked +label + div.displayArea{
@@ -108,7 +113,8 @@
 }
 
 
-.projectSection > input:checked + label + div.displayArea > input:checked + img{
+.projectSection > input:checked + label + div.displayArea > input:checked + img,
+.projectSection > input:checked + label + div.displayArea > input:checked + .calculator{
   visibility: visible;
 }
 
@@ -171,7 +177,7 @@
 
 
 .radioLabels{
-  @include top-left-position(440px,280px,absolute);
+  @include top-left-position(510px,260px,absolute);
   @include med-and-large-device{
     @include top-left-position(17.5em,220px,absolute);
     z-index:2;

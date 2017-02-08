@@ -112,6 +112,10 @@ section input{
   display:none;
 }
 
+input#display{
+  display:block;
+}
+
 section:nth-of-type(1) hr{
   @include position-top-width(relative,50px,800px);
 

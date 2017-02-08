@@ -201,13 +201,56 @@
 
 
           <input type="radio" name="images" id="project1Img1" checked>
-          <img src="images/calc1.bmp">
+          <img src="images/calc1.jpg">
 
           <input type="radio" name="images" id="project1Img2" >
-          <img src="images/calc2.bmp">
+          <img src="images/calc2.jpg">
  
           <input type="radio" name="images" id="project1Img3" >
-          <img src="images/calc3.bmp">
+          <!--img src="images/calc3.bmp"-->
+
+          <div class="calculator">
+
+            <form id="calc">
+              <input type="text" name="display" id="display" value="0" readonly>
+
+              <table id="bottom-right">
+
+                <tr>
+                  <td class="nums oper">+</td>
+                  <td class="nums oper">-</td>
+                  <td class="nums oper">*</td>
+                  <td class="nums oper">&divide;</td>             
+                </tr>
+                <tr >
+                  <td class="nums" >7</td>
+                  <td class="nums">8</td>
+                  <td class="nums">9</td>
+                  <td class="nums" id=clear>C</td>              
+                </tr>
+                <tr>
+                  <td class="nums">4</td>
+                  <td class="nums">5</td>
+                  <td class="nums">6</td>
+                  <td class="nums" id="clear" >DEL</td>             
+                </tr>
+                <tr>
+                  <td class="nums">1</td>
+                  <td class="nums">2</td>
+                  <td class="nums">3</td>
+                  <td rowspan="2" class="total" id="total">=</td>             
+                </tr>
+                <tr>
+                  <td class="nums">0</td>
+                  <td class="nums">.</td>
+                  <td class="nums">&plusmn;</td>
+                    
+                </tr>         
+              </table>
+            </form>
+
+          </div>
+
 
           <input type="radio" name="images" id="project1Img4" >
           <img src="images/calc4.jpg">          
@@ -246,16 +289,16 @@
 
 
           <input type="radio" name="images2" id="project2Img1" checked>
-          <img src="images/cart1.png">
+          <img src="images/cart1.jpg">
 
           <input type="radio" name="images2" id="project2Img2" >
-          <img src="images/cart2.png">
+          <img src="images/cart2.jpg">
  
           <input type="radio" name="images2" id="project2Img3" >
-          <img src="images/cart3.png">
+          <img src="images/cart3.jpg">
 
           <input type="radio" name="images2" id="project2Img4" >
-          <img src="images/cart4.jpg">
+          <img src="images/shopCart.gif">
 
 
           <div class="chevronLabels">
@@ -298,7 +341,7 @@
           <img src="images/forms2.jpg">
  
           <input type="radio" name="images3" id="project3Img3" >
-          <img src="images/forms3.jpg">
+          <img src="images/forms.gif">
 
           <input type="radio" name="images3" id="project3Img4" >
           <img src="images/forms4.jpg">          
@@ -752,5 +795,6 @@
 
     <!--/div-->
   <!--/div-->
+  <script type="text/javascript" src="JS/calculator.js"></script>
 </body>
 </html>
