@@ -18,7 +18,7 @@
 
 .accordion ul li div:nth-child(1) {
   font-family:Verdana, Impact;
-  font-size:1em;
+  font-size:0.7em;
   text-transform: uppercase;
   width:100%;
   background-color:#D95B44;
@@ -95,54 +95,36 @@
 
 }
 
-@media(max-width:1020px) {
-
-  .accordion{
-    position:absolute;
-    left:1em;
-
-  }
-  
-  .accordion div > label{
-    width:100%;
-  }
-  .accordion ul li div:nth-child(1) {
-    background-color:black;
-    color:white;
-  }
-.accordion ul li input:checked ~ div{  
-  padding-right:1.9%;
-  max-height:100vh;
-    transition: max-height 1s;
-  } 
-
-  .accordion ul li div:nth-child(1) {
-    background-color:black;
-    color:white;
-  }
-
-  .accordion ul li div:last-of-type{
-  /*max-height:0 and overflow-y:hidden hide the div;*/
-  position:static;
-  max-height: 0;
-  transition:max-height 0.7s;
-  overflow-y:hidden;
-
-
-}
-  
-}
-
 @media(max-width:600px){
+
+    .accordion{
+      width:15em;
+      left:60px;
+    }
+
+    .accordion ul{
+      position:relative;
+      left:-48px;
+      width:90%;
+    }
+    
     .accordion ul li div:nth-child(1) {
     background-color:green;
     color:white;
   }
+
+  .accordion h3, .accordion h4{
+    font-size:0.8em;
+  }
+
+  .accordion p{
+    font-size:0.6em;
+  }
 }
 
 @media(max-width:360px){
-    .accordion ul li div:nth-child(1) {
-    background-color:blue;
-    color:white;
-  }
+    
+    .accordion{
+      left:30px;
+    }
 }

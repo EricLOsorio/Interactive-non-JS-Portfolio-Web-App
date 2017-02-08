@@ -12,7 +12,7 @@
 }
 
 
-#display {border:5px solid black;
+.calculator #display {border:5px solid black;
 	width: 99%;
 	border-radius:0.3em;
 	text-align: right;
@@ -22,72 +22,72 @@
 
 }
 
-#inputtype {
+.calculator #inputtype {
 	color: white;
 	margin-bottom:1em;
 }
 
-table {
+.calculator table {
 	display: inline-block;
 	margin-bottom: 0.5em;
 	background-color: purple;
 
 }
 
-td {
+.calculator td {
 	cursor: pointer;
 }
 
-td:hover {
+.calculator td:hover {
 	background-color:white;
 }
 
 
-#bottom-right {
+.calculator #bottom-right {
 	width:100%;
 }
 
 
 
- #bottom-right td{
+ .calculator #bottom-right td{
 	width:10em;
 	border-radius: 0.5em;
 	text-align: center;
 
 }
 
-#bottom-right td {
+.calculator #bottom-right td {
 	height: 3em;
   font-size:1.5em;
   box-shadow: 1px 1px 1px 1px #363636;
 }
-.nums{
+.calculator .nums{
 	background-color:royalblue;
   color:black;
 }
 
-.mem {
+.calculator .mem {
 	background-color: green;
   font-weight:bold;
 }
 
-#bottom-right td.oper {
+.calculator #bottom-right td.oper {
 	background-color: darkturquoise;
 }
 
-.fraction {
+.calculator .fraction {
 	background-color: cadetblue;
 }
 
-#clear {
+.calculator #clear {
 	background-color: red;
 }
 
-#clear:hover{
+.calculator #clear:hover{
   background-color:white;
 }
 
-.total {
+.calculator .total {
 	background-color:chartreuse;
 }
 
@@ -107,6 +107,7 @@ td:hover {
   color: white;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+/*************@MEDIA SECTIONS NOT NEEDED FOR LIVE CAROUSEL*************************
 
 @media (max-device-width:1024px){
 
@@ -152,39 +153,39 @@ td:hover {
     font-size:2em;
   }
 
-}
+} 
 
-@media (max-device-width:600px){
+@media (max-width:600px){
   
-  .content{
+  .calculator{
     right:0%;
     left:0%;
-    width:700px;
-    border:5px solid blue;      
+    width:650px;
+ 
   }
    #display {
   font-size: 5em ;
 }
 
-#inputtype{
+.calculator #inputtype{
   font-size:2em;
 }
 
-#inputtype input{
+.calculator #inputtype input{
   width:2em;
   height:2.5em;
 }
 
- #bottom-right td{
-   width:4em;
+ .calculator #bottom-right td{
+   width:3em;
     height:1em;
    border-radius: 0.5em;
    text-align: center;
-    font-size:2.8em;
+    font-size:1.3em;
   }
 
-  #bottom-right td {
-  height: 3.5em;
+  .calculator #bottom-right td {
+  height: 2.0em;
 }
 
 
@@ -197,6 +198,7 @@ td:hover {
   }
 
 }
+
 
 @media (max-device-width:360px){
   
@@ -239,3 +241,4 @@ td:hover {
   }
 
 }
+*/

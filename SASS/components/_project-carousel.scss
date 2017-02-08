@@ -62,16 +62,16 @@
   @include structure-dimension(absolute,150px,283px,700px,680px);
   @include display-marginLeft(none,50px);
   @include med-only-device{
-    @include structure-dimension(relative,-2.6em,1.2em,300px,26em);
+    @include structure-dimension(relative,-65px,17px,24em,480px);
     display:none;
   }
   @include large-only-device{
-    @include structure-dimension(relative,-3.2em,-147px,600px,26em);
+    @include structure-dimension(relative,-95px,-147px,700px,680px);
     display:none;
   }
   @include small-device{
     position:relative;
-    top:0;
+    top:-15px;
     left:-48px;
     width:90vw;
     height:470px;
@@ -83,29 +83,54 @@
  .projectSection .displayArea > img, .calculator, .accordion{
    @include top-left-position(5%,125px,absolute);
    @include h-w(470px,450px);
-   @include med-and-large-device{
-     @include structure-dimension(absolute,2em,3em,200px,15em);
-   }
+   @include large-only-device{
+     @include structure-dimension(absolute,125px,5%,30em,32em);
+   }   
    @include med-only-device{
-     @include structure-dimension(absolute,3em,3em,200px,15em);
+     @include structure-dimension(absolute,3.8em,3em,16em,19em);
      visibility: hidden;
      z-index:2;
    }
-   @include large-only-device{
-     width:400px;
-     left:93px;
-   }
    @include small-device{
      width:15em;
-     left:14%;
+     left:11%;
+     height:20em;
    }
 
    visibility: hidden;
    z-index:2;
 }
 
-.calculator{
+.displayArea > .calculator{
   margin-left:-50px;
+  @include med-only-device{
+    @include structure-dimension(absolute,3.5em,3.0em,16em,19em);
+    margin-left:0px;
+    #display{
+      font-size:1.5em;
+    }
+    #bottom-right td{
+      height:1.8em;
+    }
+  }
+  @include small-device{
+    @include structure-dimension(absolute,2.3em,3.3em,14em,19em);
+    margin-left:0px;
+    margin-top:-30px;
+    #display{
+      font-size:1.5em;
+    }
+    #bottom-right td{
+      height:1.9em;
+    }
+  }
+
+}
+
+.accordion {
+  @include large-only-device{
+    margin-left:5px;
+  }
 } 
 
 .projectSection > input:checked +label + div.displayArea{
@@ -136,20 +161,18 @@
 .chevronLabels label[class="right"]{
   color:$chevrons;
   @include top-left-position(300px,630px,absolute);
-  @include med-and-large-device{
-    @include top-left-position(157px,290px,absolute);
-    display:none;
-  }
+
   @include med-only-device{
-    @include top-left-position(157px,250px,absolute);
+    @include top-left-position(197px,315px,absolute);
     display:none;
   }
   @include large-only-device{
-    @include top-left-position(157px,570px,absolute);
+    @include top-left-position(300px,630px,absolute);
     display:none;
   }
   @include small-device{
-    left:280px;
+    left:265px;
+    top:190px;    
   }
   display:none;
   &:hover{
@@ -160,15 +183,18 @@
 .chevronLabels label[class="left"]{
   color:$chevrons;
   @include top-left-position(300px,50px,absolute);
-  @include med-and-large-device{
-    @include top-left-position(160px,15px,absolute);
+  @include large-only-device{
+    @include top-left-position(300px,50px,absolute);
     display:none;
   }
   @include med-only-device{
+    @include top-left-position(200px,50px,absolute);
     left:25px;
+    display:none;
   }
   @include small-device{
-    left:15px;
+    left:10px;
+    top:190px;
   }
   display:none;
   &:hover{
@@ -179,15 +205,17 @@
 
 .radioLabels{
   @include top-left-position(510px,260px,absolute);
-  @include med-and-large-device{
-    @include top-left-position(17.5em,220px,absolute);
+  @include large-only-device{
+    @include top-left-position(510px,260px,absolute);
     z-index:2;
   }
   @include med-only-device{
-    left:70px;
+    @include top-left-position(330px,105px,absolute);
+    z-index:2;  
   }
   @include small-device{
-    left:90px;
+    left:70px;
+    top:320px;
   }
   z-index:2;  
 }
@@ -213,8 +241,8 @@
 
 div.description{
   @include h-w(100px,100%);
-  @include med-and-large-device{
-    @include top-left-position(25em,-20px,relative);
+  @include large-only-device{
+    @include top-left-position(570px,-20px,relative);
     margin-top:-15px; 
     margin-right:0px;
     font-size:0.8em; 
@@ -224,6 +252,11 @@ div.description{
     margin-left:3em;
   }
   @include med-only-device{
+    @include top-left-position(390px,-20px,relative);
+    margin-top:-15px; 
+    margin-right:0px;
+    font-size:0.8em; 
+    color:$white;   
     padding-left:2em;
   }
   @include small-device{
