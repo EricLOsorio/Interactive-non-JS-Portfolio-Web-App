@@ -2,10 +2,11 @@ section {
   width: 900px;
   position: relative;
   margin: auto;
+  paddin: 0;
   font-size: 15px;
   color: #6D7373;
   position: relative;
-  left: 50px; }
+  left: 0; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section {
       width: 600px;
@@ -13,6 +14,9 @@ section {
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     section {
       position: relative;
+      width: 400px;
+      margin: auto;
+      left: 10%;
       top: 0; } }
   @media (max-width: 360px) and (min-height: 200px) {
     section {
@@ -47,7 +51,7 @@ section.aboutMe h1, section.projectSection h1, section.skills h1, section.contac
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
       top: -30px;
-      left: -9em; } }
+      left: -2em; } }
   @media (max-width: 360px) and (min-height: 200px) {
     section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
       left: -20px; } }
@@ -119,7 +123,7 @@ section:nth-of-type(1) hr {
       position: relative;
       top: 10px;
       width: 220px;
-      left: -20em; } }
+      left: -4em; } }
   @media (max-width: 360px) and (min-height: 200px) {
     section:nth-of-type(1) hr {
       position: relative;
@@ -149,7 +153,7 @@ section:nth-of-type(2) hr {
     section:nth-of-type(2) hr {
       top: 5em;
       width: 220px;
-      left: -20em; } }
+      left: -4em; } }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     section:nth-of-type(2) hr {
       top: -4em;
@@ -215,7 +219,7 @@ section:nth-of-type(2) hr {
 
 body, html {
   font-family: Roboto,sans-serif;
-  max-width: 100%;
+  max-width: 100vw;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -261,6 +265,9 @@ footer {
   @media (max-width: 360px) and (min-height: 200px) {
     footer {
       display: none; } }
+  footer p {
+    display: inline-block;
+    margin-top: 7px; }
 
 @media (max-width: 360px) and (min-height: 200px) {
   li.copy {
@@ -661,30 +668,26 @@ footer {
     #topNavBar {
       display: none; } }
 
-@media (max-width: 600px) and (min-height: 200px) {
-  #fullName {
-    display: inline;
-    width: 8em;
-    top: -0.5em;
-    margin-left: 30%;
-    margin-right: 30%; } }
-@media (max-width: 1024px) and (min-height: 200px) {
-  #fullName {
-    display: inline;
-    width: 8em;
-    top: -0.5em;
-    margin-left: 30%;
-    margin-right: 30%; } }
-@media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-  #fullName ul {
-    margin-left: -50px; } }
 @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-  #fullName ul {
-    margin-left: -150px; } }
-@media (max-width: 360px) and (min-height: 200px) {
-  #fullName ul {
-    display: none; } }
+  #fullName {
+    display: inline;
+    width: 8em;
+    top: -0.5em;
+    margin-left: 23%; } }
 
+/*
+ul{
+  @include large-only-device{
+    margin-left:-50px;
+  }
+  @include med-only-device{
+    margin-left:-150px;
+  }
+  @include small-device{
+    display:none;
+  }
+}
+*/
 #fullName {
   font-size: 20px; }
 
@@ -724,7 +727,7 @@ nav > p {
 nav > ul {
   white-space: nowrap;
   top: 50px;
-  left: 20%;
+  left: 28%;
   position: relative;
   display: inline;
   margin-left: 2em; }
@@ -955,7 +958,7 @@ nav input:checked + li > label {
 .displayArea {
   position: absolute;
   left: 150px;
-  top: 283px;
+  top: 284px;
   width: 700px;
   height: 680px;
   display: none;
@@ -1670,13 +1673,17 @@ nav > .searchBlock > #searchIcon:focus ~ .modalMask {
 
 section.skills hr:nth-of-type(1) {
   position: relative;
-  left: 0px;
-  top: -460px;
+  left: -10px;
+  top: -575px;
   width: 400px; }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section.skills hr:nth-of-type(1) {
+      position: relative;
+      margin-left: 50px; } }
 
 hr#endSkillsLine {
   position: relative;
-  top: -1050px;
+  top: -1450px;
   width: 800px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     hr#endSkillsLine {
@@ -1688,7 +1695,7 @@ hr#endSkillsLine {
       position: relative;
       top: -550px;
       width: 220px;
-      left: -18em; } }
+      left: -1em; } }
   @media (max-width: 360px) and (min-height: 200px) {
     hr#endSkillsLine {
       position: relative;
@@ -1697,21 +1704,33 @@ hr#endSkillsLine {
 
 section.skills > .backEndGraph hr {
   position: relative;
-  left: 44px;
-  top: -360px;
+  left: -12px;
+  top: -446px;
   width: 400px; }
+  @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+    section.skills > .backEndGraph hr {
+      margin-left: 52px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section.skills > .backEndGraph hr {
+      position: relative;
+      margin-left: 52px; } }
 
 section.skills > .otherGraph hr {
   position: relative;
-  left: 0px;
-  top: -724px;
-  width: 400px; }
+  left: 15px;
+  top: -844px;
+  width: 450px; }
   @media (max-width: 600px) and (min-height: 200px) {
     section.skills > .otherGraph hr {
+      width: 400px;
       left: 60px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     section.skills > .otherGraph hr {
+      width: 400px;
       left: 60px; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    section.skills > .otherGraph hr {
+      left: 3px; } }
 
 #frontend {
   height: 20px;
@@ -1792,10 +1811,11 @@ section.skills > .otherGraph hr {
   color: #FB5E5D; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #frontendSkill {
-      top: -80px; } }
+      top: -80px;
+      left: 150px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #frontendSkill {
-      left: 0em;
+      left: 40px;
       width: 13em;
       margin-left: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
@@ -1812,11 +1832,11 @@ section.skills > .otherGraph hr {
   color: #4A6FEB; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #backendSkill {
-      left: 5.5em;
+      left: 150px;
       top: 10em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #backendSkill {
-      left: 0;
+      left: 40px;
       top: 22em;
       width: 13em;
       margin-left: 20px; } }
@@ -1828,18 +1848,18 @@ section.skills > .otherGraph hr {
 #otherSkill {
   font-size: 18px;
   font-weight: bold;
-  top: 520px;
+  top: 450px;
   left: 400px;
   position: relative;
   width: 13em;
   color: #000000; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     #otherSkill {
-      top: 25em;
-      left: 5.5em; } }
+      top: 29em;
+      left: 200px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     #otherSkill {
-      left: 0;
+      left: 90px;
       top: 39em;
       width: 13em;
       margin-left: 20px; } }
@@ -1862,40 +1882,63 @@ section.skills > .otherGraph hr {
 .proficiencyLabels li {
   margin-bottom: 15px; }
 
-.frontendTechLabels {
-  position: relative;
-  left: 90px;
+/*
+.frontendTechLabels{
+  @include position-left(relative,90px);
   list-style-type: none;
-  display: inline; }
+  display:inline;
+}
 
-.frontendTechLabels li {
-  -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  transform: rotate(15deg);
-  border: 1px solid black; }
-
+.frontendTechLabels li{
+  @include rotate(15deg);
+  border:1px solid black;
+}*/
 .js, .html, .react, .jquery, .node, .php, .mongo, .ruby {
   position: absolute;
   top: 170px;
-  -webkit-transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg); }
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg); }
   @media (max-width: 600px) and (min-height: 200px) {
     .js, .html, .react, .jquery, .node, .php, .mongo, .ruby {
-      top: 0.9em; } }
+      position: absolute;
+      margin-top: -8.2em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .js, .html, .react, .jquery, .node, .php, .mongo, .ruby {
-      top: 0.9em; } }
+      position: absolute;
+      margin-top: -8.2em; } }
+
+.node {
+  top: 150px; }
+
+.mongo {
+  top: 155px; }
+
+.php {
+  top: 143px; }
+
+.ruby {
+  top: 145px; }
+
+.js {
+  top: 150px; }
+
+.html {
+  top: 155px; }
+
+.react {
+  top: 150px; }
+
+.jquery {
+  top: 145px; }
 
 .js, .node {
-  left: 150px; }
+  left: 170px; }
 
 .html, .php {
-  left: 220px; }
+  left: 230px; }
 
 .react, .mongo {
   left: 290px; }
@@ -1904,7 +1947,7 @@ section.skills > .otherGraph hr {
   left: 360px; }
 
 .jsBar, .backendBar1 {
-  top: -63px;
+  top: -58px;
   left: 170px;
   position: relative;
   height: 60px;
@@ -1912,7 +1955,7 @@ section.skills > .otherGraph hr {
   background-color: #FFAD41; }
 
 .htmlBar, .backendBar2 {
-  top: -211px;
+  top: -236px;
   left: 230px;
   position: relative;
   height: 80px;
@@ -1920,7 +1963,7 @@ section.skills > .otherGraph hr {
   background-color: #38BAF0; }
 
 .reactBar, .backendBar3 {
-  top: -298px;
+  top: -365px;
   left: 290px;
   position: relative;
   height: 20px;
@@ -1928,7 +1971,7 @@ section.skills > .otherGraph hr {
   background-color: #69D12B; }
 
 .jqueryBar, .backendBar4 {
-  top: -386px;
+  top: -482px;
   left: 350px;
   position: relative;
   height: 20px;
@@ -1949,16 +1992,16 @@ section.skills > .otherGraph hr {
   height: 20px; }
 
 .backendBar1 {
-  top: -23px; }
+  top: -18px; }
 
 .backendBar2 {
-  top: -111px; }
+  top: -135px; }
 
 .backendBar3 {
-  top: -198px; }
+  top: -238px; }
 
 .backendBar4 {
-  top: -285px; }
+  top: -355px; }
 
 .frontEndGraph {
   position: relative;
@@ -1984,7 +2027,7 @@ section.skills > .otherGraph hr {
 .backEndGraph {
   position: relative;
   left: 800px;
-  top: -512px;
+  top: -631px;
   width: 500px;
   margin-left: -360px; }
   @media (max-width: 600px) and (min-height: 200px) {
@@ -2028,7 +2071,7 @@ section.skills > .otherGraph hr {
 .otherGraph {
   position: relative;
   left: 250px;
-  top: -550px;
+  top: -820px;
   width: 500px;
   margin-left: -60px; }
   @media (max-width: 600px) and (min-height: 200px) {
@@ -2050,19 +2093,21 @@ section.skills > .otherGraph hr {
       top: -13em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .otherGraph {
-      margin-left: -45px; } }
+      margin-left: -45px;
+      top: -4em; } }
   @media (max-width: 360px) and (min-height: 200px) {
     .otherGraph {
-      margin-left: -15px; } }
+      margin-left: -15px;
+      top: -4em; } }
 
 .writing, .problemSolve, .PM, .research, .publicSpeaking {
   position: absolute;
   top: 175px;
-  -webkit-transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg); }
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg); }
   @media (max-width: 600px) and (min-height: 200px) {
     .writing, .problemSolve, .PM, .research, .publicSpeaking {
       top: 2em; } }
@@ -2071,62 +2116,71 @@ section.skills > .otherGraph hr {
       top: 2em; } }
 
 .writing {
-  left: 140px; }
+  left: 155px;
+  top: 180px; }
   @media (max-width: 600px) and (min-height: 200px) {
     .writing {
-      left: 10em;
-      top: 3em; } }
+      width: 160px;
+      left: 12em;
+      top: 3.5em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .writing {
-      left: 10em;
-      top: 3em; } }
+      width: 160px;
+      left: 12em;
+      top: 3.5em; } }
 
 .problemSolve {
-  left: 225px; }
+  left: 225px;
+  top: 165px; }
   @media (max-width: 600px) and (min-height: 200px) {
     .problemSolve {
       width: 10em;
-      left: 13em;
-      top: 3.0em; } }
+      left: 15.3em;
+      top: 3.3em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .problemSolve {
       width: 10em;
-      left: 13em;
-      top: 3.0em; } }
+      left: 15.3em;
+      top: 3.3em; } }
 
 .PM {
   left: 280px; }
   @media (max-width: 600px) and (min-height: 200px) {
     .PM {
-      left: 15em;
+      left: 18.5em;
       width: 13em;
-      top: 3.5em; } }
+      top: 4.3em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .PM {
-      left: 15em;
+      left: 18.5em;
       width: 13em;
-      top: 3.5em; } }
+      top: 4.3em; } }
 
 .research {
-  left: 360px; }
+  left: 350px;
+  top: 155px; }
   @media (max-width: 600px) and (min-height: 200px) {
     .research {
-      left: 18.5em;
-      top: 1em; } }
+      left: 22.6em;
+      top: 1.5em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .research {
-      left: 18.5em;
-      top: 1em; } }
+      left: 22.6em;
+      top: 1.5em; } }
 
 .publicSpeaking {
-  left: 430px; }
+  left: 400px;
+  top: 165px;
+  width: 105px; }
   @media (max-width: 600px) and (min-height: 200px) {
     .publicSpeaking {
-      left: 21em;
+      top: 50px;
+      left: 25.5em;
       width: 10em; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .publicSpeaking {
-      left: 21em;
+      top: 50px;
+      left: 25.5em;
       width: 10em; } }
 
 .writingBar {
@@ -2138,179 +2192,212 @@ section.skills > .otherGraph hr {
   background-color: #9FCE57; }
   @media (max-width: 600px) and (min-height: 200px) {
     .writingBar {
+      left: 190px;
       top: -90px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .writingBar {
+      left: 190px;
       top: -90px; } }
 
 .problemSolveBar {
   position: relative;
   left: 230px;
-  top: -247px;
+  top: -261px;
   width: 20px;
   height: 90px;
   background-color: #3DC694; }
   @media (max-width: 600px) and (min-height: 200px) {
     .problemSolveBar {
-      left: 210px; } }
+      left: 240px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .problemSolveBar {
-      left: 210px; } }
+      left: 240px; } }
 
 .PMBar {
   position: relative;
   left: 290px;
-  top: -364px;
+  top: -394px;
   width: 20px;
   height: 50px;
   background-color: #4EC1F2; }
   @media (max-width: 600px) and (min-height: 200px) {
     .PMBar {
-      left: 250px; } }
+      left: 290px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .PMBar {
-      left: 250px; } }
+      left: 290px; } }
 
 .researchBar {
   position: relative;
   left: 350px;
-  top: -522px;
+  top: -582px;
   width: 20px;
   height: 90px;
   background-color: #8D9EFF; }
   @media (max-width: 600px) and (min-height: 200px) {
     .researchBar {
-      left: 290px; } }
+      left: 340px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .researchBar {
-      left: 290px; } }
+      left: 340px; } }
 
 .publicSpeakingBar {
   position: relative;
   left: 400px;
-  top: -650px;
+  top: -738px;
   width: 20px;
   height: 60px;
   background-color: #CD98FE; }
   @media (max-width: 600px) and (min-height: 200px) {
     .publicSpeakingBar {
-      left: 330px; } }
+      left: 390px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .publicSpeakingBar {
-      left: 330px; } }
+      left: 390px; } }
 
 div[class*="Tooltip"] {
   visibility: hidden; }
 
 .jsTooltip {
-  top: -190px;
-  left: 108px;
+  top: -205px;
+  left: 59px;
   position: relative; }
 
 .htmlTooltip {
-  top: -350px;
-  left: 170px;
+  top: -416px;
+  left: 119px;
   position: relative; }
 
 .reactTooltip {
-  top: -380px;
-  left: 230px;
+  top: -472px;
+  left: 179px;
   position: relative; }
 
 .jqueryTooltip {
-  top: -470px;
-  left: 290px;
+  top: -575px;
+  left: 239px;
   position: relative; }
 
 .nodeTooltip {
-  top: -100px;
-  left: 110px;
+  top: -125px;
+  left: 59px;
   position: relative; }
 
 .phpTooltip {
-  top: -200px;
-  left: 170px;
+  top: -227px;
+  left: 119px;
   position: relative; }
 
 .mongoTooltip {
-  top: -280px;
-  left: 230px;
+  top: -345px;
+  left: 178px;
   position: relative; }
 
 .rubyTooltip {
-  top: -365px;
-  left: 290px;
+  top: -447px;
+  left: 239px;
   position: relative; }
 
 .writingTooltip {
-  top: -245px;
-  left: 110px;
+  top: -251px;
+  left: 59px;
   position: relative; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    .writingTooltip {
+      left: 78px; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    .writingTooltip {
+      left: 78px; } }
 
 .problemTooltip {
-  top: -400px;
-  left: 170px;
+  top: -424px;
+  left: 119px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
     .problemTooltip {
-      left: 150px; } }
+      left: 129px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .problemTooltip {
-      left: 150px; } }
+      left: 129px; } }
 
 .pmTooltip {
-  top: -480px;
-  left: 230px;
+  top: -530px;
+  left: 179px;
   position: relative; }
-  @media (max-width: 600px) and (min-height: 200px) {
-    .pmTooltip {
-      left: 192px; } }
-  @media (max-width: 1024px) and (min-height: 200px) {
-    .pmTooltip {
-      left: 192px; } }
 
 .researchTooltip {
-  top: -680px;
-  left: 290px;
+  top: -758px;
+  left: 239px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
     .researchTooltip {
-      left: 232px; } }
+      left: 229px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .researchTooltip {
-      left: 232px; } }
+      left: 229px; } }
 
 .publicTooltip {
-  top: -780px;
-  left: 340px;
+  top: -884px;
+  left: 289px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
     .publicTooltip {
-      left: 273px; } }
+      left: 279px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
     .publicTooltip {
-      left: 273px; } }
+      left: 279px; } }
 
+/*
+.tooltipBody{
+  @include h-w(40px,150px);
+  position:relative;
+  background:$black;
+  color: $white;
+  font-size:80%;
+}*/
 .tooltipBody {
-  height: 40px;
-  width: 150px;
+  /*@include h-w(55px,240px);*/
+  width: 240px;
   position: relative;
   background: #000000;
-  color: #ffffff;
-  font-size: 80%; }
+  border-radius: 3%;
+  color: #ffffff; }
+
+.tooltipBody span {
+  font-weight: 900; }
+
+.tooltipBody p {
+  font-size: 0.8em;
+  position: relative;
+  top: 3px;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 20px; }
+
+/*
 
 .tip {
+  @include structure-dimension(relative,60px,-15px,20px,15px);
+  color:$black;
+}*/
+.tip {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 12px solid black;
   position: relative;
-  left: 60px;
-  top: -15px;
-  width: 20px;
-  height: 15px;
+  left: 114px;
+  top: -12px;
   color: #000000; }
 
 /*Contact*/
 .contact {
   position: relative;
-  top: -1050px; }
+  top: -1500px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
     .contact {
       top: -70em;
@@ -2337,7 +2424,7 @@ div[class*="Tooltip"] {
       margin-left: 1em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .contact article {
-      margin-left: 3em; } }
+      margin-left: 0em; } }
   @media (max-width: 360px) and (min-height: 200px) {
     .contact article {
       margin-left: 3.5em;
@@ -2364,7 +2451,7 @@ div[class*="Tooltip"] {
   .contact header {
     position: relative;
     width: 500px;
-    left: 200px; } }
+    left: -50px; } }
 @media (max-width: 360px) and (min-height: 200px) {
   .contact header {
     position: relative;
@@ -2390,7 +2477,7 @@ div[class*="Tooltip"] {
       margin: auto; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     .contact label {
-      left: -20px; } }
+      left: 0px; } }
   @media (max-width: 360px) and (min-height: 200px) {
     .contact label {
       top: -3em;

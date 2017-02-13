@@ -14,17 +14,21 @@
 
 
 section.skills hr:nth-of-type(1){
-  @include position-left-top-width(relative,0px,-460px,400px);
+  @include position-left-top-width(relative,-10px,-575px,400px);
+  @include med-only-device{
+    position:relative;
+    margin-left:50px;
+  }
 }
 
 hr#endSkillsLine{
-  @include position-top-width(relative,-1050px,800px);
+  @include position-top-width(relative,-1450px,800px);
   @include large-only-device{
     @include position-top-width(relative,-750px,400px);
   }
   @include med-only-device{
     @include position-top-width(relative,-550px,220px);
-    left:-18em;
+    left:-1em;
   }
   @include small-device{
     @include position-top-width(relative,-600px,80px);
@@ -32,13 +36,24 @@ hr#endSkillsLine{
 }
 
 section.skills > .backEndGraph  hr{
-  @include position-left-top-width(relative,44px,-360px,400px);
+  @include position-left-top-width(relative,-12px,-446px,400px);
+  @include large-only-device{
+    margin-left:52px;
+  }
+  @include med-only-device{
+    position:relative;
+    margin-left:52px;
+  }
 }
 
 section.skills > .otherGraph hr{
-  @include position-left-top-width(relative,0px,-724px,400px);
+  @include position-left-top-width(relative,15px,-844px,450px);
   @include med-and-large-device{
+    width:400px;
     left:60px;
+  }
+  @include med-only-device{
+    left:3px;
   }
 }
 
@@ -99,9 +114,10 @@ section.skills > .otherGraph hr{
   @include skills-fonts;
   @include large-only-device{
     top:-80px;
+    left:150px;
   }
   @include med-only-device{
-    left:0em;
+    left:40px;
     width:13em;
     margin-left:20px;
   }
@@ -116,11 +132,11 @@ section.skills > .otherGraph hr{
   @include top-left-position(78px,605px,relative);
   @include skills-fonts;
   @include large-only-device{
-    left:5.5em;
+    left:150px;
     top:10em;
   }
   @include med-only-device{
-    left:0;
+    left:40px;
     top:22em;
     width:13em;
     margin-left:20px;    
@@ -135,13 +151,13 @@ section.skills > .otherGraph hr{
 
 #otherSkill{
   @include skills-fonts;
-  @include top-left-position(520px,400px,relative);
+  @include top-left-position(450px,400px,relative);
   @include large-only-device{
-    top:25em;
-    left:5.5em;
+    top:29em;
+    left:200px;
   }
   @include med-only-device{
-    left:0;
+    left:90px;
     top:39em;
     width:13em;
     margin-left:20px;    
@@ -165,7 +181,7 @@ section.skills > .otherGraph hr{
 .proficiencyLabels li {
   margin-bottom:15px;
 }
-
+/*
 .frontendTechLabels{
   @include position-left(relative,90px);
   list-style-type: none;
@@ -175,22 +191,55 @@ section.skills > .otherGraph hr{
 .frontendTechLabels li{
   @include rotate(15deg);
   border:1px solid black;
-}
+}*/
 
 
 .js, .html, .react, .jquery,.node,.php,.mongo,.ruby {
   @include position-top(absolute,170px);
-  @include rotate(30deg);
+  @include rotate(40deg);
   @include med-and-large-device{
-    top:0.9em;
+    position:absolute;
+    margin-top:-8.2em;
   } 
 }
 
+.node{
+  top:150px;
+}
+
+.mongo{
+  top:155px;
+}
+
+.php{
+  top:143px;
+}
+
+.ruby{
+  top:145px;
+}
+
+.js{
+  top:150px;
+}
+.html{
+  top:155px;
+}
+
+.react{
+  top:150px;
+}
+
+.jquery{
+  top:145px;
+}
+
+
 .js,.node{
-  left:150px;
+  left:170px;
 }
 .html,.php{
-  left:220px;
+  left:230px;
 }
 .react,.mongo{
   left:290px;
@@ -200,25 +249,25 @@ section.skills > .otherGraph hr{
 }
 
 .jsBar,.backendBar1{
-  @include top-left-position(-63px,170px,relative);
+  @include top-left-position(-58px,170px,relative);
   @include h-w(60px,20px);
   background-color:$js-backendbar1-bg-color;
 }
 
 .htmlBar,.backendBar2{
-  @include top-left-position(-211px,230px,relative);
+  @include top-left-position(-236px,230px,relative);
   @include h-w(80px,20px);
   background-color:$html-backendbar2-bg-color;
 }
 
 .reactBar,.backendBar3{
-  @include top-left-position(-298px,290px,relative);
+  @include top-left-position(-365px,290px,relative);
   @include h-w(20px,20px);
   background-color:$react-backendbar3-bg-color;
 }
 
 .jqueryBar,.backendBar4{
-  @include top-left-position(-386px,350px,relative);
+  @include top-left-position(-482px,350px,relative);
   @include h-w(20px,20px);
   background-color:$jquery-backendbar4-bg-color;
 }
@@ -235,19 +284,19 @@ section.skills > .otherGraph hr{
 }
 
 .backendBar1{
-  top:-23px;
+  top:-18px;
 }
 
 .backendBar2{
-  top:-111px;
+  top:-135px;
 }
 
 .backendBar3{
-  top:-198px;
+  top:-238px;
 }
 
 .backendBar4{
-  top:-285px;
+  top:-355px;
 }
 
 
@@ -270,7 +319,7 @@ section.skills > .otherGraph hr{
 }
 
 .backEndGraph{
-  @include position-left-top-width(relative,800px,-512px,500px);
+  @include position-left-top-width(relative,800px,-631px,500px);
   @include med-and-large-device{
     @include position-left-top-width(relative,0,12em,320px);
     margin-left:250px;
@@ -301,7 +350,7 @@ section.skills > .otherGraph hr{
 }
 
 .otherGraph{
-  @include position-left-top-width(relative, 250px,-550px, 500px);
+  @include position-left-top-width(relative, 250px,-820px, 500px);
   @include med-and-large-device{
     @include position-left-top-width(relative,15px,0,320px);
     margin-left:60px;
@@ -311,16 +360,18 @@ section.skills > .otherGraph hr{
   }
   @include med-only-device{
     margin-left:-45px;
+    top:-4em;
   }
   @include small-device{
     margin-left:-15px;
+    top:-4em;
   }  
   margin-left:-60px;
 }
 
 .writing, .problemSolve, .PM, .research, .publicSpeaking {
  @include position-top(absolute,175px);
- @include rotate(30deg);
+ @include rotate(40deg);
  @include med-and-large-device{
    top:2em;
  }
@@ -328,80 +379,88 @@ section.skills > .otherGraph hr{
 
 .writing{
   @include med-and-large-device{
-    left:10em;
-    top:3em;
+    width:160px;
+    left:12em;
+    top:3.5em;
   }
-  left:140px;
+  left:155px;
+  top:180px;
 }
 .problemSolve{
   @include med-and-large-device{
     width:10em;
-    left:13em;
-    top:3.0em;
+    left:15.3em;
+    top:3.3em;
   }
   left:225px;
+  top:165px;
 }
 .PM{
   @include med-and-large-device{
-    left:15em;
+    left:18.5em;
     width:13em;
-    top:3.5em;
+    top:4.3em;
   }
   left:280px;
 }
 
 .research{
   @include med-and-large-device{
-    left:18.5em;
-    top:1em;
+    left:22.6em;
+    top:1.5em;
   }
-  left:360px;
+  left:350px;
+  top:155px;
 }
 
 .publicSpeaking{
   @include med-and-large-device{
-    left:21em;
+    top:50px;
+    left:25.5em;
     width:10em;
   }
-  left:430px;
+  left:400px;
+  top:165px;
+  width:105px;
 }
 
 .writingBar{
   @include structure-dimension(relative,170px,-89px,20px,90px);
   background-color:$writingbar-bg-color;
   @include med-and-large-device{
+    left:190px;
     top:-90px;
   }
 }
 
 .problemSolveBar{
-  @include structure-dimension(relative,230px,-247px,20px,90px);
+  @include structure-dimension(relative,230px,-261px,20px,90px);
   @include med-and-large-device{
-    left:210px;
+    left:240px;
   }
   background-color:$probsolvebar-bg-color;
 }
 
 .PMBar{
-  @include structure-dimension(relative,290px,-364px,20px,50px);
+  @include structure-dimension(relative,290px,-394px,20px,50px);
   @include med-and-large-device{
-    left:250px;
+    left:290px;
   }
   background-color:$pmbar-bg-color;
 }
 
 .researchBar{
-  @include structure-dimension(relative,350px,-522px,20px,90px);
+  @include structure-dimension(relative,350px,-582px,20px,90px);
   @include med-and-large-device{
-    left:290px;
+    left:340px;
   }
   background-color:$researchbar-bg-color;
 }
 
 .publicSpeakingBar{
-  @include structure-dimension(relative,400px,-650px,20px,60px);
+  @include structure-dimension(relative,400px,-738px,20px,60px);
   @include med-and-large-device{
-    left:330px;
+    left:390px;
   }
   background-color:$publicspeakbar-bg-color;
 }
@@ -411,81 +470,130 @@ div[class*="Tooltip"]{
 }
 
 .jsTooltip{
-  @include top-left-position(-190px,108px,relative);
+  @include top-left-position(-205px,59px,relative);
 }
 
 .htmlTooltip{
-  @include top-left-position(-350px,170px,relative);
+  @include top-left-position(-416px,119px,relative);
 }
 
 
 .reactTooltip{
-  @include top-left-position(-380px,230px,relative);
+  @include top-left-position(-472px,179px,relative);
 }
 
 .jqueryTooltip{
-  @include top-left-position(-470px,290px,relative);
+  @include top-left-position(-575px,239px,relative);
 }
 
 
 .nodeTooltip{
-  @include top-left-position(-100px,110px,relative);
+  @include top-left-position(-125px,59px,relative);
 }
 
 
 .phpTooltip{
-  @include top-left-position(-200px,170px,relative);
+  @include top-left-position(-227px,119px,relative);
 }
 
 .mongoTooltip{
-  @include top-left-position(-280px,230px,relative);
+  @include top-left-position(-345px,178px,relative);
 }
 
 .rubyTooltip{
-  @include top-left-position(-365px,290px,relative);
+  @include top-left-position(-447px,239px,relative);
 }
 
 .writingTooltip{
-  @include top-left-position(-245px,110px,relative);
+  @include top-left-position(-251px,59px,relative);
+  @include med-and-large-device{
+    left:78px;
+  }
 }
 
 .problemTooltip{
-  @include top-left-position(-400px,170px,relative);
+  @include top-left-position(-424px,119px,relative);
   @include med-and-large-device{
-    left:150px;
+    left:129px;
   }
 }
 
 .pmTooltip{
-  @include top-left-position(-480px,230px,relative);
+  @include top-left-position(-530px,179px,relative);
   @include med-and-large-device{
-    left:192px;
+
   }
 }
 
 .researchTooltip{
-  @include top-left-position(-680px,290px,relative);
+  @include top-left-position(-758px,239px,relative);
   @include med-and-large-device{
-    left:232px;
+    left:229px;
   }
 }
 
 .publicTooltip{
-  @include top-left-position(-780px,340px,relative);
+  @include top-left-position(-884px,289px,relative);
   @include med-and-large-device{
-    left:273px;
+    left:279px;
   }
 }
 
+
+/*
 .tooltipBody{
   @include h-w(40px,150px);
   position:relative;
   background:$black;
   color: $white;
   font-size:80%;
+}*/
+
+.tooltipBody{
+  /*@include h-w(55px,240px);*/
+  width:240px;
+  position:relative;
+  background:$black;
+  border-radius:3%;
+  color: $white;
+
+
+
 }
+
+.tooltipBody span{
+  font-weight:900;
+}
+
+.tooltipBody p{
+  font-size:0.8em;
+  position:relative;
+  top:3px;
+  text-align:left;
+  vertical-align:middle;
+  padding-left:20px;
+  padding-bottom:20px;
+  padding-top:10px;
+  padding-right:20px;
+
+
+}
+
+/*
 
 .tip {
   @include structure-dimension(relative,60px,-15px,20px,15px);
   color:$black;
+}*/
+
+.tip {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 12px solid black;
+  position:relative;
+  left:114px;
+  top:-12px;
+  color:$black;  
 }

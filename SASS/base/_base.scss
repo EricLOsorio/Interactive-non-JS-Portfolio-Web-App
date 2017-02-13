@@ -4,15 +4,19 @@ section{
   width:900px;
   position:relative;
   margin:auto;
+  paddin:0;
   font-size:15px;
   color:#6D7373;
-  @include position-left(relative,50px);
+  @include position-left(relative,0);
   @include large-only-device{
     width:600px;
     left:0;
   }
   @include med-only-device{
     position:relative;
+    width:400px;
+    margin:auto;
+    left:10%;
     top:0;
   }
 
@@ -50,7 +54,7 @@ section:nth-of-type(2){
   }
   @include med-only-device{
     top:-30px;
-    left:-9em;
+    left:-2em;
   }
   @include small-device{
     left:-20px;
@@ -124,7 +128,7 @@ section:nth-of-type(1) hr{
   }
   @include med-only-device{
     @include position-top-width(relative,10px,220px);
-    left:-20em;
+    left:-4em;
   }
   @include small-device{
     @include position-top-width(relative,10px,80px);
@@ -153,7 +157,7 @@ section:nth-of-type(2) hr{
   @include med-only-device{
     top:5em;
     width:220px;
-    left:-20em;
+    left:-4em;
   }
   @include large-only-device{
     top:-4em;

@@ -337,27 +337,29 @@ input[name="navRadio"]{
  }
 
 #fullName{
-    @include med-and-large-device{
+    @include med-only-device{
       display:inline;
       width:8em;
       top:-0.5em;
-      margin-left:30%;
-      margin-right:30%;      
+      margin-left:23%;
+    
 }
 
-  ul{
-    @include large-only-device{
-      margin-left:-50px;
-    }
-    @include med-only-device{
-      margin-left:-150px;
-    }
-    @include small-device{
-      display:none;
-    }
+}
+
+/*
+ul{
+  @include large-only-device{
+    margin-left:-50px;
+  }
+  @include med-only-device{
+    margin-left:-150px;
+  }
+  @include small-device{
+    display:none;
   }
 }
-
+*/
 #fullName{
   font-size:20px;
 }
@@ -402,7 +404,7 @@ nav > p{
 
 nav > ul {
   white-space:nowrap;
-  @include top-left-position(50px,20%,relative);
+  @include top-left-position(50px,28%,relative);
   @include display-marginLeft(inline,2em);
   @include med-and-large-device{
     display:inline-block;

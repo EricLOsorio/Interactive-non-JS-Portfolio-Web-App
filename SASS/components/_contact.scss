@@ -5,7 +5,7 @@
 .contact {
 
 
-  @include position-top(relative,-1050px);
+  @include position-top(relative,-1500px);
   @include large-only-device{
     top:-70em;
     left:2em;
@@ -33,7 +33,7 @@
       margin-left:1em;
     }
     @include med-only-device{
-      margin-left:3em;
+      margin-left:0em;
     }
     @include small-device{
       margin-left:3.5em;
@@ -65,7 +65,7 @@
   @include med-only-device{
     position:relative;
     width:500px;
-    left:200px;
+    left:-50px;
   }
   @include small-device{
     position:relative;
@@ -89,7 +89,7 @@
     margin:auto;
   }
   @include med-only-device{
-    left:-20px;
+    left:0px;
   }
   @include small-device{
     top:-3em;
