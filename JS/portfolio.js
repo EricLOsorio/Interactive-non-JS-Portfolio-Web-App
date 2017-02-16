@@ -4,7 +4,7 @@
 
 
         // Function to animate the scroll
-        var scrollIt = function (target) {
+        function scrollIt (target) {
 
 
             // Calculate how far and how fast to scroll
@@ -14,18 +14,13 @@
        		var endLocation = target.offsetTop;
  			var distance = endLocation - startLocation;
 	        var increments = distance/rateOfIncrementation;
-	        var parentObj = target.offsetParent; 
 	        var stopAnimation;
-
-
 
             // Scroll the page by an increment, and check if it's time to stop
             var animateScroll = function () {
                 window.scrollBy(0, increments);
                 stopAnimation();
             };
-
-
 
             // If scrolling down
             if ( increments >= 0 ) {
@@ -54,18 +49,48 @@
         };
 
 
-        // Define smooth scroll links
-        var menuLabel = document.querySelectorAll('.menuLabel');
+        // Define smooth scroll links that point to where you want to go
+
+        var menuLabel=document.querySelectorAll('.menuLabel');
+
+     //For each of these scroll links get the associated anchors and also
+     //the associated inputs, which will determine which menu label will
+     //get highlighted by our CSS code
+
+     [].forEach.call(menuLabel,function(element){
+
+            //Determine which input is associated with the currently checked label
+           // var parentLI=element.parentElement;
+          //  var associatedInput=parentLI.previousElementSibling;
+
+            //Determine what anchor is associated with that menuLabel
+            var associatedAnchor=element.firstElementChild;
+
+            //start scroll for the associated anchor if Label has been clicked
+            //Remember: The label holds the '<a>' anchor link
+
+            element.addEventListener('click', function(event){
+                // Prevent the default link behavior
+                event.preventDefault(); 
 
 
-        // For each smooth scroll link
-        [].forEach.call(menuLabel, function (link) {
+                    startScroll(associatedAnchor);
+                           
+            });
+            
+        });        
 
-            // When the smooth scroll link is clicked
-            link.addEventListener('click', function(event) {
+        function startScroll(link){
+
+            // On click of the element pointing to the anchor commence the scroll
+
+                link.addEventListener('click', letsRoll(link),false); 
+
+
+             function letsRoll(link){ //ISUE IS THIS CLICK ON THE A LINK COMING FROM AboVE
 
                 // Prevent the default link behavior
-                event.preventDefault();
+               // link.preventDefault();
 
                 //Check the appropriate input to highlight the label
 
@@ -74,17 +99,17 @@
                 var associatedInput=parentLI.previousElementSibling;
                 associatedInput.checked="true";
 
-                //create new button
+                //create new button as soon as a scroll has started
 
                 var allContent=document.getElementById("allContent");
                 var scrollToTop=document.createElement('BUTTON');
                 var text=document.createTextNode('Back To Top');
                 scrollToTop.appendChild(text);
-                scrollToTop.className='link2Top menuLabel';
-                /*scrollToTop.setAttribute("style","position:fixed;width:100px,height:100px;top:50%;background-color:blue;")*/
+                scrollToTop.className='link2Top anchor';
                 allContent.appendChild(scrollToTop);
 
-                // Get anchor link and calculate distance from the top
+                //Get the destination section where we want to end up
+                //and start the scroll
                 var targetId = link.getAttribute('href');
                 var targetElement = document.querySelector(targetId);
 
@@ -94,16 +119,22 @@
                     scrollIt(targetElement);
                 };
 
-                scrollToTop.addEventListener('click',function(event){
-                	event.preventDefault();
-                	var topId=document.body.getAttribute('id');
-                	var top=document.querySelector('#'+topId);
-                	scrollIt(top);
-                });
+                //Check if the button clicked is the 'Back To Top' button
+                //and if so, commence the scroll to the top
 
+                scrollToTop.addEventListener('click',function(event){
+                    event.preventDefault();
+                    var topId=document.body.getAttribute('id');
+                    var top=document.querySelector('#'+topId);
+                    scrollIt(top);
+  
             }, false);
 
-        });
+
+        };
+
+
+        };
 
 
  })();
