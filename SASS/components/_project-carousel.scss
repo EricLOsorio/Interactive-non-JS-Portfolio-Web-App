@@ -3,6 +3,7 @@
 /*Projects*/
 
 .projectSection{
+  position:relative;
   top:20px;
   padding-bottom:100px;
   @include large-only-device{

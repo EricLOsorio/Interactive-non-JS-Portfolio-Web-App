@@ -3,6 +3,7 @@
 footer{
   display:block;
   position:relative;
+  top:20em;
   bottom:0;
   height:2em;
   text-align:center;
@@ -27,8 +28,3 @@ footer{
   }
 }
 
-li.copy{
-  @include small-device{
-    margin-top:7em;
-  }
-}

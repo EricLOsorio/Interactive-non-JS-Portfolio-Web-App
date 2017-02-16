@@ -2,19 +2,18 @@
 
 /*Contact*/
 
-.contact {
+.contact { 
 
-
-  @include position-top(relative,-1500px);
+  @include position-top(relative,-650px);
   @include large-only-device{
-    top:-70em;
+    top:-50em;
     left:2em;
   }
   @include med-only-device{
-    top:-45em;
+    top:-25em;
   }
   @include small-device{
-    top:-15em;
+    top:12em;
   }
   h1{
     width:5em;

@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-  <!--div class="wrapper"-->
-    <!--div class="content"-->
+  <div class="wrapper">
+<!--div class="content"-->
       <input type="checkbox" id="off-menu">
 
         <div class="solidTopBar">
@@ -32,20 +32,20 @@
 
         <ul>
           <input type="radio" name="navRadio" id="aboutNavInput" checked>        
-          <li onclick="window.location='#about'">
-            <label for="aboutNavInput" class="menuLabel">About</label>
+          <li>
+            <label for="aboutNavInput"><a class="menuLabel" href="#about">About</a></label>
           </li>
           <input type="radio" name="navRadio" id="projectNavInput">          
-          <li onclick="window.location='#projects'">
-            <label for="projectNavInput" class="menuLabel">Projects</label>
+          <li>
+            <label for="projectNavInput"><a class="menuLabel" href="#projects">Projects</a></label>
           </li>
           <input type="radio" name="navRadio" id="skillsNavInput">          
-          <li onclick="window.location='#skills'">
-            <label for="skillsNavInput" class="menuLabel">Skills</label>
+          <li>
+            <label for="skillsNavInput"><a class="menuLabel" href="#skills">Skills</a></label>
           </li>
           <input type="radio" name="navRadio" id="contactNavInput">          
-          <li onclick="window.location='#contact'">
-            <label for="contactNavInput" class="menuLabel">Contact</label>
+          <li>
+            <label for="contactNavInput"><a class="menuLabel" href="#contactId">Contact</a></label>
           </li>
           </ul>
         <div class="searchBlock">
@@ -170,9 +170,9 @@
     <label for="off-menu" class="mask"></label>   
     <div id="allContent">
 
-    <section class="aboutMe">
+    <section class="aboutMe" id="about">
       <header>
-        <h2 id="about">Top of About Section</h2>
+        <h2>Top of About Section</h2>
         <h1>About</h1>
       </header>
       <article>
@@ -185,9 +185,9 @@
     </section>
 
     
-    <section class="projectSection">
+    <section class="projectSection" id="projects">
       <header>
-        <h2 id="projects">Top of Project Section</h2>      
+        <h2 >Top of Project Section</h2>      
         <h1>Projects</h1>
       </header>
       <article>
@@ -644,9 +644,9 @@
 
 
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <header>
-        <h2 id="skills">Skills header</h2>
+        <h2>Skills header</h2>
         <h1>Skills</h1>
       </header>
       <article>
@@ -657,10 +657,7 @@
       <div class="skillBar">
       <div id="frontend">90%</div><div id="backend">10%</div>
       </div>  
-
-      <div id="frontendSkill">Frontend Development</div>
-      <div id="backendSkill">Backend Developement</div>
-      <div id="otherSkill">Other Skills</div>
+     
 
       <div class="frontEndGraph">
         <ul class="proficiencyLabels">
@@ -670,12 +667,11 @@
           <li>Learning</li>
         </ul>   
 
+        <div id="frontendSkill">Frontend Development</div>
         <div class="front">
-        <div class="js">JavaScript</div>
-        <div class="html">HTML/CSS</div>
-        <div class="react">ReactJS</div>
-        <div class="jquery">jQuery</div>
 
+        
+        <div class="graphBars">
 
         <div class="jsBar bar"></div>
         <div class="jsTooltip">
@@ -685,7 +681,7 @@
 
         <div class="htmlBar bar"></div>
         <div class="htmlTooltip">
-          <div class="tooltipBody"><p><span>Proficient:</span> I have been working with HTML and CSS since January 2016</p></div>
+          <div class="tooltipBody"><p><span>Competent:</span> I have been working with HTML and CSS since 2016</p></div>
           <div class=tip></div>
         </div>
 
@@ -699,11 +695,27 @@
         <div class="jqueryTooltip">
           <div class="tooltipBody"><p><span>Learning:</span> I am still learning jQuery</p></div>
           <div class=tip></div>
-        </div>        
+        </div> 
 
-        <hr class="graphLabelsLine">   
+        <div class="sassBar bar"></div>
+        <div class="sassTooltip">
+          <div class="tooltipBody"><p><span>Competent:</span> I have been working with SASS since 2016</p></div>
+          <div class=tip></div>
+        </div>
+
+        </div> 
+
+        <div class="technologies">
+        <div class="js">JavaScript</div>
+        <div class="html">HTML/CSS</div>
+        <div class="react">ReactJS</div>
+        <div class="jquery">jQuery</div>
+        <div class="sass">SASS</div>
+        </div>               
+  
         </div>      
       </div>
+
 
       <div class="backEndGraph">
         <ul class="proficiencyLabels">
@@ -711,14 +723,12 @@
           <li>Proficient</li>
           <li>Competent</li>
           <li>Learning</li>
-        </ul>   
+        </ul> 
 
+        <div id="backendSkill">Backend Development</div>
         <div class="back">
-        <div class="node">NodeJS</div>
-        <div class="php">PHP</div>
-        <div class="mongo">MongoDB</div>
-        <div class="ruby">Ruby</div>
 
+        <div class="graphBars">
 
         <div class="backendBar1 bar"></div>
         <div class="nodeTooltip">
@@ -744,8 +754,22 @@
           <div class=tip></div>
         </div>
 
+        <div class="backendBar5 bar"></div>
+        <div class="pythonTooltip">
+          <div class="tooltipBody"><p><span>Learning:</span> I am still learning Python</p></div>
+          <div class=tip></div>
+        </div>        
 
-        <hr class="graphLabelsLine">   
+        </div>
+
+        <div class="technologies">
+        <div class="node">NodeJS</div>
+        <div class="php">PHP</div>
+        <div class="mongo">MongoDB</div>
+        <div class="ruby">Ruby</div>
+        <div class="python">Python</div>
+        </div>   
+
         </div>      
       </div>
 
@@ -757,23 +781,21 @@
           <li>Learning</li>
         </ul>   
 
+        <div id="otherSkill">Other Skills</div>
         <div class="other">
-        <div class="writing">Written Communication</div>
-        <div class="problemSolve">Problem Solving</div>
-        <div class="PM">Project Management</div>
-        <div class="research">Research</div>
-        <div class="publicSpeaking">Public Speaking</div>
+
+        <div class="graphBars">
 
 
         <div class="writingBar bar"></div>
         <div class="writingTooltip">
-          <div class="tooltipBody"><p><span>Proficient:</span> I enjoy writing</p></div>
+          <div class="tooltipBody"><p><span>Competent:</span> I enjoy writing</p></div>
           <div class=tip></div>
         </div>
 
         <div class="problemSolveBar bar"></div>
         <div class="problemTooltip">
-          <div class="tooltipBody"><p><span>Proficient:</span> I enjoy problem solving</p></div>
+          <div class="tooltipBody"><p><span>Competent:</span> I enjoy problem solving</p></div>
           <div class=tip></div>
         </div>
 
@@ -785,7 +807,7 @@
 
         <div class="researchBar bar"></div>
         <div class="researchTooltip">
-          <div class="tooltipBody"><p><span>Proficient:</span> I am a resourceful researcher</p></div>
+          <div class="tooltipBody"><p><span>Competent:</span> I am a resourceful researcher</p></div>
           <div class=tip></div>
         </div>
 
@@ -793,19 +815,28 @@
         <div class="publicTooltip">
           <div class="tooltipBody"><p><span>Competent:</span> I am a comfortable public speaker</p></div>
           <div class=tip></div>
-        </div>        
+        </div> 
 
-        <hr/>
+        </div>
+
+        <div class="technologies">
+        <div class="writing">Written Communication</div>
+        <div class="problemSolve">Problem Solving</div>
+        <div class="PM">Project Management</div>
+        <div class="research">Research</div>
+        <div class="publicSpeaking">Public Speaking</div>
+        </div>
+
         </div>    
-      </div>
+      </div>            
 
       <hr id="endSkillsLine"/>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contactId" >
 
       <header>
-       <h2 id="contact">Contact header</h2>
+       <h2>Contact header</h2>
        <h1>Contact</h1>
       </header>
       <article>
@@ -875,6 +906,10 @@
 
     <!--/div-->
   <!--/div-->
+
+ 
+  </div>
+  <script type="text/javascript" src="JS/portfolio.js"></script>
   <script type="text/javascript" src="JS/calculator.js"></script>
 </body>
 </html>
