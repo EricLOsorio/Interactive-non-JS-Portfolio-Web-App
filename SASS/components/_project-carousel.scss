@@ -60,7 +60,7 @@
 
 
 .displayArea{
-  @include structure-dimension(absolute,150px,284px,700px,680px);
+  @include structure-dimension(absolute,150px,283px,700px,680px);
   @include display-marginLeft(none,50px);
   @include med-only-device{
     @include structure-dimension(relative,-65px,17px,24em,480px);
