@@ -4,21 +4,18 @@
 
 
         // Function to animate the scroll
-        var scrollIt = function (link) {
-
-
+        var scrollIt = function (target) {
 
 
             // Calculate how far and how fast to scroll
+
             var rateOfIncrementation=25;
             var startLocation = window.pageYOffset;
-            var endLocation = link.offsetTop;
-            var distance = endLocation - startLocation;
-            var increments = distance/rateOfIncrementation;
-            var parentObj = link.offsetParent; 
-            var stopAnimation;
-
-
+       		var endLocation = target.offsetTop;
+ 			var distance = endLocation - startLocation;
+	        var increments = distance/rateOfIncrementation;
+	        var parentObj = target.offsetParent; 
+	        var stopAnimation;
 
 
 
@@ -57,18 +54,8 @@
         };
 
 
-
-
-
         // Define smooth scroll links
         var menuLabel = document.querySelectorAll('.menuLabel');
-
-
-
-
-
-
-
 
 
         // For each smooth scroll link
@@ -80,6 +67,23 @@
                 // Prevent the default link behavior
                 event.preventDefault();
 
+                //Check the appropriate input to highlight the label
+
+                var parentLabel=link.parentElement;
+                var parentLI=parentLabel.parentElement;
+                var associatedInput=parentLI.previousElementSibling;
+                associatedInput.checked="true";
+
+                //create new button
+
+                var allContent=document.getElementById("allContent");
+                var scrollToTop=document.createElement('BUTTON');
+                var text=document.createTextNode('Back To Top');
+                scrollToTop.appendChild(text);
+                scrollToTop.className='link2Top menuLabel';
+                /*scrollToTop.setAttribute("style","position:fixed;width:100px,height:100px;top:50%;background-color:blue;")*/
+                allContent.appendChild(scrollToTop);
+
                 // Get anchor link and calculate distance from the top
                 var targetId = link.getAttribute('href');
                 var targetElement = document.querySelector(targetId);
@@ -88,7 +92,14 @@
                 if (targetElement) {
                     // Scroll to the anchor
                     scrollIt(targetElement);
-                }
+                };
+
+                scrollToTop.addEventListener('click',function(event){
+                	event.preventDefault();
+                	var topId=document.body.getAttribute('id');
+                	var top=document.querySelector('#'+topId);
+                	scrollIt(top);
+                });
 
             }, false);
 

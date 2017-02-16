@@ -217,12 +217,30 @@ section:nth-of-type(2) hr {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5); } }
 
+.link2Top {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: gray;
+  color: black;
+  box-shadow: 3px 2px 2px 3px #383838;
+  outline: none; }
+
+.link2Top:hover {
+  cursor: pointer; }
+
 body, html {
   font-family: Roboto,sans-serif;
   max-width: 100vw;
   padding: 0;
   margin: 0;
   overflow-x: hidden; }
+
+body {
+  overflow-y: hidden; }
 
 .wrapper {
   position: relative; }
@@ -248,7 +266,6 @@ body, html {
 footer {
   display: block;
   position: relative;
-  top: 20em;
   bottom: 0;
   height: 2em;
   text-align: center;
@@ -773,6 +790,13 @@ nav input:checked + li > label {
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
     nav input:checked + li > label {
       background-color: #F54D70; } }
+
+nav input:checked + li > label > a {
+  color: #000000; }
+
+nav a {
+  text-decoration: none;
+  color: #ffffff; }
 
 #aboutPic {
   max-height: 50em;

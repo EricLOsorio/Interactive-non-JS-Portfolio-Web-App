@@ -435,6 +435,7 @@ nav > ul li{
   }
 }
 
+
 nav input:checked + li > label{
   @include small-device{
     display:none;
@@ -447,4 +448,13 @@ nav input:checked + li > label{
   @include med-only-device{
     background-color:$nav-border-med-bottom;
   }
+}
+
+nav input:checked + li > label > a{
+  color:$black;
+}
+
+nav a{
+  text-decoration:none;
+  color:$white;
 }
