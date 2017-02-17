@@ -2548,6 +2548,11 @@ div[class*="Tooltip"] {
       width: 1.5em; } }
 
 .card .back {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   background-color: none;
   color: #ffffff;
   -webkit-transform: rotateX(180deg);

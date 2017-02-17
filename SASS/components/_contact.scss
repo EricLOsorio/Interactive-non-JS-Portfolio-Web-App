@@ -206,6 +206,7 @@
 }
 
 .card  .back { 
+  @include preserve-3d;
   background-color: none;
   color: $white;
   @include rotateX(180deg);
