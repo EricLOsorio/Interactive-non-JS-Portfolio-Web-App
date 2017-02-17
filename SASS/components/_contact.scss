@@ -141,6 +141,7 @@
 .card div {
   @include back-visibility(hidden);
   @include h-w(100%,100%);
+  @include preserve-3d;
   position: absolute;
   text-align: center;
   border-radius: 2px;

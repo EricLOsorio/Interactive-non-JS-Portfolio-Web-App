@@ -2481,6 +2481,11 @@ div[class*="Tooltip"] {
   backface-visibility: hidden;
   height: 100%;
   width: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: absolute;
   text-align: center;
   border-radius: 2px; }
