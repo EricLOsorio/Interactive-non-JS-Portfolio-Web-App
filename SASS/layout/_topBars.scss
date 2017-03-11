@@ -1,6 +1,6 @@
 //_topBars.scss
 
-.solidTopBar{overflow:hidden;
+.off-menu__solidTopBar{overflow:hidden;
   @include small-device{
     @include h-w(3.5em,100vw);
     @include translate3d(0,0,0);
@@ -13,7 +13,7 @@
 
   }
   display:none;
-  .name{
+  .off-menu__name{
     @include small-device{
       width:100vw;
       @include position-top(absolute,0.9em);
@@ -30,7 +30,7 @@
   }
 }
 
-.hamburger{
+.off-menu__hamburger{
   @include small-device{
     @include h-w(2em,2em);
     @include translate3d(2em,0,0);
@@ -39,7 +39,7 @@
     margin-top:1em;
   }
   display:none;
-  .bars{
+  .off-menu__bars{
     @include small-device{
       @include h-w(2em,2em);
       display:block;    
@@ -68,7 +68,7 @@
   display:none;
 }
 
-#off-menu:checked ~ .solidTopBar > .hamburger{
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger{
   @include small-device{
     @include translate3d(15em,0,0);
     @include transition-element(transform,1s);
@@ -86,7 +86,7 @@
   }
 }
 
-#off-menu:checked ~ .solidTopBar > .name,
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__name,
 #off-menu:checked ~ #fullCanvas > #sideNavBar{
   @include small-device{
     @include translate3d(4em,0,0);
@@ -95,7 +95,7 @@
   }
 }
 
-#off-menu:checked ~ .solidTopBar > .name{
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__name{
   @include small-device{
     @include translate3d(1em,0,0);
     @include transition-element(transform,1s);
@@ -103,7 +103,7 @@
 }
 
 #off-menu:checked ~ #fullCanvas > #allContent,
-#off-menu:checked ~ #fullCanvas > .mask{
+#off-menu:checked ~ #fullCanvas > .fullCanvas__mask{
   @include small-device{
     @include translate3d(14em,0,0);
     @include transition-element(transform,1s);
@@ -116,7 +116,7 @@
   }
 }
 
-#off-menu:checked ~ #fullCanvas > .mask{
+#off-menu:checked ~ #fullCanvas > .fullCanvas__mask{
   @include small-device{
     opacity:1;
     z-index:1;
@@ -150,7 +150,7 @@ input[name="navRadio"]{
   }
 }
 
-.sideDetails, .projectDetails{
+.sideNavBar__sideDetails, .sideNavBar__projectDetails{
   @include small-device{
     @include transition-element(max-height,1s);
     position:static;
@@ -163,10 +163,10 @@ input[name="navRadio"]{
   }
 }
 
-.sideDetails:nth-of-type(1){
+.sideNavBar__sideDetails:nth-of-type(1){
   margin-left:-1em;
 }
-.sideDetails:nth-of-type(3){
+.sideNavBar__sideDetails:nth-of-type(3){
    position:relative;
     margin-left:3em;
     ul{
@@ -175,7 +175,7 @@ input[name="navRadio"]{
     }
 }
 
-.sideProjList{
+.sideNavBar__sideProjList{
   @include small-device{
     @include translate3d(0,0,0);
     @include transition-element(transform,1s);
@@ -186,7 +186,7 @@ input[name="navRadio"]{
     top:0;
     left:-2em;
   }
-  .projectDetails{
+  .sideNavBar__projectDetails{
     @include small-device{
       height:12em;
       margin-top:-1.9em;
@@ -208,16 +208,10 @@ input[name="navRadio"]{
   }
 }
 
-/*
-.sideProjList li + div{
-  @inclue small-device{
-    margin-top:-2em;
-    height:9em;color:red;
-  }
-}*/
+
 
 @for $i from 1 through 4 {
-  #sideNavBar input:nth-of-type(#{$i}):checked ~ .sideDetails:nth-of-type(#{$i}){
+  #sideNavBar input:nth-of-type(#{$i}):checked ~ .sideNavBar__sideDetails:nth-of-type(#{$i}){
     @include small-device{
       max-height:105vh;
     }
@@ -225,7 +219,7 @@ input[name="navRadio"]{
 }
 
 @for $j from 1 through 7 {
-  .sideProjList input:nth-of-type(#{$j}):checked ~ .projectDetails:nth-of-type(#{$j}){
+  .sideNavBar__sideProjList input:nth-of-type(#{$j}):checked ~ .sideNavBar__projectDetails:nth-of-type(#{$j}){
     @include small-device{
       max-height:105vh;
     }
@@ -307,7 +301,7 @@ input[name="navRadio"]{
   }
 }
 
-.sideProjList > input:checked + li{
+.sideNavBar__sideProjList > input:checked + li{
   @include small-device{
     background-color:$skyblue;
   }
@@ -336,40 +330,24 @@ input[name="navRadio"]{
   }
  }
 
-#fullName{
+#topNavBar__fullName{
     @include med-only-device{
       display:inline;
       width:8em;
-      top:-0.5em;
+      margin-top:-1.5em;
       margin-left:23%;
     
 }
 
 }
 
-/*
-ul{
-  @include large-only-device{
-    margin-left:-50px;
-  }
-  @include med-only-device{
-    margin-left:-150px;
-  }
-  @include small-device{
-    display:none;
-  }
-}
-*/
-#fullName{
+
+#topNavbar__fullName{
   font-size:20px;
 }
 
-nav label > i{
-  color:$black;
-}
 
-
-nav ul label {
+nav#topNavBar ul label {
   width:70px;
   display:inline-block;
   text-align:center;
@@ -389,12 +367,12 @@ nav ul label {
   }
 }
 
-nav ul input{
+nav#topNavBar ul input{
   display:none;
 }
 
 
-nav > p{
+nav#topNavBar > p{
   @include top-left-position(33px,20px,absolute);
   width:8em;
   font-size:18px;
@@ -402,7 +380,7 @@ nav > p{
   line-height:1.15;
 }
 
-nav > ul {
+nav#topNavBar > ul {
   white-space:nowrap;
   @include top-left-position(50px,28%,relative);
   @include display-marginLeft(inline,2em);
@@ -419,7 +397,7 @@ nav > ul {
   }
 }
 
-nav > ul li{
+nav#topNavBar > ul li{
   display:inline-block;
   padding-right:0px;
   color:$white;
@@ -436,7 +414,7 @@ nav > ul li{
 }
 
 
-nav input:checked + li > label{
+nav#topNavBar input:checked + li > label{
   @include small-device{
     display:none;
   }
@@ -450,11 +428,11 @@ nav input:checked + li > label{
   }
 }
 
-nav input:checked + li > label > a{
+nav#topNavBar input:checked + li > label > a{
   color:$black;
 }
 
-nav a{
+nav#topNavBar a{
   text-decoration:none;
   color:$white;
 }

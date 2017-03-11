@@ -192,7 +192,7 @@ section:nth-of-type(2) hr{
   
 }
 
-.mask{
+.fullCanvas__mask{
   @include small-device{
     @include structure-dimension(absolute,0,2.5em,100%,100%);
     @include transition-element(z-index,0.5s);

@@ -1,6 +1,6 @@
 //_search.scss
 
-.searchBlock{
+.topNavBar__searchBlock{
   display:inline-block;
   width:250px;
   margin:0 20px;
@@ -18,7 +18,7 @@
   }
 }
 
-#search{
+#topNavBar__search{
   @include position-top(relative,40px);
   @include h-w(30px,180px);
   display:inline-block;
@@ -40,15 +40,15 @@
   }
 }
 
-#search:focus{
+#topNavBar__search:focus{
   outline:none;
 }
 
-#search:not(:focus){
+#topNavBar__search:not(:focus){
   color:transparent;
 }
 
-.searchText{
+.topNavBar__searchText{
   @include position-top(relative,20px);
   @include transition-element(top,0.5s);
   color:$searchText;
@@ -69,14 +69,14 @@
 }
 
 
-#search:focus ~ .searchText{
+#topNavBar__search:focus ~ .topNavBar__searchText{
   color:$search-text-focus;
   top:0px;
   font-size:12px;
   color:$white;
 }
 
-#searchIcon{
+#topNavBar__searchIcon{
   @include top-left-position(37px,210px,relative);
   height:30px;
   width:30px;
@@ -104,6 +104,6 @@
 
 }
 
-nav > .searchBlock > #searchIcon:focus ~ .modalMask{
+nav > .topNavBar__searchBlock > #topNavBar__searchIcon:focus ~ .modalMask{
   visibility:visible;
 }

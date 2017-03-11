@@ -1,6 +1,6 @@
 //_modal.scss
 
-.modalMask{
+.topNavBar__modalMask{
   @include h-w(1000px,100%);
   @include med-and-large-device{
     @include structure-dimension(fixed,0,90px,100vw,150vh);
@@ -12,7 +12,7 @@
   text-align: center;
   display:none;
   background-color:rgba(0,0,0,0);
-  .modal{
+  .topNavBar__modal{
     margin:auto;
     font-size:0.5em;
     margin-top:150px;
@@ -39,18 +39,18 @@
   }
 }
 
-#modalInput1, #modalInput2{
+#topNavBar__modalInput1, #topNavBar__modalInput2{
   display:none;
 }
 
 
-#modalInput1:checked + .modalMask{
+#topNavBar__modalInput1:checked + .topNavBar__modalMask{
   display:block;
   background-color:rgba(0,0,0,0.9);
   transition:background-color 1s;
 }
 
-#modalClose{
+#topNavBar__modalClose{
   @include med-and-large-device{
     left:0;
     cursor: pointer;
@@ -63,7 +63,7 @@
   left:0px;
   cursor: pointer;
   top:200px;
-  .button{
+  .topNavBar__button{
     width:150px; 
     margin:auto;
     border:1px solid black;

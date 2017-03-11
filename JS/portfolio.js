@@ -51,7 +51,7 @@
 
         // Define smooth scroll links that point to where you want to go
 
-        var menuLabel=document.querySelectorAll('.menuLabel');
+        var menuLabel=document.querySelectorAll('.topNavBar__menuLabel');
 
      //For each of these scroll links get the associated anchors and also
      //the associated inputs, which will determine which menu label will
@@ -105,7 +105,7 @@
                 var scrollToTop=document.createElement('BUTTON');
                 var text=document.createTextNode('Back To Top');
                 scrollToTop.appendChild(text);
-                scrollToTop.className='link2Top anchor';
+                scrollToTop.className='link2Top topNavBar__anchor';
                 allContent.appendChild(scrollToTop);
 
                 //Get the destination section where we want to end up

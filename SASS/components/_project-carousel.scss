@@ -59,7 +59,7 @@
 }
 
 
-.displayArea{
+.projectSection__displayArea{
   @include structure-dimension(absolute,150px,283px,700px,680px);
   @include display-marginLeft(none,50px);
   @include med-only-device{
@@ -81,7 +81,7 @@
 
 }
 
- .projectSection .displayArea > img, .calculator, .accordion{
+ .projectSection .projectSection__displayArea > img, .calculator, .accordion{
    @include top-left-position(5%,125px,absolute);
    @include h-w(470px,450px);
    @include large-only-device{
@@ -102,7 +102,7 @@
    z-index:2;
 }
 
-.displayArea > .calculator{
+.projectSection__displayArea > .calculator{
   margin-left:-50px;
   @include med-only-device{
     @include structure-dimension(absolute,3.5em,3.0em,16em,19em);
@@ -134,14 +134,14 @@
   }
 } 
 
-.projectSection > input:checked +label + div.displayArea{
+.projectSection > input:checked +label + .projectSection__displayArea{
   display:block;
 }
 
 
-.projectSection > input:checked + label + div.displayArea > input:checked + img,
-.projectSection > input:checked + label + div.displayArea > input:checked + .calculator,
-.projectSection > input:checked + label + div.displayArea > input:checked + .accordion{
+.projectSection > input:checked + label + .projectSection__displayArea > input:checked + img,
+.projectSection > input:checked + label + .projectSection__displayArea > input:checked + .calculator,
+.projectSection > input:checked + label + .projectSection__displayArea > input:checked + .accordion{
   visibility: visible;
 }
 
@@ -152,7 +152,7 @@
 }
 
 @for $i from 1 through 4 {
-  .projectSection input:checked ~ div.displayArea input:nth-of-type(#{$i}):checked ~  div.radioLabels  label:nth-of-type(#{$i}) > .fa-circle-o {
+  .projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(#{$i}):checked ~  div.radioLabels  label:nth-of-type(#{$i}) > .fa-circle-o {
     background-color:$purple;
     color:transparent;
   }
@@ -233,8 +233,8 @@
 @for $j from 1 through 4 {
    $rightArrow:chevronRT($j);
    $leftArrow:chevronLT($j);
-  .projectSection > input:checked ~ .displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$rightArrow}),
-  .projectSection > input:checked ~ .displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$leftArrow}){
+  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$rightArrow}),
+  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$leftArrow}){
     display:block;
   }  
 }
@@ -292,7 +292,7 @@ div.description a:hover{
   color:$blue;
 }
 
-.projectSection input:checked ~ div.displayArea > div.description {
+.projectSection input:checked ~ .projectSection__displayArea > div.description {
   display:block;
   z-index:1;
 }
