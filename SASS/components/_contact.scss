@@ -100,7 +100,7 @@
     display: none;
 }
 
-.card {
+.contact__card {
   @include preserve-3d;
   @include transition-all(1s);
   @include back-visibility(hidden);
@@ -138,7 +138,7 @@
 }
 
 
-.card div {
+.contact__card div {
   @include back-visibility(hidden);
   @include h-w(100%,100%);
   @include preserve-3d;
@@ -147,7 +147,7 @@
   border-radius: 2px;
 }
 
-.card div  p.name{
+.contact__card div  p.contact__name{
   @include med-and-large-device{
     margin-top:1.5em;
     font-size:1.5em;
@@ -162,7 +162,7 @@
   text-align:left;
 }
 
-.card div p.aboutme{
+.contact__card div p.contact__aboutme{
   position:relative;
   font-size:1.1em;
   line-height:1.2em;
@@ -185,7 +185,7 @@
   margin-top:-10em;
 }
 
-.card .front{ 
+.contact__card .contact__front{ 
   color:$white;
   background-image: url("../designs/bg2.png");
   left:0em;
@@ -206,7 +206,7 @@
   }
 }
 
-.card  .back { 
+.contact__card  .contact__back { 
   @include preserve-3d;
   background-color: none;
   color: $white;
@@ -228,7 +228,7 @@
   }
 }
 
-#myName{
+#contact__myName{
   @include structure-dimension(relative,20px,-50px,100px,30px);
   border:2px solid red;
   color:$white;
@@ -239,7 +239,7 @@
 
 }
 
-.back > img{
+.contact__back > img{
   @include h-w(400px,600px);
   @include med-only-device{
     @include h-w(35em,300px);
@@ -256,18 +256,18 @@
   position:relative;
 }
 
-.contact label:hover .card{
+.contact label:hover .contact__card{
   @include rotateX(15deg);
   box-shadow: 1px 15px 10px rgba(0, 0, 0, .3);
 }
 
-.contact label:hover input:checked + .card {
+.contact label:hover input:checked + .contact__card {
   @include rotateX(160deg);
   box-shadow: 1px 15px 10px rgba(0,0,0,.2);
 
 }
 
-.contact input:checked + .card {
+.contact input:checked + .contact__card {
   @include rotateX(180deg);
 }
 
@@ -277,7 +277,7 @@
   font-weight:bold;
 }
 
-#lmd{
+#contact__lmd{
   @include position-left(absolute,5%);
   bottom:5%;
   @include large-only-device{
@@ -303,7 +303,7 @@
   }
 }
 
-.encyclopedia{
+.contact__encyclopedia{
   @include med-only-device{
     @include top-left-position(-0.5em,3%,relative);
   }
@@ -324,29 +324,29 @@
   margin-top:12%;
 }
 
-#left, #up {
+#contact__left, #contact__up {
   @include h-w(3px,20px);
   position:absolute;
   background-color: $white;
   margin:5px;
 }
 
-#up {
+#contact__up {
   @include rotate(90deg);
   @include top-left-position(3px,-10px,relative);
 }
 
-#up-triangle {
+#contact__up-triangle {
   @include structure-dimension(relative,0px,-20px,0,0);
   @include flip-triangle-borders;
 }
 
-#down-triangle {
+#contact__down-triangle {
   @include structure-dimension(relative,0,-20px,0,0);
   @include flip-triangle-borders;
 }
 
- .front ~ #upArrow, .front ~ #downArrow{
+ .contact__front ~ .contact__upArrow, .contact__front ~ .contact__downArrow{
    @include h-w(30px,30px);
    @include position-left(relative,50px);
    float:right;
@@ -354,7 +354,7 @@
    margin-top:40px;
 }
 
-.front ~ #downArrow{
+.contact__front ~ .contact__downArrow{
   @include rotate(180deg);
   @include back-visibility(visible);
   position:relative;
@@ -362,7 +362,7 @@
   margin-top:25px;
 }
 
-.back #upArrow{
+.contact__back .contact__upArrow{
   @include top-left-position(-400px,543px,relative);
   @include med-and-large-device{
     @include structure-dimension(relative,240px,-630px,2em,2em);
@@ -379,7 +379,7 @@
   color:$red;
 }
 
-.back #downArrow{
+.contact__back .contact__downArrow{
   @include rotate(180deg);
   @include top-left-position(-1200px,-20px,relative);
   @include med-and-large-device{
