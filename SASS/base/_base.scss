@@ -38,7 +38,7 @@ section:nth-of-type(2){
 
 
 
-  section.aboutMe h1, section.projectSection h1,section.skills h1, section.contact h1{
+  section.aboutMe h1, section.projectSection h1,section.skillsSection h1, section.contact h1{
   @include position-left(relative,0);
   font-size:32px;
   font-weight:100;

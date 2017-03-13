@@ -33,7 +33,7 @@ section {
   section:nth-of-type(2) {
     top: -13em; } }
 
-section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
   position: relative;
   left: 0;
   font-size: 32px;
@@ -44,16 +44,16 @@ section.aboutMe h1, section.projectSection h1, section.skills h1, section.contac
   margin: auto;
   text-align: center; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+    section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
       margin: auto;
       width: 5em;
       top: -200px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+    section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
       top: -30px;
       left: -2em; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    section.aboutMe h1, section.projectSection h1, section.skills h1, section.contact h1 {
+    section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
       left: -20px; } }
 
 article {
@@ -1077,103 +1077,103 @@ nav#topNavBar a {
   background-color: purple;
   color: transparent; }
 
-.chevronLabels label[class="right"] {
+.projectSection__chevronLabels label[class="right"] {
   color: #cccccc;
   top: 300px;
   left: 630px;
   position: absolute;
   display: none; }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .chevronLabels label[class="right"] {
+    .projectSection__chevronLabels label[class="right"] {
       top: 197px;
       left: 315px;
       position: absolute;
       display: none; } }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .chevronLabels label[class="right"] {
+    .projectSection__chevronLabels label[class="right"] {
       top: 300px;
       left: 630px;
       position: absolute;
       display: none; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .chevronLabels label[class="right"] {
+    .projectSection__chevronLabels label[class="right"] {
       left: 265px;
       top: 190px; } }
-  .chevronLabels label[class="right"]:hover {
+  .projectSection__chevronLabels label[class="right"]:hover {
     cursor: pointer; }
 
-.chevronLabels label[class="left"] {
+.projectSection__chevronLabels label[class="left"] {
   color: #cccccc;
   top: 300px;
   left: 50px;
   position: absolute;
   display: none; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .chevronLabels label[class="left"] {
+    .projectSection__chevronLabels label[class="left"] {
       top: 300px;
       left: 50px;
       position: absolute;
       display: none; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .chevronLabels label[class="left"] {
+    .projectSection__chevronLabels label[class="left"] {
       top: 200px;
       left: 50px;
       position: absolute;
       left: 25px;
       display: none; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .chevronLabels label[class="left"] {
+    .projectSection__chevronLabels label[class="left"] {
       left: 10px;
       top: 190px; } }
-  .chevronLabels label[class="left"]:hover {
+  .projectSection__chevronLabels label[class="left"]:hover {
     cursor: pointer; }
 
-.radioLabels {
+.projectSection__radioLabels {
   top: 510px;
   left: 260px;
   position: absolute;
   z-index: 2; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .radioLabels {
+    .projectSection__radioLabels {
       top: 510px;
       left: 260px;
       position: absolute;
       z-index: 2; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .radioLabels {
+    .projectSection__radioLabels {
       top: 330px;
       left: 105px;
       position: absolute;
       z-index: 2; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .radioLabels {
+    .projectSection__radioLabels {
       left: 70px;
       top: 320px; } }
 
-.radioLabels label {
+.projectSection__radioLabels label {
   display: inline;
   float: left;
   padding: 10px; }
-  .radioLabels label:hover {
+  .projectSection__radioLabels label:hover {
     cursor: pointer; }
 
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(1):checked ~ .chevronLabels label:nth-of-type(1),
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(1):checked ~ .chevronLabels label:nth-of-type(2) {
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(1):checked ~ .projectSection__chevronLabels label:nth-of-type(1),
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(1):checked ~ .projectSection__chevronLabels label:nth-of-type(2) {
   display: block; }
 
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(2):checked ~ .chevronLabels label:nth-of-type(3),
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(2):checked ~ .chevronLabels label:nth-of-type(4) {
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(2):checked ~ .projectSection__chevronLabels label:nth-of-type(3),
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(2):checked ~ .projectSection__chevronLabels label:nth-of-type(4) {
   display: block; }
 
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(3):checked ~ .chevronLabels label:nth-of-type(5),
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(3):checked ~ .chevronLabels label:nth-of-type(6) {
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(3):checked ~ .projectSection__chevronLabels label:nth-of-type(5),
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(3):checked ~ .projectSection__chevronLabels label:nth-of-type(6) {
   display: block; }
 
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(4):checked ~ .chevronLabels label:nth-of-type(7),
-.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(4):checked ~ .chevronLabels label:nth-of-type(8) {
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(4):checked ~ .projectSection__chevronLabels label:nth-of-type(7),
+.projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(4):checked ~ .projectSection__chevronLabels label:nth-of-type(8) {
   display: block; }
 
-div.description {
+div.projectSection__description {
   height: 100px;
   width: 100%;
   background-color: rgba(76, 74, 74, 0);
@@ -1184,7 +1184,7 @@ div.description {
   font-size: 17px;
   padding-left: 20px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    div.description {
+    div.projectSection__description {
       top: 570px;
       left: -20px;
       position: relative;
@@ -1193,10 +1193,10 @@ div.description {
       font-size: 0.8em;
       color: #ffffff; } }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    div.description {
+    div.projectSection__description {
       margin-left: 3em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    div.description {
+    div.projectSection__description {
       top: 390px;
       left: -20px;
       position: relative;
@@ -1206,24 +1206,24 @@ div.description {
       color: #ffffff;
       padding-left: 2em; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    div.description {
+    div.projectSection__description {
       font-size: 0.8em;
       top: 30em; } }
 
-div.description span {
+div.projectSection__description span {
   font-family: Georgia, Serif;
   font-weight: 500; }
 
-div.description a {
+div.projectSection__description a {
   margin-top: 15px;
   margin-right: 30px;
   text-decoration: none;
   color: #ffffff; }
 
-div.description a:hover {
+div.projectSection__description a:hover {
   color: #0000ff; }
 
-.projectSection input:checked ~ .projectSection__displayArea > div.description {
+.projectSection input:checked ~ .projectSection__displayArea > div.projectSection__description {
   display: block;
   z-index: 1; }
 
@@ -1655,20 +1655,20 @@ nav > .topNavBar__searchBlock > #topNavBar__searchIcon:focus ~ .modalMask {
   visibility: visible; }
 
 /*Skills */
-.skills {
+.skillsSection {
   height: 1600px;
   position: relative;
   top: 250px;
   margin-bottom: 0px; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .skills {
+    .skillsSection {
       position: relative;
       top: 0; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .skills {
+    .skillsSection {
       position: relative;
       top: 0; } }
-  .skills h1 {
+  .skillsSection h1 {
     width: 5em; }
 
 hr#endSkillsLine {
@@ -1692,7 +1692,7 @@ hr#endSkillsLine {
       top: 710px;
       width: 80px; } }
 
-#frontend {
+#skillsSection__frontendDevelopment {
   height: 20px;
   width: 650px;
   left: -100px;
@@ -1702,19 +1702,19 @@ hr#endSkillsLine {
   padding-left: 1em;
   color: #ffffff; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    #frontend {
+    #skillsSection__frontendDevelopment {
       width: 500px;
       left: -30px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    #frontend {
+    #skillsSection__frontendDevelopment {
       width: 270px;
       left: -25px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    #frontend {
+    #skillsSection__frontendDevelopment {
       width: 200px;
       left: 5px; } }
 
-#backend {
+#skillsSection__backendDevelopment {
   position: relative;
   top: -20px;
   width: 100px;
@@ -1726,64 +1726,64 @@ hr#endSkillsLine {
   text-align: right;
   color: #ffffff; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    #backend {
+    #skillsSection__backendDevelopment {
       width: 50px;
       margin-left: 485px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    #backend {
+    #skillsSection__backendDevelopment {
       width: 27px;
       margin-left: 245px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    #backend {
+    #skillsSection__backendDevelopment {
       width: 20px;
       margin-left: 200px; } }
 
-.skillBar {
+.skillsSection__skillBar {
   height: 20px;
   width: 556px;
   position: relative;
   left: 18%; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .skillBar {
+    .skillsSection__skillBar {
       height: 20px;
       width: 50vw;
       position: relative;
       left: 8%;
       top: -140px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .skillBar {
+    .skillsSection__skillBar {
       position: relative;
       left: 10px;
       height: 20px;
       width: 240px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .skillBar {
+    .skillsSection__skillBar {
       width: 230px;
       left: 30px; } }
 
 @media (max-width: 600px) and (min-height: 200px) {
-  .front {
+  .skillsSection__frontend {
     position: relative;
     left: -5.3em;
     height: 2em; } }
 @media (max-width: 1024px) and (min-height: 200px) {
-  .front {
+  .skillsSection__frontend {
     position: relative;
     left: -5.3em;
     height: 2em; } }
 
-.proficiencyLabels {
+.skillsSection__proficiencyLabels {
   position: absolute;
   top: -255px;
   left: -30px;
   list-style-type: none; }
 
-.proficiencyLabels li {
+.skillsSection__proficiencyLabels li {
   margin-bottom: 20px; }
 
-.js, .html, .react, .jquery, .sass,
-.node, .php, .mongo, .ruby, .python,
-.writing, .problemSolve, .PM, .research, .publicSpeaking {
+.skillsSection__js, .skillsSection__html, .skillsSection__react, .skillsSection__jquery, .skillsSection__sass,
+.skillsSection__node, .skillsSection__php, .skillsSection__mongo, .skillsSection__ruby, .skillsSection__python,
+.skillsSection__writing, .skillsSection__problemSolve, .skillsSection__PM, .skillsSection__research, .skillsSection__publicSpeaking {
   position: absolute;
   top: 0px;
   -webkit-transform: rotate(40deg);
@@ -1792,94 +1792,94 @@ hr#endSkillsLine {
   -ms-transform: rotate(40deg);
   transform: rotate(40deg); }
 
-.js, .node, .writing {
+.skillsSection__js, .skillsSection__node, .skillsSection__writing {
   top: 17px;
   left: 100px; }
 
-.html, .php, .problemSolve {
+.skillsSection__html, .skillsSection__php, .skillsSection__problemSolve {
   top: 20px;
   left: 130px; }
 
-.php {
+.skillsSection__php {
   top: 10px; }
 
-.react, .mongo, .PM {
+.skillsSection__react, .skillsSection__mongo, .skillsSection__PM {
   top: 15px;
   left: 160px; }
 
-.mongo {
+.skillsSection__mongo {
   top: 18px; }
 
-.jquery, .ruby, .research {
+.skillsSection__jquery, .skillsSection__ruby, .skillsSection__research {
   top: 12px;
   left: 195px; }
 
-.sass, .python, .publicSpeaking {
+.skillsSection__sass, .skillsSection__python, .skillsSection__publicSpeaking {
   left: 225px;
   top: 13px; }
 
-.writing {
+.skillsSection__writing {
   top: 40px;
   left: 90px; }
 
-.problemSolve {
+.skillsSection__problemSolve {
   top: 30px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .problemSolve {
+    .skillsSection__problemSolve {
       left: 126px; } }
 
-.PM {
+.skillsSection__PM {
   top: 35px;
   left: 155px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .PM {
+    .skillsSection__PM {
       left: 152px; } }
 
-.research {
+.skillsSection__research {
   top: 17px;
   left: 190px; }
 
-.publicSpeaking {
+.skillsSection__publicSpeaking {
   left: 215px;
   top: 43px;
   width: 130px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .publicSpeaking {
+    .skillsSection__publicSpeaking {
       left: 210px; } }
 
-.technologies {
+.skillsSection__technologies {
   position: absolute;
   height: 30px;
   width: 300px;
   top: -90px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .technologies {
+    .skillsSection__technologies {
       left: 70px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .technologies {
+    .skillsSection__technologies {
       left: 50px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .technologies {
+    .skillsSection__technologies {
       left: 50px; } }
 
 @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-  .back .technologies {
+  .skillsSection__backend .skillsSection__technologies {
     top: -90px; } }
 
 @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-  .other .technologies {
+  .skillsSection__other .skillsSection__technologies {
     top: -85px;
     left: 80px; } }
 @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-  .other .technologies {
+  .skillsSection__other .skillsSection__technologies {
     top: -85px;
     left: 60px; } }
 @media (max-width: 360px) and (min-height: 200px) {
-  .other .technologies {
+  .skillsSection__other .skillsSection__technologies {
     left: 75px; } }
 
 /****************************ALL BARS**************************************/
-.jsBar, .htmlBar, .reactBar, .jqueryBar, .sassBar {
+.skillsSection__jsBar, .skillsSection__htmlBar, .skillsSection__reactBar, .skillsSection__jqueryBar, .skillsSection__sassBar {
   top: 20px;
   left: 100px;
   position: absolute;
@@ -1887,7 +1887,7 @@ hr#endSkillsLine {
   height: 80px;
   width: 20px; }
 
-.graphBars {
+.skillsSection__graphBars {
   position: absolute;
   border-bottom: 1px solid gray;
   top: -190px;
@@ -1895,73 +1895,73 @@ hr#endSkillsLine {
   height: 100px;
   width: 260px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .graphBars {
+    .skillsSection__graphBars {
       left: 70px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .graphBars {
+    .skillsSection__graphBars {
       left: 50px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .graphBars {
+    .skillsSection__graphBars {
       left: 50px; } }
 
 @media (max-width: 360px) and (min-height: 200px) {
-  .other .graphBars {
+  .skillsSection__other .skillsSection__graphBars {
     left: 60px; } }
 
-.jsBar {
+.skillsSection__jsBar {
   background-color: #FFAD41; }
 
-.htmlBar {
+.skillsSection__htmlBar {
   left: 130px;
   background-color: #38BAF0; }
 
-.reactBar {
+.skillsSection__reactBar {
   left: 160px;
   height: 40px;
   top: 60px;
   background-color: #69D12B; }
 
-.jqueryBar {
+.skillsSection__jqueryBar {
   left: 190px;
   height: 40px;
   top: 60px;
   background-color: #EFE210; }
 
-.sassBar {
+.skillsSection__sassBar {
   left: 220px;
   background-color: pink; }
 
-.backendBar1, .backendBar2, .backendBar3, .backendBar4, .backendBar5 {
+.skillsSection__backendBar1, .skillsSection__backendBar2, .skillsSection__backendBar3, .skillsSection__backendBar4, .skillsSection__backendBar5 {
   position: absolute;
   top: 60px;
   display: inline-block;
   height: 40px;
   width: 20px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .backendBar1, .backendBar2, .backendBar3, .backendBar4, .backendBar5 {
+    .skillsSection__backendBar1, .skillsSection__backendBar2, .skillsSection__backendBar3, .skillsSection__backendBar4, .skillsSection__backendBar5 {
       top: 60px; } }
 
-.backendBar1 {
+.skillsSection__backendBar1 {
   left: 100px;
   background-color: #FFAD41; }
 
-.backendBar2 {
+.skillsSection__backendBar2 {
   left: 130px;
   background-color: #38BAF0; }
 
-.backendBar3 {
+.skillsSection__backendBar3 {
   left: 160px;
   background-color: #69D12B; }
 
-.backendBar4 {
+.skillsSection__backendBar4 {
   left: 190px;
   background-color: #EFE210; }
 
-.backendBar5 {
+.skillsSection__backendBar5 {
   left: 220px;
   background-color: pink; }
 
-.writingBar {
+.skillsSection__writingBar {
   position: absolute;
   left: 100px;
   top: 20px;
@@ -1969,18 +1969,18 @@ hr#endSkillsLine {
   height: 80px;
   background-color: #9FCE57; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .writingBar {
+    .skillsSection__writingBar {
       left: 110px;
       top: 20px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .writingBar {
+    .skillsSection__writingBar {
       left: 110px;
       top: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .writingBar {
+    .skillsSection__writingBar {
       top: 20px; } }
 
-.problemSolveBar {
+.skillsSection__problemSolveBar {
   position: absolute;
   left: 130px;
   top: 20px;
@@ -1988,18 +1988,18 @@ hr#endSkillsLine {
   height: 80px;
   background-color: #3DC694; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .problemSolveBar {
+    .skillsSection__problemSolveBar {
       left: 140px;
       top: 20px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .problemSolveBar {
+    .skillsSection__problemSolveBar {
       left: 140px;
       top: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .problemSolveBar {
+    .skillsSection__problemSolveBar {
       top: 20px; } }
 
-.PMBar {
+.skillsSection__PMBar {
   position: absolute;
   left: 160px;
   top: 20px;
@@ -2007,18 +2007,18 @@ hr#endSkillsLine {
   height: 80px;
   background-color: #4EC1F2; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .PMBar {
+    .skillsSection__PMBar {
       left: 170px;
       top: 20px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .PMBar {
+    .skillsSection__PMBar {
       left: 170px;
       top: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .PMBar {
+    .skillsSection__PMBar {
       top: 20px; } }
 
-.researchBar {
+.skillsSection__researchBar {
   position: absolute;
   left: 190px;
   top: 20px;
@@ -2026,18 +2026,18 @@ hr#endSkillsLine {
   height: 80px;
   background-color: #8D9EFF; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .researchBar {
+    .skillsSection__researchBar {
       left: 200px;
       top: 20px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .researchBar {
+    .skillsSection__researchBar {
       left: 200px;
       top: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .researchBar {
+    .skillsSection__researchBar {
       top: 20px; } }
 
-.publicSpeakingBar {
+.skillsSection__publicSpeakingBar {
   position: absolute;
   left: 220px;
   top: 20px;
@@ -2045,40 +2045,28 @@ hr#endSkillsLine {
   height: 80px;
   background-color: #CD98FE; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .publicSpeakingBar {
+    .skillsSection__publicSpeakingBar {
       left: 230px;
       top: 20px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .publicSpeakingBar {
+    .skillsSection__publicSpeakingBar {
       left: 230px;
       top: 20px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .publicSpeakingBar {
+    .skillsSection__publicSpeakingBar {
       top: 20px; } }
 
-/*
-.writingBar,.problemSolveBar,.researchBar,{
-    @include med-and-large-device{
-      top:-10px;
-    }
-}
-
-.PMBar,.publicSpeakingBar{
-   @include med-and-large-device{
-     top:10px;
-   }
-}*/
 /********************************************************************END BARS***/
 @media (max-width: 600px) and (min-height: 200px) {
-  .back {
+  .skillsSection__backend {
     position: relative;
     left: -5.3em; } }
 @media (max-width: 1024px) and (min-height: 200px) {
-  .back {
+  .skillsSection__backend {
     position: relative;
     left: -5.3em; } }
 
-#frontendSkill {
+#skillsSection__frontendSkills {
   top: -290px;
   left: 65px;
   position: absolute;
@@ -2087,7 +2075,7 @@ hr#endSkillsLine {
   width: 13em;
   color: #FB5E5D; }
 
-#backendSkill {
+#skillsSection__backendSkills {
   top: -290px;
   left: 65px;
   position: absolute;
@@ -2096,7 +2084,7 @@ hr#endSkillsLine {
   width: 13em;
   color: #4A6FEB; }
 
-#otherSkill {
+#skillsSection__otherSkills {
   font-size: 18px;
   font-weight: bold;
   top: -290px;
@@ -2105,7 +2093,7 @@ hr#endSkillsLine {
   width: 13em;
   color: #000000; }
 
-.frontEndGraph, .backEndGraph, .otherGraph {
+.skillsSection__frontEndGraph, .skillsSection__backEndGraph, .skillsSection__otherGraph {
   height: 100px;
   font-size: 0.8em;
   left: 100px;
@@ -2114,55 +2102,55 @@ hr#endSkillsLine {
   width: 260px;
   margin-left: -30px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .frontEndGraph, .backEndGraph, .otherGraph {
+    .skillsSection__frontEndGraph, .skillsSection__backEndGraph, .skillsSection__otherGraph {
       left: 0px; } }
 
 @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-  .frontEndGraph {
+  .skillsSection__frontEndGraph {
     left: 40px; } }
 @media (max-width: 360px) and (min-height: 200px) {
-  .frontEndGraph {
+  .skillsSection__frontEndGraph {
     left: 40px; } }
 
-.backEndGraph {
+.skillsSection__backEndGraph {
   left: 500px;
   top: 250px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .backEndGraph {
+    .skillsSection__backEndGraph {
       left: 350px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .backEndGraph {
+    .skillsSection__backEndGraph {
       left: 40px;
       top: 550px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .backEndGraph {
+    .skillsSection__backEndGraph {
       top: 550px;
       left: 40px; } }
 
-.otherGraph {
+.skillsSection__otherGraph {
   left: 320px;
   top: 450px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .otherGraph {
+    .skillsSection__otherGraph {
       left: 175px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .otherGraph {
+    .skillsSection__otherGraph {
       top: 750px;
-      left: 45px; } }
+      left: 40px; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .otherGraph {
+    .skillsSection__otherGraph {
       top: 750px;
       left: 40px; } }
 
-.bar:hover + div {
+.skillsSection__bar:hover + div {
   visibility: visible; }
 
 @media (max-width: 600px) and (min-height: 200px) {
-  .other {
+  .skillsSection__other {
     position: relative;
     left: -6.2em; } }
 @media (max-width: 1024px) and (min-height: 200px) {
-  .other {
+  .skillsSection__other {
     position: relative;
     left: -6.2em; } }
 
@@ -2170,122 +2158,122 @@ div[class*="Tooltip"] {
   z-index: 100;
   visibility: hidden; }
 
-.jsTooltip {
+.skillsSection__jsTooltip {
   top: -55px;
   left: -11px;
   position: relative; }
 
-.htmlTooltip {
+.skillsSection__htmlTooltip {
   top: -140px;
   left: 19px;
   position: relative; }
 
-.reactTooltip {
+.skillsSection__reactTooltip {
   top: -175px;
   left: 49px;
   position: relative; }
 
-.jqueryTooltip {
+.skillsSection__jqueryTooltip {
   top: -250px;
   left: 79px;
   position: relative; }
 
-.sassTooltip {
+.skillsSection__sassTooltip {
   top: -375px;
   left: 109px;
   position: relative; }
 
-.nodeTooltip {
+.skillsSection__nodeTooltip {
   top: -4px;
   left: -11px;
   position: relative; }
 
-.phpTooltip {
+.skillsSection__phpTooltip {
   top: -78px;
   left: 20px;
   position: relative; }
 
-.mongoTooltip {
+.skillsSection__mongoTooltip {
   top: -152px;
   left: 50px;
   position: relative; }
 
-.rubyTooltip {
+.skillsSection__rubyTooltip {
   top: -228px;
   left: 80px;
   position: relative; }
 
-.pythonTooltip {
+.skillsSection__pythonTooltip {
   top: -303px;
   left: 110px;
   position: relative; }
 
-.writingTooltip {
+.skillsSection__writingTooltip {
   top: -42px;
   left: -11px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .writingTooltip {
+    .skillsSection__writingTooltip {
       left: -1px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .writingTooltip {
+    .skillsSection__writingTooltip {
       left: -1px; } }
 
-.problemTooltip {
+.skillsSection__problemTooltip {
   top: -117px;
   left: 19px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .problemTooltip {
+    .skillsSection__problemTooltip {
       left: 29px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .problemTooltip {
+    .skillsSection__problemTooltip {
       left: 29px; } }
 
-.pmTooltip {
+.skillsSection__pmTooltip {
   top: -205px;
   left: 49px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .pmTooltip {
+    .skillsSection__pmTooltip {
       left: 58px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .pmTooltip {
+    .skillsSection__pmTooltip {
       left: 58px; } }
 
-.researchTooltip {
+.skillsSection__researchTooltip {
   top: -280px;
   left: 79px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .researchTooltip {
+    .skillsSection__researchTooltip {
       left: 88px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .researchTooltip {
+    .skillsSection__researchTooltip {
       left: 88px; } }
 
-.publicTooltip {
+.skillsSection__publicTooltip {
   top: -365px;
   left: 109px;
   position: relative; }
   @media (max-width: 600px) and (min-height: 200px) {
-    .publicTooltip {
+    .skillsSection__publicTooltip {
       left: 120px; } }
   @media (max-width: 1024px) and (min-height: 200px) {
-    .publicTooltip {
+    .skillsSection__publicTooltip {
       left: 120px; } }
 
-.tooltipBody {
+.skillsSection__tooltipBody {
   width: 240px;
   position: relative;
   background: #000000;
   border-radius: 3%;
   color: #ffffff; }
 
-.tooltipBody span {
+.skillsSection__tooltipBody span {
   font-weight: 900; }
 
-.tooltipBody p {
+.skillsSection__tooltipBody p {
   font-size: 0.8em;
   position: relative;
   top: 3px;
@@ -2296,7 +2284,7 @@ div[class*="Tooltip"] {
   padding-top: 10px;
   padding-right: 20px; }
 
-.tip {
+.skillsSection__tip {
   width: 0;
   height: 0;
   border-left: 7px solid transparent;

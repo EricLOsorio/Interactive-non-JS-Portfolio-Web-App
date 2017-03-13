@@ -2,7 +2,7 @@
 
 /*Skills */
 
-.skills {
+.skillsSection {
   height:1600px;
   @include position-top(relative,250px);
   margin-bottom:0px;
@@ -30,7 +30,7 @@ hr#endSkillsLine{
 }
 
 
-#frontend{
+#skillsSection__frontendDevelopment{
   @include h-w(20px,650px);
   left:-100px;
   @include large-only-device{
@@ -54,7 +54,7 @@ hr#endSkillsLine{
   color:$white;
 }
 
-#backend{
+#skillsSection__backendDevelopment{
   @include position-top-width(relative,-20px,100px);
   @include display-marginLeft(inline-block,500px);
   @include large-only-device{
@@ -76,7 +76,7 @@ hr#endSkillsLine{
   color:$white;
 }
 
-.skillBar {
+.skillsSection__skillBar {
   @include h-w(20px,556px);
   @include position-left(relative,18%);
   @include large-only-device{
@@ -95,7 +95,7 @@ hr#endSkillsLine{
   }
 }
 
-.front{
+.skillsSection__frontend{
   @include med-and-large-device{
     @include position-left(relative,-5.3em);
     height:2em;
@@ -104,73 +104,73 @@ hr#endSkillsLine{
 
 
 
-.proficiencyLabels{
+.skillsSection__proficiencyLabels{
   position:absolute;
   top:-255px;
   left:-30px;
   list-style-type:none;
 }
 
-.proficiencyLabels li {
+.skillsSection__proficiencyLabels li {
   margin-bottom:20px;
 }
 
 
-.js, .html, .react, .jquery, .sass,
-.node, .php, .mongo, .ruby, .python,
-.writing, .problemSolve, .PM, .research, .publicSpeaking{
+.skillsSection__js, .skillsSection__html, .skillsSection__react, .skillsSection__jquery, .skillsSection__sass,
+.skillsSection__node, .skillsSection__php, .skillsSection__mongo, .skillsSection__ruby, .skillsSection__python,
+.skillsSection__writing, .skillsSection__problemSolve, .skillsSection__PM, .skillsSection__research, .skillsSection__publicSpeaking{
   @include position-top(absolute,0px);
   @include rotate(40deg);
 }
 
-.js,.node,.writing{
+.skillsSection__js,.skillsSection__node,.skillsSection__writing{
   top:17px;
   left:100px;
  
 }
-.html,.php,.problemSolve{
+.skillsSection__html,.skillsSection__php,.skillsSection__problemSolve{
   top:20px;
   left:130px;
 }
 
-.php{
+.skillsSection__php{
   top:10px;
 }
 
-.react,.mongo,.PM{
+.skillsSection__react,.skillsSection__mongo,.skillsSection__PM{
   top:15px;
   left:160px;
 }
 
-.mongo{
+.skillsSection__mongo{
   top:18px;
 }
 
-.jquery,.ruby,.research{
+.skillsSection__jquery,.skillsSection__ruby,.skillsSection__research{
   top:12px;
   left:195px;
 
 }
 
-.sass,.python,.publicSpeaking{
+.skillsSection__sass,.skillsSection__python,.skillsSection__publicSpeaking{
   left:225px;
   top:13px;
 
 }
 
-.writing{
+.skillsSection__writing{
   top:40px;
   left:90px;
 }
 
-.problemSolve{
+.skillsSection__problemSolve{
   top:30px;
   @include large-only-device{
     left:126px;
   }
 }
 
-.PM{
+.skillsSection__PM{
   top:35px;
   left:155px;
   @include large-only-device{
@@ -178,12 +178,12 @@ hr#endSkillsLine{
   }
 }
 
-.research{
+.skillsSection__research{
   top:17px;
   left:190px;
 }
 
-.publicSpeaking{
+.skillsSection__publicSpeaking{
   left:215px;
   top:43px;
   width:130px;
@@ -193,7 +193,7 @@ hr#endSkillsLine{
 }
 
 
-.technologies{
+.skillsSection__technologies{
   position:absolute;
   height:30px;
   width:300px;
@@ -209,13 +209,13 @@ hr#endSkillsLine{
   }
 }
 
-.back .technologies{
+.skillsSection__backend .skillsSection__technologies{
   @include large-only-device{
     top:-90px;
   }
 }
 
-.other .technologies{
+.skillsSection__other .skillsSection__technologies{
   @include large-only-device{
     top:-85px;
     left:80px;
@@ -231,13 +231,13 @@ hr#endSkillsLine{
 
 /****************************ALL BARS**************************************/
 
-.jsBar,.htmlBar,.reactBar,.jqueryBar,.sassBar{
+.skillsSection__jsBar,.skillsSection__htmlBar,.skillsSection__reactBar,.skillsSection__jqueryBar,.skillsSection__sassBar{
   @include top-left-position(20px,100px,absolute);
   display:inline-block;
   @include h-w(80px,20px);
 }
 
-.graphBars{
+.skillsSection__graphBars{
   position:absolute;
   border-bottom:1px solid gray;
   top:-190px;
@@ -256,42 +256,42 @@ hr#endSkillsLine{
 
 }
 
-.other .graphBars{
+.skillsSection__other .skillsSection__graphBars{
   @include small-device{
     left:60px;
   }
 }
 
-.jsBar{
+.skillsSection__jsBar{
     background-color:$js-backendbar1-bg-color;
 }
 
-.htmlBar{
+.skillsSection__htmlBar{
   left:130px;
   background-color:$html-backendbar2-bg-color;
 
 }
 
-.reactBar{
+.skillsSection__reactBar{
   left:160px;
   height:40px;
   top:60px;
   background-color:$react-backendbar3-bg-color;
 }
 
-.jqueryBar{
+.skillsSection__jqueryBar{
   left:190px;
   height:40px;
   top:60px;
   background-color:$jquery-backendbar4-bg-color;
 }
 
-.sassBar{
+.skillsSection__sassBar{
   left:220px;
   background-color:pink;
 }
 
-.backendBar1,.backendBar2,.backendBar3,.backendBar4,.backendBar5{
+.skillsSection__backendBar1,.skillsSection__backendBar2,.skillsSection__backendBar3,.skillsSection__backendBar4,.skillsSection__backendBar5{
   position:absolute;
   top:60px;
   display:inline-block;
@@ -301,32 +301,32 @@ hr#endSkillsLine{
   }  
 }
 
-.backendBar1{
+.skillsSection__backendBar1{
   left:100px;
   background-color:$js-backendbar1-bg-color;
 }
 
-.backendBar2{
+.skillsSection__backendBar2{
   left:130px;
   background-color:$html-backendbar2-bg-color;
 }
 
-.backendBar3{
+.skillsSection__backendBar3{
   left:160px;
   background-color:$react-backendbar3-bg-color;
 }
 
-.backendBar4{
+.skillsSection__backendBar4{
   left:190px;
   background-color:$jquery-backendbar4-bg-color;
 }
 
-.backendBar5{
+.skillsSection__backendBar5{
   left:220px;
   background-color:pink;
 }
 
-.writingBar{
+.skillsSection__writingBar{
   @include structure-dimension(absolute,100px,20px,20px,80px);
   background-color:$writingbar-bg-color;
   @include med-and-large-device{
@@ -338,7 +338,7 @@ hr#endSkillsLine{
   }
 }
 
-.problemSolveBar{
+.skillsSection__problemSolveBar{
   @include structure-dimension(absolute,130px,20px,20px,80px);
   @include med-and-large-device{
     left:140px;
@@ -350,7 +350,7 @@ hr#endSkillsLine{
   background-color:$probsolvebar-bg-color;
 }
 
-.PMBar{
+.skillsSection__PMBar{
   @include structure-dimension(absolute,160px,20px,20px,80px);
   @include med-and-large-device{
     left:170px;
@@ -362,7 +362,7 @@ hr#endSkillsLine{
   background-color:$pmbar-bg-color;
 }
 
-.researchBar{
+.skillsSection__researchBar{
   @include structure-dimension(absolute,190px,20px,20px,80px);
   @include med-and-large-device{
     left:200px;
@@ -374,7 +374,7 @@ hr#endSkillsLine{
   background-color:$researchbar-bg-color;
 }
 
-.publicSpeakingBar{
+.skillsSection__publicSpeakingBar{
   @include structure-dimension(absolute,220px,20px,20px,80px);
   @include med-and-large-device{
     left:230px;
@@ -385,22 +385,11 @@ hr#endSkillsLine{
   }
   background-color:$publicspeakbar-bg-color;
 }
-/*
-.writingBar,.problemSolveBar,.researchBar,{
-    @include med-and-large-device{
-      top:-10px;
-    }
-}
 
-.PMBar,.publicSpeakingBar{
-   @include med-and-large-device{
-     top:10px;
-   }
-}*/
 
 /********************************************************************END BARS***/
 
-.back{
+.skillsSection__backend{
   @include med-and-large-device{
     @include position-left(relative,-5.3em);
   }
@@ -408,28 +397,28 @@ hr#endSkillsLine{
 
 
 
-#frontendSkill{
+#skillsSection__frontendSkills{
   @include top-left-position(-290px,65px,absolute);
   @include skills-fonts;
   width:13em;
   color:$frontend-skill-color;
 }
 
-#backendSkill{
+#skillsSection__backendSkills{
   @include top-left-position(-290px,65px,absolute);
   @include skills-fonts;
   width:13em;
   color:$backend-skill-color;
 }
 
-#otherSkill{
+#skillsSection__otherSkills{
   @include skills-fonts;
   @include top-left-position(-290px,65px,absolute);
   width:13em;
   color:$black;
 }
 
-.frontEndGraph, .backEndGraph,.otherGraph{
+.skillsSection__frontEndGraph, .skillsSection__backEndGraph,.skillsSection__otherGraph{
   height:100px;
   font-size:0.8em;
   left:100px;
@@ -441,7 +430,7 @@ hr#endSkillsLine{
 
 }
 
-.frontEndGraph{
+.skillsSection__frontEndGraph{
   @include med-only-device{
     left:40px;
   }
@@ -450,7 +439,7 @@ hr#endSkillsLine{
   }
 }
 
-.backEndGraph{
+.skillsSection__backEndGraph{
   left:500px;
   top:250px;
   @include large-only-device{
@@ -466,7 +455,7 @@ hr#endSkillsLine{
   }
 }
 
-.otherGraph{
+.skillsSection__otherGraph{
   left:320px;
   top:450px;
   @include large-only-device{
@@ -474,7 +463,7 @@ hr#endSkillsLine{
   }
   @include med-only-device{
     top:750px;
-    left:45px;
+    left:40px;
   }
   @include small-device{
     top:750px;
@@ -484,11 +473,11 @@ hr#endSkillsLine{
 
 
 
- .bar:hover + div{
+ .skillsSection__bar:hover + div{
   visibility: visible;
 }
 
-.other{
+.skillsSection__other{
   @include med-and-large-device{
     @include position-left(relative,-6.2em);
   }
@@ -500,71 +489,71 @@ div[class*="Tooltip"]{
   visibility:hidden;
 }
 
-.jsTooltip{
+.skillsSection__jsTooltip{
   @include top-left-position(-55px,-11px,relative);
 }
 
-.htmlTooltip{
+.skillsSection__htmlTooltip{
   @include top-left-position(-140px,19px,relative);
 }
 
 
-.reactTooltip{
+.skillsSection__reactTooltip{
   @include top-left-position(-175px,49px,relative);
 }
 
-.jqueryTooltip{
+.skillsSection__jqueryTooltip{
   @include top-left-position(-250px,79px,relative);
 }
 
-.sassTooltip{
+.skillsSection__sassTooltip{
   @include top-left-position(-375px,109px,relative);
 }
 
 
 
-.nodeTooltip{
+.skillsSection__nodeTooltip{
   @include top-left-position(-4px,-11px,relative);
 }
 
 
-.phpTooltip{
+.skillsSection__phpTooltip{
   @include top-left-position(-78px,20px,relative);
 }
 
-.mongoTooltip{
+.skillsSection__mongoTooltip{
   @include top-left-position(-152px,50px,relative);
 }
 
-.rubyTooltip{
+.skillsSection__rubyTooltip{
   @include top-left-position(-228px,80px,relative);
 }
 
-.pythonTooltip{
+.skillsSection__pythonTooltip{
   @include top-left-position(-303px,110px,relative);
 }
-.writingTooltip{
+.skillsSection__writingTooltip{
   @include top-left-position(-42px,-11px,relative);
   @include med-and-large-device{
     left:-1px;
   }
 }
 
-.problemTooltip{
+.skillsSection__problemTooltip{
   @include top-left-position(-117px,19px,relative);
   @include med-and-large-device{
     left:29px;
   }
 }
 
-.pmTooltip{
+.skillsSection__pmTooltip{
   @include top-left-position(-205px,49px,relative);
   @include med-and-large-device{
     left:58px;
   }
 }
 
-.researchTooltip{
+.skillsSection__researchTooltip{
   @include top-left-position(-280px,79px,relative);
   @include med-and-large-device{
     left:88px;
@@ -572,7 +561,7 @@ div[class*="Tooltip"]{
 
 }
 
-.publicTooltip{
+.skillsSection__publicTooltip{
   @include top-left-position(-365px,109px,relative);
   @include med-and-large-device{
     left:120px;
@@ -582,7 +571,7 @@ div[class*="Tooltip"]{
 
 
 
-.tooltipBody{
+.skillsSection__tooltipBody{
   width:240px;
   position:relative;
   background:$black;
@@ -590,11 +579,11 @@ div[class*="Tooltip"]{
   color: $white;
 }
 
-.tooltipBody span{
+.skillsSection__tooltipBody span{
   font-weight:900;
 }
 
-.tooltipBody p{
+.skillsSection__tooltipBody p{
   font-size:0.8em;
   position:relative;
   top:3px;
@@ -606,7 +595,7 @@ div[class*="Tooltip"]{
   padding-right:20px;
 }
 
-.tip {
+.skillsSection__tip {
   width: 0;
   height: 0;
   border-left: 7px solid transparent;

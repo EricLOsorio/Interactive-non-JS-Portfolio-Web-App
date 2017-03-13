@@ -159,7 +159,7 @@
 } 
 
 
-.chevronLabels label[class="right"]{
+.projectSection__chevronLabels label[class="right"]{
   color:$chevrons;
   @include top-left-position(300px,630px,absolute);
 
@@ -181,7 +181,7 @@
   }
 }
 
-.chevronLabels label[class="left"]{
+.projectSection__chevronLabels label[class="left"]{
   color:$chevrons;
   @include top-left-position(300px,50px,absolute);
   @include large-only-device{
@@ -204,7 +204,7 @@
 }
 
 
-.radioLabels{
+.projectSection__radioLabels{
   @include top-left-position(510px,260px,absolute);
   @include large-only-device{
     @include top-left-position(510px,260px,absolute);
@@ -221,7 +221,7 @@
   z-index:2;  
 }
 
-.radioLabels label{
+.projectSection__radioLabels label{
   display:inline;
   float:left;
   padding:10px;
@@ -233,14 +233,14 @@
 @for $j from 1 through 4 {
    $rightArrow:chevronRT($j);
    $leftArrow:chevronLT($j);
-  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$rightArrow}),
-  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .chevronLabels label:nth-of-type(#{$leftArrow}){
+  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .projectSection__chevronLabels label:nth-of-type(#{$rightArrow}),
+  .projectSection > input:checked ~ .projectSection__displayArea > input:nth-of-type(#{$j}):checked  ~  .projectSection__chevronLabels label:nth-of-type(#{$leftArrow}){
     display:block;
   }  
 }
 
 
-div.description{
+div.projectSection__description{
   @include h-w(100px,100%);
   @include large-only-device{
     @include top-left-position(570px,-20px,relative);
@@ -275,24 +275,24 @@ div.description{
 }
 
 
-div.description  span {
+div.projectSection__description  span {
   font-family:Georgia, Serif;
   font-weight:500;
 
 }
 
-div.description a{
+div.projectSection__description a{
   margin-top:15px;
   margin-right:30px;
   text-decoration: none;
   color:$white;
 }
 
-div.description a:hover{
+div.projectSection__description a:hover{
   color:$blue;
 }
 
-.projectSection input:checked ~ .projectSection__displayArea > div.description {
+.projectSection input:checked ~ .projectSection__displayArea > div.projectSection__description {
   display:block;
   z-index:1;
 }
