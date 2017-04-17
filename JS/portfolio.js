@@ -2,6 +2,57 @@
 
      'use strict';
 
+     var topNav=document.getElementById("topNavBar"); //the top Nav Bar
+     var scrollSideBar=document.getElementById('scrollSideBar'); //The Side Scroll Nav Bar
+
+// Define smooth scroll links that point to where you want to go
+
+     var menuLabel=document.querySelectorAll('.topNavBar__menuLabel');
+     var topBarInputs=document.querySelectorAll('input[name=navRadio]');
+     var sideBarInputs=document.querySelectorAll('input[name=sideScroll]')
+
+
+        window.addEventListener('scroll', function(event){
+          //  var posi = window.getComputedStyle(topNav, null).getPropertyValue("position");
+            var loc=window.pageYOffset;
+
+
+
+           console.log("PageYOffset is: ",loc);      
+
+           //Hide the top nav bar
+
+           topNav.style.top="-100px";
+           topNav.style.transition= "top 1s";
+
+           //Slide in the side bar upon scroll
+
+           scrollSideBar.style.left="0";
+           scrollSideBar.style.transition="left 1s";
+
+
+           if(loc===0){
+            topNav.style.top="-10px";
+            scrollSideBar.style.left="-150px";
+           }
+
+
+            if(loc>=0 && loc<=250){
+                topBarInputs[0].checked=true;
+                sideBarInputs[0].checked=true;
+            } else if (loc>250 && loc<1300){
+                topBarInputs[1].checked=true;
+                sideBarInputs[1].checked=true;
+            } else if(loc>=1300 && loc<2198){
+                topBarInputs[2].checked=true;
+                sideBarInputs[2].checked=true;;
+            } else if(loc>2198){
+                topBarInputs[3].checked=true;
+                sideBarInputs[3].checked=true;
+            }
+
+        })
+
 
         // Function to animate the scroll
         function scrollIt (target) {
@@ -49,11 +100,8 @@
         };
 
 
-        // Define smooth scroll links that point to where you want to go
 
-        var menuLabel=document.querySelectorAll('.topNavBar__menuLabel');
-
-     //For each of these scroll links get the associated anchors and also
+     //For each of the scroll links get the associated anchors and also
      //the associated inputs, which will determine which menu label will
      //get highlighted by our CSS code
 

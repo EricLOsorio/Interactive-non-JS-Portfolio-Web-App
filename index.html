@@ -12,10 +12,10 @@
 <!--div class="content"-->
       <input type="checkbox" id="off-menu">
 
-        <div class="off-menu__solidTopBar">
-          <div class="off-menu__name">
-             <p>ERIC L OSORIO</p>
-          </div>
+      <div class="off-menu__solidTopBar">
+        <div class="off-menu__name">
+          <p>ERIC L OSORIO</p>
+        </div>
 
 
         <label for="off-menu" class="off-menu__hamburger">
@@ -25,7 +25,7 @@
             <span></span>
           </div>
         </label>
-        </div>
+      </div>
 
       <nav id="topNavBar">
         <p id="topNavBar__fullName">ERIC L OSORIO</p> 
@@ -69,6 +69,30 @@
       </nav>
 
     <div id="fullCanvas">
+
+      <!-- Side Bar upon Scrolling for desktop only-->
+      <div id="scrollSideBar">
+        <ul>
+          <input type="radio" name="sideScroll" id="sideScroll_about">
+          <li id="scrollAbout">
+            <label for="sideScroll_about" class="topNavBar__menuLabel"><a class="topNavBar__anchor" href="#about">About</a></label>
+          </li>
+          <input type="radio" name="sideScroll" id="sideScroll_projects">
+          <li id="scrollProjects">
+            <label for="sideScroll_projects" class="topNavBar__menuLabel"><a class="topNavBar__anchor" href="#projects">Projects</a></label>
+          </li>  
+          <input type="radio" name="sideScroll" id="sideScroll_skills">
+          <li id="scrollSkills">
+            <label for="sideScroll_skills" class="topNavBar__menuLabel"><a class="topNavBar__anchor" href="#skills">Skills</a></label>
+          </li>
+          <input type="radio" name="sideScroll" id="sideScroll_contact">
+          <li id="scrollContact">
+            <label for="sideScroll_contact" class="topNavBar__menuLabel"><a class="topNavBar__anchor" href="#contactId">Contact</a></label>
+          </li>                   
+        </ul>
+
+
+      </div>
 
       <div id="sideNavBar">
 
