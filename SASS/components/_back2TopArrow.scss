@@ -1,0 +1,30 @@
+/*.link2Top{
+  display:none;
+  position:fixed;
+  bottom:50px;
+  left:90%;
+  background-color:purple;
+  color:$white;
+}*/
+
+.link2Top{
+
+  position:fixed;
+  width:60px;
+  height:60px;
+  top:80%;
+  border-radius:50%;
+  font-weight:bold;
+  font-size:0.7em;
+  margin-left:20px;
+  box-shadow:2px 2px 2px 3px #383838;
+  outline:none;
+    bottom:50px;
+  left:90%;
+  background-color:$nav-bar-bg-color;
+  color:$white;
+}
+
+.link2Top:hover{
+  cursor:pointer;
+}

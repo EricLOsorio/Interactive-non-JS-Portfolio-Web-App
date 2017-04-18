@@ -9,7 +9,9 @@
 
      var menuLabel=document.querySelectorAll('.topNavBar__menuLabel');
      var topBarInputs=document.querySelectorAll('input[name=navRadio]');
-     var sideBarInputs=document.querySelectorAll('input[name=sideScroll]')
+     var sideBarInputs=document.querySelectorAll('input[name=sideScroll]');
+
+     var top=true;
 
 
         window.addEventListener('scroll', function(event){
@@ -34,6 +36,7 @@
            if(loc===0){
             topNav.style.top="-10px";
             scrollSideBar.style.left="-150px";
+
            }
 
 
@@ -175,6 +178,7 @@
                     var topId=document.body.getAttribute('id');
                     var top=document.querySelector('#'+topId);
                     scrollIt(top);
+                    scrollToTop.remove();
   
             }, false);
 
