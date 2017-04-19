@@ -10,8 +10,8 @@
      var menuLabel=document.querySelectorAll('.topNavBar__menuLabel');
      var topBarInputs=document.querySelectorAll('input[name=navRadio]');
      var sideBarInputs=document.querySelectorAll('input[name=sideScroll]');
+     var scrollToTop=document.getElementsByClassName('link2Top')[0];
 
-     var top=true;
 
 
         window.addEventListener('scroll', function(event){
@@ -19,10 +19,7 @@
             var loc=window.pageYOffset;
 
 
-
-           console.log("PageYOffset is: ",loc);      
-
-           //Hide the top nav bar
+             //Hide the top nav bar
 
            topNav.style.top="-100px";
            topNav.style.transition= "top 1s";
@@ -36,7 +33,9 @@
            if(loc===0){
             topNav.style.top="-10px";
             scrollSideBar.style.left="-150px";
-
+            scrollToTop.style.display="none";
+           } else{
+              scrollToTop.style.display="block";
            }
 
 
@@ -75,6 +74,7 @@
                 window.scrollBy(0, increments);
                 stopAnimation();
             };
+
 
             // If scrolling down
             if ( increments >= 0 ) {
@@ -151,13 +151,15 @@
                 associatedInput.checked="true";
 
                 //create new button as soon as a scroll has started
-
+/**********************************************************************************
                 var allContent=document.getElementById("allContent");
                 var scrollToTop=document.createElement('BUTTON');
                 var text=document.createTextNode('Back To Top');
                 scrollToTop.appendChild(text);
                 scrollToTop.className='link2Top topNavBar__anchor';
                 allContent.appendChild(scrollToTop);
+***********************************************************************************/
+
 
                 //Get the destination section where we want to end up
                 //and start the scroll
@@ -170,7 +172,13 @@
                     scrollIt(targetElement);
                 };
 
-                //Check if the button clicked is the 'Back To Top' button
+   
+        };
+
+
+        };
+
+                     //Check if the button clicked is the 'Back To Top' button
                 //and if so, commence the scroll to the top
 
                 scrollToTop.addEventListener('click',function(event){
@@ -178,15 +186,10 @@
                     var topId=document.body.getAttribute('id');
                     var top=document.querySelector('#'+topId);
                     scrollIt(top);
-                    scrollToTop.remove();
+
+
   
             }, false);
-
-
-        };
-
-
-        };
 
 
  })();

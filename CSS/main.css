@@ -1325,6 +1325,7 @@ nav#topNavBar a {
   color:$white;
 }*/
 .link2Top {
+  display: none;
   position: fixed;
   width: 60px;
   height: 60px;
