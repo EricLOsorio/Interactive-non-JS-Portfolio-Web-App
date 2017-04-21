@@ -129,6 +129,7 @@ input[name="navRadio"]{
   }
 }
 
+
 #fullCanvas > #sideNavBar{
   @include small-device{
     position:fixed;  
@@ -142,6 +143,7 @@ input[name="navRadio"]{
     overflow-x:hidden;
     z-index:1;
   }
+
 }
 
 #sideNavbar li:hover{
@@ -307,13 +309,25 @@ input[name="navRadio"]{
   }
 }
 
-#scrollSideBar{
+
+#scrollSideBar{border:2px solid blue;
   position:fixed;
   width:150px;
   height:350px;
   top:200px;
-  left:-150px;
+  left:-160px;
   background-color:$nav-bar-bg-color;
+
+  @include med-and-large-device{
+    background-color:$nav-bar-lg-bg-color;
+/*    left:-80px; **************************************************************/
+  }
+  @include med-only-device{
+    background-color:$nav-bar-med-bg-color;
+  }
+  @include small-device{
+    display:none;
+  }
   input{
     display:none;
   }
@@ -332,6 +346,14 @@ input[name="navRadio"]{
       padding-left:30px;
       margin-left:-60px;
       height:50px;
+      label{
+        @include med-and-large-device{
+        float:right;
+        padding-right:10px;
+        padding-left:5px;
+        font-size:0.7em;        
+        }
+      }
       label:hover{
         cursor:pointer;
       }
@@ -349,6 +371,12 @@ input[name="navRadio"]{
     background-color:$nav-label-bg-color;
     color:black;
     font-size:1.5em;
+    @include large-only-device{
+      background-color:$nav-border-lg-bottom;
+    }
+    @include med-only-device{
+      background-color:$nav-border-med-bottom;
+    }
   }
   input:checked + li:before{
     content:"\f13d";
@@ -358,6 +386,7 @@ input[name="navRadio"]{
   }
 
 }
+
 
 #topNavBar{
   width:100%;

@@ -23,6 +23,12 @@
   left:90%;
   background-color:$nav-bar-bg-color;
   color:$white;
+  @include med-and-large-device{
+    display:none;
+  }
+  @include small-device{
+    display:none;
+  }
 }
 
 .link2Top:hover{

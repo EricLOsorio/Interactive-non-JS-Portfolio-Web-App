@@ -1,3 +1,27 @@
+#slide {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 150px;
+  left: -150px;
+  border: 1px solid blue;
+  background-color: #9932CC; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    #slide {
+      background-color: #BD2075; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    #slide {
+      background-color: #BD2075; } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    #slide {
+      background-color: #99182C; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    #slide {
+      display: none; } }
+  #slide > .fa {
+    position: relative;
+    color: #ffffff; }
+
 section {
   width: 900px;
   position: relative;
@@ -1013,12 +1037,27 @@ footer {
     background-color: skyblue; } }
 
 #scrollSideBar {
+  border: 2px solid blue;
   position: fixed;
   width: 150px;
   height: 350px;
   top: 200px;
-  left: -150px;
+  left: -160px;
   background-color: #9932CC; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    #scrollSideBar {
+      background-color: #BD2075;
+      /*    left:-80px; **************************************************************/ } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    #scrollSideBar {
+      background-color: #BD2075;
+      /*    left:-80px; **************************************************************/ } }
+  @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+    #scrollSideBar {
+      background-color: #99182C; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    #scrollSideBar {
+      display: none; } }
   #scrollSideBar input {
     display: none; }
   #scrollSideBar ul a {
@@ -1032,6 +1071,18 @@ footer {
     padding-left: 30px;
     margin-left: -60px;
     height: 50px; }
+    @media (max-width: 600px) and (min-height: 200px) {
+      #scrollSideBar ul li label {
+        float: right;
+        padding-right: 10px;
+        padding-left: 5px;
+        font-size: 0.7em; } }
+    @media (max-width: 1024px) and (min-height: 200px) {
+      #scrollSideBar ul li label {
+        float: right;
+        padding-right: 10px;
+        padding-left: 5px;
+        font-size: 0.7em; } }
     #scrollSideBar ul li label:hover {
       cursor: pointer; }
   #scrollSideBar ul li:before {
@@ -1043,6 +1094,12 @@ footer {
     background-color: #BB32FF;
     color: black;
     font-size: 1.5em; }
+    @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
+      #scrollSideBar input:checked + li {
+        background-color: #D172BB; } }
+    @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
+      #scrollSideBar input:checked + li {
+        background-color: #F54D70; } }
   #scrollSideBar input:checked + li:before {
     content: "\f13d"; }
   #scrollSideBar input:checked + li a {
@@ -1340,6 +1397,15 @@ nav#topNavBar a {
   left: 90%;
   background-color: #9932CC;
   color: #ffffff; }
+  @media (max-width: 600px) and (min-height: 200px) {
+    .link2Top {
+      display: none; } }
+  @media (max-width: 1024px) and (min-height: 200px) {
+    .link2Top {
+      display: none; } }
+  @media (max-width: 360px) and (min-height: 200px) {
+    .link2Top {
+      display: none; } }
 
 .link2Top:hover {
   cursor: pointer; }

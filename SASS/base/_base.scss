@@ -1,4 +1,29 @@
 // _base.scss
+@import 'base/colors';
+
+
+#slide{
+  position:fixed;
+  height:30px;
+  width:30px;
+  top:150px;
+  left:-150px;
+  border:1px solid blue;
+  background-color:$nav-bar-bg-color;
+  @include med-and-large-device{
+    background-color:$nav-bar-lg-bg-color;
+  }
+  @include med-only-device{
+    background-color:$nav-bar-med-bg-color;
+  }
+  @include small-device{
+    display:none;
+  }
+  > .fa{
+    position:relative;
+    color:$white;
+  }
+}
 
 section{
   width:900px;

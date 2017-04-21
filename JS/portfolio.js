@@ -12,13 +12,39 @@
      var sideBarInputs=document.querySelectorAll('input[name=sideScroll]');
      var scrollToTop=document.getElementsByClassName('link2Top')[0];
 
+     var large=window.matchMedia("(max-width:1024px)");
+     var defaultScreen=window.matchMedia("(min-width:1025px");
+
 
 
         window.addEventListener('scroll', function(event){
           //  var posi = window.getComputedStyle(topNav, null).getPropertyValue("position");
             var loc=window.pageYOffset;
+          // slider variable representing the sliding arrow for the side scroll menu
+            var slider=document.getElementById('slide');
+
+          if(!defaultScreen.matches){
+
+           slider.addEventListener('click', function(event){
+              scrollSideBar.style.left="-80px";
+              scrollSideBar.style.transition="left 1s";
+              scrollSideBar.style.zIndex="1000";
+              slider.style.left="-160px";
+              slider.style.transition="0.5s";
+            });
 
 
+            scrollSideBar.addEventListener(('click'), function(event){
+              scrollSideBar.style.left="-160px";
+              slider.style.left="0";
+              scrollSideBar.style.transition="0.5s";
+              slider.style.transition="0.5s";
+              slider.style.zIndex="1000";
+            },false);
+
+          }
+
+ 
              //Hide the top nav bar
 
            topNav.style.top="-100px";
@@ -26,18 +52,30 @@
 
            //Slide in the side bar upon scroll
 
-           scrollSideBar.style.left="0";
-           scrollSideBar.style.transition="left 1s";
+           if(large.matches){
+            //  scrollSideBar.style.left="-80px";
+             // scrollSideBar.style.transition="left 1s";
+              //scrollSideBar.style.zIndex="1000";
+              slider.style.left="0px";
+              slider.style.transition="left 0.5s";
+           } else{
+               scrollSideBar.style.left="0";
+               scrollSideBar.style.transition="left 1s";              
+           }
 
 
            if(loc===0){
             topNav.style.top="-10px";
-            scrollSideBar.style.left="-150px";
+            scrollSideBar.style.left="-160px";
             scrollToTop.style.display="none";
+            slider.style.left="-150px";
+            slider.style.transition="left 0.5s";
            } else{
-              scrollToTop.style.display="block";
-           }
+               if(loc!==0 && defaultScreen.matches){
+                 scrollToTop.style.display="block";                
+               }
 
+           }
 
             if(loc>=0 && loc<=250){
                 topBarInputs[0].checked=true;
