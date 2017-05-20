@@ -100,7 +100,7 @@
 
         window.addEventListener('load', function(){
           randomNum = Math.floor(Math.random() * 100);
-          alert(randomNum);
+
           var xhr= new XMLHttpRequest();
           
           xhr.onload = function(){
@@ -120,7 +120,7 @@
         factButton.addEventListener('click',function(){
           
           var xhr= new XMLHttpRequest();
-          
+
           randomNum = Math.floor(Math.random() * 100);
           factText.removeChild(factText.childNodes[0]);
 
