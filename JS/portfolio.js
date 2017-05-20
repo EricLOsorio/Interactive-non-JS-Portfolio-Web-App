@@ -14,6 +14,9 @@
 
      var large=window.matchMedia("(max-width:1024px)");
      var defaultScreen=window.matchMedia("(min-width:1025px");
+     var randomNum=1;
+     var factButton=document.getElementById('factButton');
+     var factText=document.getElementById('factText');
 
 
 
@@ -91,6 +94,47 @@
                 sideBarInputs[3].checked=true;
             }
 
+        })
+
+        //Wait for window to load and then get random numbers facts from numberapi site
+
+        window.addEventListener('load', function(){
+          randomNum = Math.floor(Math.random() * 100);
+          alert(randomNum);
+          var xhr= new XMLHttpRequest();
+          
+          xhr.onload = function(){
+           if (xhr.status === 200) {
+            var text=document.createTextNode(xhr.response);
+             factText.appendChild(text);
+           };
+
+          };
+
+          xhr.open('GET','http://numbersapi.com/'+randomNum);
+
+          xhr.send();
+        })
+
+
+        factButton.addEventListener('click',function(){
+          
+          var xhr= new XMLHttpRequest();
+          
+          randomNum = Math.floor(Math.random() * 100);
+          factText.removeChild(factText.childNodes[0]);
+
+          xhr.onload = function(){
+           if (xhr.status === 200) {
+            var text=document.createTextNode(xhr.response);
+             factText.appendChild(text);
+           };
+
+          };
+
+          xhr.open('GET','http://numbersapi.com/'+randomNum);
+
+          xhr.send();          
         })
 
 

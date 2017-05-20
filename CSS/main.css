@@ -57,6 +57,25 @@ section {
   section:nth-of-type(2) {
     top: -13em; } }
 
+.fact {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+  font-size: 1.4em;
+  text-align: center;
+  box-shadow: 10px 10px 5px #888888; }
+  .fact span {
+    font-size: 1.8em; }
+  .fact p {
+    position: absolute;
+    width: 100%;
+    height: 50px; }
+  .fact button {
+    position: absolute;
+    transform: translate(-150px, 150px); }
+
 section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
   position: relative;
   left: 0;
