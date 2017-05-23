@@ -102,7 +102,7 @@
           randomNum = Math.floor(Math.random() * 100);
 
           var xhr= new XMLHttpRequest();
-          
+        
           xhr.onload = function(){
            if (xhr.status === 200) {
             var text=document.createTextNode(xhr.response);
@@ -111,7 +111,7 @@
 
           };
 
-          xhr.open('GET','http://numbersapi.com/'+randomNum);
+          xhr.open('GET','https://numbersapi.p.mashape.com/'+randomNum+'/trivia?mashape-key=D3M5a9cS8QmshH8z6Xqs1CiPPWVGp1kGJ61jsnJYodMZu7MFXO');
 
           xhr.send();
         })
