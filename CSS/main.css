@@ -1604,19 +1604,19 @@ nav#topNavBar a {
   background-color: grey;
   border-radius: 50%; }
 
-.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(1):checked ~ div.radioLabels label:nth-of-type(1) > .fa-circle-o {
+.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(1):checked ~ div.projectSection__radioLabels label:nth-of-type(1) > .fa-circle-o {
   background-color: purple;
   color: transparent; }
 
-.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(2):checked ~ div.radioLabels label:nth-of-type(2) > .fa-circle-o {
+.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(2):checked ~ div.projectSection__radioLabels label:nth-of-type(2) > .fa-circle-o {
   background-color: purple;
   color: transparent; }
 
-.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(3):checked ~ div.radioLabels label:nth-of-type(3) > .fa-circle-o {
+.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(3):checked ~ div.projectSection__radioLabels label:nth-of-type(3) > .fa-circle-o {
   background-color: purple;
   color: transparent; }
 
-.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(4):checked ~ div.radioLabels label:nth-of-type(4) > .fa-circle-o {
+.projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(4):checked ~ div.projectSection__radioLabels label:nth-of-type(4) > .fa-circle-o {
   background-color: purple;
   color: transparent; }
 

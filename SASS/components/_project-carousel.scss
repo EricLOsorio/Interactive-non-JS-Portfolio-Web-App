@@ -152,7 +152,7 @@
 }
 
 @for $i from 1 through 4 {
-  .projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(#{$i}):checked ~  div.radioLabels  label:nth-of-type(#{$i}) > .fa-circle-o {
+  .projectSection input:checked ~ .projectSection__displayArea input:nth-of-type(#{$i}):checked ~  div.projectSection__radioLabels  label:nth-of-type(#{$i}) > .fa-circle-o {
     background-color:$purple;
     color:transparent;
   }
