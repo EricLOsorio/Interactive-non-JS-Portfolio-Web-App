@@ -1,4 +1,4 @@
-(function() {
+window.onload=(function() {
 
      'use strict';
 
@@ -17,6 +17,38 @@
      var randomNum=1;
      var factButton=document.getElementById('factButton');
      var factText=document.getElementById('factText');
+
+/*******************************COOKIE SETTINGS************************************************/
+
+var introMovie=document.getElementById('introMovie');
+var myVideo=document.getElementById('myIntro');
+var enter=document.getElementById('enter');
+var wrapper=document.getElementsByClassName('wrapper')[0];
+
+
+    if(!document.cookie){
+      introMovie.style.display='block';
+      myVideo.load();
+      myVideo.play();
+     //myVideo.setAttribute('style', 'top:20%; transition: top 5s');
+      document.cookie='intro=done';
+    } else{
+      introMovie.style.display='none';
+      wrapper.style.display="block";
+
+    };
+
+enter.addEventListener('click',function(event){
+
+  wrapper.style.display="block";
+  introMovie.style.display='none';
+  myVideo.autoplay = false;
+  myVideo.load();
+});
+
+
+
+/**********************************************************************************************/
 
 
 

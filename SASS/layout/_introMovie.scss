@@ -1,25 +1,46 @@
 // Intro Movie for first time launch
 
 #introMovie{
+ 	display:none;
 	position:absolute;
 	top:-50px;
 	width:100%;
-	height:100%;
+	height:120%;
 	background-color:$black;
 	opacity:1;
 	z-index:20000;
 	& button{
 	    display:block;
 	    margin:auto;
-	    margin-top:20px;
+	    margin-top:10%;
 	    font-size:1.5em;
+	    opacity:0;
+	    animation: fadeIn 11s 1;
+	    animation-delay: 5s;
+	    animation-fill-mode:forwards;
 	  }
 }
 
 #myIntro{
+    display:block;
 	position:relative;
-	margin-left:25%;
-	margin-top:20%;
-	width:800px;
+	//left:29%;
+	margin:auto;
+	top:-20%;
+	width:600px;
 	height:400px;
+	animation: moveIt 5s 1;
+	//animation-delay:1s;
+	animation-fill-mode:forwards;
+}
+
+
+@keyframes moveIt{
+	from {top:-20%;transform:rotateY(0deg)}
+	to {top:5%;transform:rotateY(1800deg)}
+}
+
+@keyframes fadeIn{
+	from {opacity:0;}
+	to {opacity:1;}
 }

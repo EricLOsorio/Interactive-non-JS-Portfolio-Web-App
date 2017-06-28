@@ -116,6 +116,14 @@
   transform:translate3d($x,$y,$z);
 }
 
+@mixin translate2d($x,$y){
+  -webkit-transform:translate2d($x,$y);
+  -moz-transform:translate2d($x,$y);
+  -o-transform:translate2d($x,$y);
+  -ms-transform:translate2d($x,$y);
+  transform:translate2d($x,$y);
+}
+
 @mixin back-visibility($visibility){
   -webkit-backface-visibility:$visibility;
   -ms-backface-visibility:$visibility;
