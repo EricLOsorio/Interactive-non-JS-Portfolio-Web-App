@@ -161,7 +161,8 @@ input[name="navRadio"]{
     padding-top:0;
     margin-top:0em;
     margin-left:-2em;
-    overflow:hidden;
+    overflow-y:scroll;
+    overflow-x:hidden;
   }
 }
 
@@ -220,7 +221,7 @@ input[name="navRadio"]{
   }
 }
 
-@for $j from 1 through 7 {
+@for $j from 1 through 9 {
   .sideNavBar__sideProjList input:nth-of-type(#{$j}):checked ~ .sideNavBar__projectDetails:nth-of-type(#{$j}){
     @include small-device{
       max-height:105vh;
