@@ -1,5 +1,5 @@
 // _base.scss
-@import 'base/colors';
+@import './colors';
 
 
 #slide{
@@ -128,7 +128,7 @@ section:nth-of-type(2){
 
 }
 
-article{
+.article{
   margin-bottom:51px;
   margin-left:0em;
   width:100%;
@@ -139,7 +139,7 @@ article{
   }
 }
 
-article > p {
+.article > p {
   position:relative;
   left:0;
   width:100%;

@@ -118,31 +118,31 @@ section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section
     section.aboutMe h1, section.projectSection h1, section.skillsSection h1, section.contact h1 {
       left: -20px; } }
 
-article {
+.article {
   margin-bottom: 51px;
   margin-left: 0em;
   width: 100%; }
   @media (max-width: 360px) and (min-height: 200px) {
-    article {
+    .article {
       position: relative;
       width: 100%;
       left: 19%; } }
 
-article > p {
+.article > p {
   position: relative;
   left: 0;
   width: 100%;
   margin: auto;
   font-size: 18px; }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    article > p {
+    .article > p {
       top: -150px; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    article > p {
+    .article > p {
       margin-left: 1em;
       width: 15em; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    article > p {
+    .article > p {
       width: 80vw;
       margin-left: -2em; } }
 
@@ -855,7 +855,7 @@ footer {
     -ms-transition: transform 1s;
     -o-transition: transform 1s;
     transition: transform 1s; } }
-#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger span:nth-of-type(1) {
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger .off-menu__bars span:nth-of-type(1) {
   -webkit-transform: rotate(45deg) translate(8px, 6px);
   -moz-transform: rotate(45deg) translate(8px, 6px);
   -o-transform: rotate(45deg) translate(8px, 6px);
@@ -866,9 +866,9 @@ footer {
   -ms-transition: transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s; }
-#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger span:nth-of-type(2) {
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger .off-menu__bars span:nth-of-type(2) {
   display: none; }
-#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger span:nth-of-type(3) {
+#off-menu:checked ~ .off-menu__solidTopBar > .off-menu__hamburger .off-menu__bars span:nth-of-type(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -1883,10 +1883,10 @@ div.projectSection__description a:hover {
 .calculator .fraction {
   background-color: cadetblue; }
 
-.calculator #clear {
+.calculator #clear, .calculator #clear2 {
   background-color: red; }
 
-.calculator #clear:hover {
+.calculator #clear:hover, .calculator #clear2:hover {
   background-color: white; }
 
 .calculator .total {
@@ -2915,23 +2915,23 @@ div[class*="Tooltip"] {
       .contact h1 {
         margin-left: 1em; } }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .contact article {
+    .contact .article {
       margin-left: 1em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .contact article {
+    .contact .article {
       margin-left: 0em; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .contact article {
+    .contact .article {
       margin-left: 3.5em;
       top: -30em; } }
   @media (min-width: 601px) and (max-width: 1024px) and (min-height: 200px) {
-    .contact article p {
+    .contact .article p {
       width: 19em; } }
   @media (min-width: 361px) and (max-width: 600px) and (min-height: 200px) {
-    .contact article p {
+    .contact .article p {
       width: 15em; } }
   @media (max-width: 360px) and (min-height: 200px) {
-    .contact article p {
+    .contact .article p {
       position: relative;
       width: 90vw;
       left: -4em; } }
@@ -3251,14 +3251,17 @@ div[class*="Tooltip"] {
       margin-left: 3em;
       font-size: 0.7em; } }
 
-#contact__left, #contact__up {
+#contact__left-front-line1, #contact__left-front-line2, #contact__up-front-line1, #contact__up-front-line2,
+#contact__up-back-line1, #contact__up-back-line2,
+#contact__left-back-line1, #contact__left-back-line2 {
   height: 3px;
   width: 20px;
   position: absolute;
   background-color: #ffffff;
   margin: 5px; }
 
-#contact__up {
+#contact__up-front-line1, #contact__up-front-line2,
+#contact__up-back-line1, #contact__up-back-line2 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
@@ -3268,7 +3271,7 @@ div[class*="Tooltip"] {
   left: -10px;
   position: relative; }
 
-#contact__up-triangle {
+#contact__up-triangle-front, #contact__up-triangle-back {
   position: relative;
   left: 0px;
   top: -20px;
@@ -3278,7 +3281,7 @@ div[class*="Tooltip"] {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent; }
 
-#contact__down-triangle {
+#contact__down-triangle-front, #contact__down-triangle-back {
   position: relative;
   left: 0;
   top: -20px;

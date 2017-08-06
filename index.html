@@ -4,8 +4,8 @@
   <title>Portfolio Eric L. Osorio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="CSS/main.css">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/main.css?version=1.0.0">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css?version=1.0.0">
 </head>
 <body id="top">
 
@@ -31,11 +31,11 @@
 
 
         <label for="off-menu" class="off-menu__hamburger">
-          <div class="off-menu__bars">
+          <span class="off-menu__bars">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </label>
       </div>
 
@@ -68,7 +68,7 @@
           </label>
           <input type="radio" name="modalInput" id="topNavBar__modalInput1">
           <div class="topNavBar__modalMask">
-            <div class="topNavBar__modal"><p>Search is temporarily disabled</p><label for="topNavBar__modalInput2" id="topNavBar__modalClose"><div class="topNavBar__button">Close Me</div></label>
+            <div class="topNavBar__modal"><p>Search is temporarily disabled</p><label for="topNavBar__modalInput2" id="topNavBar__modalClose"><span class="topNavBar__button">Close Me</span></label>
             <input type="radio" name="modalInput" id="topNavBar__modalInput2">
             </div>
           </div>
@@ -203,11 +203,11 @@
             </li>
 
               <div class="sideNavBar__sideDetails">
-              <a href="mailto:cyberfrein@gmail.com">cyberfrein@gmail.com</a></p>
-              <a href="https://twitter.com/ericleeo1"><img src="designs/twitter.png" class="contact__links"/></a>
-              <a href="https://github.com/EricLOsorio"><img src="designs/github2.png" class="contact__links"/></a>         
-              <a href="https://www.linkedin.com/in/ericlosorio"><img src="designs/linkedin.png" class="contact__links"/></a>
-              <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img src="designs/facebook.png" class="contact__links"/></a>
+              <a href="mailto:cyberfrein@gmail.com">cyberfrein@gmail.com</a>
+              <a href="https://twitter.com/ericleeo1"><img alt="twitter" src="designs/twitter.png" class="contact__links"/></a>
+              <a href="https://github.com/EricLOsorio"><img alt="github" src="designs/github2.png" class="contact__links"/></a>         
+              <a href="https://www.linkedin.com/in/ericlosorio"><img alt="linkedin" src="designs/linkedin.png" class="contact__links"/></a>
+              <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img alt="facebook" src="designs/facebook.png" class="contact__links"/></a>
               </div>
               <li class="sideNavBar__copyright">© 2016 Logo. All Rights Reserved.</li>
 
@@ -225,10 +225,10 @@
         <h2>Top of About Section</h2>
         <h1>About</h1>
       </header>
-      <article>
+      <div class="article">
         <p>I am a systems engineer turned web developer. My goal is to become a fullstack developer.</p>
         <p> This page is part of my portfolio as I progress through the challenging curriculum of the <span><a href="https://bovacademy.com/">Bov Academy of Programming and Futuristic Engineering</a></span> in my quest to reach this goal. It is a work in progress used to track my skill proficiencies. Thisportfolio has been done by using only HTML, CSS and Vanilla JavaScript. Most of the projects featured in the <a href="#projects">Projects Section</a> have been done without JS, but some include some vanilla JavaScript.</p>
-      </article>
+      </div>
 
       <div class="fact">
          <span>Fun Facts</span>
@@ -246,9 +246,9 @@
         <h2 >Top of Project Section</h2>      
         <h1>Projects</h1>
       </header>
-      <article>
+      <div class="article">
         <p>Here is a sample of the projects that I've worked on so far at <span><a href="https://bovacademy.com/">BOV Academy</a></span> Most of them are only done with HTML and CSS. A few of them also use vanilla JavaScript. </p>
-      </article>
+      </div>
 
        
       <input type="radio" name="projects" id="projectSection__project1" checked>
@@ -257,10 +257,10 @@
 
 
           <input type="radio" name="images" id="projectSection__project1Img1" checked>
-          <img src="images/calc1.jpg">
+          <img alt="calculator" src="images/calc1.jpg">
 
           <input type="radio" name="images" id="projectSection__project1Img2" >
-          <img src="images/calc2.jpg">
+          <img alt="calculator" src="images/calc2.jpg">
  
           <input type="radio" name="images" id="projectSection__project1Img3" >
           <!--img src="images/calc3.bmp"-->
@@ -288,7 +288,7 @@
                   <td class="nums">4</td>
                   <td class="nums">5</td>
                   <td class="nums">6</td>
-                  <td class="nums" id="clear" >DEL</td>             
+                  <td class="nums" id="clear2" >DEL</td>             
                 </tr>
                 <tr>
                   <td class="nums">1</td>
@@ -309,7 +309,7 @@
 
 
           <input type="radio" name="images" id="projectSection__project1Img4" >
-          <img src="images/calc4.jpg">          
+          <img alt="calculator" src="images/calc4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project1Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -323,7 +323,8 @@
           </div>    
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project1Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project1Img1"><i class="fa fa-circle-o"
+            aria-hidden="true"></i></label>
             <label for="projectSection__project1Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project1Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project1Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                     
@@ -345,16 +346,16 @@
 
 
           <input type="radio" name="images2" id="projectSection__project2Img1" checked>
-          <img src="images/cart1.jpg">
+          <img alt="shopping cart" src="images/cart1.jpg">
 
           <input type="radio" name="images2" id="projectSection__project2Img2" >
-          <img src="images/cart2.jpg">
+          <img  alt="shopping cart" src="images/cart2.jpg">
  
           <input type="radio" name="images2" id="projectSection__project2Img3" >
-          <img src="images/cart3.jpg">
+          <img alt="shopping cart" src="images/cart3.jpg">
 
           <input type="radio" name="images2" id="projectSection__project2Img4" >
-          <img src="images/shopCart.gif">
+          <img alt="shopping cart" src="images/shopCart.gif">
 
 
           <div class="projectSection__chevronLabels">
@@ -369,7 +370,7 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project2Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project2Img1"><i class="fa fa-circle-o"  aria-hidden="true"></i></label>
             <label for="projectSection__project2Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project2Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project2Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                   
@@ -391,16 +392,16 @@
 
 
           <input type="radio" name="images3" id="projectSection__project3Img1" checked>
-          <img src="images/forms1.jpg">
+          <img alt="forms" src="images/forms1.jpg">
 
           <input type="radio" name="images3" id="projectSection__project3Img2" >
-          <img src="images/forms2.jpg">
+          <img alt="forms" src="images/forms2.jpg">
  
           <input type="radio" name="images3" id="projectSection__project3Img3" >
-          <img src="images/forms.gif">
+          <img alt="forms" src="images/forms.gif">
 
           <input type="radio" name="images3" id="projectSection__project3Img4" >
-          <img src="images/forms4.jpg">          
+          <img alt="forms" src="images/forms4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project3Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -414,7 +415,7 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project3Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project3Img1"><i class="fa fa-circle-o"  aria-hidden="true"></i></label>
             <label for="projectSection__project3Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project3Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project3Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                     
@@ -438,16 +439,16 @@
 
 
           <input type="radio" name="images4" id="projectSection__project4Img1" checked>
-          <img src="images/non-js1.jpg">
+          <img alt="non-js-ui" src="images/non-js1.jpg">
 
           <input type="radio" name="images4" id="projectSection__project4Img2" >
-          <img src="images/non-js2.jpg">
+          <img alt="non-js-ui" src="images/non-js2.jpg">
  
           <input type="radio" name="images4" id="projectSection__project4Img3" >
-          <img src="images/non-js3.jpg">
+          <img alt="non-js-ui" src="images/non-js3.jpg">
 
           <input type="radio" name="images4" id="projectSection__project4Img4" >
-          <img src="images/non-js4.jpg">          
+          <img alt="non-js-ui" src="images/non-js4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project4Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -461,7 +462,8 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project4Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project4Img1"><i class="fa fa-circle-o"
+            aria-hidden="true"></i></label>
             <label for="projectSection__project4Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project4Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project4Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -483,16 +485,16 @@
 
 
           <input type="radio" name="images5" id="projectSection__project5Img1" checked>
-          <img src="images/collaboration_1.jpg">
+          <img alt="collaboration-project" src="images/collaboration_1.jpg">
 
           <input type="radio" name="images5" id="projectSection__project5Img2" >
-          <img src="images/collaboration_2.jpg">
+          <img alt="collaboration-project" src="images/collaboration_2.jpg">
  
           <input type="radio" name="images5" id="projectSection__project5Img3" >
-          <img src="images/collaboration_3.jpg">
+          <img alt="collaboration-project" src="images/collaboration_3.jpg">
 
           <input type="radio" name="images5" id="projectSection__project5Img4" >
-          <img src="images/collaboration_4.jpg">          
+          <img alt="collaboration-project" src="images/collaboration_4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project5Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -506,7 +508,8 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project5Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project5Img1"><i class="fa fa-circle-o"
+            aria-hidden="true"></i></label>
             <label for="projectSection__project5Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project5Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project5Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -529,13 +532,13 @@
 
 
           <input type="radio" name="images6" id="projectSection__project6Img1" checked>
-          <img src="images/accResponsive1.jpg">
+          <img alt="accordion" src="images/accResponsive1.jpg">
 
           <input type="radio" name="images6" id="projectSection__project6Img2" >
-          <img src="images/accResponsive2.jpg">
+          <img alt="accordion" src="images/accResponsive2.jpg">
  
           <input type="radio" name="images6" id="projectSection__project6Img3" >
-          <img src="images/accResponsive3.jpg">
+          <img alt="accordion" src="images/accResponsive3.jpg">
 
           <input type="radio" name="images6" id="projectSection__project6Img4" >
           <!--img src="images/accResponsive4.jpg"--> 
@@ -632,7 +635,7 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project6Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project6Img1"><i class="fa fa-circle-o"  aria-hidden="true"></i></label>
             <label for="projectSection__project6Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project6Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project6Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -655,16 +658,16 @@
 
 
           <input type="radio" name="images7" id="projectSection__project7Img1" checked>
-          <img src="images/animatedBorders1.jpg">
+          <img alt="animatedBorders" src="images/animatedBorders1.jpg">
 
           <input type="radio" name="images7" id="projectSection__project7Img2" >
-          <img src="images/animatedBorders2.jpg">
+          <img alt="animatedBorders" src="images/animatedBorders2.jpg">
  
           <input type="radio" name="images7" id="projectSection__project7Img3" >
-          <img src="images/animatedBorders3.jpg">
+          <img alt="animatedBorders" src="images/animatedBorders3.jpg">
 
           <input type="radio" name="images7" id="projectSection__project7Img4" >
-          <img src="images/borders.gif">          
+          <img alt="animatedBorders" src="images/borders.gif">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project7Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -678,7 +681,8 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project7Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project7Img1"><i class="fa fa-circle-o"
+            aria-hidden="true"></i></label>
             <label for="projectSection__project7Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project7Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project7Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -702,16 +706,16 @@
 
 
           <input type="radio" name="images8" id="projectSection__project8Img1" checked>
-          <img src="images/puzzle1.jpg">
+          <img alt="puzzle" src="images/puzzle1.jpg">
 
           <input type="radio" name="images8" id="projectSection__project8Img2" >
-          <img src="images/puzzle2.jpg">
+          <img alt="puzzle" src="images/puzzle2.jpg">
  
           <input type="radio" name="images8" id="projectSection__project8Img3" >
-          <img src="images/puzzle3.jpg">
+          <img alt="puzzle" src="images/puzzle3.jpg">
 
           <input type="radio" name="images8" id="projectSection__project8Img4" >
-          <img src="images/puzzle4.jpg">          
+          <img alt="puzzle" src="images/puzzle4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project8Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -725,7 +729,7 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project8Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project8Img1"><i class="fa fa-circle-o"  aria-hidden="true"></i></label>
             <label for="projectSection__project8Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project8Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project8Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -748,16 +752,16 @@
 
 
           <input type="radio" name="images9" id="projectSection__project9Img1" checked>
-          <img src="images/UI1.jpg">
+          <img alt="UIComponents" src="images/UI1.jpg">
 
           <input type="radio" name="images9" id="projectSection__project9Img2" >
-          <img src="images/UI2.jpg">
+          <img alt="UIComponents" src="images/UI2.jpg">
  
           <input type="radio" name="images9" id="projectSection__project9Img3" >
-          <img src="images/UI3.jpg">
+          <img alt="UIComponents" src="images/UI3.jpg">
 
           <input type="radio" name="images9" id="projectSection__project9Img4" >
-          <img src="images/UI4.jpg">          
+          <img alt="UIComponents" src="images/UI4.jpg">          
 
           <div class="projectSection__chevronLabels">
             <label for="projectSection__project9Img2" class="right"><i class="fa fa-chevron-right " aria-hidden="true"></i></label>
@@ -771,7 +775,7 @@
           </div>
 
           <div class="projectSection__radioLabels">
-            <label for="projectSection__project9Img1"><i class="fa fa-circle-o" class="first" aria-hidden="true"></i></label>
+            <label for="projectSection__project9Img1"><i class="fa fa-circle-o"  aria-hidden="true"></i></label>
             <label for="projectSection__project9Img2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
             <label for="projectSection__project9Img3"><i class="fa fa-circle-o" aria-hidden="true"></i></label> 
             <label for="projectSection__project9Img4"><i class="fa fa-circle-o" aria-hidden="true"></i></label>                    
@@ -798,9 +802,9 @@
         <h2>Skills header</h2>
         <h1>Skills</h1>
       </header>
-      <article>
+      <div class="article">
         <p>Here are some metrics to help visualize a number of skills related to web development and other professional skills</p>
-      </article>
+      </div>
 
 
       <div class="skillsSection__skillBar">
@@ -988,9 +992,9 @@
        <h2>Contact header</h2>
        <h1>Contact</h1>
       </header>
-      <article>
+      <div class="article">
         <p>Feel free to contact me at the email below, or through any of the social network sites on my digital business card.</p>
-      </article>
+      </div>
 
       <label>
         <input type="checkbox">
@@ -1002,41 +1006,41 @@
             <p class="contact__aboutme">Proficient in HTML, CSS3 and JavaScript along with extensive experience in systems administration and networking.</p>
             <p class="contact__aboutme">Location:Washington D.C. Area
             <p class="contact__aboutme"><a href="mailto:cyberfrein@gmail.com">cyberfrein@gmail.com</a></p>
-            <a href="https://encyclopedia.moderndeveloper.com"><img src="designs/enc1.png" id="contact__lmd"/></a>
-            <a href="https://twitter.com/ericleeo1"><img src="designs/twitter.png" class="contact__links"/></a>
-            <a href="https://github.com/EricLOsorio"><img src="designs/github2.png" class="contact__links"/></a>         
-            <a href="https://www.linkedin.com/in/ericlosorio"><img src="designs/linkedin.png" class="contact__links"/></a>
-            <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img src="designs/facebook.png" class="contact__links"/></a>
+            <a href="https://encyclopedia.moderndeveloper.com"><img alt="encyclopedia" src="designs/enc1.png" id="contact__lmd"/></a>
+            <a href="https://twitter.com/ericleeo1"><img alt="twitter" src="designs/twitter.png" class="contact__links"/></a>
+            <a href="https://github.com/EricLOsorio"><img alt="github" src="designs/github2.png" class="contact__links"/></a>         
+            <a href="https://www.linkedin.com/in/ericlosorio"><img alt="linkedin" src="designs/linkedin.png" class="contact__links"/></a>
+            <a href="https://www.facebook.com/profile.php?id=100012878112674&ref=br_rs"><img alt="facebook" src="designs/facebook.png" class="contact__links"/></a>
             <p class="contact__encyclopedia">Eric L. Osorio<br/>
           on  <a href="https://encyclopedia.moderndeveloper.com/">Encyclopedia.MD</a></p>
 
 
           </div>
         <div class="contact__upArrow">
-          <div id="contact__up" ></div>
-          <div id="contact__left"></div>
-          <div id="contact__up-triangle"></div>
+          <div id="contact__up-front-line1" ></div>
+          <div id="contact__left-front-line1"></div>
+          <div id="contact__up-triangle-front"></div>
         </div>
 
         <div class="contact__downArrow">
-          <div id="contact__up" ></div>
-          <div id="contact__left"></div>
-          <div id="contact__down-triangle"></div>
+          <div id="contact__up-front-line2" ></div>
+          <div id="contact__left-front-line2"></div>
+          <div id="contact__down-triangle-front"></div>
         </div>        
         
         <div class="contact__back">
           <img src="designs/atWork.JPG" alt="At Work" id="contact__backImg"/>
           <div id="contact__myName">Eric L. Osorio</div>
           <div class="contact__upArrow">
-            <div id="contact__up" ></div>
-            <div id="contact__left"></div>
-            <div id="contact__up-triangle"></div>
+            <div id="contact__up-back-line1" ></div>
+            <div id="contact__left-back-line1"></div>
+            <div id="contact__up-triangle-back"></div>
           </div>
 
           <div class="contact__downArrow">
-            <div id="contact__up" ></div>
-            <div id="contact__left"></div>
-            <div id="contact__down-triangle"></div>
+            <div id="contact__up-back-line2" ></div>
+            <div id="contact__left-back-line2"></div>
+            <div id="contact__down-triangle-back"></div>
           </div> 
         </div>
 
@@ -1055,7 +1059,7 @@
     </div>
 
     <footer>
-      <p>&copy 2016 Eric L. Osorio</p>
+      <p>&copy; 2016 Eric L. Osorio</p>
     </footer>    
 
     <!--/div-->
@@ -1063,7 +1067,7 @@
 
  
   </div>
-  <script type="text/javascript" src="JS/portfolio.js"></script>
-  <script type="text/javascript" src="JS/calculator.js"></script>
+  <script type="text/javascript" src="JS/portfolio.js?version=1.0.0"></script>
+  <script type="text/javascript" src="JS/calculator.js?version=1.0.0"></script>
 </body>
 </html>
