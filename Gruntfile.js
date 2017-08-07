@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
+
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
-  grunt.initConfig({
+  grunt.initConfig( {
     pkg: grunt.file.readJSON('package.json'),
 
     babel: {
@@ -18,12 +19,10 @@ module.exports = function(grunt) {
       
         files: [  
 	
-	//  'dest/app.js' : 'JS/calculator.js'
-
 	  {
 	  
 	    expand: true,
-	    //cwd : 'src/',
+
 	    src: ['JS/**/*.js'],
 	    ext: '.js',
 	    dest: 'dest/JS'
@@ -48,17 +47,15 @@ module.exports = function(grunt) {
     uglify: {
       all: {
         files: [
-         // 'dest/output.min.js': ['dest/app.js']
        
           {
 	  
-	    //cwd: 'dest/JS/JS',
-	    src: ['dest/JS/JS/*.js'],
-	    dest: 'dest/minifiedJS.js'
+	         src: ['dest/JS/JS/*.js'],
+	         dest: 'dest/minifiedJS.js'
 	  
-	  }
+	        }
        
-       ]
+        ]
       }
     },
     htmllint: {
@@ -104,13 +101,13 @@ module.exports = function(grunt) {
 	      },
 
         files:[ {
-          //'styles/style.css': 'sass/style.scss'
+
 	        expand: true,
-	       //cwd: 'SASS',
+
 	       src: ['SASS/**/*.scss'],
 	       dest: 'dest/css',
 	       ext: '.css'
-        }]
+        } ]
       }
     },
     
@@ -155,6 +152,7 @@ module.exports = function(grunt) {
         prefix: '[\\?]?version[\\\'"]?[=:]\\s*[\\\'"]?'
       }
     },
+
     exec: {
       add: 'git add .', // Add all changed files to the commit
       commit: {
@@ -169,11 +167,13 @@ module.exports = function(grunt) {
     }
   });
 
+
+
   grunt.registerTask('build', function(){
     grunt.task.run(['sass','babel','jshint','htmllint','uglify','cssmin','imagemin'])
-  })
+  });
 
-
+  
   grunt.registerTask('deploy', function (releaseType) {
     if (!releaseType) {
       releaseType = 'patch';
