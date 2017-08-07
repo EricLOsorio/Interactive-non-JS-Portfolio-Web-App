@@ -137,13 +137,16 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      dynamic: {
+      dist: {
+        options: {
+	  optimizationLevel: 7
+      },
         files: [{
           expand: true,
           src: ['images/*.{png,JPG,bmp,gif,mp4,jpg,gif}'],
           dest: 'dest/'
         }]
-      }
+     }
     },
     
     version: {
