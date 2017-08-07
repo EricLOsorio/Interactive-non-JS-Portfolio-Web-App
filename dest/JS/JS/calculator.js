@@ -78,9 +78,9 @@ window.onload = function () {
                                     for (var n = 0; n < theDisplay.length - 1; n++) {
 
                                           newDisplay = newDisplay + theDisplay[n];
-                                    };
+                                    }
                                     theDisplay = newDisplay + "/";
-                              };
+                              }
                         } else {
 
                               newDisplay = "";
@@ -88,10 +88,10 @@ window.onload = function () {
                               for (var _n = 0; _n < theDisplay.length - 1; _n++) {
 
                                     newDisplay = newDisplay + theDisplay[_n];
-                              };
+                              }
 
                               theDisplay = newDisplay + thisKey.innerHTML;
-                        };
+                        }
                   } else if (thisKey.innerHTML == ".") {
 
                         if (theDisplay.substr(k).indexOf(".") < 0) {
@@ -104,7 +104,7 @@ window.onload = function () {
                               } else theDisplay = theDisplay + ".";
 
                               j = theDisplay.length - 1;
-                        };
+                        }
                   } else if (thisKey.innerHTML == Number(thisKey.innerHTML)) {
 
                         if (clearFlag) {
@@ -128,7 +128,7 @@ window.onload = function () {
                               for (var m = 0; m < k + 1; m++) {
 
                                     frontDisplay = frontDisplay + theDisplay[m];
-                              };
+                              }
 
                               if (theDisplay[k + 1] !== "-") {
 
@@ -172,7 +172,7 @@ window.onload = function () {
                         for (var _n2 = 0; _n2 < theDisplay.length - 1; _n2++) {
 
                               newDisplay = newDisplay + theDisplay[_n2];
-                        };
+                        }
                         j -= 1;
 
                         theDisplay = newDisplay;
@@ -183,13 +183,13 @@ window.onload = function () {
 
                                     k = j - 1;
                               } else k = j;
-                        };
+                        }
                   } else if (thisKey.innerHTML === "C") {
 
                         theDisplay = "0";
 
                         clearFlag = true;
-                  };
+                  }
 
                   display.value = theDisplay;
             });
@@ -212,7 +212,7 @@ window.onload = function () {
 
       for (var i = 0; i < numberKeys.length; i++) {
             _loop(i);
-      }; //for loop
+      } //for loop
 }(window.console);
 //# sourceMappingURL=calculator.js.map
 //# sourceMappingURL=calculator.js.map

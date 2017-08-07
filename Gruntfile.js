@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       options: {
       
         sourceMap: true,
-	presets: ['es2015']
+	      presets: ['es2015']
       
       },
 
@@ -44,6 +44,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     uglify: {
       all: {
         files: [
@@ -66,22 +67,20 @@ module.exports = function(grunt) {
     
         options: {
 	  
-	  ignore: [/Element/, /input/]
+	        ignore: [/Element/, /input/]
 	  
-	},
-	src: 'index.html'
+	      },
+
+	      src: 'index.html'
+
       },
    },
-    csslint: {
-      all: {
-        src: ['CSS/*.css']
-      }
-    },
+
     jshint: {
-      all: ['JS/calculator.js'],
+      all: ['JS/*.js'],
       options: {
         browser: true,
-	evil: true,
+	      evil: true,
         asi: true, // Don't worry about missing semicolons
         undef: true, // Warn about undeclared globals
         globals: { // Pass in a list of globals we don't want warnings about
@@ -94,49 +93,52 @@ module.exports = function(grunt) {
         force: true
       }
     },
+
     sass: {
       dist: {
         options: {
 	
-	  loadPath: [],
-	  style: 'compressed'
+	        loadPath: [],
+	        style: 'compressed'
 	
-	},
+	      },
 
         files:[ {
           //'styles/style.css': 'sass/style.scss'
-	  expand: true,
-	  //cwd: 'SASS',
-	  src: ['SASS/**/*.scss'],
-	  dest: 'dest/css',
-	  ext: '.css'
+	        expand: true,
+	       //cwd: 'SASS',
+	       src: ['SASS/**/*.scss'],
+	       dest: 'dest/css',
+	       ext: '.css'
         }]
       }
     },
+    
     watch: {
       scripts: {
-        files: ['js/*.js'],
+        files: ['./**/*.js'],
         tasks: ['jshint:dev'],
         options: {
           livereload: true
         }
       },
       sass: {
-        files: ['sass/*.scss'],
+        files: ['sass/**/*.scss'],
         tasks: ['sass'],
         options: {
           livereload: true
         }
+      },
+      html: {
+        files: ['index.html'],
+	tasks: ['htmllint'],
+	options: {
+	  livereload: true
+	}
+      
       }
     },
-    jasmine: {
-      all: {
-        src: ['js/*.js'],
-        options: {
-          specs: ['spec/**/*Spec.js']
-        }
-      }
-    },
+
     imagemin: {
       dynamic: {
         files: [{
@@ -144,19 +146,6 @@ module.exports = function(grunt) {
           src: ['images/*.{png,JPG,bmp,gif,jpg,gif}'],
           dest: 'dest/'
         }]
-      }
-    },
-    postcss: {
-      options: {
-        map: true,
-	processors: [
-	  require('autoprefixer')({browsers:'last 2 versions'}),
-	  require('cssnano')()
-	]
-      },
-      dist: {
-        src:'styles/style.css',
-	dest: 'dest/css/style.css'
       }
     },
     
@@ -181,16 +170,9 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', function(){
-    grunt.task.run(['cssmin','uglify','htmllint','csslint','jshint','sass','jasmine','imagemin','postcss'])
+    grunt.task.run(['cssmin','babel','uglify','htmllint','jshint','sass','imagemin'])
   });
 
-  grunt.registerTask('minify', function (full) {
-    if (full) {
-      grunt.task.run(['cssmin', 'uglify', 'imagemin']);
-    } else {
-      grunt.task.run(['cssmin', 'uglify']);
-    }
-  });
 
   grunt.registerTask('deploy', function (releaseType) {
     if (!releaseType) {
@@ -199,8 +181,5 @@ module.exports = function(grunt) {
     grunt.task.run(['build', 'version::' + releaseType, 'exec:add', 'exec:commit', 'exec:push']);
   });
 
-  // Default task(s).
-  grunt.registerTask('default', function () {
-    console.log('Grunt has run');
-  });
+
 };

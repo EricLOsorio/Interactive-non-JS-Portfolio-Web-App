@@ -1,5 +1,3 @@
-"use strict";
-
 window.onload = function () {
 
             "use strict";
@@ -48,7 +46,7 @@ window.onload = function () {
                         introMovie.style.display = "none";
 
                         wrapper.style.display = "block";
-            };
+            }
 
             enter.addEventListener("click", function (event) {
 
@@ -153,7 +151,7 @@ window.onload = function () {
 
                                     topBarInputs[2].checked = true;
 
-                                    sideBarInputs[2].checked = true;;
+                                    sideBarInputs[2].checked = true
                         } else if (loc > 2198) {
 
                                     topBarInputs[3].checked = true;
@@ -166,7 +164,7 @@ window.onload = function () {
 
                         var factText = document.getElementById("factText");
 
-                        var factorPromise = new Promise(function (resolve, reject) {
+                        var factorPromise = new Promise(function (resolve, reject) { //jshint esnext: true
 
                                     var xhr = new XMLHttpRequest();
 
@@ -174,7 +172,7 @@ window.onload = function () {
 
                                     if (factText.childNodes[0]) {
                                                 factText.removeChild(factText.childNodes[0]);
-                                    };
+                                    }
 
                                     xhr.onload = function () {
 
@@ -183,7 +181,7 @@ window.onload = function () {
                                                             var text = document.createTextNode(xhr.response);
 
                                                             resolve(text);
-                                                };
+                                                }
                                     };
 
                                     xhr.onerror = function (error) {
@@ -273,7 +271,7 @@ window.onload = function () {
 
                         // Loop the animation function
                         var runAnimation = setInterval(animateScroll, 20);
-            };
+            }
 
             //For each of the scroll links get the associated anchors and also
             //the associated inputs, which will determine which menu label will
@@ -331,9 +329,9 @@ window.onload = function () {
 
                                                 // Scroll to the anchor
                                                 scrollIt(targetElement);
-                                    };
-                        };
-            };
+                                    }
+                        }
+            }
 
             //Check if the button clicked is the `Back To Top` button
             //and if so, commence the scroll to the top
