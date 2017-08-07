@@ -67,26 +67,26 @@ window.onload=(function(){
 
               for(let n=0;n<theDisplay.length-1;n++){
 
-               newDisplay=newDisplay+theDisplay[n];
-          };  
-             theDisplay=`${newDisplay}/`;  
+               newDisplay=newDisplay+theDisplay[n]
+          }  
+             theDisplay=`${newDisplay}/`  
 
-          };  
+          }  
 
 
               
            } else {
 
-               newDisplay=``; 
+               newDisplay=`` 
 
               for(let n=0;n<theDisplay.length-1;n++) {
 
-                newDisplay=newDisplay+theDisplay[n];
-              };  
+                newDisplay=newDisplay+theDisplay[n]
+              }  
 
-              theDisplay=newDisplay+thisKey.innerHTML;  
+              theDisplay=newDisplay+thisKey.innerHTML  
 
-          };
+          }
 
 
       } else if (thisKey.innerHTML==`.`) {
@@ -97,13 +97,13 @@ window.onload=(function(){
 
                theDisplay=`${theDisplay}0.`;
 
-               j=theDisplay.length-1;
+               j=theDisplay.length-1
 
              } else theDisplay=`${theDisplay}.`;
 
-               j=theDisplay.length-1;              
+               j=theDisplay.length-1              
 
-             };
+             }
             
       } else if(thisKey.innerHTML==Number(thisKey.innerHTML)){
 
@@ -116,12 +116,12 @@ window.onload=(function(){
 
             theDisplay=theDisplay+thisKey.innerHTML;
 
-            j=theDisplay.length-1;
+            j=theDisplay.length-1
 
 
       } else if(theCode===177){
 
-             frontDisplay=``;
+             frontDisplay=``
 
              if(k!==0){
 
@@ -131,7 +131,7 @@ window.onload=(function(){
 
                   frontDisplay=frontDisplay+theDisplay[m];
 
-                 }; 
+                 } 
 
 
                  if(theDisplay[(k+1)]!==`-`){
@@ -166,7 +166,7 @@ window.onload=(function(){
 
                 numOnly=theDisplay;
 
-                theDisplay=`-${numOnly}`;
+                theDisplay=`-${numOnly}`
 
                 } else {
 
@@ -188,7 +188,7 @@ window.onload=(function(){
 
             newDisplay=newDisplay+theDisplay[n];
 
-          };
+          }
           j-=1;
 
           theDisplay=newDisplay;
@@ -201,9 +201,9 @@ window.onload=(function(){
 
                k=j-1;
 
-            } else k=j;
+            } else k=j
 
-          };
+          }
 
         } else if(thisKey.innerHTML===`C`) {
 
@@ -211,7 +211,7 @@ window.onload=(function(){
 
           clearFlag=true;
 
-        };
+        }
       
 
          display.value=theDisplay;
@@ -237,7 +237,7 @@ window.onload=(function(){
        
       }); //eventListener
 
-  }; //for loop
+  } //for loop
 
 
 }(window.console));

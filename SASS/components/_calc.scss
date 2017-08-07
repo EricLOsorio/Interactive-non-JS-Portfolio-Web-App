@@ -79,11 +79,11 @@
 	background-color: cadetblue;
 }
 
-.calculator #clear {
+.calculator #clear, .calculator #clear2 {
 	background-color: red;
 }
 
-.calculator #clear:hover{
+.calculator #clear:hover, .calculator #clear2:hover{
   background-color:white;
 }
 

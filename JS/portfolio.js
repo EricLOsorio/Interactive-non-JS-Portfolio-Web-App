@@ -50,7 +50,7 @@ window.onload=(function() {
 
       wrapper.style.display=`block`;
 
-    };
+    }
 
     enter.addEventListener(`click`, event=>{
 
@@ -175,7 +175,7 @@ window.onload=(function() {
 
                 topBarInputs[2].checked=true;
 
-                sideBarInputs[2].checked=true;;
+                sideBarInputs[2].checked=true;
 
             } else if(loc>2198){
 
@@ -192,7 +192,7 @@ window.onload=(function() {
 
           let factText=document.getElementById(`factText`);
 
-          let factorPromise = new Promise(function(resolve,reject) { 
+          let factorPromise = new Promise(function(resolve,reject) { //jshint esnext: true
 
             let xhr= new XMLHttpRequest();
 
@@ -200,7 +200,7 @@ window.onload=(function() {
 
             if(factText.childNodes[0]){
               factText.removeChild(factText.childNodes[0]);              
-            };
+            }
 
             xhr.onload = ()=>{
 
@@ -210,7 +210,7 @@ window.onload=(function() {
 
                resolve(text);
 
-             };
+             }
 
             };
 
@@ -317,7 +317,7 @@ window.onload=(function() {
             // Loop the animation function
             let runAnimation = setInterval(animateScroll,20);
        
-        };
+        }
 
 
 
@@ -381,13 +381,13 @@ window.onload=(function() {
 
                     // Scroll to the anchor
                     scrollIt(targetElement);
-                };
+                }
 
    
-        };
+        }
 
 
-        };
+        }
 
                      //Check if the button clicked is the `Back To Top` button
                 //and if so, commence the scroll to the top
