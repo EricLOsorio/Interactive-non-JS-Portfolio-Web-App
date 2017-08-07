@@ -38,9 +38,9 @@ window.onload=(function() {
 
       introMovie.style.display=`block`;
 
-      myVideo.load();
+   //   myVideo.load();
 
-      myVideo.play();
+    //  myVideo.play();
 
       document.cookie=`intro=done`;
 
@@ -58,9 +58,9 @@ window.onload=(function() {
 
       introMovie.style.display=`none`;
 
-      myVideo.autoplay = false;
+ //     myVideo.autoplay = false;
 
-      myVideo.load();
+  //    myVideo.load();
 
     });
 
