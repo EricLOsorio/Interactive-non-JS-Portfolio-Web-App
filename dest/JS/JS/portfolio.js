@@ -1,5 +1,3 @@
-"use strict";
-
 window.onload = function () {
 
             "use strict";
@@ -350,5 +348,4 @@ window.onload = function () {
                         scrollIt(top);
             }, false);
 }();
-//# sourceMappingURL=portfolio.js.map
 //# sourceMappingURL=portfolio.js.map

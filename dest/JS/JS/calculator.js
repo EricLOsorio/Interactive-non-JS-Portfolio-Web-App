@@ -1,5 +1,3 @@
-"use strict";
-
 window.onload = function () {
 
       "use strict";
@@ -11,36 +9,28 @@ window.onload = function () {
       var numberKeys = document.getElementsByClassName("nums");
 
       var numOnly = void 0,
-
-      //whole number portion of the display
+          //whole number portion of the display
 
       theDisplay = void 0,
-
-      //display area of the calculator
+          //display area of the calculator
 
       theCode = void 0,
-
-      //ASCII code of number key pressed
+          //ASCII code of number key pressed
 
       newDisplay = void 0,
-
-      //updated display
+          //updated display
 
       frontDisplay = void 0,
-
-      //front portion of display
+          //front portion of display
 
       answer = void 0,
-
-      //vslue after clicking the equal key
+          //vslue after clicking the equal key
 
       j = 0,
-
-      //Used to count all characters up to the LATEST symbol
+          //Used to count all characters up to the LATEST symbol
 
       k = 0,
-
-      //Used in determining what to do when DOT is pressed
+          //Used in determining what to do when DOT is pressed
 
       clearFlag = true; //Display is initially 0 or when the `C` key hit;
 
@@ -213,6 +203,6 @@ window.onload = function () {
       for (var i = 0; i < numberKeys.length; i++) {
             _loop(i);
       } //for loop
+
 }(window.console);
-//# sourceMappingURL=calculator.js.map
 //# sourceMappingURL=calculator.js.map

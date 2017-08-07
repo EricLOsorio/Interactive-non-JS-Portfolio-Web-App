@@ -1,208 +1,243 @@
-window.onload = function () {
+window.onload=(function(){
 
-      "use strict";
+  `use strict`;
 
-      var total = document.getElementById("total");
+  let total=document.getElementById(`total`);
 
-      var display = document.getElementById("display");
+  let display=document.getElementById(`display`);
 
-      var numberKeys = document.getElementsByClassName("nums");
+  let numberKeys=document.getElementsByClassName(`nums`);
 
-      var numOnly = void 0,
-          //whole number portion of the display
+  let numOnly, //whole number portion of the display
 
-      theDisplay = void 0,
-          //display area of the calculator
+      theDisplay, //display area of the calculator
 
-      theCode = void 0,
-          //ASCII code of number key pressed
+      theCode, //ASCII code of number key pressed
 
-      newDisplay = void 0,
-          //updated display
+      newDisplay, //updated display
 
-      frontDisplay = void 0,
-          //front portion of display
+      frontDisplay, //front portion of display
 
-      answer = void 0,
-          //vslue after clicking the equal key
+      answer, //vslue after clicking the equal key
 
-      j = 0,
-          //Used to count all characters up to the LATEST symbol
+      j=0, //Used to count all characters up to the LATEST symbol
 
-      k = 0,
-          //Used in determining what to do when DOT is pressed
+      k=0, //Used in determining what to do when DOT is pressed
 
-      clearFlag = true; //Display is initially 0 or when the `C` key hit;
+      clearFlag=true; //Display is initially 0 or when the `C` key hit;
 
-      var _loop = function _loop(i) {
+  for(let i=0; i<numberKeys.length;i++){
 
-            numOnly = "";
+     numOnly=``;
 
-            theDisplay = "";
+     theDisplay=``;
 
-            numberKeys[i].addEventListener("click", function (event) {
 
-                  var thisKey = numberKeys[i];
+  	numberKeys[i].addEventListener(`click`, event => {
 
-                  theCode = thisKey.innerHTML.charCodeAt();
+      let thisKey=numberKeys[i];
 
-                  if (thisKey.innerHTML != Number(thisKey.innerHTML) && thisKey.innerHTML != "." && theCode !== 177 && thisKey.innerHTML !== "DEL" && thisKey.innerHTML !== "C") {
 
-                        if ((theDisplay[theDisplay.length - 1] == Number(theDisplay[theDisplay.length - 1]) || theDisplay[theDisplay.length - 1] == ".") && theCode !== 247) {
+       theCode=(thisKey.innerHTML).charCodeAt();
 
-                              theDisplay = theDisplay + thisKey.innerHTML;
 
-                              j = theDisplay.length - 1;
-                              k = j;
-                        } else if (theCode === 247) {
+      if(thisKey.innerHTML!=Number(thisKey.innerHTML) && thisKey.innerHTML!=`.` &&
+          theCode!==177 && thisKey.innerHTML!==`DEL` && thisKey.innerHTML!==`C`) {
 
-                              if (theDisplay[theDisplay.length - 1] == Number(theDisplay[theDisplay.length - 1]) || theDisplay[theDisplay.length - 1] == ".") {
+          if((theDisplay[theDisplay.length-1]==Number(theDisplay[theDisplay.length-1])||
+            theDisplay[theDisplay.length-1]==`.`) && theCode!==247) {
 
-                                    theDisplay = theDisplay + "/";
-                                    j = theDisplay.length - 1;
-                                    k = j;
-                              } else {
+            theDisplay=theDisplay+thisKey.innerHTML;
 
-                                    newDisplay = "";
+            j=theDisplay.length-1;
+             k=j;  
 
-                                    for (var n = 0; n < theDisplay.length - 1; n++) {
+          } else if(theCode===247){
 
-                                          newDisplay = newDisplay + theDisplay[n];
-                                    }
-                                    theDisplay = newDisplay + "/";
-                              }
-                        } else {
+             if (theDisplay[theDisplay.length-1]==Number(theDisplay[theDisplay.length-1]) ||
+              theDisplay[theDisplay.length-1]==`.`) {
 
-                              newDisplay = "";
+                 theDisplay=`${theDisplay}/`;
+                 j=theDisplay.length-1;
+                 k=j; 
 
-                              for (var _n = 0; _n < theDisplay.length - 1; _n++) {
+            } else {
 
-                                    newDisplay = newDisplay + theDisplay[_n];
-                              }
+               newDisplay=``;
 
-                              theDisplay = newDisplay + thisKey.innerHTML;
-                        }
-                  } else if (thisKey.innerHTML == ".") {
+              for(let n=0;n<theDisplay.length-1;n++){
 
-                        if (theDisplay.substr(k).indexOf(".") < 0) {
+               newDisplay=newDisplay+theDisplay[n]
+          }  
+             theDisplay=`${newDisplay}/`  
 
-                              if (theDisplay[theDisplay.length - 1] != Number(theDisplay[theDisplay.length - 1])) {
+          }  
 
-                                    theDisplay = theDisplay + "0.";
 
-                                    j = theDisplay.length - 1;
-                              } else theDisplay = theDisplay + ".";
+              
+           } else {
 
-                              j = theDisplay.length - 1;
-                        }
-                  } else if (thisKey.innerHTML == Number(thisKey.innerHTML)) {
+               newDisplay=`` 
 
-                        if (clearFlag) {
+              for(let n=0;n<theDisplay.length-1;n++) {
 
-                              theDisplay = "";
+                newDisplay=newDisplay+theDisplay[n]
+              }  
 
-                              clearFlag = false;
-                        }
+              theDisplay=newDisplay+thisKey.innerHTML  
 
-                        theDisplay = theDisplay + thisKey.innerHTML;
+          }
 
-                        j = theDisplay.length - 1;
-                  } else if (theCode === 177) {
 
-                        frontDisplay = "";
+      } else if (thisKey.innerHTML==`.`) {
 
-                        if (k !== 0) {
+             if((theDisplay.substr(k)).indexOf(`.`)<0) {
 
-                              numOnly = theDisplay.substr(k + 1);
+              if(theDisplay[theDisplay.length-1]!=Number(theDisplay[theDisplay.length-1])){
 
-                              for (var m = 0; m < k + 1; m++) {
+               theDisplay=`${theDisplay}0.`;
 
-                                    frontDisplay = frontDisplay + theDisplay[m];
-                              }
+               j=theDisplay.length-1
 
-                              if (theDisplay[k + 1] !== "-") {
+             } else theDisplay=`${theDisplay}.`;
 
-                                    numOnly = "-" + numOnly;
-                              } else {
+               j=theDisplay.length-1              
 
-                                    numOnly = numOnly.substr(1);
-                              }
+             }
+            
+      } else if(thisKey.innerHTML==Number(thisKey.innerHTML)){
 
-                              if (frontDisplay[frontDisplay.length - 1] !== "-") {
+            if(clearFlag){
 
-                                    theDisplay = frontDisplay + numOnly;
-                              } else {
+              theDisplay=``;
 
-                                    numOnly = numOnly.substr(1);
+              clearFlag=false;
+            }
 
-                                    frontDisplay = frontDisplay.substring(0, frontDisplay.length - 1);
+            theDisplay=theDisplay+thisKey.innerHTML;
 
-                                    theDisplay = frontDisplay + "+" + numOnly;
-                              }
-                        } else {
+            j=theDisplay.length-1
 
-                              if (theDisplay[0] !== "-") {
 
-                                    numOnly = theDisplay;
+      } else if(theCode===177){
 
-                                    theDisplay = "-" + numOnly;
-                              } else {
+             frontDisplay=``
 
-                                    numOnly = theDisplay.substr(1);
+             if(k!==0){
 
-                                    theDisplay = numOnly;
-                              }
-                        }
+               numOnly=theDisplay.substr(k+1);
 
-                        j = theDisplay.length - 1;
-                  } else if (thisKey.innerHTML === "DEL") {
+                for (let m=0;m<k+1;m++){
 
-                        newDisplay = "";
+                  frontDisplay=frontDisplay+theDisplay[m];
 
-                        for (var _n2 = 0; _n2 < theDisplay.length - 1; _n2++) {
+                 } 
 
-                              newDisplay = newDisplay + theDisplay[_n2];
-                        }
-                        j -= 1;
 
-                        theDisplay = newDisplay;
+                 if(theDisplay[(k+1)]!==`-`){
 
-                        if (theDisplay[theDisplay.length - 1] != Number(theDisplay[theDisplay.length - 1]) && theDisplay[theDisplay.length - 1] != ".") {
+                  numOnly=`-${numOnly}`;
 
-                              if (theDisplay[theDisplay.length - 2] != Number(theDisplay[theDisplay.length - 1]) && theDisplay[theDisplay.length - 2] != ".") {
+                 } else{
 
-                                    k = j - 1;
-                              } else k = j;
-                        }
-                  } else if (thisKey.innerHTML === "C") {
+                  numOnly=numOnly.substr(1);
 
-                        theDisplay = "0";
+                 }
 
-                        clearFlag = true;
-                  }
+                 if(frontDisplay[frontDisplay.length-1]!==`-`){
 
-                  display.value = theDisplay;
-            });
+                   theDisplay=frontDisplay+numOnly; 
 
-            total.addEventListener("click", function (event) {
+                 } else {
 
-                  answer = display.value;
+                    numOnly=numOnly.substr(1);
 
-                  display.value = eval(answer);
+                    frontDisplay=frontDisplay.substring(0,(frontDisplay.length-1));
 
-                  theDisplay = eval(answer).toString();
+                    theDisplay=`${frontDisplay}+${numOnly}`;
+                 }
+                
 
-                  j = 0;
+                 
 
-                  k = 0;
+             } else {
 
-                  numOnly = "";
-            }); //eventListener
-      };
+                if(theDisplay[0]!==`-`){
 
-      for (var i = 0; i < numberKeys.length; i++) {
-            _loop(i);
-      } //for loop
+                numOnly=theDisplay;
 
-}(window.console);
-//# sourceMappingURL=calculator.js.map
+                theDisplay=`-${numOnly}`
+
+                } else {
+
+                  numOnly=theDisplay.substr(1);
+
+                  theDisplay=numOnly;
+
+                }
+
+             } 
+
+             j=theDisplay.length-1;
+
+        } else if (thisKey.innerHTML===`DEL`) {
+
+           newDisplay=``;
+
+          for(let n=0;n<theDisplay.length-1;n++){
+
+            newDisplay=newDisplay+theDisplay[n];
+
+          }
+          j-=1;
+
+          theDisplay=newDisplay;
+
+          if(theDisplay[theDisplay.length-1]!=Number(theDisplay[theDisplay.length-1]) &&
+            theDisplay[theDisplay.length-1]!=`.`){
+
+            if(theDisplay[theDisplay.length-2]!=Number(theDisplay[theDisplay.length-1]) &&
+               theDisplay[theDisplay.length-2]!=`.`){
+
+               k=j-1;
+
+            } else k=j
+
+          }
+
+        } else if(thisKey.innerHTML===`C`) {
+
+          theDisplay=`0`;
+
+          clearFlag=true;
+
+        }
+      
+
+         display.value=theDisplay;
+  	}); 
+
+
+
+
+
+      total.addEventListener(`click`, event => {
+
+         answer=display.value;
+
+         display.value=eval(answer);
+
+         theDisplay=eval(answer).toString();
+
+         j=0;
+
+         k=0;
+
+         numOnly=``;
+       
+      }); //eventListener
+
+  } //for loop
+
+
+}(window.console));

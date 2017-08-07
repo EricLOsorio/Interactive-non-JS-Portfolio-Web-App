@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       options: {
       
         sourceMap: true,
-	      presets: ['es2015']
+        presets: ['es2015']
       
       },
 
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
    },
 
     jshint: {
-      all: ['JS/*.js'],
+      all: ['dest/JS/JS/*.js'],
       options: {
         browser: true,
 	      evil: true,
@@ -170,8 +170,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', function(){
-    grunt.task.run(['cssmin','babel','uglify','htmllint','jshint','sass','imagemin'])
-  });
+    grunt.task.run(['sass','babel','jshint','htmllint','uglify','cssmin','imagemin'])
+  })
 
 
   grunt.registerTask('deploy', function (releaseType) {
