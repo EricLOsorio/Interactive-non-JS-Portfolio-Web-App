@@ -1,6 +1,6 @@
 {
   "name": "interactive-non-js-portfolio-web-app",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "My Portfolio",
   "main": "Gruntfile.js",
   "dependencies": {
