@@ -22,9 +22,9 @@ module.exports = function(grunt) {
 	  
 	    expand: true,
 
-	    src: ['JS/**/*.js'],
+	    src: ['JS/*.js'],
 	    ext: '.js',
-	    dest: 'dest/JS'
+	    dest: 'dest'
 
 	  }
 	
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     cssmin: {
       all: {
         files: {
-          'dest/main.css': ['CSS/main.css']
+          'dest/CSS/main.css': ['CSS/main.css']
         }
       }
       
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
        
           {
 	  
-	         src: ['dest/JS/JS/*.js'],
-	         dest: './dest/minified.js'
+	         src: ['dest/JS/*.js'],
+	         dest: './dest/JS/JSES5/minified.js'
 	  
 	        }
        
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
    },
 
     jshint: {
-      all: ['dest/JS/JS/*.js'],
+      all: ['dest/JS/*.js'],
       options: {
         browser: true,
 	      evil: true,
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 	        expand: true,
 
 	       src: ['SASS/**/*.scss'],
-	       dest: 'dest/css',
+	       dest: './CSS',
 	       ext: '.css'
         } ]
       }
