@@ -9,7 +9,6 @@ module.exports = function(grunt) {
     babel: {
     
       options: {
-      
         sourceMap: true,
         presets: ['es2015']
       
@@ -39,10 +38,12 @@ module.exports = function(grunt) {
     cssmin: {
       all: {
         files: {
-          'dest/app.min.css': ['CSS/*.css']
+          'dest/main.css': ['CSS/main.css']
         }
       }
+      
     },
+
 
     uglify: {
       all: {
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
           {
 	  
 	         src: ['dest/JS/JS/*.js'],
-	         dest: 'dest/minifiedJS.js'
+	         dest: './dest/minified.js'
 	  
 	        }
        
@@ -80,8 +81,8 @@ module.exports = function(grunt) {
 	      evil: true,
         asi: true, // Don't worry about missing semicolons
         undef: true, // Warn about undeclared globals
-        globals: { // Pass in a list of globals we don't want warnings about
-          module: true,
+	globals: { // Pass in a list of globals we don't want warnings about
+	  module: true,
           require: true,
           console: true
         }

@@ -86,6 +86,7 @@
    @include h-w(470px,450px);
    @include large-only-device{
      @include structure-dimension(absolute,125px,5%,30em,32em);
+     visibility:hidden;
    }   
    @include med-only-device{
      @include structure-dimension(absolute,3.8em,3em,16em,19em);
@@ -93,6 +94,7 @@
      z-index:2;
    }
    @include small-device{
+     visibility:hidden;
      width:15em;
      left:11%;
      height:20em;

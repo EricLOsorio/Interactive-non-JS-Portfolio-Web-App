@@ -40,6 +40,15 @@
 	//animation-delay:1s;
 	animation-fill-mode:forwards;
 	z-index: 30000;
+	@include small-device{
+	  @include h-w(auto, 75vw);
+	};
+	@include med-only-device{
+	  @include h-w(auto, 70vw);
+	};
+	@include large-only-device{
+	  @include h-w(auto, 45vw);
+	}	
 }
 
 
