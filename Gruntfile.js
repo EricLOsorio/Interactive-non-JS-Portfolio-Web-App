@@ -9,7 +9,6 @@ module.exports = function(grunt) {
     babel: {
     
       options: {
-      
         sourceMap: true,
         presets: ['es2015']
       
@@ -23,9 +22,9 @@ module.exports = function(grunt) {
 	  
 	    expand: true,
 
-	    src: ['JS/**/*.js'],
+	    src: ['JS/*.js'],
 	    ext: '.js',
-	    dest: 'dest/JS'
+	    dest: 'dest'
 
 	  }
 	
@@ -39,10 +38,12 @@ module.exports = function(grunt) {
     cssmin: {
       all: {
         files: {
-          'dest/app.min.css': ['CSS/*.css']
+          'dest/CSS/main.css': ['CSS/main.css']
         }
       }
+      
     },
+
 
     uglify: {
       all: {
@@ -50,8 +51,8 @@ module.exports = function(grunt) {
        
           {
 	  
-	         src: ['dest/JS/JS/*.js'],
-	         dest: 'dest/minifiedJS.js'
+	         src: ['dest/JS/*.js'],
+	         dest: './dest/JS/JSES5/minified.js'
 	  
 	        }
        
@@ -74,14 +75,14 @@ module.exports = function(grunt) {
    },
 
     jshint: {
-      all: ['dest/JS/JS/*.js'],
+      all: ['dest/JS/*.js'],
       options: {
         browser: true,
 	      evil: true,
         asi: true, // Don't worry about missing semicolons
         undef: true, // Warn about undeclared globals
-        globals: { // Pass in a list of globals we don't want warnings about
-          module: true,
+	globals: { // Pass in a list of globals we don't want warnings about
+	  module: true,
           require: true,
           console: true
         }
@@ -105,7 +106,7 @@ module.exports = function(grunt) {
 	        expand: true,
 
 	       src: ['SASS/**/*.scss'],
-	       dest: 'dest/css',
+	       dest: './CSS',
 	       ext: '.css'
         } ]
       }

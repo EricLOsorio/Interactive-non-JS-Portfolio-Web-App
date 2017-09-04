@@ -1,58 +1,77 @@
 window.onload = function () {
 
-            "use strict";
+            'use strict';
 
-            var topNav = document.getElementById("topNavBar"); //the top Nav Bar
+            var topNav = document.getElementById('topNavBar'); //the top Nav Bar
 
-            var scrollSideBar = document.getElementById("scrollSideBar"); //The Side Scroll Nav Bar
+            var scrollSideBar = document.getElementById('scrollSideBar'); //The Side Scroll Nav Bar
 
             // Define smooth scroll links that point to where you want to go
 
-            var menuLabel = document.querySelectorAll(".topNavBar__menuLabel");
+            var menuLabel = document.querySelectorAll('.topNavBar__menuLabel');
 
-            var topBarInputs = document.querySelectorAll("input[name=navRadio]");
+            var topBarInputs = document.querySelectorAll('input[name=navRadio]');
 
-            var sideBarInputs = document.querySelectorAll("input[name=sideScroll]");
+            var sideBarInputs = document.querySelectorAll('input[name=sideScroll]');
 
-            var scrollToTop = document.getElementsByClassName("link2Top")[0];
+            var scrollToTop = document.getElementsByClassName('link2Top')[0];
 
-            var large = window.matchMedia("(max-width:1024px)");
+            var large = window.matchMedia('(max-width:1024px)');
 
-            var defaultScreen = window.matchMedia("(min-width:1025px");
+            var defaultScreen = window.matchMedia('(min-width:1025px');
 
-            var factButton = document.getElementById("factButton");
+            var factButton = document.getElementById('factButton');
+
+            var contactCard = document.getElementsByClassName('contact__card')[0];
+
+            contactCard.style.display = 'none';
 
             /*******************************COOKIE SETTINGS************************************************/
 
-            var introMovie = document.getElementById("introMovie");
+            var introMovie = document.getElementById('introMovie');
 
-            var myVideo = document.getElementById("myIntro");
+            var myVideo = document.getElementById('myIntro');
 
-            var enter = document.getElementById("enter");
+            var enter = document.getElementById('enter');
 
-            var wrapper = document.getElementsByClassName("wrapper")[0];
+            var wrapper = document.getElementsByClassName('wrapper')[0];
+
+            function init() {
+
+                        var imgDefer = document.getElementsByTagName('img');
+                        for (var i = 0; i < imgDefer.length; i++) {
+                                    if (imgDefer[i].getAttribute('data-src')) {
+                                                imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+                                    }
+                        }
+            }
 
             if (!document.cookie) {
 
-                        introMovie.style.display = "block";
+                        var imgIntro = document.getElementById('myIntro');
+                        imgIntro.setAttribute('src', imgIntro.getAttribute('data-src'));
+
+                        introMovie.style.display = 'block';
 
                         //   myVideo.load();
 
                         //  myVideo.play();
 
-                        document.cookie = "intro=done";
+                        document.cookie = 'intro=done';
             } else {
 
-                        introMovie.style.display = "none";
+                        introMovie.style.display = 'none';
 
-                        wrapper.style.display = "block";
+                        myVideo.style.visibility = 'hidden';
+
+                        wrapper.style.display = 'block';
             }
 
-            enter.addEventListener("click", function (event) {
+            enter.addEventListener('click', function (event) {
 
-                        wrapper.style.display = "block";
+                        wrapper.style.display = 'block';
 
-                        introMovie.style.display = "none";
+                        introMovie.style.display = 'none';
 
                         //     myVideo.autoplay = false;
 
@@ -61,79 +80,83 @@ window.onload = function () {
 
             /**********************************************************************************************/
 
-            window.addEventListener("scroll", function (event) {
+            window.addEventListener('scroll', function (event) {
+
+                        init();
+
+                        contactCard.style.display = 'block';
 
                         var loc = window.pageYOffset;
 
                         // slider letiable representing the sliding arrow for the side scroll menu
 
-                        var slider = document.getElementById("slide");
+                        var slider = document.getElementById('slide');
 
                         if (!defaultScreen.matches) {
 
-                                    slider.addEventListener("click", function (event) {
+                                    slider.addEventListener('click', function (event) {
 
-                                                scrollSideBar.style.left = "-80px";
+                                                scrollSideBar.style.left = '-80px';
 
-                                                scrollSideBar.style.transition = "left 1s";
+                                                scrollSideBar.style.transition = 'left 1s';
 
-                                                scrollSideBar.style.zIndex = "1000";
+                                                scrollSideBar.style.zIndex = '1000';
 
-                                                slider.style.left = "-160px";
+                                                slider.style.left = '-160px';
 
-                                                slider.style.transition = "0.5s";
+                                                slider.style.transition = '0.5s';
                                     });
 
-                                    scrollSideBar.addEventListener("click", function (event) {
+                                    scrollSideBar.addEventListener('click', function (event) {
 
-                                                scrollSideBar.style.left = "-160px";
+                                                scrollSideBar.style.left = '-160px';
 
-                                                slider.style.left = "0";
+                                                slider.style.left = '0';
 
-                                                scrollSideBar.style.transition = "0.5s";
+                                                scrollSideBar.style.transition = '0.5s';
 
-                                                slider.style.transition = "0.5s";
+                                                slider.style.transition = '0.5s';
 
-                                                slider.style.zIndex = "1000";
+                                                slider.style.zIndex = '1000';
                                     }, false);
                         }
 
                         //Hide the top nav bar
 
-                        topNav.style.top = "-100px";
+                        topNav.style.top = '-100px';
 
-                        topNav.style.transition = "top 1s";
+                        topNav.style.transition = 'top 1s';
 
                         //Slide in the side bar upon scroll
 
                         if (large.matches) {
 
-                                    slider.style.left = "0px";
+                                    slider.style.left = '0px';
 
-                                    slider.style.transition = "left 0.5s";
+                                    slider.style.transition = 'left 0.5s';
                         } else {
 
-                                    scrollSideBar.style.left = "0";
+                                    scrollSideBar.style.left = '0';
 
-                                    scrollSideBar.style.transition = "left 1s";
+                                    scrollSideBar.style.transition = 'left 1s';
                         }
 
                         if (loc === 0) {
 
-                                    topNav.style.top = "-10px";
+                                    topNav.style.top = '-10px';
 
-                                    scrollSideBar.style.left = "-160px";
+                                    scrollSideBar.style.left = '-160px';
 
-                                    scrollToTop.style.display = "none";
+                                    scrollToTop.style.display = 'none';
 
-                                    slider.style.left = "-150px";
+                                    slider.style.left = '-150px';
 
-                                    slider.style.transition = "left 0.5s";
+                                    slider.style.transition = 'left 0.5s';
                         } else {
 
                                     if (loc !== 0 && defaultScreen.matches) {
 
-                                                scrollToTop.style.display = "block";
+                                                scrollToTop.style.display = 'block';
                                     }
                         }
 
@@ -162,7 +185,7 @@ window.onload = function () {
 
             function randomFactGenerator() {
 
-                        var factText = document.getElementById("factText");
+                        var factText = document.getElementById('factText');
 
                         var factorPromise = new Promise(function (resolve, reject) {
                                     //jshint esnext: true
@@ -189,7 +212,7 @@ window.onload = function () {
                                                 return reject(error);
                                     };
 
-                                    xhr.open("GET", "https://numbersapi.p.mashape.com/" + randomNum + "/trivia?mashape-key=D3M5a9cS8QmshH8z6Xqs1CiPPWVGp1kGJ61jsnJYodMZu7MFXO");
+                                    xhr.open('GET', 'https://numbersapi.p.mashape.com/' + randomNum + '/trivia?mashape-key=D3M5a9cS8QmshH8z6Xqs1CiPPWVGp1kGJ61jsnJYodMZu7MFXO');
 
                                     xhr.send();
                         });
@@ -203,12 +226,12 @@ window.onload = function () {
 
             //Wait for window to load and then get random numbers facts from numberapi site
 
-            window.addEventListener("load", function () {
+            window.addEventListener('load', function () {
 
                         randomFactGenerator();
             });
 
-            factButton.addEventListener("click", function () {
+            factButton.addEventListener('click', function () {
 
                         randomFactGenerator();
             });
@@ -290,7 +313,7 @@ window.onload = function () {
                         //start scroll for the associated anchor if Label has been clicked
                         //Remember: The label holds the `<a>` anchor link
 
-                        element.addEventListener("click", function (event) {
+                        element.addEventListener('click', function (event) {
                                     // Prevent the default link behavior
                                     event.preventDefault();
 
@@ -302,7 +325,8 @@ window.onload = function () {
 
                         // On click of the element pointing to the anchor commence the scroll
 
-                        link.addEventListener("click", letsRoll(link), false);
+
+                        link.addEventListener('click', letsRoll(link), false);
 
                         function letsRoll(link) {
                                     //ISUE IS THIS CLICK ON THE A LINK COMING FROM AboVE
@@ -316,12 +340,12 @@ window.onload = function () {
 
                                     var associatedInput = parentLI.previousElementSibling;
 
-                                    associatedInput.checked = "true";
+                                    associatedInput.checked = 'true';
 
                                     //Get the destination section where we want to end up
                                     //and start the scroll
 
-                                    var targetId = link.getAttribute("href");
+                                    var targetId = link.getAttribute('href');
 
                                     var targetElement = document.querySelector(targetId);
 
@@ -337,13 +361,13 @@ window.onload = function () {
             //Check if the button clicked is the `Back To Top` button
             //and if so, commence the scroll to the top
 
-            scrollToTop.addEventListener("click", function (event) {
+            scrollToTop.addEventListener('click', function (event) {
 
                         event.preventDefault();
 
-                        var topId = document.body.getAttribute("id");
+                        var topId = document.body.getAttribute('id');
 
-                        var top = document.querySelector("#" + topId);
+                        var top = document.querySelector('#' + topId);
 
                         scrollIt(top);
             }, false);

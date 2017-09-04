@@ -2,25 +2,29 @@ window.onload=(function() {
 
      `use strict`;
 
-     let topNav=document.getElementById(`topNavBar`); //the top Nav Bar
+     let topNav = document.getElementById(`topNavBar`); //the top Nav Bar
 
-     let scrollSideBar=document.getElementById(`scrollSideBar`); //The Side Scroll Nav Bar
+     let scrollSideBar = document.getElementById(`scrollSideBar`); //The Side Scroll Nav Bar
 
 // Define smooth scroll links that point to where you want to go
 
-     let menuLabel=document.querySelectorAll(`.topNavBar__menuLabel`);
+     let menuLabel = document.querySelectorAll(`.topNavBar__menuLabel`);
 
-     let topBarInputs=document.querySelectorAll(`input[name=navRadio]`);
+     let topBarInputs = document.querySelectorAll(`input[name=navRadio]`);
 
-     let sideBarInputs=document.querySelectorAll(`input[name=sideScroll]`);
+     let sideBarInputs = document.querySelectorAll(`input[name=sideScroll]`);
 
-     let scrollToTop=document.getElementsByClassName(`link2Top`)[0];
+     let scrollToTop = document.getElementsByClassName(`link2Top`)[0];
 
-     let large=window.matchMedia(`(max-width:1024px)`);
+     let large = window.matchMedia(`(max-width:1024px)`);
 
-     let defaultScreen=window.matchMedia(`(min-width:1025px`);
+     let defaultScreen = window.matchMedia(`(min-width:1025px`);
 
-     let factButton=document.getElementById(`factButton`);
+     let factButton = document.getElementById(`factButton`);
+
+     let contactCard = document.getElementsByClassName(`contact__card`)[0];
+
+     contactCard.style.display = `none`;
 
 
 /*******************************COOKIE SETTINGS************************************************/
@@ -33,8 +37,19 @@ window.onload=(function() {
 
     let wrapper=document.getElementsByClassName(`wrapper`)[0];
 
+    function init() {
+
+      var imgDefer = document.getElementsByTagName('img');
+      for (var i=0; i<imgDefer.length; i++) {
+      if(imgDefer[i].getAttribute('data-src')) {
+      imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+    } } }
+
 
     if(!document.cookie){
+
+      var imgIntro = document.getElementById(`myIntro`);
+      imgIntro.setAttribute(`src`,imgIntro.getAttribute(`data-src`));
 
       introMovie.style.display=`block`;
 
@@ -47,6 +62,8 @@ window.onload=(function() {
     } else{
 
       introMovie.style.display=`none`;
+
+      myVideo.style.visibility='hidden';
 
       wrapper.style.display=`block`;
 
@@ -72,6 +89,9 @@ window.onload=(function() {
 
         window.addEventListener(`scroll`, event=>{
 
+          init();
+
+          contactCard.style.display = `block`;
 
             let loc=window.pageYOffset;
 
@@ -352,6 +372,7 @@ window.onload=(function() {
 
             // On click of the element pointing to the anchor commence the scroll
 
+
                 link.addEventListener(`click`, letsRoll(link),false); 
 
 
@@ -405,6 +426,5 @@ window.onload=(function() {
 
   
             }, false);
-
 
  })();
